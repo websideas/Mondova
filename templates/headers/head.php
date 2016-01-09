@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <title>Delphinus - Creative Multi-Purpose eCommerce HTML5</title>
+    <title>Mondova - Creative Multi-Purpose eCommerce HTML5</title>
 
     <link href='https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic%7cRoboto+Slab:400,700%7cCrete+Round:400italic' rel='stylesheet' type='text/css'>
     <?php
@@ -17,7 +17,7 @@
 
     <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="assets/fonts/Lineicons/style.css" />
+    <link rel="stylesheet" href="assets/fonts/elegant_font/style.css" />
     <link rel="stylesheet" href="assets/css/plugins.css" />
 
 <?php
