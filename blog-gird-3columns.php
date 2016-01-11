@@ -1,26 +1,16 @@
 <?php
-global $shadow;
-$shadow = ' ';
-
 
 include_once('templates/headers/head.php');
 include_once('templates/headers/header2.php');
 
 ?>
 
-    <div class="page-section bg-gray small-section">
+    <div class="page-section page-header-bg small-section">
         <div class="page-header">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <ol class="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li class="active">Blog</li>
-                        </ol>
-                    </div>
-                    <div class="col-md-8 text-right">
-                        <h1>Blog</h1>
-                    </div>
+                <div class="page-header-content text-center">
+                    <h1>blog grid 3 columns</h1>
+                    <div class="page-header-divider"><i class="icon_pens"></i></div>
                 </div>
             </div>
         </div>
@@ -30,208 +20,228 @@ include_once('templates/headers/header2.php');
     <div id="main">
         <div class="page-section">
             <div class="container">
+                <div class="row">
+                    <div class="main-content col-md-12 col-sm-12 col-xs-12">
+                        <div class="blog-posts">
+                            <div class="row multi-columns-row">
+                                <div class="blog-post col-lg-4 col-md-4 col-sm-6">
+                                    <div class="blog-post-content">
+                                        <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
+                                            <img src="assets/images/blog/1.jpg" alt=""/>
+                                        </a>
+                                        <div class="post-date">
+                                            <span class="post-date-number">17</span>
+                                            <span class="post-date-text">thursday</span>
+                                        </div>
+                                        <div class="blog-post-inner">
+                                            <h4 class="blog-post-title">
+                                                <a href="blog-singlepost-standard.php"> Blog demo 1</a>
+                                            </h4>
+                                            <div class="blog-post-meta">
+                                                <span class="cat-links"><a href="#">the blog</a></span>
+                                                <span class="author vcard">By <a href="#">Author</a></span>
+                                            </div>
+                                            <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-                <div class="blog-posts">
-                    <div class="row multi-columns-row">
-                        <div class="blog-post col-lg-4 col-md-4 col-sm-6">
-                            <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
-                                <img src="assets/images/blog/blog-01.jpg" alt=""/>
-                            </a>
-                            <h4 class="blog-post-title">
-                                <a href="blog-singlepost-standard.php"> The Best Way to Clean Your Pillows</a>
-                            </h4>
-                            <div class="blog-post-meta">
-                                <span class="author vcard">By: <a href="#">Steven Bradley</a></span>
-                                <span class="comments-link"><a href="#">3 Comments</a></span>
+                                <div class="blog-post col-lg-4 col-md-4 col-sm-6">
+                                    <div class="blog-post-content">
+                                        <div class="blog-post-content">
+                                            <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
+                                                <img src="assets/images/blog/2.jpg" alt=""/>
+                                            </a>
+                                            <div class="post-date">
+                                                <span class="post-date-number">17</span>
+                                                <span class="post-date-text">thursday</span>
+                                            </div>
+                                            <div class="blog-post-inner">
+                                                <h4 class="blog-post-title">
+                                                    <a href="blog-singlepost-standard.php">Blog demo 2</a>
+                                                </h4>
+                                                <div class="blog-post-meta">
+                                                    <span class="cat-links"><a href="#">the blog</a></span>
+                                                    <span class="author vcard">By <a href="#">Author</a></span>
+                                                </div>
+                                                <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="blog-post col-lg-4 col-md-4 col-sm-6">
+                                    <div class="blog-post-content">
+                                        <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
+                                            <img src="assets/images/blog/3.jpg" alt=""/>
+                                        </a>
+                                        <div class="post-date">
+                                            <span class="post-date-number">17</span>
+                                            <span class="post-date-text">thursday</span>
+                                        </div>
+                                        <div class="blog-post-inner">
+                                            <h4 class="blog-post-title">
+                                                <a href="blog-singlepost-standard.php">Blog demo 3</a>
+                                            </h4>
+                                            <div class="blog-post-meta">
+                                                <span class="cat-links"><a href="#">the blog</a></span>
+                                                <span class="author vcard">By <a href="#">Author</a></span>
+                                            </div>
+                                            <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-post col-lg-4 col-md-4 col-sm-6">
+                                    <div class="blog-post-content">
+                                        <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
+                                            <img src="assets/images/blog/4.jpg" alt=""/>
+                                        </a>
+                                        <div class="post-date">
+                                            <span class="post-date-number">17</span>
+                                            <span class="post-date-text">thursday</span>
+                                        </div>
+                                        <div class="blog-post-inner">
+                                            <h4 class="blog-post-title">
+                                                <a href="blog-singlepost-standard.php">Blog demo 4</a>
+                                            </h4>
+                                            <div class="blog-post-meta">
+                                                <span class="cat-links"><a href="#">the blog</a></span>
+                                                <span class="author vcard">By <a href="#">Author</a></span>
+                                            </div>
+                                            <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="blog-post col-lg-4 col-md-4 col-sm-6">
+                                    <div class="blog-post-content">
+                                        <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
+                                            <img src="assets/images/blog/5.jpg" alt=""/>
+                                        </a>
+                                        <div class="post-date">
+                                            <span class="post-date-number">17</span>
+                                            <span class="post-date-text">thursday</span>
+                                        </div>
+                                        <div class="blog-post-inner">
+                                            <h4 class="blog-post-title">
+                                                <a href="blog-singlepost-standard.php">Blog demo 5</a>
+                                            </h4>
+                                            <div class="blog-post-meta">
+                                                <span class="cat-links"><a href="#">the blog</a></span>
+                                                <span class="author vcard">By <a href="#">Author</a></span>
+                                            </div>
+                                            <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="blog-post col-lg-4 col-md-4 col-sm-6">
+                                    <div class="blog-post-content">
+                                        <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
+                                            <img src="assets/images/blog/6.jpg" alt=""/>
+                                        </a>
+                                        <div class="post-date">
+                                            <span class="post-date-number">17</span>
+                                            <span class="post-date-text">thursday</span>
+                                        </div>
+                                        <div class="blog-post-inner">
+                                            <h4 class="blog-post-title">
+                                                <a href="blog-singlepost-standard.php">Blog demo 6</a>
+                                            </h4>
+                                            <div class="blog-post-meta">
+                                                <span class="cat-links"><a href="#">the blog</a></span>
+                                                <span class="author vcard">By <a href="#">Author</a></span>
+                                            </div>
+                                            <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-post col-lg-4 col-md-4 col-sm-6">
+                                    <div class="blog-post-content">
+                                        <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
+                                            <img src="assets/images/blog/7.jpg" alt=""/>
+                                        </a>
+                                        <div class="post-date">
+                                            <span class="post-date-number">17</span>
+                                            <span class="post-date-text">thursday</span>
+                                        </div>
+                                        <div class="blog-post-inner">
+                                            <h4 class="blog-post-title">
+                                                <a href="blog-singlepost-standard.php">Blog demo 7</a>
+                                            </h4>
+                                            <div class="blog-post-meta">
+                                                <span class="cat-links"><a href="#">the blog</a></span>
+                                                <span class="author vcard">By <a href="#">Author</a></span>
+                                            </div>
+                                            <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-post col-lg-4 col-md-4 col-sm-6">
+                                    <div class="blog-post-content">
+                                        <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
+                                            <img src="assets/images/blog/8.jpg" alt=""/>
+                                        </a>
+                                        <div class="post-date">
+                                            <span class="post-date-number">17</span>
+                                            <span class="post-date-text">thursday</span>
+                                        </div>
+                                        <div class="blog-post-inner">
+                                            <h4 class="blog-post-title">
+                                                <a href="blog-singlepost-standard.php">Blog demo 8</a>
+                                            </h4>
+                                            <div class="blog-post-meta">
+                                                <span class="cat-links"><a href="#">the blog</a></span>
+                                                <span class="author vcard">By <a href="#">Author</a></span>
+                                            </div>
+                                            <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-post col-lg-4 col-md-4 col-sm-6">
+                                    <div class="blog-post-content">
+                                        <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
+                                            <img src="assets/images/blog/9.jpg" alt=""/>
+                                        </a>
+                                        <div class="post-date">
+                                            <span class="post-date-number">17</span>
+                                            <span class="post-date-text">thursday</span>
+                                        </div>
+                                        <div class="blog-post-inner">
+                                            <h4 class="blog-post-title">
+                                                <a href="blog-singlepost-standard.php">Blog demo 9</a>
+                                            </h4>
+                                            <div class="blog-post-meta">
+                                                <span class="cat-links"><a href="#">the blog</a></span>
+                                                <span class="author vcard">By <a href="#">Author</a></span>
+                                            </div>
+                                            <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscinp ...</p>
-                        </div>
+                        </div><!-- .blog-posts -->
 
-                        <div class="blog-post col-lg-4 col-md-4 col-sm-6">
-                            <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
-                                <img src="assets/images/blog/blog-02.jpg" alt=""/>
-                            </a>
-                            <h4 class="blog-post-title">
-                                <a href="blog-singlepost-standard.php">17 Small Space Decorating Tricks ...</a>
-                            </h4>
-                            <div class="blog-post-meta">
-                                <span class="author vcard">By: <a href="#">Steven Bradley</a></span>
-                                <span class="comments-link"><a href="#">3 Comments</a></span>
+                        <nav class="navigation pagination">
+                            <div class="nav-links">
+                                <a href="#" class="prev page-numbers">Previous</a>
+                                <a href="#" class="page-numbers">1</a>
+                                <a href="#" class="page-numbers">2</a>
+                                <span class="page-numbers current">3</span>
+                                <a href="#" class="page-numbers">4</a>
+                                <a href="#" class="page-numbers">5</a>
+                                <a href="#" class="next page-numbers">Next</a>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscinp ...</p>
-                        </div>
+                        </nav><!-- .pagination -->
 
-                        <div class="blog-post col-lg-4 col-md-4 col-sm-6">
-                            <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
-                                <img src="assets/images/blog/blog-03.jpg" alt=""/>
-                            </a>
-                            <h4 class="blog-post-title">
-                                <a href="blog-singlepost-standard.php">The Best Bathrooms of 2014</a>
-                            </h4>
-                            <div class="blog-post-meta">
-                                <span class="author vcard">By: <a href="#">Steven Bradley</a></span>
-                                <span class="comments-link"><a href="#">3 Comments</a></span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscinp ...</p>
-                        </div>
-                        <div class="blog-post col-lg-4 col-md-4 col-sm-6">
-                            <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
-                                <img src="assets/images/blog/blog-4.jpg" alt=""/>
-                            </a>
-                            <h4 class="blog-post-title">
-                                <a href="blog-singlepost-standard.php"> The Best Way to Clean Your Pillows</a>
-                            </h4>
-                            <div class="blog-post-meta">
-                                <span class="author vcard">By: <a href="#">Steven Bradley</a></span>
-                                <span class="comments-link"><a href="#">3 Comments</a></span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscinp ...</p>
-                        </div>
+                    </div><!-- .main-content -->
 
-                        <div class="blog-post col-lg-4 col-md-4 col-sm-6">
-                            <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
-                                <img src="assets/images/blog/blog-5.jpg" alt=""/>
-                            </a>
-                            <h4 class="blog-post-title">
-                                <a href="blog-singlepost-standard.php">17 Small Space Decorating Tricks ...</a>
-                            </h4>
-                            <div class="blog-post-meta">
-                                <span class="author vcard">By: <a href="#">Steven Bradley</a></span>
-                                <span class="comments-link"><a href="#">3 Comments</a></span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscinp ...</p>
-                        </div>
-
-                        <div class="blog-post col-lg-4 col-md-4 col-sm-6">
-                            <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
-                                <img src="assets/images/blog/blog-6.jpg" alt=""/>
-                            </a>
-                            <h4 class="blog-post-title">
-                                <a href="blog-singlepost-standard.php">The Best Bathrooms of 2014</a>
-                            </h4>
-                            <div class="blog-post-meta">
-                                <span class="author vcard">By: <a href="#">Steven Bradley</a></span>
-                                <span class="comments-link"><a href="#">3 Comments</a></span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscinp ...</p>
-                        </div>
-
-                        <div class="blog-post col-lg-4 col-md-4 col-sm-6">
-                            <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
-                                <img src="assets/images/blog/blog-7.jpg" alt=""/>
-                            </a>
-                            <h4 class="blog-post-title">
-                                <a href="blog-singlepost-standard.php"> The Best Way to Clean Your Pillows</a>
-                            </h4>
-                            <div class="blog-post-meta">
-                                <span class="author vcard">By: <a href="#">Steven Bradley</a></span>
-                                <span class="comments-link"><a href="#">3 Comments</a></span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscinp ...</p>
-                        </div>
-
-                        <div class="blog-post col-lg-4 col-md-4 col-sm-6">
-                            <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
-                                <img src="assets/images/blog/blog-8.jpg" alt=""/>
-                            </a>
-                            <h4 class="blog-post-title">
-                                <a href="blog-singlepost-standard.php">17 Small Space Decorating Tricks ...</a>
-                            </h4>
-                            <div class="blog-post-meta">
-                                <span class="author vcard">By: <a href="#">Steven Bradley</a></span>
-                                <span class="comments-link"><a href="#">3 Comments</a></span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscinp ...</p>
-                        </div>
-
-                        <div class="blog-post col-lg-4 col-md-4 col-sm-6">
-                            <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
-                                <img src="assets/images/blog/blog-9.jpg" alt=""/>
-                            </a>
-                            <h4 class="blog-post-title">
-                                <a href="blog-singlepost-standard.php">The Best Bathrooms of 2014</a>
-                            </h4>
-                            <div class="blog-post-meta">
-                                <span class="author vcard">By: <a href="#">Steven Bradley</a></span>
-                                <span class="comments-link"><a href="#">3 Comments</a></span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscinp ...</p>
-                        </div>
-
-                        <div class="blog-post col-lg-4 col-md-4 col-sm-6">
-                            <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
-                                <img src="assets/images/blog/blog-10.jpg" alt=""/>
-                            </a>
-                            <h4 class="blog-post-title">
-                                <a href="blog-singlepost-standard.php"> The Best Way to Clean Your Pillows</a>
-                            </h4>
-                            <div class="blog-post-meta">
-                                <span class="author vcard">By: <a href="#">Steven Bradley</a></span>
-                                <span class="comments-link"><a href="#">3 Comments</a></span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscinp ...</p>
-                        </div>
-
-                        <div class="blog-post col-lg-4 col-md-4 col-sm-6">
-                            <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
-                                <img src="assets/images/blog/blog-11.jpg" alt=""/>
-                            </a>
-                            <h4 class="blog-post-title">
-                                <a href="blog-singlepost-standard.php">17 Small Space Decorating Tricks ...</a>
-                            </h4>
-                            <div class="blog-post-meta">
-                                <span class="author vcard">By: <a href="#">Steven Bradley</a></span>
-                                <span class="comments-link"><a href="#">3 Comments</a></span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscinp ...</p>
-                        </div>
-
-                        <div class="blog-post col-lg-4 col-md-4 col-sm-6">
-                            <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
-                                <img src="assets/images/blog/blog-12.jpg" alt=""/>
-                            </a>
-                            <h4 class="blog-post-title">
-                                <a href="blog-singlepost-standard.php">The Best Bathrooms of 2014</a>
-                            </h4>
-                            <div class="blog-post-meta">
-                                <span class="author vcard">By: <a href="#">Steven Bradley</a></span>
-                                <span class="comments-link"><a href="#">3 Comments</a></span>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscinp ...</p>
-                        </div>
-
-
-
-
-                    </div>
-                </div><!-- .blog-posts -->
-
-
-                <nav class="navigation pagination">
-                    <div class="nav-links">
-                        <a href="#" class="prev page-numbers">
-                            <span class="screen-reader-text">Prev</span>
-                            <i class="icon-Left-3"></i>
-                        </a>
-                        <span class="page-numbers current">1</span>
-                        <a href="#" class="page-numbers">2</a>
-                        <span class="page-numbers dots">…</span>
-                        <a href="#" class="page-numbers">4</a>
-                        <a href="#" class="next page-numbers">
-                            <span class="screen-reader-text">Next</span>
-                            <i class="icon-Right-3"></i>
-                        </a>
-                    </div>
-                </nav>
-
-            </div>
-        </div>
-
-
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </div><!-- .page-section -->
 
     </div><!-- #main -->
-
-
 
 <?php
 

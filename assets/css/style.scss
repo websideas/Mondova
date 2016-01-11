@@ -148,18 +148,6 @@ p {
   }
 }
 
-.page-header{
-  border: none;
-  margin: 0;
-  padding: 0;
-  h1{
-    margin: 0;
-    font-size: 18px;
-  }
-  .breadcrumb{
-    margin: 0;
-  }
-}
 
 /*
  * 1.2. Helper CSS
@@ -724,9 +712,10 @@ select:not([multiple]) {
       position: absolute;
       top: 0;
       left: 0;
-      background: rgba(#000000, .4);
+      background: rgba($text, .4);
     }
   }
+
 }
 
 
@@ -736,9 +725,65 @@ select:not([multiple]) {
   padding: 0 15px;
 }
 
+
+
 /* ==============================
-   7. Search
+   7. Page Header
    ============================== */
+.page-section.page-header-bg{
+  background-image: url("../images/page-header.jpg");
+  padding: 150px 0;
+  &:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba($text, .85);
+  }
+}
+
+.page-header{
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  color: $white;
+  h1{
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    color: $white;
+  }
+  .breadcrumb{
+    margin: 0;
+  }
+  &-divider{
+    text-align: center;
+    font-size: 24px;
+    width: 200px;
+    margin: 15px auto 0;
+    position: relative;
+    &:before,
+    &:after{
+      content: '';
+      width: 50px;
+      height: 2px;
+      top: 50%;
+      margin-top: -1px;
+      background: $primary-color;
+      display: block;
+      position: absolute;
+    }
+    &:before{
+      left:0;
+    }
+    &:after{
+      right:0;
+    }
+  }
+}
 
 /* ==============================
    8. Header
@@ -2922,35 +2967,77 @@ ul.style-list{
 .blog-posts{
   .blog-post{
     margin-bottom: 50px;
-
-    &-thumbnail{
-      display: block;
-      overflow: hidden;
-      img{
-        @include transition('all 1s ease-in-out 0s');
-        @include transform(scale(1));
-        width: 100%;
-      }
+    &-content{
+      position: relative;
       &:hover{
-        img{
-          @include transform(scale(1.2));
+        .post-date{
+          @include opacity(1);
+        }
+        .blog-post-thumbnail{
+          &:before{
+            @include opacity(.35);
+          }
         }
       }
     }
-
-
-
-    &-thumbnail + .blog-post-inner{
-      margin-top: -80px;
+    &-thumbnail{
+      display: block;
+      overflow: hidden;
       position: relative;
+      img{
+        width: 100%;
+      }
+      &:before{
+        position: absolute;
+        left:0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        @include opacity(0);
+        content: '';
+        display: block;
+        background: $text;
+        @include transition();
+      }
+    }
+
+    .post-date{
+      position: absolute;
+      left: 30px;
+      top: 30px;
+      border: 2px solid $white;
+      padding: 2px;
+      text-align: center;
+      width: 60px;
+      opacity: 0;
+      @include transition();
+      &-number{
+        background: $white;
+        display: block;
+        height: 52px;
+        line-height: 52px;
+        font-size: 36px;
+        font-weight: bold;
+      }
+      &-text{
+        font-size: 10px;
+        font-weight: 300;
+        color: $white;
+        line-height: 17px;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+      }
     }
 
     &-inner{
       background: $white;
       margin-left: 28px;
-      padding: 33px 85px 0 40px;
+      padding: 33px 85px 0 30px;
       font-size: 14px;
       line-height: 23px;
+      margin-top: -80px;
+      position: relative;
     }
 
     &-meta{

@@ -5,11 +5,12 @@ include_once('templates/headers/header2.php');
 
 ?>
 
-    <div class="page-section bg-gray small-section">
+    <div class="page-section page-header-bg small-section">
         <div class="page-header">
             <div class="container">
                 <div class="page-header-content text-center">
                     <h1>blog grid 2 columns with sidebar</h1>
+                    <div class="page-header-divider"><i class="icon_pens"></i></div>
                 </div>
             </div>
         </div>
@@ -25,97 +26,135 @@ include_once('templates/headers/header2.php');
                         <div class="blog-posts">
                             <div class="row multi-columns-row">
                                 <div class="blog-post col-lg-6 col-md-6 col-sm-6">
-                                    <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
-                                        <img src="assets/images/blog/1.jpg" alt=""/>
-                                    </a>
-                                    <div class="blog-post-inner">
-                                        <h4 class="blog-post-title">
-                                            <a href="blog-singlepost-standard.php"> Blog demo 1</a>
-                                        </h4>
-                                        <div class="blog-post-meta">
-                                            <span class="cat-links"><a href="#">the blog</a></span>
-                                            <span class="author vcard">By <a href="#">Author</a></span>
+                                    <div class="blog-post-content">
+                                        <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
+                                            <img src="assets/images/blog/1.jpg" alt=""/>
+                                        </a>
+                                        <div class="post-date">
+                                            <span class="post-date-number">17</span>
+                                            <span class="post-date-text">thursday</span>
                                         </div>
-                                        <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
+                                        <div class="blog-post-inner">
+                                            <h4 class="blog-post-title">
+                                                <a href="blog-singlepost-standard.php"> Blog demo 1</a>
+                                            </h4>
+                                            <div class="blog-post-meta">
+                                                <span class="cat-links"><a href="#">the blog</a></span>
+                                                <span class="author vcard">By <a href="#">Author</a></span>
+                                            </div>
+                                            <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="blog-post col-lg-6 col-md-6 col-sm-6">
-                                    <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
-                                        <img src="assets/images/blog/2.jpg" alt=""/>
-                                    </a>
-                                    <div class="blog-post-inner">
-                                        <h4 class="blog-post-title">
-                                            <a href="blog-singlepost-standard.php">Blog demo 2</a>
-                                        </h4>
-                                        <div class="blog-post-meta">
-                                            <span class="cat-links"><a href="#">the blog</a></span>
-                                            <span class="author vcard">By <a href="#">Author</a></span>
+                                    <div class="blog-post-content">
+                                        <div class="blog-post-content">
+                                            <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
+                                                <img src="assets/images/blog/2.jpg" alt=""/>
+                                            </a>
+                                            <div class="post-date">
+                                                <span class="post-date-number">17</span>
+                                                <span class="post-date-text">thursday</span>
+                                            </div>
+                                            <div class="blog-post-inner">
+                                                <h4 class="blog-post-title">
+                                                    <a href="blog-singlepost-standard.php">Blog demo 2</a>
+                                                </h4>
+                                                <div class="blog-post-meta">
+                                                    <span class="cat-links"><a href="#">the blog</a></span>
+                                                    <span class="author vcard">By <a href="#">Author</a></span>
+                                                </div>
+                                                <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
+                                            </div>
                                         </div>
-                                        <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
                                     </div>
                                 </div>
 
                                 <div class="blog-post col-lg-6 col-md-6 col-sm-6">
-                                    <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
-                                        <img src="assets/images/blog/3.jpg" alt=""/>
-                                    </a>
-                                    <div class="blog-post-inner">
-                                        <h4 class="blog-post-title">
-                                            <a href="blog-singlepost-standard.php">Blog demo 3</a>
-                                        </h4>
-                                        <div class="blog-post-meta">
-                                            <span class="cat-links"><a href="#">the blog</a></span>
-                                            <span class="author vcard">By <a href="#">Author</a></span>
+                                    <div class="blog-post-content">
+                                        <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
+                                            <img src="assets/images/blog/3.jpg" alt=""/>
+                                        </a>
+                                        <div class="post-date">
+                                            <span class="post-date-number">17</span>
+                                            <span class="post-date-text">thursday</span>
                                         </div>
-                                        <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
+                                        <div class="blog-post-inner">
+                                            <h4 class="blog-post-title">
+                                                <a href="blog-singlepost-standard.php">Blog demo 3</a>
+                                            </h4>
+                                            <div class="blog-post-meta">
+                                                <span class="cat-links"><a href="#">the blog</a></span>
+                                                <span class="author vcard">By <a href="#">Author</a></span>
+                                            </div>
+                                            <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="blog-post col-lg-6 col-md-6 col-sm-6">
-                                    <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
-                                        <img src="assets/images/blog/4.jpg" alt=""/>
-                                    </a>
-                                    <div class="blog-post-inner">
-                                        <h4 class="blog-post-title">
-                                            <a href="blog-singlepost-standard.php">Blog demo 4</a>
-                                        </h4>
-                                        <div class="blog-post-meta">
-                                            <span class="cat-links"><a href="#">the blog</a></span>
-                                            <span class="author vcard">By <a href="#">Author</a></span>
+                                    <div class="blog-post-content">
+                                        <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
+                                            <img src="assets/images/blog/4.jpg" alt=""/>
+                                        </a>
+                                        <div class="post-date">
+                                            <span class="post-date-number">17</span>
+                                            <span class="post-date-text">thursday</span>
                                         </div>
-                                        <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
-                                    </div>
-                                </div>
-
-                                <div class="blog-post col-lg-6 col-md-6 col-sm-6">
-                                    <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
-                                        <img src="assets/images/blog/5.jpg" alt=""/>
-                                    </a>
-                                    <div class="blog-post-inner">
-                                        <h4 class="blog-post-title">
-                                            <a href="blog-singlepost-standard.php">Blog demo 5</a>
-                                        </h4>
-                                        <div class="blog-post-meta">
-                                            <span class="cat-links"><a href="#">the blog</a></span>
-                                            <span class="author vcard">By <a href="#">Author</a></span>
+                                        <div class="blog-post-inner">
+                                            <h4 class="blog-post-title">
+                                                <a href="blog-singlepost-standard.php">Blog demo 4</a>
+                                            </h4>
+                                            <div class="blog-post-meta">
+                                                <span class="cat-links"><a href="#">the blog</a></span>
+                                                <span class="author vcard">By <a href="#">Author</a></span>
+                                            </div>
+                                            <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
                                         </div>
-                                        <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
                                     </div>
                                 </div>
 
                                 <div class="blog-post col-lg-6 col-md-6 col-sm-6">
-                                    <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
-                                        <img src="assets/images/blog/6.jpg" alt=""/>
-                                    </a>
-                                    <div class="blog-post-inner">
-                                        <h4 class="blog-post-title">
-                                            <a href="blog-singlepost-standard.php">Blog demo 6</a>
-                                        </h4>
-                                        <div class="blog-post-meta">
-                                            <span class="cat-links"><a href="#">the blog</a></span>
-                                            <span class="author vcard">By <a href="#">Author</a></span>
+                                    <div class="blog-post-content">
+                                        <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
+                                            <img src="assets/images/blog/5.jpg" alt=""/>
+                                        </a>
+                                        <div class="post-date">
+                                            <span class="post-date-number">17</span>
+                                            <span class="post-date-text">thursday</span>
                                         </div>
-                                        <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
+                                        <div class="blog-post-inner">
+                                            <h4 class="blog-post-title">
+                                                <a href="blog-singlepost-standard.php">Blog demo 5</a>
+                                            </h4>
+                                            <div class="blog-post-meta">
+                                                <span class="cat-links"><a href="#">the blog</a></span>
+                                                <span class="author vcard">By <a href="#">Author</a></span>
+                                            </div>
+                                            <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="blog-post col-lg-6 col-md-6 col-sm-6">
+                                    <div class="blog-post-content">
+                                        <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
+                                            <img src="assets/images/blog/6.jpg" alt=""/>
+                                        </a>
+                                        <div class="post-date">
+                                            <span class="post-date-number">17</span>
+                                            <span class="post-date-text">thursday</span>
+                                        </div>
+                                        <div class="blog-post-inner">
+                                            <h4 class="blog-post-title">
+                                                <a href="blog-singlepost-standard.php">Blog demo 6</a>
+                                            </h4>
+                                            <div class="blog-post-meta">
+                                                <span class="cat-links"><a href="#">the blog</a></span>
+                                                <span class="author vcard">By <a href="#">Author</a></span>
+                                            </div>
+                                            <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
+                                        </div>
                                     </div>
                                 </div>
 
