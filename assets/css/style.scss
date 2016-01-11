@@ -326,9 +326,9 @@ p {
 
 body {
   font-family: $font-stack;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 30px;
-  color: $gray-darker;
+  color: $text;
   min-width: 320px;
 }
 
@@ -337,12 +337,8 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
   font-family: $heading-font;
   text-transform: uppercase;
-  font-weight: bold;
-  color: #000000;
-}
-
-h1, h2, h3{
-  letter-spacing: 0.2em;
+  font-weight: normal;
+  color: $black;
 }
 
 a {
@@ -416,10 +412,10 @@ input[type=phone],
 input[type=tel],
 input[type=text],
 textarea {
-  border: 2px solid $border-color;
-  color: $gray-text;
+  border: 2px solid $text;
+  color: $text;
   padding: 6px 12px;
-  height: 40px;
+  height: 46px;
   background: none;
   @include border-radius(0);
   @include css3-prefix('box-shadow', 'none');
@@ -428,9 +424,7 @@ textarea {
   width: 100%;
   &:focus {
     @include css3-prefix('box-shadow', 'none');
-    border-color: $gray-text;
     outline: 0;
-    color: $gray-text;
   }
 }
 
@@ -488,7 +482,7 @@ select:not([multiple]) {
     pointer-events: none;
     right: 5px;
     z-index: 1;
-    @include FontAwesome('\f107');
+    @include FontIcon('\f107');
     @include translate(y);
     font-size: 12px;
 
@@ -702,7 +696,7 @@ select:not([multiple]) {
 .page-section{
   display: block;
   position: relative;
-  padding: 90px 0;
+  padding: 100px 0;
 
   background-repeat: no-repeat;
   background-position: center center;
@@ -745,61 +739,6 @@ select:not([multiple]) {
 /* ==============================
    7. Search
    ============================== */
-.searchform {
-  margin: 0 auto;
-  position: relative;
-  input[type=text] {
-    background: transparent;
-    width: 100%;
-    padding: 5px 40px 5px 10px;
-  }
-  button {
-    background: none;
-    border: none;
-    height: 26px;
-    padding: 0;
-    right: 5px;
-    width: 26px;
-    line-height: 26px;
-    @include translate('y');
-    i{
-      line-height: 26px;
-    }
-  }
-}
-
-#search-fullwidth {
-  background: #ffffff;
-  margin: 0 auto;
-  max-width: 1170px;
-  padding: 70px 200px;
-  position: relative;
-
-  button.mfp-close{
-    color: #000000;
-    font-size: 0;
-    right: 15px;
-    top: 15px;
-    &:before{
-      font-size: 18px;
-      @include FontAwesome('\f00d');
-      @include translate(c);
-    }
-  }
-  .searchform{
-    input[type=text] {
-      border: none;
-      border-bottom: 2px solid $border-color;
-      padding: 10px 0;
-      height: auto;
-      font-size: 14px;
-      letter-spacing: 0.075em;
-    }
-    button{
-      font-size: 14px;
-    }
-  }
-}
 
 /* ==============================
    8. Header
@@ -1062,7 +1001,7 @@ select:not([multiple]) {
         right: 12px;
         top: 18px;
         &:before{
-          @include FontAwesome('\f00d');
+          @include FontIcon('\f00d');
         }
         &:hover{
           color: red;
@@ -1465,7 +1404,7 @@ select:not([multiple]) {
 
           &:after {
             font-size: 15px;
-            @include FontAwesome('\f107');
+            @include FontIcon('\f107');
           }
 
         }
@@ -1890,7 +1829,7 @@ ul.style-list{
       color: #fff;
       font-size: 10px;
       line-height: 28px;
-      @include FontAwesome('\f00c');
+      @include FontIcon('\f00c');
     }
   }
   &.style3{
@@ -1900,7 +1839,7 @@ ul.style-list{
       font-size: 14px;
       color: #000;
       line-height: 28px;
-      @include FontAwesome('\f105');
+      @include FontIcon('\f105');
     }
   }
 }
@@ -1934,7 +1873,7 @@ ul.style-list{
     font-size: 18px;
   }
   &:after{
-    @include FontAwesome("\f0f3");
+    @include FontIcon("\f0f3");
     text-transform: none;
     left: 0;
     position: absolute;
@@ -2088,7 +2027,7 @@ ul.style-list{
       @include translate('y');
       display: block;
       &:after{
-        @include FontAwesome('\f067');
+        @include FontIcon('\f067');
         font-size: 10px;
         @include translate();
         font-weight: normal;
@@ -2171,22 +2110,66 @@ ul.style-list{
   margin: 0;
   padding: 0;
   list-style: none;
+
   li{
     display: inline-block;
-    padding: 0 22px;
+    padding: 0 3px;
     font-size: 14px;
     a{
-      @include transform(translatey(0));
-      @include transition('all 0.2s ease 0s');
       display: inline-block;
-    }
-    &:hover{
-      a{
-        @include transform(translatey(-6px));
+      border: 2px solid $border-color;
+      width: 73px;
+      height: 73px;
+      text-align: center;
+      line-height: 20px;
+      color: $text;
+      padding-top: 14px;
+      position: relative;
+      @include transition();
+
+      &:before,
+      &:after{
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        @include transition();
+        @include opacity(0);
+      }
+      &:before{
+        left: -2px;
+        bottom: -2px;
+        border-left: 2px solid $primary-color;
+        border-bottom: 2px solid $primary-color;
+      }
+      &:after{
+        top: -2px;
+        right: -2px;
+        border-right: 2px solid $primary-color;
+        border-top: 2px solid $primary-color;
+      }
+      i{
+        font-size: 18px;
+      }
+      span{
+        display: block;
+        font-size: 10px;
+        letter-spacing: .1em;
+      }
+      &:hover{
+        border-color: $text;
+        &:before,
+        &:after{
+          width: 20px;
+          height: 20px;
+          @include opacity(1);
+        }
       }
     }
     &:first-child{
       padding-left: 0;
+
     }
     &:last-child{
       padding-right: 0;
@@ -2701,115 +2684,252 @@ ul.style-list{
    11. Widgets
    ============================== */
 
-.widget-container{
-  margin-bottom: 40px;
-  border-bottom: 2px solid #f6f6f6;
-  padding-bottom: 5px;
-  font-size: 14px;
-  &:last-child{
-    border: none;
+
+.searchform {
+  margin: 0 auto;
+  position: relative;
+  input[type=text] {
+    background: transparent;
+    width: 100%;
+    padding: 8px 50px 8px 16px;
   }
+  button {
+    background: none;
+    border: none;
+    height: 42px;
+    padding: 0;
+    right: 2px;
+    width: 42px;
+    line-height: 42px;
+    @include translate('y');
+    i{
+      line-height: 42px;
+    }
+  }
+}
+
+
+.widget-container{
+  margin-bottom: 55px;
 
   .widget-title{
     font-size: 18px;
     margin: 0 0 30px;
-    text-transform: capitalize;
-    letter-spacing: 0.075em;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    padding-right: 70px;
+    position: relative;
+
+    &:before,
+    &:after{
+      content: '';
+      position: absolute;
+      height: 2px;
+      background: $primary-color;
+
+    }
+    &:before{
+      top: 8px;
+      right: 35px;
+      width: 15px;
+    }
+    &:after{
+      top: 15px;
+      right: 0;
+      width: 50px;
+    }
   }
 
   &.widget_nav_menu,
   &.widget_categories,
-  &.widget_product_categories,
-  &.widget_recent_entries{
+  &.widget_archive,
+  &.widget_product_categories{
+
+    > ul{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      >li{
+        font-size: 14px;
+        line-height: 25px;
+        padding-bottom: 25px;
+        padding-left: 22px;
+        position: relative;
+
+        &:before{
+          width: 2px;
+          @include calc('height', '100% - 22px');
+          background: $gray-text;
+          bottom: 0;
+          left: 1px;
+          content: '';
+          display: block;
+          position: absolute;
+        }
+
+        span{
+          float: right;
+          color: #afb0b1;
+        }
+
+        > a{
+          color: $text;
+          display: block;
+          &:before{
+            width: 4px;
+            height: 4px;
+            @include transform(rotate(45deg));
+            top: 10px;
+            left: 0;
+            background: $text;
+            content: '';
+            display: block;
+            position: absolute;
+          }
+        }
+
+        &.current-cat{
+          > a{
+            &:before{
+              background: $text;
+            }
+          }
+        }
+
+
+        &.current-cat > a,
+        > a:hover{
+          color: $primary-color;
+          &:before{
+            background: $primary-color;
+          }
+          span{
+            color: $text;
+          }
+        }
+
+        &:last-child{
+          padding-bottom: 0;
+          &:before{
+            display: none;
+          }
+        }
+
+        ul{
+          margin: 20px 0 -20px;
+          padding: 0;
+          list-style: none;
+          li{
+            padding-bottom: 25px;
+            a{
+              color: #afb0b1;
+              &:before{
+                @include FontIcon("\35", 'ElegantIcons');
+                padding-right: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.widget_kt_posts{
     ul{
       margin: 0;
       padding: 0;
       list-style: none;
       li{
-        padding-bottom: 6px;
-        &.nav-copyright{
-          color: $gray-text;
-          font-weight: 300;
+        margin-bottom: 40px;
+        .image-link{
+          float: left;
+          width: 75px;
+          margin-right: 20px;
         }
-        a{
-          color: $gray-darker;
+        .content{
+          overflow: hidden;
+          line-height: 24px;
+        }
+        .title-link{
+          margin-top: -4px;
+          font-size: 14px;
+          display: block;
+          margin-bottom: 5px;
+          color: $text;
           &:hover{
-            color: #000000;
+            color: $primary-color;
           }
         }
-        .count{
-          padding-left: 17px;
-          font-size: 12px;
-          color: #cacaca;
+        .post-meta{
+          color: #afb0b1;
+          text-transform: uppercase;
+        }
+        &:after{
+          content: " ";
+          display: table;
+          clear: both;
+        }
+        &:last-child{
+          margin: 0;
         }
       }
     }
   }
-  &.widget_tag_cloud{
-    a{
-      font-size: 14px !important;
-      line-height: normal !important;
-      display: inline-block;
-      margin: 0 20px 20px 0;
-      color: #666;
-      &:hover{
-        color: #000000;
-      }
-    }
-  }
 
-  &.widget_price_filter{
-    .ui-slider {
-      position: relative;
-      background: $gray-bg;
-      margin-bottom: 40px;
-      height: 2px;
-      margin-left: 4px;
-      .ui-slider-range{
-        background: #000000;
-        height: 100%;
-        position: absolute;
-      }
-      .ui-slider-handle{
-        height: 14px;
-        width: 4px;
-        background: #000000;
-        position: absolute;
-        top: -6px;
-        cursor: ew-resize;
-        margin-left: -4px;
-      }
-    }
-  }
-  &.widget-hover-content{
-    .widget-hover-element{
-      visibility: hidden;
-      @include opacity(0);
-      @include transition('all 0.4s ease-in-out');
-    }
-    &:hover{
-      .widget-hover-element{
-        visibility: visible;
-        @include opacity(1);
+  &.widget_recent_comments{
+    ul{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      line-height: 24px;
+      li{
+        padding: 0 0 20px 20px;
+        position: relative;
+        color: #afb0b1;
+        &:before{
+          width: 4px;
+          height: 4px;
+          @include transform(rotate(45deg));
+          top: 10px;
+          left: 0;
+          background: $text;
+          content: '';
+          display: block;
+          position: absolute;
+        }
+        a{
+          color: $text;
+          &:hover{
+            color: $primary-color;
+          }
+        }
+        &:last-child{
+          padding-bottom: 0;
+        }
       }
     }
   }
-
 }
+
+
+
 
 /* ==============================
    12. Blog posts
    ============================== */
 .blog-posts{
   .blog-post{
-    margin-bottom: 25px;
-    .blog-post-thumbnail{
-      margin-bottom: 33px;
+    margin-bottom: 50px;
+
+    &-thumbnail{
       display: block;
       overflow: hidden;
       img{
         @include transition('all 1s ease-in-out 0s');
         @include transform(scale(1));
+        width: 100%;
       }
       &:hover{
         img{
@@ -2817,19 +2937,54 @@ ul.style-list{
         }
       }
     }
-    .blog-post-title{
-      margin-bottom: 10px;
-      font-size: 16px;
-      text-transform: none;
-      letter-spacing: 0;
+
+
+
+    &-thumbnail + .blog-post-inner{
+      margin-top: -80px;
+      position: relative;
     }
-    .blog-post-meta{
-      margin-bottom: 20px;
-      color: $gray-text;
+
+    &-inner{
+      background: $white;
+      margin-left: 28px;
+      padding: 33px 85px 0 40px;
+      font-size: 14px;
+      line-height: 23px;
+    }
+
+    &-meta{
+      position: absolute;
+      top:0;
+      @include transform-origin(left top 0);
+      @include transform(rotate(90deg));
+
+      left: 100%;
+      z-index: 99;
+      white-space: nowrap;
+      width: auto;
+      padding-top: 20px;
+      padding-left: 60px;
+      text-transform: uppercase;
+
+      &:before{
+        content: '';
+        width: 100px;
+        height: 2px;
+        background: $text;
+        display: block;
+        position: absolute;
+        left: -70px;
+        bottom: 10px;
+      }
+
+
       > span{
+        color: #c9cacb;
         &:after{
           content: '/';
-          padding-left: 4px;
+          padding-left: 8px;
+          padding-right: 4px;
         }
         &:last-child{
           &:after{
@@ -2838,9 +2993,21 @@ ul.style-list{
         }
       }
       a{
-        color: $gray-text;
+        color: #c9cacb;
         &:hover{
           color: #000000;
+        }
+      }
+    }
+
+    &-title{
+      margin-bottom: 15px;
+      font-size: 26px;
+      text-transform: uppercase;
+      a{
+        color: $black;
+        &:hover{
+          color: $primary-color;
         }
       }
     }
@@ -3092,40 +3259,57 @@ ul.style-list{
   text-align: center;
   display: block;
   margin: 0;
-  padding-top: 35px;
-  border-top: 2px solid #f6f6f6;
+
+  border-bottom: 2px solid $text;
+  @include border-radius(0);
+  font-size: 14px;
+  line-height: 30px;
+
   .page-numbers {
-    border: 2px solid transparent;
-    color: $gray-darker;
+    color: $text;
     display: inline-block;
-    font-size: 14px;
-    line-height: 36px;
-    margin: 0 2px;
-    padding: 0;
-    width: 40px;
-    height: 40px;
-    &.next,
-    &.prev {
-      font-size: 18px;
-      &:hover{
-        border-color: transparent;
-        color: #000000;
+    margin: 0 15px;
+    padding: 0 5px 20px;
+    position: relative;
+
+    &.current{
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        display: block;
+        @include transition();
+      }
+
+      &:before{
+        content: '';
+        width: 20px;
+        background: $white;
+        height: 8px;
+        bottom: -7px;
+        margin-left: -10px;
+      }
+      &:after{
+        width: 6px;
+        height: 6px;
+        background: $primary-color;
+        left: 50%;
+        margin-left: -3px;
+        bottom: -4px;
+        @include transform(rotate(45deg));
       }
     }
-    &.next{
-      float: right;
-      text-align: right;
-    }
-    &.prev{
-      float: left;
-      text-align: left;
+    &.disable{
+      @include opacity(.5);
+      cursor: not-allowed;
     }
   }
-  a.page-numbers:hover,
-  .page-numbers.current{
-    border-color: #f0f0f0;
+  a{
+    &:hover{
+      color: $primary-color;
+    }
   }
-
 }
 
 
@@ -4517,12 +4701,12 @@ table.compare{
       }
       &.tp-leftarrow{
         &:before{
-          @include FontAwesome('\f104');
+          @include FontIcon('\f104');
         }
       }
       &.tp-rightarrow{
         &:before{
-          @include FontAwesome('\f105');
+          @include FontIcon('\f105');
         }
       }
 

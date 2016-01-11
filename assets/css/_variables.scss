@@ -13,9 +13,9 @@
 
 //// 1. Fonts ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-$font-stack: 'Karla',arial,sans-serif;
-$heading-font: 'Roboto Slab', serif;
-$button-text: 'Karla', sans-serif;
+$font-stack: 'Oswald', sans-serif;
+$heading-font: 'Oswald', sans-serif;
+$button-text: 'Oswald', sans-serif;
 $second-font: 'Montserrat', sans-serif;
 $three-font: 'Crete Round', serif;
 $four-font: 'Vollkorn', serif;
@@ -23,14 +23,19 @@ $four-font: 'Vollkorn', serif;
 
 //// 2. Color codes ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-$primary-color: #000000;
+$primary-color: #d1c45a;
 $primary-light-color: lighten($primary-color, 20%);
 
+$text: #3b3e43;
+
+$white: #FFFFFF;
+$black: #000000;
+
 $gray-bg: #f6f6f6;
-$gray-text: #999999;
+$gray-text: #f1f1f1;
 $gray-darker: #666666;
 $orange : #ed8b5c;
-$border-color: #ebebeb;
+$border-color: #ebebec;
 
 
 //// 3. Header height ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

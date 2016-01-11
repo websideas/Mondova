@@ -429,8 +429,8 @@
 }
 
 /// Calc
-@mixin FontAwesome($key) {
-  font-family: FontAwesome;
+@mixin FontIcon($key, $font: 'FontAwesome') {
+  font-family: $font;
   content: "#{$key}";
   font-style: normal;
   font-weight: normal;
