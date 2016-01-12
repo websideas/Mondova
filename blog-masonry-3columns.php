@@ -9,7 +9,7 @@ include_once('templates/headers/header2.php');
         <div class="page-header">
             <div class="container">
                 <div class="page-header-content text-center">
-                    <h1>blog grid 2 columns with sidebar</h1>
+                    <h1>blog grid 3 columns</h1>
                     <div class="page-header-divider"><i class="icon_pens"></i></div>
                 </div>
             </div>
@@ -21,14 +21,16 @@ include_once('templates/headers/header2.php');
         <div class="page-section">
             <div class="container">
                 <div class="row">
-                    <div class="main-content col-md-9 col-sm-12 col-xs-12">
+                    <div class="main-content col-md-12 col-sm-12 col-xs-12">
+                        <div class="blog-posts blog-posts-masonry">
+                            <div class="row">
 
-                        <div class="blog-posts">
-                            <div class="row multi-columns-row">
-                                <div class="blog-post col-lg-6 col-md-6 col-sm-6">
+                                <div class="blog-post-sizer col-lg-4 col-md-4 col-sm-6 "></div>
+
+                                <div class="blog-post col-lg-4 col-md-4 col-sm-6">
                                     <div class="blog-post-content">
                                         <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
-                                            <img src="assets/images/blog/1.jpg" alt=""/>
+                                            <img src="assets/images/blog/10.jpg" alt=""/>
                                         </a>
                                         <div class="post-date">
                                             <span class="post-date-number">17</span>
@@ -47,7 +49,7 @@ include_once('templates/headers/header2.php');
                                     </div>
                                 </div>
 
-                                <div class="blog-post col-lg-6 col-md-6 col-sm-6">
+                                <div class="blog-post col-lg-4 col-md-4 col-sm-6">
                                     <div class="blog-post-content">
                                         <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
                                             <img src="assets/images/blog/2.jpg" alt=""/>
@@ -69,10 +71,10 @@ include_once('templates/headers/header2.php');
                                     </div>
                                 </div>
 
-                                <div class="blog-post col-lg-6 col-md-6 col-sm-6">
+                                <div class="blog-post col-lg-4 col-md-4 col-sm-6">
                                     <div class="blog-post-content">
                                         <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
-                                            <img src="assets/images/blog/3.jpg" alt=""/>
+                                            <img src="assets/images/blog/11.jpg" alt=""/>
                                         </a>
                                         <div class="post-date">
                                             <span class="post-date-number">17</span>
@@ -90,7 +92,7 @@ include_once('templates/headers/header2.php');
                                         </div>
                                     </div>
                                 </div>
-                                <div class="blog-post col-lg-6 col-md-6 col-sm-6">
+                                <div class="blog-post col-lg-4 col-md-4 col-sm-6">
                                     <div class="blog-post-content">
                                         <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
                                             <img src="assets/images/blog/4.jpg" alt=""/>
@@ -112,7 +114,7 @@ include_once('templates/headers/header2.php');
                                     </div>
                                 </div>
 
-                                <div class="blog-post col-lg-6 col-md-6 col-sm-6">
+                                <div class="blog-post col-lg-4 col-md-4 col-sm-6">
                                     <div class="blog-post-content">
                                         <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
                                             <img src="assets/images/blog/5.jpg" alt=""/>
@@ -134,7 +136,7 @@ include_once('templates/headers/header2.php');
                                     </div>
                                 </div>
 
-                                <div class="blog-post col-lg-6 col-md-6 col-sm-6">
+                                <div class="blog-post col-lg-4 col-md-4 col-sm-6">
                                     <div class="blog-post-content">
                                         <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
                                             <img src="assets/images/blog/6.jpg" alt=""/>
@@ -146,6 +148,69 @@ include_once('templates/headers/header2.php');
                                         <div class="blog-post-inner">
                                             <h4 class="blog-post-title">
                                                 <a href="blog-singlepost-standard.php">Blog demo 6</a>
+                                            </h4>
+                                            <div class="blog-post-meta">
+                                                <span class="cat-links"><a href="#">the blog</a></span>
+                                                <span class="author vcard">By <a href="#">Author</a></span>
+                                            </div>
+                                            <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-post col-lg-4 col-md-4 col-sm-6">
+                                    <div class="blog-post-content">
+                                        <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
+                                            <img src="assets/images/blog/7.jpg" alt=""/>
+                                        </a>
+                                        <div class="post-date">
+                                            <span class="post-date-number">17</span>
+                                            <span class="post-date-text">thursday</span>
+                                        </div>
+                                        <div class="blog-post-inner">
+                                            <h4 class="blog-post-title">
+                                                <a href="blog-singlepost-standard.php">Blog demo 7</a>
+                                            </h4>
+                                            <div class="blog-post-meta">
+                                                <span class="cat-links"><a href="#">the blog</a></span>
+                                                <span class="author vcard">By <a href="#">Author</a></span>
+                                            </div>
+                                            <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-post col-lg-4 col-md-4 col-sm-6">
+                                    <div class="blog-post-content">
+                                        <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
+                                            <img src="assets/images/blog/8.jpg" alt=""/>
+                                        </a>
+                                        <div class="post-date">
+                                            <span class="post-date-number">17</span>
+                                            <span class="post-date-text">thursday</span>
+                                        </div>
+                                        <div class="blog-post-inner">
+                                            <h4 class="blog-post-title">
+                                                <a href="blog-singlepost-standard.php">Blog demo 8</a>
+                                            </h4>
+                                            <div class="blog-post-meta">
+                                                <span class="cat-links"><a href="#">the blog</a></span>
+                                                <span class="author vcard">By <a href="#">Author</a></span>
+                                            </div>
+                                            <p>Typi non habent claritatem insitamest usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="blog-post col-lg-4 col-md-4 col-sm-6">
+                                    <div class="blog-post-content">
+                                        <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
+                                            <img src="assets/images/blog/9.jpg" alt=""/>
+                                        </a>
+                                        <div class="post-date">
+                                            <span class="post-date-number">17</span>
+                                            <span class="post-date-text">thursday</span>
+                                        </div>
+                                        <div class="blog-post-inner">
+                                            <h4 class="blog-post-title">
+                                                <a href="blog-singlepost-standard.php">Blog demo 9</a>
                                             </h4>
                                             <div class="blog-post-meta">
                                                 <span class="cat-links"><a href="#">the blog</a></span>
@@ -172,7 +237,6 @@ include_once('templates/headers/header2.php');
                         </nav><!-- .pagination -->
 
                     </div><!-- .main-content -->
-                    <?php include_once('templates/sidebar.php'); ?>
 
                 </div><!-- .row -->
             </div><!-- .container -->

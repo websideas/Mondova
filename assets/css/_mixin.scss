@@ -435,3 +435,16 @@
   font-style: normal;
   font-weight: normal;
 }
+
+// Clearfix
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+

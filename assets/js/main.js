@@ -56,6 +56,22 @@
             $('#hamburger-icon').removeClass('active');
         }
 
+
+
+        $('.blog-posts-masonry').each(function(){
+            var $masonry = $(this);
+            $masonry.imagesLoaded(function() {
+                $masonry.find('.row').isotope({
+                    itemSelector: '.blog-post',
+                    percentPosition: true,
+                    masonry: {
+                        columnWidth: '.blog-post-sizer'
+                    }
+                })
+            });
+        });
+
+
     });
 
 
@@ -220,7 +236,7 @@
      --------------------------------------------- */
     function init_shortcodes() {
         // Tooltips (bootstrap plugin activated)
-        $('[data-toggle="tooltip"]').tooltip({container:"body", delay: { "show": 100, "hide": 100 }});
+        $('[data-toggle="tooltip"]').tooltip({container:"body", delay: { "show": 100, "hide": 50 }});
         $('.kt-tab-container').tabs();
         $('.kt-accordion').accordion({ 'heightStyle': 'content' });
 
@@ -388,12 +404,12 @@
     function init_ecommerce(){
 
         var current_min_price = 0,
-            current_max_price = 500;
+            current_max_price = 750;
 
         $( '.price_slider' ).slider({
             range: true,
             min: 0,
-            max: 700,
+            max: 1000,
             values: [ current_min_price, current_max_price ],
             create: function() {
                 $( '.price_label span.from' ).html( '$' + current_min_price );
