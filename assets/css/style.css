@@ -2929,15 +2929,14 @@ ul.style-list {
     .widget-container.widget_layered_nav ul:after {
       clear: both; }
     .widget-container.widget_layered_nav ul li {
-      float: left;
-      width: 50%;
-      list-style: none;
-      padding-bottom: 10px; }
+      padding-bottom: 10px;
+      list-style: none; }
       .widget-container.widget_layered_nav ul li a {
         padding-left: 20px;
         position: relative;
         color: #3b3e43; }
-        .widget-container.widget_layered_nav ul li a i {
+        .widget-container.widget_layered_nav ul li a:before {
+          content: '';
           width: 4px;
           height: 4px;
           -webkit-transform: rotate(45deg);
@@ -2952,8 +2951,80 @@ ul.style-list {
           top: 50%;
           margin-top: -2px;
           left: 0; }
-        .widget-container.widget_layered_nav ul li a:hover {
+    .widget-container.widget_layered_nav ul.colors li {
+      float: left;
+      width: 50%;
+      list-style: none;
+      padding-bottom: 10px;
+      padding-right: 6px; }
+      .widget-container.widget_layered_nav ul.colors li a {
+        padding-left: 20px;
+        position: relative;
+        color: #3b3e43; }
+        .widget-container.widget_layered_nav ul.colors li a i {
+          width: 4px;
+          height: 4px;
+          -webkit-transform: rotate(45deg);
+          -khtml-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+          display: block;
+          background: #3b3e43;
+          position: absolute;
+          top: 50%;
+          margin-top: -2px;
+          left: 0; }
+        .widget-container.widget_layered_nav ul.colors li a:before {
+          display: none; }
+        .widget-container.widget_layered_nav ul.colors li a:hover {
           text-decoration: underline; }
+    .widget-container.widget_layered_nav ul.sizes li {
+      float: left;
+      position: relative;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      padding: 0;
+      margin: 0 10px 10px 0; }
+      .widget-container.widget_layered_nav ul.sizes li:before, .widget-container.widget_layered_nav ul.sizes li:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        -webkit-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+        -khtml-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+        -moz-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+        -ms-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+        -o-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+        visibility: hidden; }
+      .widget-container.widget_layered_nav ul.sizes li:before {
+        left: 0;
+        top: 0;
+        border-left: 2px solid #d1c45a;
+        border-top: 2px solid #d1c45a; }
+      .widget-container.widget_layered_nav ul.sizes li:after {
+        bottom: 0;
+        right: 0;
+        border-right: 2px solid #d1c45a;
+        border-bottom: 2px solid #d1c45a; }
+      .widget-container.widget_layered_nav ul.sizes li:hover, .widget-container.widget_layered_nav ul.sizes li.current {
+        color: #3b3e43; }
+        .widget-container.widget_layered_nav ul.sizes li:hover:before, .widget-container.widget_layered_nav ul.sizes li:hover:after, .widget-container.widget_layered_nav ul.sizes li.current:before, .widget-container.widget_layered_nav ul.sizes li.current:after {
+          width: 10px;
+          height: 10px;
+          visibility: visible; }
+        .widget-container.widget_layered_nav ul.sizes li:hover a, .widget-container.widget_layered_nav ul.sizes li.current a {
+          color: #3b3e43; }
+      .widget-container.widget_layered_nav ul.sizes li a {
+        padding: 0 12px;
+        display: block;
+        color: #afb0b1; }
+        .widget-container.widget_layered_nav ul.sizes li a:before {
+          display: none; }
 
 /* ==============================
    12. Blog posts

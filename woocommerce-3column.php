@@ -13,7 +13,7 @@ include_once('templates/headers/header2.php');
         <div class="page-header">
             <div class="container">
                 <div class="page-header-content text-center">
-                    <h1>product grid 3 columnsr</h1>
+                    <h1>product grid 3 columns</h1>
                     <div class="page-header-divider"><i class="icon_images"></i></div>
                 </div>
             </div>

@@ -23,9 +23,9 @@
 
     <div class="widget-container widget_layered_nav">
         <h3 class="widget-title">size</h3>
-        <ul>
+        <ul class="sizes">
             <li><a href="#">M</a></li>
-            <li><a href="#">S</a></li>
+            <li class="current"><a href="#">S</a></li>
             <li><a href="#">L</a></li>
             <li><a href="#">XL</a></li>
             <li><a href="#">XXL</a></li>
@@ -35,7 +35,7 @@
 
     <div class="widget-container widget_layered_nav">
         <h3 class="widget-title">Color</h3>
-        <ul>
+        <ul class="colors">
             <li><a href="#"><i class="-filter-color" style="background-color:green;"></i>Green</a></li>
             <li><a href="#"><i class="-filter-color" style="background-color:blue;"></i>Blue</a></li>
             <li><a href="#"><i class="-filter-color" style="background-color:#3b3e43;"></i>Grey</a></li>
