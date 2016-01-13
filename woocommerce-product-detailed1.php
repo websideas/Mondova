@@ -49,20 +49,17 @@ include_once('templates/headers/header2.php');
                                 <li><a href="#">Products</a></li>
                                 <li class="active">Afteroom Chair</li>
                             </ol>
-                            <h1 class="product-title">Afteroom chair</h1>
-                            <div class="product-price-wrap clearfix">
-                                <div itemtype="http://schema.org/Offer" itemscope="" itemprop="offers">
-                                    <h3 class="price"><span class="amount">$340</span></h3>
-                                    <meta content="340" itemprop="price" />
-                                    <meta content="$" itemprop="priceCurrency" />
-                                    <link href="http://schema.org/InStock" itemprop="availability" />
+                            <h1 class="product-title">Super Skinny Suit Trousers In Brown</h1>
+                            <p class="price">
+                                <ins><span class="amount">$145,00 </span></ins>
+                                <del><span class="amount">$175,00 </span></del>
+                            </p>
+                            <div class="review-summary">
+                                <div class="star-rating" title="Rated 4 out of 5">
+                                    <span style="width:80%"><span class="rating">4</span> out of 5</span>
                                 </div>
-                                <div class="review-summary">
-                                    <div title="Rated 4 out of 5" class="star-rating">
-                                        <span style="width:80%"><span class="rating">4</span> out of 5</span>
-                                    </div>
-                                    <div class="reviews-text">3 Reviews</div>
-                                </div>
+                                <div class="woocommerce-review-count">3 Reviews</div>
+                                <a class="woocommerce-review-link" href="#">Add your review</a>
                             </div>
 
                             <form enctype="multipart/form-data" method="post" class="cart clearfix">
@@ -84,10 +81,8 @@ include_once('templates/headers/header2.php');
 
                             </form>
 
-                            <div class="product-short">
-                                <p>The first Menu chair ever is a three-legged one, and it’s the result of deconstructing an item, piece by piece, with the purpose of obtaining an original design.</p>
-                                <p><strong class="black">Features and materials</strong><br/>Black<br/>Wood</p>
-                                <p><strong class="black">Dimensions</strong><br/>48"x48"x36"</p>
+                            <div class="product-description">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper</p>
                             </div>
 
                             <div class="product_meta">
@@ -123,13 +118,9 @@ include_once('templates/headers/header2.php');
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div id="tab-description_tab" role="tabpanel" class="tab-pane active">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam felis neque, imperdiet consectetur nulla a, lacinia tempus arcu. Integer quis maximus dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas erat enim, vulputate id pulvinar molestie, blandit vitae quam. Donec nisi est, tempus eget dignissim vitae.</p>
-                                </div>
-                                <div class="col-md-6">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam felis neque, imperdiet consectetur nulla a, lacinia tempus arcu. Integer quis maximus dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas erat enim, vulputate id pulvinar molestie, blandit vitae quam. Donec nisi est, tempus eget dignissim vitae.</p>
-                                </div>
+                            <div class="product-description">
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.<br/>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing hidden in the middle of text.</p>
+                                <blockquote>6.1 oz. 100% preshrunk heavyweight cotton<br/>Shoulder-to-shoulder taping<br/>Double-needle sleeves and bottom hem</blockquote>
                             </div>
                         </div>
                         <div id="tab-additional_information" role="tabpanel" class="tab-pane">
@@ -272,19 +263,7 @@ include_once('templates/headers/header2.php');
             <div class="container">
 
                 <div class="kt-heading-wrapper">
-                    <div class="kt-heading-divider">
-                        <svg version="1.1" x="0px" y="0px"
-                             viewBox="349 274.7 1310.8 245.3" style="enable-background:new 349 274.7 1310.8 245.3;" xml:space="preserve">
-                        <path d="M1222,438.9c-2.7,0-5.4,0-8.1-2.7l-210.8-129.7L792.3,436.2c-5.4,2.7-10.8,2.7-13.5,0L573.3,306.5L365.2,436.2L349,411.9
-                            l216.2-132.4c5.4-2.7,10.8-2.7,13.5,0l208.1,127l210.8-129.7c5.4-2.7,10.8-2.7,13.5,0L1222,409.2l208.1-129.7
-                            c5.4-2.7,10.8-2.7,13.5,0l216.2,135.1l-13.5,21.7l-208.1-129.7l-208.1,129.7C1227.4,436.2,1224.7,438.9,1222,438.9L1222,438.9z"/>
-                            <path d="M1222,520c-2.7,0-5.4,0-8.1-2.7l-210.8-129.7L792.3,517.3c-5.4,2.7-10.8,2.7-13.5,0L573.3,387.6L362.5,517.3L349,493
-                            l216.2-132.4c5.4-2.7,10.8-2.7,13.5,0l205.4,129.7L995,360.5c5.4-2.7,10.8-2.7,13.5,0l210.8,129.7l208.1-129.7
-                            c5.4-2.7,10.8-2.7,13.5,0l216.2,135.1l-13.5,21.6l-205.4-129.7l-208.1,129.8C1227.4,517.3,1224.7,520,1222,520L1222,520z"/>
-                        </svg>
-                    </div>
-                    <h3 class="kt-heading-title">LASTEST PRODUCT</h3>
-                    <div class="kt-heading-subtitle"><a href="#">see all</a></div>
+                    <h3 class="kt-heading-title">Recently viewed</h3>
                 </div>
 
                 <div class="products">

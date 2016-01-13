@@ -24,7 +24,7 @@
     </div>
 
     <div class="widget-container widget_search">
-        <form action="http://localhost/aquila/" class="searchform clearfix" method="get">
+        <form action="#" class="searchform" method="get">
             <input type="text" name="s" value="" placeholder="Type and hit enter ...">
             <button class="submit"><i class="icon_search"></i></button>
         </form>

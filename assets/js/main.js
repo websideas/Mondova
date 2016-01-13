@@ -42,12 +42,14 @@
         /**==============================
          ***  Sticky header
          ===============================**/
+        /*
         if ($.fn.ktSticky) {
             $('.navbar-container.sticky-header').ktSticky({
                 contentSticky : '',
                 offset: 50
             });
         }
+        */
         /**==============================
          ***  Disable mobile menu in desktop
          ===============================**/
@@ -81,7 +83,7 @@
      --------------------------------------------- */
     init_SearchFull();
     init_SearchFull();
-    init_MainMenu();
+    //init_MainMenu();
     init_MobileMenu();
     init_rating();
     init_carousel();

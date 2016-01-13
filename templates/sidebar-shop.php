@@ -32,7 +32,6 @@
         </ul>
     </div>
 
-
     <div class="widget-container widget_layered_nav">
         <h3 class="widget-title">Color</h3>
         <ul class="colors">

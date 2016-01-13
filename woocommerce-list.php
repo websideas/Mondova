@@ -26,9 +26,45 @@ include_once('templates/headers/header2.php');
             <div class="container">
 
                 <div class="row">
-                    <div class="main-content col-md-12 col-sm-12 col-xs-12">
+                    <div class="main-content col-md-9 col-sm-9 col-xs-12 pull-right">
+
+                        <div class="products-tools">
+                            <ul class="grid-list">
+                                <li><a href="#" data-layout="grid" data-remove="lists" title="Grid view"><i class="icon_grid-2x2"></i></a></li>
+                                <li><a class="active" href="#" data-layout="lists" data-remove="grid" title="List view"><i class="icon_menu"></i></a></li>
+                            </ul>
+
+
+                            <form class="woocommerce-ordering" method="get" action="#">
+                                <label>Sort by:</label>
+                                <div class="select-icon">
+                                    <select name="shortby">
+                                        <option value="selling">Best selling</option>
+                                        <option value="">Default</option>
+                                        <option value="popularity">Popularity</option>
+                                        <option value="date">Newness</option>
+                                    </select>
+                                </div>
+                            </form>
+
+                            <form class="woocommerce-per-page" method="get">
+                                <label>View: </label>
+                                <div class="select-icon">
+                                    <select name="showby">
+                                        <option value="15">15</option>
+                                        <option value="30">30</option>
+                                        <option value="45">45</option>
+                                    </select>
+                                </div>
+                            </form>
+
+                        </div>
+
+
                         <div class="row multi-columns-row">
-                            <div class="products">
+                            <div class="products lists products-effect-2">
+
+
                                 <div class="product col-lg-4 col-md-4 col-sm-6 col-xs-6">
                                     <div class="product-content">
                                         <span class="posted_in"><a href="#">Dress</a> / <a href="#">T-Shirt</a></span>
@@ -60,11 +96,9 @@ include_once('templates/headers/header2.php');
                                         </div>
                                         <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus mi luctus fringilla pretium. Duis est justo, pellentesque vitae imperdiet pharetra, varius ut mauris. Cras mauris magna, </div>
                                         <div class="product-tool-list">
-                                            <div class="product-over-tool">
-                                                <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
-                                                <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
-                                                <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
-                                            </div>
+                                            <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
+                                            <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
+                                            <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
                                         </div>
                                     </div><!-- .product-attribute -->
                                 </div><!-- .product -->
@@ -100,11 +134,9 @@ include_once('templates/headers/header2.php');
                                         </div>
                                         <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus mi luctus fringilla pretium. Duis est justo, pellentesque vitae imperdiet pharetra, varius ut mauris. Cras mauris magna, </div>
                                         <div class="product-tool-list">
-                                            <div class="product-over-tool">
-                                                <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
-                                                <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
-                                                <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
-                                            </div>
+                                            <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
+                                            <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
+                                            <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
                                         </div>
                                     </div><!-- .product-attribute -->
                                 </div><!-- .product -->
@@ -140,11 +172,9 @@ include_once('templates/headers/header2.php');
                                         </div>
                                         <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus mi luctus fringilla pretium. Duis est justo, pellentesque vitae imperdiet pharetra, varius ut mauris. Cras mauris magna, </div>
                                         <div class="product-tool-list">
-                                            <div class="product-over-tool">
-                                                <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
-                                                <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
-                                                <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
-                                            </div>
+                                            <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
+                                            <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
+                                            <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
                                         </div>
                                     </div><!-- .product-attribute -->
                                 </div><!-- .product -->
@@ -180,11 +210,9 @@ include_once('templates/headers/header2.php');
                                         </div>
                                         <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus mi luctus fringilla pretium. Duis est justo, pellentesque vitae imperdiet pharetra, varius ut mauris. Cras mauris magna, </div>
                                         <div class="product-tool-list">
-                                            <div class="product-over-tool">
-                                                <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
-                                                <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
-                                                <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
-                                            </div>
+                                            <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
+                                            <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
+                                            <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
                                         </div>
                                     </div><!-- .product-attribute -->
                                 </div><!-- .product -->
@@ -220,11 +248,9 @@ include_once('templates/headers/header2.php');
                                         </div>
                                         <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus mi luctus fringilla pretium. Duis est justo, pellentesque vitae imperdiet pharetra, varius ut mauris. Cras mauris magna, </div>
                                         <div class="product-tool-list">
-                                            <div class="product-over-tool">
-                                                <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
-                                                <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
-                                                <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
-                                            </div>
+                                            <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
+                                            <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
+                                            <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
                                         </div>
                                     </div><!-- .product-attribute -->
                                 </div><!-- .product -->
@@ -260,11 +286,9 @@ include_once('templates/headers/header2.php');
                                         </div>
                                         <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus mi luctus fringilla pretium. Duis est justo, pellentesque vitae imperdiet pharetra, varius ut mauris. Cras mauris magna, </div>
                                         <div class="product-tool-list">
-                                            <div class="product-over-tool">
-                                                <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
-                                                <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
-                                                <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
-                                            </div>
+                                            <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
+                                            <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
+                                            <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
                                         </div>
                                     </div><!-- .product-attribute -->
                                 </div><!-- .product -->
@@ -300,11 +324,9 @@ include_once('templates/headers/header2.php');
                                         </div>
                                         <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus mi luctus fringilla pretium. Duis est justo, pellentesque vitae imperdiet pharetra, varius ut mauris. Cras mauris magna, </div>
                                         <div class="product-tool-list">
-                                            <div class="product-over-tool">
-                                                <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
-                                                <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
-                                                <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
-                                            </div>
+                                            <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
+                                            <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
+                                            <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
                                         </div>
                                     </div><!-- .product-attribute -->
                                 </div><!-- .product -->
@@ -340,11 +362,9 @@ include_once('templates/headers/header2.php');
                                         </div>
                                         <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus mi luctus fringilla pretium. Duis est justo, pellentesque vitae imperdiet pharetra, varius ut mauris. Cras mauris magna, </div>
                                         <div class="product-tool-list">
-                                            <div class="product-over-tool">
-                                                <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
-                                                <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
-                                                <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
-                                            </div>
+                                            <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
+                                            <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
+                                            <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
                                         </div>
                                     </div><!-- .product-attribute -->
                                 </div><!-- .product -->
@@ -380,11 +400,9 @@ include_once('templates/headers/header2.php');
                                         </div>
                                         <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus mi luctus fringilla pretium. Duis est justo, pellentesque vitae imperdiet pharetra, varius ut mauris. Cras mauris magna, </div>
                                         <div class="product-tool-list">
-                                            <div class="product-over-tool">
-                                                <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
-                                                <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
-                                                <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
-                                            </div>
+                                            <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
+                                            <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
+                                            <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
                                         </div>
                                     </div><!-- .product-attribute -->
                                 </div><!-- .product -->
@@ -420,11 +438,9 @@ include_once('templates/headers/header2.php');
                                         </div>
                                         <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus mi luctus fringilla pretium. Duis est justo, pellentesque vitae imperdiet pharetra, varius ut mauris. Cras mauris magna, </div>
                                         <div class="product-tool-list">
-                                            <div class="product-over-tool">
-                                                <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
-                                                <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
-                                                <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
-                                            </div>
+                                            <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
+                                            <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
+                                            <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
                                         </div>
                                     </div><!-- .product-attribute -->
                                 </div><!-- .product -->
@@ -460,11 +476,9 @@ include_once('templates/headers/header2.php');
                                         </div>
                                         <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus mi luctus fringilla pretium. Duis est justo, pellentesque vitae imperdiet pharetra, varius ut mauris. Cras mauris magna, </div>
                                         <div class="product-tool-list">
-                                            <div class="product-over-tool">
-                                                <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
-                                                <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
-                                                <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
-                                            </div>
+                                            <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
+                                            <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
+                                            <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
                                         </div>
                                     </div><!-- .product-attribute -->
                                 </div><!-- .product -->
@@ -500,37 +514,45 @@ include_once('templates/headers/header2.php');
                                         </div>
                                         <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus mi luctus fringilla pretium. Duis est justo, pellentesque vitae imperdiet pharetra, varius ut mauris. Cras mauris magna, </div>
                                         <div class="product-tool-list">
-                                            <div class="product-over-tool">
-                                                <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
-                                                <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
-                                                <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
-                                            </div>
+                                            <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
+                                            <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
+                                            <a href="#" class="add_to_compare" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_tags_alt"></i></a>
                                         </div>
                                     </div><!-- .product-attribute -->
                                 </div><!-- .product -->
 
                             </div>
                         </div>
-                        <nav class="navigation pagination">
-                            <div class="nav-links">
-                                <a href="#" class="prev page-numbers">
-                                    <span class="screen-reader-text">Prev</span>
-                                    <i class="icon-Left-3"></i>
-                                </a>
-                                <span class="page-numbers current">1</span>
-                                <a href="#" class="page-numbers">2</a>
-                                <span class="page-numbers dots">…</span>
-                                <a href="#" class="page-numbers">4</a>
-                                <a href="#" class="next page-numbers">
-                                    <span class="screen-reader-text">Next</span>
-                                    <i class="icon-Right-3"></i>
-                                </a>
-                            </div>
-                        </nav>
+
+
+
+                        <div class="woocommerce-end-shop">
+
+                            <div class="woocommerce-result-count">View 36 per page</div>
+
+                            <nav class="navigation pagination">
+                                <div class="nav-links">
+                                    <a href="#" class="prev page-numbers">Prev</a>
+                                    <span class="page-numbers current">1</span>
+                                    <a href="#" class="page-numbers">2</a>
+                                    <span class="page-numbers dots">…</span>
+                                    <a href="#" class="page-numbers">4</a>
+                                    <a href="#" class="next page-numbers">Next</a>
+                                </div>
+                            </nav>
+
+                        </div>
+
+
+
                     </div><!-- .main-content -->
+                    <?php include_once('templates/sidebar-shop.php'); ?>
                 </div><!-- .row -->
             </div><!-- .container -->
+
         </div><!-- .page-section -->
+
+
     </div><!-- #main -->
 
 <?php

@@ -416,6 +416,7 @@ include_once('templates/slideshows/slideshow1.php');
 
 </div><!-- #main -->
 
+<img src="previews/01-homepage-V1.jpg" class="preview-image" style="top: 0;display: none" />
 
 <?php
 
