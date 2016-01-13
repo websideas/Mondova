@@ -8,19 +8,11 @@ include_once('templates/headers/header2.php');
 
 ?>
 
-    <div class="page-section bg-gray small-section">
+    <div class="page-section page-header-bg page-header-single small-section">
         <div class="page-header">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <ol class="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li class="active">Blog</li>
-                        </ol>
-                    </div>
-                    <div class="col-md-8 text-right">
-                        <h1>The Best Way to Clean Your Pillows</h1>
-                    </div>
+                <div class="page-header-content text-center">
+                    <div class="page-header"><i class="icon_pens"></i></div>
                 </div>
             </div>
         </div>
@@ -31,13 +23,13 @@ include_once('templates/headers/header2.php');
             <div class="container">
 
                 <div class="row">
-                    <div class="col-sm-9">
+                    <div class="col-sm-9 col-md-9 col-xs-12">
 
                         <article>
                             <h3 class="hidden">The Best Way to Clean Your Pillows</h3>
                             <div class="entry-thumb">
                                 <figure>
-                                    <img src="assets/images/blog/blog-detail.jpg" class="img-responsive" alt="Single post"/>
+                                    <img src="assets/images/blog/single-thumb.jpg" class="img-responsive" alt="Single post"/>
                                 </figure>
                             </div><!-- .entry-thumb -->
 
@@ -279,7 +271,7 @@ include_once('templates/headers/header2.php');
                     </div>
 
 
-                    <div class="col-sm-3 side-bar side-bar-right">
+                    <div class="col-sm-3 side-bar side-bar-left col-md-3 col-xs-12">
                         <div class="widget-container widget_categories">
                             <h3 class="widget-title">Categories</h3>
                             <ul>

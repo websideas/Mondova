@@ -3285,6 +3285,11 @@ ul.style-list {
 /*
  * 13.1 Single Post Common styles
  */
+.page-section.page-header-bg {
+  background-image: url("../images/blog/single-thumb.jpg"); }
+  .page-section.page-header-bg:before {
+    display: none; }
+
 .single-post .entry-thumb {
   margin-bottom: 60px; }
 .single-post .entry-meta-data {
