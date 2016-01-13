@@ -3436,9 +3436,15 @@ ul.style-list{
 
 .page-section{
   &.page-header-bg{
-    background-image:url("../images/blog/single-thumb.jpg"); 
-    &:before{
-      display: none;
+    &.page-header-single{
+      background-image:url("../images/blog/single-thumb.jpg"); 
+      padding: 190px 0 295px;
+      &:before{
+        display: none;
+      }
+      i{
+        font-size: 70px;
+      }
     }
   }
 }
