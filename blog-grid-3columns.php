@@ -22,7 +22,7 @@ include_once('templates/headers/header2.php');
             <div class="container">
                 <div class="row">
                     <div class="main-content col-md-12 col-sm-12 col-xs-12">
-                        <div class="blog-posts">
+                        <div class="blog-posts blog-posts-grid">
                             <div class="row multi-columns-row">
                                 <div class="blog-post col-lg-4 col-md-4 col-sm-6">
                                     <div class="blog-post-content">
