@@ -2959,6 +2959,21 @@ ul.style-list{
 /*
  * 13.1 Single Post Common styles
  */
+
+.page-section{
+  &.page-header-bg{
+    &.page-header-single{
+      background-image:url("../images/blog/single-thumb.jpg"); 
+      padding: 190px 0 295px;
+      &:before{
+        display: none;
+      }
+      i{
+        font-size: 70px;
+      }
+    }
+  }
+}
 .single-post{
   .entry-thumb{
     margin-bottom: 60px;

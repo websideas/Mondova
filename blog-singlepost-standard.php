@@ -8,38 +8,25 @@ include_once('templates/headers/header2.php');
 
 ?>
 
-    <div class="page-section bg-gray small-section">
+    <div class="page-section page-header-bg page-header-single small-section">
         <div class="page-header">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <ol class="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li class="active">Blog</li>
-                        </ol>
-                    </div>
-                    <div class="col-md-8 text-right">
-                        <h1>The Best Way to Clean Your Pillows</h1>
-                    </div>
+                <div class="page-header-content text-center">
+                    <div class="page-header"><i class="icon_pens"></i></div>
                 </div>
             </div>
         </div>
     </div>
 
     <div id="main" class="single-post">
-        <div class="page-section">
+        <div class="page-section remove-pad-top">
             <div class="container">
 
                 <div class="row">
-                    <div class="col-sm-9">
+                    <div class="col-sm-9 col-md-9 col-xs-12 pull-right">
 
                         <article>
-                            <h3 class="hidden">The Best Way to Clean Your Pillows</h3>
-                            <div class="entry-thumb">
-                                <figure>
-                                    <img src="assets/images/blog/blog-detail.jpg" class="img-responsive" alt="Single post"/>
-                                </figure>
-                            </div><!-- .entry-thumb -->
+                            <h2 class="entry-title">Duis autem vel eum iriure dolor in hendrerit in vulputate</h2>
 
                             <div class="entry-meta-data">
                                 <span class="author vcard">By <a href="#" class="url">Collin Alexander</a></span>
@@ -64,7 +51,7 @@ include_once('templates/headers/header2.php');
                             </div><!-- .entry-content-outer -->
 
                         </article>
-
+<?php /*
                         <div class="related-articles">
                             <h4 class="related-title single-bottom-title">Related Articles</h4>
                             <div class="blog-posts owl-carousel-kt">
@@ -139,147 +126,11 @@ include_once('templates/headers/header2.php');
                                     <p class="author-bio">Vivamus imperdiet ex sed lobortis luctus. Aenean posuere nulla in turpis porttitor laoreet. Quisque finibus aliquet purus. Ut et mi eu ante interdum .</p><!-- .author-bio -->
                                 </div><!-- .author-description -->
                             </div><!-- .author-info -->
-                        </div>
-
-                        <div class="comments-area" id="comments">
-                            <h4 class="comments-title single-bottom-title">3 comments</h4>
-                            <ol class="comment-list">
-                                <li class="comment">
-                                    <article class="comment-item">
-                                        <div class="comment-avatar">
-                                            <img src="http://placehold.it/70x70/" alt="">
-                                        </div>
-
-                                        <div class="comment-body">
-
-                                            <footer class="comment-meta">
-                                                <h5 class="comment-author vcard">Kenny Minh</h5><!-- .comment-author -->
-                                                <div class="comment-metadata">
-                                                    <time datetime="2015-08-07T14:58:33+00:00">5 months ago</time>
-                                                </div><!-- .comment-metadata -->
-                                            </footer><!-- .comment-meta -->
-
-                                            <div class="comment-content">
-                                                <p>Vivamus imperdiet ex sed lobortis luctus. Aenean posuere nulla in turpis porttitor laoreet. Quisque finibus aliquet purus.</p>
-                                            </div><!-- .comment-content -->
-
-                                            <div class="reply">
-                                                <a href="#" class="comment-reply-link">Reply</a>
-                                            </div>
-
-                                        </div><!-- .comment-body -->
-                                    </article><!-- .comment-item -->
-
-                                    <ol class="children">
-                                        <li class="comment">
-                                            <article class="comment-item">
-                                                <div class="comment-avatar">
-                                                    <img src="http://placehold.it/70x70/" alt="">
-                                                </div>
-
-                                                <div class="comment-body">
-
-                                                    <footer class="comment-meta">
-                                                        <h5 class="comment-author vcard">Kenny Minh</h5><!-- .comment-author -->
-                                                        <div class="comment-metadata">
-                                                            <time datetime="2015-08-07T14:58:33+00:00">5 months ago</time>
-                                                        </div><!-- .comment-metadata -->
-                                                    </footer><!-- .comment-meta -->
-
-                                                    <div class="comment-content">
-                                                        <p>Maecenas euismod faucibus dolor a finibus.</p>
-                                                    </div><!-- .comment-content -->
-
-                                                    <div class="reply">
-                                                        <a href="#" class="comment-reply-link">Reply</a>
-                                                    </div>
-
-                                                </div><!-- .comment-body -->
-                                            </article><!-- .comment-item -->
-                                        </li>
-                                        <li class="comment">
-                                            <article class="comment-item">
-                                                <div class="comment-avatar">
-                                                    <img src="http://placehold.it/70x70/" alt="">
-                                                </div>
-
-                                                <div class="comment-body">
-
-                                                    <footer class="comment-meta">
-                                                        <h5 class="comment-author vcard">Kenny Minh</h5><!-- .comment-author -->
-                                                        <div class="comment-metadata">
-                                                            <time datetime="2015-08-07T14:58:33+00:00">5 months ago</time>
-                                                        </div><!-- .comment-metadata -->
-                                                    </footer><!-- .comment-meta -->
-
-                                                    <div class="comment-content">
-                                                        <p>Maecenas euismod faucibus dolor a finibus.</p>
-                                                    </div><!-- .comment-content -->
-
-                                                    <div class="reply">
-                                                        <a href="#" class="comment-reply-link">Reply</a>
-                                                    </div>
-
-                                                </div><!-- .comment-body -->
-                                            </article><!-- .comment-item -->
-                                        </li>
-                                    </ol>
-
-                                </li>
-
-                                <li class="comment">
-                                    <article class="comment-item">
-                                        <div class="comment-avatar">
-                                            <img src="http://placehold.it/70x70/" alt="">
-                                        </div>
-
-                                        <div class="comment-body">
-
-                                            <footer class="comment-meta">
-                                                <h5 class="comment-author vcard">Kenny Minh</h5><!-- .comment-author -->
-                                                <div class="comment-metadata">
-                                                    <time datetime="2015-08-07T14:58:33+00:00">5 months ago</time>
-                                                </div><!-- .comment-metadata -->
-                                            </footer><!-- .comment-meta -->
-
-                                            <div class="comment-content">
-                                                <p>Maecenas euismod faucibus dolor a finibus.</p>
-                                            </div><!-- .comment-content -->
-
-                                            <div class="reply">
-                                                <a href="#" class="comment-reply-link">Reply</a>
-                                            </div>
-
-                                        </div><!-- .comment-body -->
-                                    </article><!-- .comment-item -->
-                                </li>
-
-                            </ol><!-- .comment-list -->
-
-
-                            <div class="comment-respond">
-                                <h4 class="comment-reply-title single-bottom-title">Leave a Reply</h4>
-                                <form class="comment-form" id="commentform" method="post" action="#">
-                                    <div class="row">
-                                        <p class="comment-form-author col-sm-4"><input type="text" placeholder="Your Name" aria-required="true" size="30" value="" name="author" id="author"></p>
-                                        <p class="comment-form-email col-sm-4"><input type="text" placeholder="Your Email" aria-required="true" size="30" value="" name="email" id="email"></p>
-                                        <p class="comment-form-url col-sm-4"><input type="text" placeholder="Your Website" size="30" value="" name="url" id="url"></p>
-                                    </div>
-                                    <p class="comment-form-title"><input type="text" placeholder="Title" size="30" value="" name="url" id="title"></p>
-                                    <p class="comment-form-comment"><textarea placeholder="Your Review" name="comment"></textarea></p>
-                                    <p class="form-submit"><input type="submit" value="Submit" class="btn btn-dark-b btn-lg" name="submit"></p>
-
-
-                                </form><!-- .comment-form -->
-
-                            </div><!-- .comment-respond -->
-                        </div><!-- .comments-area -->
-
-
+                        </div> */ ?>
                     </div>
 
 
-                    <div class="col-sm-3 side-bar side-bar-right">
+                    <div class="col-sm-3 side-bar side-bar-left col-md-3 col-xs-12">
                         <div class="widget-container widget_categories">
                             <h3 class="widget-title">Categories</h3>
                             <ul>
@@ -320,7 +171,148 @@ include_once('templates/headers/header2.php');
             </div>
         </div>
 
+        <div class="page-section">
+            
+            <div class="comments-area" id="comments">
+                <div class="comment-title">
+                    <h4 class="comments-title single-bottom-title">There are 205 comments</h4>
+                    <div data-href=".comment-respond">leave a comment</div>
+                </div>
 
+                <h4 class="comments-title single-bottom-title">3 comments</h4>
+                <ol class="comment-list">
+                    <li class="comment">
+                        <article class="comment-item">
+                            <div class="comment-avatar">
+                                <img src="http://placehold.it/70x70/" alt="">
+                            </div>
+
+                            <div class="comment-body">
+
+                                <footer class="comment-meta">
+                                    <h5 class="comment-author vcard">Kenny Minh</h5><!-- .comment-author -->
+                                    <div class="comment-metadata">
+                                        <time datetime="2015-08-07T14:58:33+00:00">5 months ago</time>
+                                    </div><!-- .comment-metadata -->
+                                </footer><!-- .comment-meta -->
+
+                                <div class="comment-content">
+                                    <p>Vivamus imperdiet ex sed lobortis luctus. Aenean posuere nulla in turpis porttitor laoreet. Quisque finibus aliquet purus.</p>
+                                </div><!-- .comment-content -->
+
+                                <div class="reply">
+                                    <a href="#" class="comment-reply-link">Reply</a>
+                                </div>
+
+                            </div><!-- .comment-body -->
+                        </article><!-- .comment-item -->
+
+                        <ol class="children">
+                            <li class="comment">
+                                <article class="comment-item">
+                                    <div class="comment-avatar">
+                                        <img src="http://placehold.it/70x70/" alt="">
+                                    </div>
+
+                                    <div class="comment-body">
+
+                                        <footer class="comment-meta">
+                                            <h5 class="comment-author vcard">Kenny Minh</h5><!-- .comment-author -->
+                                            <div class="comment-metadata">
+                                                <time datetime="2015-08-07T14:58:33+00:00">5 months ago</time>
+                                            </div><!-- .comment-metadata -->
+                                        </footer><!-- .comment-meta -->
+
+                                        <div class="comment-content">
+                                            <p>Maecenas euismod faucibus dolor a finibus.</p>
+                                        </div><!-- .comment-content -->
+
+                                        <div class="reply">
+                                            <a href="#" class="comment-reply-link">Reply</a>
+                                        </div>
+
+                                    </div><!-- .comment-body -->
+                                </article><!-- .comment-item -->
+                            </li>
+                            <li class="comment">
+                                <article class="comment-item">
+                                    <div class="comment-avatar">
+                                        <img src="http://placehold.it/70x70/" alt="">
+                                    </div>
+
+                                    <div class="comment-body">
+
+                                        <footer class="comment-meta">
+                                            <h5 class="comment-author vcard">Kenny Minh</h5><!-- .comment-author -->
+                                            <div class="comment-metadata">
+                                                <time datetime="2015-08-07T14:58:33+00:00">5 months ago</time>
+                                            </div><!-- .comment-metadata -->
+                                        </footer><!-- .comment-meta -->
+
+                                        <div class="comment-content">
+                                            <p>Maecenas euismod faucibus dolor a finibus.</p>
+                                        </div><!-- .comment-content -->
+
+                                        <div class="reply">
+                                            <a href="#" class="comment-reply-link">Reply</a>
+                                        </div>
+
+                                    </div><!-- .comment-body -->
+                                </article><!-- .comment-item -->
+                            </li>
+                        </ol>
+
+                    </li>
+
+                    <li class="comment">
+                        <article class="comment-item">
+                            <div class="comment-avatar">
+                                <img src="http://placehold.it/70x70/" alt="">
+                            </div>
+
+                            <div class="comment-body">
+
+                                <footer class="comment-meta">
+                                    <h5 class="comment-author vcard">Kenny Minh</h5><!-- .comment-author -->
+                                    <div class="comment-metadata">
+                                        <time datetime="2015-08-07T14:58:33+00:00">5 months ago</time>
+                                    </div><!-- .comment-metadata -->
+                                </footer><!-- .comment-meta -->
+
+                                <div class="comment-content">
+                                    <p>Maecenas euismod faucibus dolor a finibus.</p>
+                                </div><!-- .comment-content -->
+
+                                <div class="reply">
+                                    <a href="#" class="comment-reply-link">Reply</a>
+                                </div>
+
+                            </div><!-- .comment-body -->
+                        </article><!-- .comment-item -->
+                    </li>
+
+                </ol><!-- .comment-list -->
+
+
+                <div class="comment-respond">
+                    <h4 class="comment-reply-title single-bottom-title">Leave a Reply</h4>
+                    <form class="comment-form" id="commentform" method="post" action="#">
+                        <div class="row">
+                            <p class="comment-form-author col-sm-4"><input type="text" placeholder="Your Name" aria-required="true" size="30" value="" name="author" id="author"></p>
+                            <p class="comment-form-email col-sm-4"><input type="text" placeholder="Your Email" aria-required="true" size="30" value="" name="email" id="email"></p>
+                            <p class="comment-form-url col-sm-4"><input type="text" placeholder="Your Website" size="30" value="" name="url" id="url"></p>
+                        </div>
+                        <p class="comment-form-title"><input type="text" placeholder="Title" size="30" value="" name="url" id="title"></p>
+                        <p class="comment-form-comment"><textarea placeholder="Your Review" name="comment"></textarea></p>
+                        <p class="form-submit"><input type="submit" value="Submit" class="btn btn-dark-b btn-lg" name="submit"></p>
+
+
+                    </form><!-- .comment-form -->
+
+                </div><!-- .comment-respond -->
+            </div><!-- .comments-area -->
+
+        </div>
 
     </div><!-- #main -->
 

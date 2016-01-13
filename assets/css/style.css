@@ -453,7 +453,7 @@ blockquote {
   blockquote:before {
     background: #d1c45a;
     color: #ffffff;
-    content: "“";
+    content: "ΓÇ£";
     font-size: 36px;
     height: 32px;
     left: 45px;
@@ -468,7 +468,7 @@ blockquote {
     blockquote .blockquote-reverse:before {
       left: auto;
       right: 45px;
-      content: "”"; }
+      content: "ΓÇ¥"; }
   blockquote p {
     margin-bottom: 15px; }
   blockquote *:last-child {
@@ -2882,6 +2882,14 @@ ul.style-list {
 /*
  * 13.1 Single Post Common styles
  */
+.page-section.page-header-bg.page-header-single {
+  background-image: url("../images/blog/single-thumb.jpg");
+  padding: 190px 0 295px; }
+  .page-section.page-header-bg.page-header-single:before {
+    display: none; }
+  .page-section.page-header-bg.page-header-single i {
+    font-size: 70px; }
+
 .single-post .entry-thumb {
   margin-bottom: 60px; }
 .single-post .entry-meta-data {
