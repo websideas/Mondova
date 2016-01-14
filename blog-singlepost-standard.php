@@ -4,7 +4,7 @@ $shadow = ' ';
 
 
 include_once('templates/headers/head.php');
-include_once('templates/headers/header2.php');
+include_once('templates/headers/header1.php');
 
 ?>
 
@@ -23,145 +23,71 @@ include_once('templates/headers/header2.php');
             <div class="container">
 
                 <div class="row">
-                    <div class="col-sm-9 col-md-9 col-xs-12 pull-right">
+                    <div class="col-sm-8 col-md-8 col-xs-12 pull-right">
 
-                        <article>
+                        <article class="single-post-content">
                             <h2 class="entry-title">Duis autem vel eum iriure dolor in hendrerit in vulputate</h2>
 
                             <div class="entry-meta-data">
-                                <span class="author vcard">By <a href="#" class="url">Collin Alexander</a></span>
-                                <span class="posted-on"><span class="screen-reader-text">Posted on </span><time datetime="2015-08-20T15:27:01+00:00" class="entry-date published">June 14, 2015</time></span>
-                                <span class="cat-links"><span class="screen-reader-text">Categories </span><a href="#"> Graphic</a>, <a href="#">Design</a></span>
-                                <span class="comments-link"><a href="#comments"> 3 Comments </a></span>
+                                <span class="cat-links"><span class="screen-reader-text">Categories </span><a href="#"> lifestyle</a></span>
+                                <span class="author vcard">By <a href="#" class="url">Author</a></span>
+                                <span class="posted-on"><span class="screen-reader-text">Posted on </span><time datetime="2015-10-12T15:27:01+00:00" class="entry-date published">10.12.2015</time></span>
                             </div><!-- .entry-meta-data -->
                             <div class="entry-content-outer">
                                 <div class="entry-content clearfix">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at magna ex. Morbi elementum ut velit in malesuada. Donec a diam neque. Nulla malesuada in ante vel ultrices. Nulla consequat accumsan augue, nec sagittis ex rutrum sit amet. Suspendisse justo arcu, aliquet quis sollicitudin vitae, consequat id sem. Proin viverra facilisis magna, vel maximus purus rhoncus ut. Phasellus malesuada at lacus egestas faucibus. Donec porttitor metus at dui auctor, eget blandit velit egestas. Praesent id justo vitae sapien laoreet aliquam eu id turpis. Phasellus pellentesque ipsum vel ex convallis, laoreet posuere lorem pellentesque. Donec urna leo, molestie non risus et, tincidunt porta justo. Duis non metus quis nibh rhoncus rhoncus in in dui. Vestibulum velit ex, finibus a est id, dapibus finibus felis. Aliquam nec ante nec velit sagittis viverra vitae ut diam. Maecenas vel ultricies metus.</p>
-                                    <p>Proin a posuere est, in consequat eros. Nam varius, nibh sed malesuada eleifend, quam lectus volutpat magna, eu posuere metus nisl eu diam. Ut viverra lacus at eros interdum, et varius sapien lobortis. Etiam nec sem odio. Ut sit amet lorem id lectus mattis suscipit. Curabitur consectetur viverra rhoncus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis sed massa vitae mauris vulputate rhoncus. Nam non convallis risus, quis finibus orci. Aenean maximus velit ac leo gravida, sit amet congue erat dignissim.</p>
-                                    <p>Quisque ullamcorper justo ut pulvinar dictum. Etiam lacinia lacus dolor, vel posuere dolor tempus sit amet. Pellentesque at massa volutpat, rutrum est maximus, consectetur sapien. Donec dignissim gravida sem at venenatis. Morbi viverra auctor libero quis elementum.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
+                                    <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum</p>
+                                    <p>Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum </p>
+                                    <p><img src="assets/images/blog/single-content.jpg" alt="" class="img-responsive" /></p>
+                                    <h4 class="text-nomal">Duis autem vel eum iriure dolor in hendrerit in vulputate</h4>
+                                    <p>Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+                                    <blockquote><p>Duis autem vel eum iriure dolor in hendrerit velit esse molestie
+                                    vel illum dolore eu feugiat nulla facilisis at vero. Nam liber tempor
+                                    nobis eleifend option congue nihil imperdiet doming</p></blockquote>    
                                 </div>
-                                <div class="share-it">
-                                    <span class="screen-reader-text">Share this</span>
-                                    <ul class="social_icons">
-                                        <li><a href="#"><i class="fa fa-facebook"></i> <span>Facebook</span></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i> <span>Twitter</span></a></li>
-                                    <li><a href="#"><i class="fa fa-pinterest"></i> <span>Pinterest</span></a></li>
-                                    </ul>
-                                </div><!-- .share-it -->
                             </div><!-- .entry-content-outer -->
 
                         </article>
-<?php /*
-                        <div class="related-articles">
-                            <h4 class="related-title single-bottom-title">Related Articles</h4>
-                            <div class="blog-posts owl-carousel-kt">
-                                <div class="owl-carousel kt-owl-carousel"  data-options='{"pagination": false, "navigation": false, "desktop": 3, "desktopsmall": 2, "tablet" : 2, "mobile" : 1}'>
-                                    <div class="blog-post">
-                                        <a href="blog-singlepost-standard.html" class="blog-post-thumbnail">
-                                            <img src="assets/images/blog/blog-10.jpg" alt=""/>
-                                        </a>
-                                        <h4 class="blog-post-title">
-                                            <a href="blog-singlepost-standard.html"> The Best Way to Clean Your...</a>
-                                        </h4>
-                                        <div class="blog-post-meta">
-                                            <span class="author vcard">By: <a href="#">Steven Bradley</a></span>
-                                            <span class="comments-link"><a href="#">3 Comments</a></span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio ...</p>
-                                    </div>
-
-                                    <div class="blog-post">
-                                        <a href="blog-singlepost-standard.html" class="blog-post-thumbnail">
-                                            <img src="assets/images/blog/blog-11.jpg" alt=""/>
-                                        </a>
-                                        <h4 class="blog-post-title">
-                                            <a href="blog-singlepost-standard.html">The Best Way to Clean Your...</a>
-                                        </h4>
-                                        <div class="blog-post-meta">
-                                            <span class="author vcard">By: <a href="#">Steven Bradley</a></span>
-                                            <span class="comments-link"><a href="#">3 Comments</a></span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio ...</p>
-                                    </div>
-
-                                    <div class="blog-post">
-                                        <a href="blog-singlepost-standard.html" class="blog-post-thumbnail">
-                                            <img src="assets/images/blog/blog-12.jpg" alt=""/>
-                                        </a>
-                                        <h4 class="blog-post-title">
-                                            <a href="blog-singlepost-standard.html">The Best Way to Clean Your...</a>
-                                        </h4>
-                                        <div class="blog-post-meta">
-                                            <span class="author vcard">By: <a href="#">Steven Bradley</a></span>
-                                            <span class="comments-link"><a href="#">3 Comments</a></span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio ...</p>
-                                    </div>
-
-                                    <div class="blog-post">
-                                        <a href="blog-singlepost-standard.html" class="blog-post-thumbnail">
-                                            <img src="assets/images/blog/blog-01.jpg" alt=""/>
-                                        </a>
-                                        <h4 class="blog-post-title">
-                                            <a href="blog-singlepost-standard.html"> The Best Way to Clean Your...</a>
-                                        </h4>
-                                        <div class="blog-post-meta">
-                                            <span class="author vcard">By: <a href="#">Steven Bradley</a></span>
-                                            <span class="comments-link"><a href="#">3 Comments</a></span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio ...</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="author-area">
-                            <h4 class="author-title single-bottom-title">About the Author</h4>
-                            <div class="author-info">
-                                <div class="author-avatar">
-                                    <img src="http://placehold.it/165x165/" alt="">
-                                </div><!-- .author-avatar -->
-
-                                <div class="author-description">
-                                    <h3 class="author-title"><a href="#">Steven Bradley</a></h3>
-                                    <p class="author-bio">Vivamus imperdiet ex sed lobortis luctus. Aenean posuere nulla in turpis porttitor laoreet. Quisque finibus aliquet purus. Ut et mi eu ante interdum .</p><!-- .author-bio -->
-                                </div><!-- .author-description -->
-                            </div><!-- .author-info -->
-                        </div> */ ?>
                     </div>
 
 
-                    <div class="col-sm-3 side-bar side-bar-left col-md-3 col-xs-12">
-                        <div class="widget-container widget_categories">
-                            <h3 class="widget-title">Categories</h3>
-                            <ul>
-                                <li><a href="#">Photoshop <span class="count">(5)</span></a></li>
-                                <li><a href="#">Photography <span class="count">(5)</span></a></li>
-                                <li><a href="#">Design <span class="count">(5)</span></a></li>
-                                <li><a href="#">Development <span class="count">(5)</span></a></li>
-                                <li><a href="#">Illustrator <span class="count">(5)</span></a></li>
-                            </ul>
-                        </div>
-
-                        <div class="widget-container widget_recent_entries">
-                            <h3 class="widget-title">Recent Posts</h3>
-                            <ul>
-                                <li><a href="#">Smarter Grids With Sass And ...</a></li>
-                                <li><a href="#">Quantity Ordering With CSS</a></li>
-                                <li><a href="#">Gallery Post</a></li>
-                                <li><a href="#">Video Post</a></li>
-                                <li><a href="#">Image Post</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="widget-container widget_tag_cloud">
-                            <h3 class="widget-title">Tag</h3>
-                            <div class="tagcloud">
-                                <a href="#">Design</a>
-                                <a href="#">Branding</a>
-                                <a href="#">Concept</a>
-                                <a href="#">Website</a>
-                                <a href="#">App</a>
-                                <a href="#">Photography</a>
+                    <div class="col-sm-4 col-md-4 col-xs-12 single-left">
+                        <div class="single-left-content">
+                            <div class="content-single-left">
+                                <h3 class="title">Lifestyle</h3>
+                                <div class="category-desciption">
+                                    <p>“ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero”</p>
+                                </div>
+                            </div>
+                            <div class="content-single-left">
+                                <h3 class="title">SOCIAL SHARE</h3>
+                                <div class="share-it">
+                                    <ul class="social_icons">
+                                        <li><a href="#"><i class="fa fa-facebook"></i> <span>Share on Facebook</span></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i> <span>Share on Twitter</span></a></li>
+                                        <li><a href="#"><i class="fa fa-google-plus"></i> <span>Share on Google+</span></a></li>
+                                        <li><a href="#"><i class="fa fa-youtube"></i> <span>Share on Youtube</span></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest"></i> <span>Share on Pinterest</span></a></li>
+                                    </ul>
+                                </div><!-- .share-it -->
+                            </div>
+                            <div class="content-single-left">
+                                <h3 class="title">Author</h3>
+                                <div class="author-bio">
+                                    <div class="avatar"><img src="assets/images/author.jpg" alt="" class="img-responsive" /></div>
+                                    <h5 class="name">anna pickard</h5>
+                                    <div class="agency">creative director </div>
+                                </div><!-- .share-it -->
+                            </div>
+                            <div class="content-single-left">
+                                <h3 class="title">Tags</h3>
+                                <span class="tags-links"> 
+                                    <a rel="tag" href="#">lifestyle</a>, 
+                                    <a rel="tag" href="#">Beauty</a>
+                                    <a rel="tag" href="#">Trends</a>
+                                    <a rel="tag" href="#">SKIRT</a>
+                                    <a rel="tag" href="#">Food</a>
+                                </span>
                             </div>
                         </div>
                     </div>
