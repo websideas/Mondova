@@ -34,11 +34,11 @@
     padding: 50px 45px; } }
 /* 5. Styles for devices(>=1200px) */
 @media (min-width: 1200px) {
-  .side-bar .widget-container {
-    margin-right: 25px; }
-  .side-bar.side-bar-right .widget-container {
-    margin-left: 25px;
-    margin-right: 0; }
+  .single-left .single-left-content {
+    margin-right: 60px; }
+
+  .single-post .single-post-content {
+    margin-left: -70px; }
 
   .product-main .product-detail-thumbarea {
     padding-right: 45px; }

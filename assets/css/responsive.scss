@@ -43,15 +43,14 @@
 
 /* 5. Styles for devices(>=1200px) */
 @media (min-width: 1200px) {
-  .side-bar{
-    .widget-container{
-      margin-right: 25px;
+  .single-left{
+    .single-left-content{
+      margin-right: 60px;
     }
-    &.side-bar-right{
-      .widget-container{
-        margin-left: 25px;
-        margin-right: 0;
-      }
+  }
+  .single-post{
+    .single-post-content{
+      margin-left: -70px;
     }
   }
 
