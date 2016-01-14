@@ -448,33 +448,9 @@ blockquote {
   margin-bottom: 30px;
   border: none;
   position: relative;
-<<<<<<< HEAD
-  font-size: 14px;
-  color: #f1f1f1; }
-  blockquote:before {
-    background: #d1c45a;
-    color: #ffffff;
-    content: "“";
-    font-size: 36px;
-    height: 32px;
-    left: 45px;
-    line-height: 55px;
-    padding-left: 2px;
-    position: absolute;
-    top: 35px;
-    width: 28px;
-    text-align: left; }
-  blockquote .blockquote-reverse {
-    padding: 90px 45px 35px; }
-    blockquote .blockquote-reverse:before {
-      left: auto;
-      right: 45px;
-      content: "”"; }
-=======
   font-size: 18px;
   line-height: 36px;
   color: #3b3e43; }
->>>>>>> origin/master
   blockquote p {
     padding: 18px 29px;
     border-left: 2px solid #d1c45a; }
