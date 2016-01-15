@@ -23,9 +23,9 @@
  * Title:   SCSS VARIABLES
  * Author:  http://themeforest.net/user/Kite-Themes
 ------------------------------------------------------------- */
-@media (min-width: 1400px) {
+@media (min-width: 1300px) {
   .container {
-    width: 1192px; } }
+    width: 1200px; } }
 /* 1. Styles for devices(<=1300px) */
 @media (max-width: 1300px) {
   #footer-area .footer-area-inner {
