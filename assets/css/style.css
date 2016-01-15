@@ -123,7 +123,7 @@ img:not([draggable]), embed, object, video {
   height: auto; }
 
 p {
-  margin-bottom: 20px; }
+  margin-bottom: 30px; }
 
 .appear-animate .wow {
   visibility: hidden; }
@@ -454,7 +454,7 @@ blockquote {
   line-height: 36px;
   color: #3b3e43; }
   blockquote p {
-    padding: 18px 0 18px 30px;
+    padding: 18px 20px 18px 30px;
     border-left: 2px solid #d1c45a; }
   blockquote *:last-child {
     margin-bottom: 0; }
@@ -468,10 +468,10 @@ input[type=phone],
 input[type=tel],
 input[type=text],
 textarea {
-  border: 2px solid #3b3e43;
+  border: 2px solid #ebebec;
   color: #3b3e43;
-  padding: 6px 12px;
-  height: 46px;
+  padding: 6px 17px;
+  height: 50px;
   background: none;
   -webkit-border-radius: 0;
   -khtml-border-radius: 0;
@@ -510,21 +510,11 @@ textarea {
     -ms-box-shadow: none;
     -o-box-shadow: none;
     box-shadow: none;
-    outline: 0; }
+    outline: 0;
+    border-color: #d1c45a; }
 
 textarea {
   height: auto; }
-
-input[type=email].input-bg,
-input[type=password].input-bg,
-input[type=phone].input-bg,
-input[type=tel].input-bg,
-input[type=text].input-bg,
-textarea.input-bg {
-  background: #f6f6f6;
-  border: 1px solid #f0f0f0;
-  font-size: 12px;
-  letter-spacing: 0.075em; }
 
 select {
   -webkit-border-radius: 0;
@@ -2848,24 +2838,21 @@ ul.style-list {
   text-transform: uppercase; }
   .single-post .entry-meta-data > span:after {
     content: "/";
-    margin: 0 5px; }
+    margin: 0 8px; }
   .single-post .entry-meta-data > span:last-child:after {
     display: none; }
   .single-post .entry-meta-data a {
     color: #000; }
+.single-post .single-left-content {
+  margin-left: 7px;
+  border-left: 2px solid #f5f5f5;
+  padding: 110px 0 150px;
+  margin-top: -55px; }
 .single-post .content-single-left {
-  padding: 50px 0 50px 58px;
+  padding: 50px 0 50px 50px;
   position: relative; }
-  .single-post .content-single-left:after {
-    position: absolute;
-    top: 0;
-    left: 7px;
-    background: #f5f5f5;
-    content: "";
-    width: 2px;
-    height: 100%; }
   .single-post .content-single-left h3.title {
-    margin: 0 0 0 9px;
+    margin: 0;
     font-size: 18px;
     -webkit-transform: translatey(-50%) translatex(-50%) rotate(90deg);
     -khtml-transform: translatey(-50%) translatex(-50%) rotate(90deg);
@@ -2886,7 +2873,8 @@ ul.style-list {
   .single-post .content-single-left .category-desciption {
     position: relative;
     font-style: italic;
-    font-weight: 300; }
+    font-weight: 300;
+    margin-bottom: 5px; }
     .single-post .content-single-left .category-desciption:after {
       position: absolute;
       font-family: "ElegantIcons";
@@ -2920,7 +2908,7 @@ ul.style-list {
   .single-post .content-single-left .author-bio {
     text-align: center; }
     .single-post .content-single-left .author-bio .avatar {
-      margin-bottom: 28px; }
+      margin-bottom: 29px; }
     .single-post .content-single-left .author-bio .name {
       font-size: 24px;
       margin-bottom: 5px;
@@ -2934,12 +2922,12 @@ ul.style-list {
   margin: 0;
   list-style: none; }
   .single-post .share-it .social_icons li {
-    margin: 0 0 10px; }
+    margin: 0 0 9px; }
     .single-post .share-it .social_icons li:last-child {
       margin: 0; }
     .single-post .share-it .social_icons li a {
       display: block;
-      padding: 15px 40px;
+      padding: 14px 40px;
       border: 2px solid #ebebec;
       font-size: 12px;
       color: #3b3e43;
@@ -3022,8 +3010,8 @@ ul.style-list {
   border-bottom: 2px solid #f1f1f1; }
   .single-post .post-pagination .previous-post {
     float: left;
-    width: 40%;
-    padding-left: 130px;
+    width: 50%;
+    padding: 0 130px;
     position: relative;
     min-height: 100px; }
     .single-post .post-pagination .previous-post .previous-post-thumbnail {
@@ -3032,9 +3020,9 @@ ul.style-list {
       top: 0; }
   .single-post .post-pagination .next-post {
     float: right;
-    width: 40%;
+    width: 50%;
     text-align: right;
-    padding-right: 130px;
+    padding: 0 130px;
     position: relative;
     min-height: 100px; }
     .single-post .post-pagination .next-post .next-post-thumbnail {
@@ -3075,6 +3063,17 @@ ul.style-list {
     margin: 0;
     text-transform: none;
     font-size: 14px; }
+  .single-post .post-pagination > a:hover .previous-post-label,
+  .single-post .post-pagination > a:hover .next-post-label {
+    color: #d1c45a; }
+  .single-post .post-pagination > a:nth-child(2):after {
+    position: absolute;
+    width: 2px;
+    top: 0;
+    height: 100%;
+    background: #f1f1f1;
+    left: 0;
+    content: ""; }
 
 /*
  * 13.3 Comments Area
@@ -3087,100 +3086,182 @@ ul.style-list {
     margin-bottom: 40px; }
     .comments-area .comment-title .comments-title {
       font-size: 24px;
+      text-transform: none;
       margin: 0;
       float: left; }
       .comments-area .comment-title .comments-title span {
         color: #d1c45a; }
+    .comments-area .comment-title .leave-comment {
+      float: right;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 24px;
+      line-height: normal; }
+      .comments-area .comment-title .leave-comment a {
+        color: #3b3e43;
+        position: relative; }
+        .comments-area .comment-title .leave-comment a:before {
+          font-family: "ElegantIcons";
+          content: "$";
+          font-style: normal;
+          font-weight: normal;
+          font-size: 36px;
+          position: absolute;
+          top: -2px;
+          left: -48px; }
+        .comments-area .comment-title .leave-comment a:hover {
+          color: #d1c45a; }
   .comments-area .comment-list {
     list-style: none;
-    margin: 0 0 85px;
+    margin: 0 0 180px;
     padding: 0; }
   .comments-area .children {
     list-style: outside none none;
     margin: 0;
     padding-left: 25px;
     position: relative; }
-    .comments-area .children:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 1px;
-      background: #e1e1e1; }
-    .comments-area .children > li {
-      position: relative; }
-      .comments-area .children > li:before {
-        background: #e1e1e1;
-        content: "";
-        height: 1px;
-        left: -25px;
-        position: absolute;
-        top: 25px;
-        width: 12px; }
 
 .comments-area .comment-item {
-  padding: 25px;
-  background: #f2f2f2;
-  margin-bottom: 30px;
-  min-height: 120px; }
+  padding: 40px 150px;
+  margin: 0;
+  min-height: 182px;
+  border-bottom: 1px solid #f7f8fa; }
   .comments-area .comment-item .comment-avatar {
     float: left;
-    margin-right: 20px;
-    max-width: 70px; }
+    margin-right: 30px;
+    max-width: 100px; }
   .comments-area .comment-item .comment-body {
     padding-left: 90px;
     position: relative; }
     .comments-area .comment-item .comment-body .comment-meta {
-      margin: 0 0 12px;
+      margin: 0 0 22px;
       line-height: 15px; }
       .comments-area .comment-item .comment-body .comment-meta .comment-author {
-        color: #000000;
+        color: #3b3e43;
         font-size: 14px;
-        font-weight: 700;
-        text-transform: none;
+        font-weight: 400;
         display: inline-block;
         padding: 0;
-        margin: 0 10px 0 0;
+        margin: 0 25px 0 0;
         line-height: 15px; }
       .comments-area .comment-item .comment-body .comment-meta .comment-metadata {
-        color: #f1f1f1;
+        color: #3b3e43;
+        filter: alpha(opacity=50);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        -webkit-opacity: 0.5;
+        -khtml-opacity: 0.5;
+        -moz-opacity: 0.5;
+        -ms-opacity: 0.5;
+        -o-opacity: 0.5;
+        opacity: 0.5;
         font-size: 12px;
-        font-weight: bold;
-        display: inline-block; }
-    .comments-area .comment-item .comment-body .comment-content p:last-child {
-      margin: 0; }
+        display: inline-block;
+        margin-left: 23px;
+        position: relative; }
+        .comments-area .comment-item .comment-body .comment-meta .comment-metadata:before {
+          font-family: "FontAwesome";
+          content: "";
+          font-style: normal;
+          font-weight: normal;
+          position: absolute;
+          left: -26px;
+          top: 0;
+          color: #d1c45a;
+          font-size: 7px; }
+    .comments-area .comment-item .comment-body .comment-content {
+      line-height: 24px; }
+      .comments-area .comment-item .comment-body .comment-content p:last-child {
+        margin: 0; }
     .comments-area .comment-item .comment-body .reply {
-      font-size: 14px;
-      font-weight: bold;
-      letter-spacing: 0.075em;
+      font-size: 12px;
+      font-weight: normal;
       line-height: 15px;
       position: absolute;
       right: 0;
-      top: 0; }
+      top: 0;
+      text-transform: uppercase; }
       .comments-area .comment-item .comment-body .reply a {
-        color: #4ad1e5; }
+        color: #3b3e43; }
+        .comments-area .comment-item .comment-body .reply a:hover {
+          color: #d1c45a; }
 
 /*
  * 13.4 Comment Form
  */
 .comment-respond {
-  margin-bottom: 30px; }
-  .comment-respond .comment-form textarea,
-  .comment-respond .comment-form input[type=text] {
-    border: none;
-    border-bottom: 2px solid #ebebec;
-    padding: 10px 0;
-    height: auto; }
-    .comment-respond .comment-form textarea:focus,
-    .comment-respond .comment-form input[type=text]:focus {
-      border-color: #f1f1f1;
-      color: #f1f1f1; }
-  .comment-respond .comment-form textarea {
-    height: 55px;
-    width: 100% !important; }
-  .comment-respond .comment-form .form-submit {
-    padding-top: 15px; }
+  padding: 95px 0 100px;
+  background: #f7f8fa; }
+  .comment-respond .comment-reply-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 75px;
+    margin-right: 150px;
+    margin-left: 150px;
+    line-height: 30px;
+    padding-right: 70px;
+    position: relative;
+    display: inline-block; }
+    .comment-respond .comment-reply-title:before, .comment-respond .comment-reply-title:after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      background: #d1c45a; }
+    .comment-respond .comment-reply-title:before {
+      top: 11px;
+      right: 35px;
+      width: 15px; }
+    .comment-respond .comment-reply-title:after {
+      top: 18px;
+      right: 0;
+      width: 50px; }
+  .comment-respond .comment-form {
+    margin-right: 150px;
+    margin-left: 150px;
+    padding: 60px;
+    background: #FFFFFF; }
+    .comment-respond .comment-form .comment-form-author,
+    .comment-respond .comment-form .comment-form-email,
+    .comment-respond .comment-form .comment-form-comment {
+      position: relative; }
+      .comment-respond .comment-form .comment-form-author:after,
+      .comment-respond .comment-form .comment-form-email:after,
+      .comment-respond .comment-form .comment-form-comment:after {
+        font-family: "ElegantIcons";
+        content: "";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        filter: alpha(opacity=35);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";
+        -webkit-opacity: 0.35;
+        -khtml-opacity: 0.35;
+        -moz-opacity: 0.35;
+        -ms-opacity: 0.35;
+        -o-opacity: 0.35;
+        opacity: 0.35;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        text-align: center;
+        width: 50px;
+        line-height: 50px; }
+    .comment-respond .comment-form .comment-form-email:after {
+      font-family: "ElegantIcons";
+      content: "";
+      font-style: normal;
+      font-weight: normal; }
+    .comment-respond .comment-form .comment-form-comment:after {
+      font-family: "ElegantIcons";
+      content: "";
+      font-style: normal;
+      font-weight: normal; }
+    .comment-respond .comment-form textarea,
+    .comment-respond .comment-form input {
+      padding-right: 50px; }
+    .comment-respond .comment-form textarea {
+      height: 155px;
+      width: 100% !important; }
 
 /* ==============================
    14. Pagination

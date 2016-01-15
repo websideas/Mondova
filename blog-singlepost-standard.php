@@ -36,10 +36,10 @@ include_once('templates/headers/header1.php');
                             <div class="entry-content clearfix">
                                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
                                 <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum</p>
-                                <p>Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum </p>
-                                <p><img src="assets/images/blog/single-content.jpg" alt="" class="img-responsive" /></p>
-                                <h4 class="text-nomal">Duis autem vel eum iriure dolor in hendrerit in vulputate</h4>
-                                <p>Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+                                <p class="mar-bottom-50">Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+                                <p class="mar-bottom-50"><img src="assets/images/blog/single-content.jpg" alt="" class="img-responsive" /></p>
+                                <h4 class="text-nomal mar-bottom-15">Duis autem vel eum iriure dolor in hendrerit in vulputate</h4>
+                                <p class="mar-bottom-40">Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
                                 <blockquote><p>Duis autem vel eum iriure dolor in hendrerit velit esse molestie
                                 vel illum dolore eu feugiat nulla facilisis at vero. Nam liber tempor
                                 nobis eleifend option congue nihil imperdiet doming</p></blockquote>    
@@ -123,7 +123,7 @@ include_once('templates/headers/header1.php');
                 <div class="comment-title">
                     <div class="container">
                         <h4 class="comments-title">There are <span>205</span> comments</h4>
-                        <div class="leave-comment" data-href=".comment-respond">leave a comment</div>
+                        <div class="leave-comment"><a href="#comment-respond">leave a comment</a></div>
                     </div>
                 </div>
                 <div class="container">
@@ -131,20 +131,20 @@ include_once('templates/headers/header1.php');
                         <li class="comment">
                             <article class="comment-item">
                                 <div class="comment-avatar">
-                                    <img src="http://placehold.it/70x70/" alt="">
+                                    <img src="http://placehold.it/100x100/" alt="">
                                 </div>
 
                                 <div class="comment-body">
 
                                     <footer class="comment-meta">
-                                        <h5 class="comment-author vcard">Kenny Minh</h5><!-- .comment-author -->
+                                        <h5 class="comment-author vcard">Jonathan doe</h5><!-- .comment-author -->
                                         <div class="comment-metadata">
-                                            <time datetime="2015-08-07T14:58:33+00:00">5 months ago</time>
+                                            <time datetime="2015-08-07T14:58:33+00:00">Dec 23, 2015 at 3:35 am</time>
                                         </div><!-- .comment-metadata -->
                                     </footer><!-- .comment-meta -->
 
                                     <div class="comment-content">
-                                        <p>Vivamus imperdiet ex sed lobortis luctus. Aenean posuere nulla in turpis porttitor laoreet. Quisque finibus aliquet purus.</p>
+                                        <p>Proin est purus, elementum eu tempus ut, molestie vel magna. Sed id lorem a felis lobortis tristique. Mauris ac auctor nibh. Cras venenatis neque eget pellentesque posuere.</p>
                                     </div><!-- .comment-content -->
 
                                     <div class="reply">
@@ -154,75 +154,48 @@ include_once('templates/headers/header1.php');
                                 </div><!-- .comment-body -->
                             </article><!-- .comment-item -->
 
-                            <ol class="children">
-                                <li class="comment">
-                                    <article class="comment-item">
-                                        <div class="comment-avatar">
-                                            <img src="http://placehold.it/70x70/" alt="">
-                                        </div>
+                        </li>
 
-                                        <div class="comment-body">
+                        <li class="comment">
+                            <article class="comment-item">
+                                <div class="comment-avatar">
+                                    <img src="http://placehold.it/100x100/" alt="">
+                                </div>
 
-                                            <footer class="comment-meta">
-                                                <h5 class="comment-author vcard">Kenny Minh</h5><!-- .comment-author -->
-                                                <div class="comment-metadata">
-                                                    <time datetime="2015-08-07T14:58:33+00:00">5 months ago</time>
-                                                </div><!-- .comment-metadata -->
-                                            </footer><!-- .comment-meta -->
+                                <div class="comment-body">
 
-                                            <div class="comment-content">
-                                                <p>Maecenas euismod faucibus dolor a finibus.</p>
-                                            </div><!-- .comment-content -->
+                                    <footer class="comment-meta">
+                                        <h5 class="comment-author vcard">Super Junaid</h5><!-- .comment-author -->
+                                        <div class="comment-metadata">
+                                            <time datetime="2015-08-07T14:58:33+00:00">Dec 23, 2015 at 3:35 am</time>
+                                        </div><!-- .comment-metadata -->
+                                    </footer><!-- .comment-meta -->
 
-                                            <div class="reply">
-                                                <a href="#" class="comment-reply-link">Reply</a>
-                                            </div>
+                                    <div class="comment-content">
+                                        <p>Proin est purus, elementum eu tempus ut, molestie vel magna. Sed id lorem a felis lobortis tristique. Mauris ac auctor nibh. Cras venenatis neque eget pellentesque posuere.</p>
+                                    </div><!-- .comment-content -->
 
-                                        </div><!-- .comment-body -->
-                                    </article><!-- .comment-item -->
-                                </li>
-                                <li class="comment">
-                                    <article class="comment-item">
-                                        <div class="comment-avatar">
-                                            <img src="http://placehold.it/70x70/" alt="">
-                                        </div>
+                                    <div class="reply">
+                                        <a href="#" class="comment-reply-link">Reply</a>
+                                    </div>
 
-                                        <div class="comment-body">
-
-                                            <footer class="comment-meta">
-                                                <h5 class="comment-author vcard">Kenny Minh</h5><!-- .comment-author -->
-                                                <div class="comment-metadata">
-                                                    <time datetime="2015-08-07T14:58:33+00:00">5 months ago</time>
-                                                </div><!-- .comment-metadata -->
-                                            </footer><!-- .comment-meta -->
-
-                                            <div class="comment-content">
-                                                <p>Maecenas euismod faucibus dolor a finibus.</p>
-                                            </div><!-- .comment-content -->
-
-                                            <div class="reply">
-                                                <a href="#" class="comment-reply-link">Reply</a>
-                                            </div>
-
-                                        </div><!-- .comment-body -->
-                                    </article><!-- .comment-item -->
-                                </li>
-                            </ol>
+                                </div><!-- .comment-body -->
+                            </article><!-- .comment-item -->
 
                         </li>
 
                         <li class="comment">
                             <article class="comment-item">
                                 <div class="comment-avatar">
-                                    <img src="http://placehold.it/70x70/" alt="">
+                                    <img src="http://placehold.it/100x100/" alt="">
                                 </div>
 
                                 <div class="comment-body">
 
                                     <footer class="comment-meta">
-                                        <h5 class="comment-author vcard">Kenny Minh</h5><!-- .comment-author -->
+                                        <h5 class="comment-author vcard">tony chester</h5><!-- .comment-author -->
                                         <div class="comment-metadata">
-                                            <time datetime="2015-08-07T14:58:33+00:00">5 months ago</time>
+                                            <time datetime="2015-08-07T14:58:33+00:00">Dec 23, 2015 at 3:35 am</time>
                                         </div><!-- .comment-metadata -->
                                     </footer><!-- .comment-meta -->
 
@@ -239,25 +212,22 @@ include_once('templates/headers/header1.php');
                         </li>
 
                     </ol><!-- .comment-list -->
+                </div>
 
-
-                    <div class="comment-respond">
-                        <h4 class="comment-reply-title single-bottom-title">Leave a Reply</h4>
+                <div id="comment-respond" class="comment-respond">
+                    <div class="container">
+                        <h4 class="comment-reply-title">leave a comment</h4>
                         <form class="comment-form" id="commentform" method="post" action="#">
                             <div class="row">
-                                <p class="comment-form-author col-sm-4"><input type="text" placeholder="Your Name" aria-required="true" size="30" value="" name="author" id="author"></p>
-                                <p class="comment-form-email col-sm-4"><input type="text" placeholder="Your Email" aria-required="true" size="30" value="" name="email" id="email"></p>
-                                <p class="comment-form-url col-sm-4"><input type="text" placeholder="Your Website" size="30" value="" name="url" id="url"></p>
+                                <div class="col-sm-6"><p class="comment-form-author"><input type="text" placeholder="Name" aria-required="true" size="30" value="" name="author" id="author"></p></div>
+                                <div class="col-sm-6"><p class="comment-form-email"><input type="text" placeholder="Email" aria-required="true" size="30" value="" name="email" id="email"></p></div>
                             </div>
-                            <p class="comment-form-title"><input type="text" placeholder="Title" size="30" value="" name="url" id="title"></p>
-                            <p class="comment-form-comment"><textarea placeholder="Your Review" name="comment"></textarea></p>
-                            <p class="form-submit"><input type="submit" value="Submit" class="btn btn-dark-b btn-lg" name="submit"></p>
-
-
+                            <p class="comment-form-comment"><textarea placeholder="Comment" name="comment"></textarea></p>
+                            <p class="form-submit no-margin"><input type="submit" value="Submit" class="btn btn-default btn-lg" name="submit"></p>
                         </form><!-- .comment-form -->
-
-                    </div><!-- .comment-respond -->
-                </div>
+                    </div>
+                </div><!-- .comment-respond -->
+                
             </div><!-- .comments-area -->
 
         </div>
@@ -265,7 +235,7 @@ include_once('templates/headers/header1.php');
     </div><!-- #main -->
 
 
-<img src="previews/19-blog-single.jpg" class="preview-image" style="top: 0;display: none1;max-width:none;" />
+<img src="previews/19-blog-single.jpg" class="preview-image" style="top: 0;display: none;max-width:none;" />
 <?php
 
 include_once('templates/footers/footer3.php');

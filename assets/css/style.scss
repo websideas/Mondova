@@ -120,7 +120,7 @@ img:not([draggable]), embed, object, video {
 }
 
 p {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .appear-animate .wow {
@@ -371,7 +371,7 @@ blockquote {
   color: $text;
 
   p {
-    padding: 18px 0 18px 30px;
+    padding: 18px 20px 18px 30px;
     border-left: 2px solid $primary-color;
   }
 
@@ -389,10 +389,10 @@ input[type=phone],
 input[type=tel],
 input[type=text],
 textarea {
-  border: 2px solid $text;
+  border: 2px solid $border-color;
   color: $text;
-  padding: 6px 12px;
-  height: 46px;
+  padding: 6px 17px;
+  height: 50px;
   background: none;
   @include border-radius(0);
   @include css3-prefix('box-shadow', 'none');
@@ -402,23 +402,12 @@ textarea {
   &:focus {
     @include css3-prefix('box-shadow', 'none');
     outline: 0;
+    border-color: $primary-color;
   }
 }
 
 textarea {
   height: auto;
-}
-
-input[type=email].input-bg,
-input[type=password].input-bg,
-input[type=phone].input-bg,
-input[type=tel].input-bg,
-input[type=text].input-bg,
-textarea.input-bg{
-  background: #f6f6f6;
-  border: 1px solid #f0f0f0;
-  font-size: 12px;
-  letter-spacing: 0.075em;
 }
 
 select {
@@ -2984,7 +2973,7 @@ ul.style-list{
     > span{
       &:after{
         content: "/";
-        margin: 0 5px;
+        margin: 0 8px;
       }
       &:last-child:after{
         display: none;
@@ -2994,20 +2983,17 @@ ul.style-list{
       color: #000;
     }
   }
+  .single-left-content{
+    margin-left: 7px;
+    border-left:2px solid $border-color2;
+    padding: 110px 0 150px;
+    margin-top: -55px;
+  }
   .content-single-left{
-    padding: 50px 0 50px 58px;
+    padding: 50px 0 50px 50px;
     position: relative;
-    &:after{
-      position: absolute;
-      top:0;
-      left: 7px;
-      background: $border-color2;
-      content: "";
-      width: 2px;
-      height: 100%;
-    }
     h3.title{
-      margin: 0 0 0 9px;
+      margin: 0;
       font-size: 18px;
       @include transform(translatey(-50%) translatex(-50%) rotate(90deg) );
       padding: 30px;
@@ -3027,6 +3013,7 @@ ul.style-list{
       position: relative;
       font-style: italic;
       font-weight: 300;
+      margin-bottom: 5px;
       &:after{
         position: absolute;
         @include FontIcon('\7c', 'ElegantIcons');
@@ -3045,7 +3032,7 @@ ul.style-list{
     .author-bio{
       text-align: center;
       .avatar{
-        margin-bottom: 28px;
+        margin-bottom: 29px;
       }
       .name{
         font-size: 24px;
@@ -3066,13 +3053,13 @@ ul.style-list{
       margin: 0;
       list-style: none;
       li{
-        margin:0 0 10px;
+        margin:0 0 9px;
         &:last-child{
           margin: 0;
         }
         a{
           display: block;
-          padding: 15px 40px;
+          padding: 14px 40px;
           border: 2px solid $border-color;
           font-size: 12px;
           color:$text;
@@ -3145,8 +3132,8 @@ ul.style-list{
     border-bottom: 2px solid $gray-text;
     .previous-post{
       float: left;
-      width: 40%;
-      padding-left: 130px;
+      width: 50%;
+      padding:0 130px;
       position: relative;
       min-height: 100px;
       .previous-post-thumbnail{
@@ -3157,9 +3144,9 @@ ul.style-list{
     }
     .next-post{
       float: right;
-      width: 40%;
+      width: 50%;
       text-align: right;
-      padding-right: 130px;
+      padding:0 130px;
       position: relative;
       min-height: 100px;
       .next-post-thumbnail{
@@ -3201,6 +3188,25 @@ ul.style-list{
       text-transform: none;
       font-size: 14px;
     }
+    > a{
+      &:hover{
+        .previous-post-label,
+        .next-post-label{
+          color: $primary-color;
+        }
+      }
+      &:nth-child(2){
+        &:after{
+          position: absolute;
+          width: 2px;
+          top: 0;
+          height: 100%;
+          background: $gray-text;
+          left: 0;
+          content: "";
+        }
+      }
+    }
   }
 }
 
@@ -3215,16 +3221,38 @@ ul.style-list{
     margin-bottom: 40px;
     .comments-title{
       font-size: 24px;
+      text-transform: none;
       margin: 0;
       float: left;
       span{
         color: $primary-color;
       }
     }
+    .leave-comment{
+      float: right;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 24px;
+      line-height: normal;
+      a{
+        color: $text;
+        position: relative;
+        &:before{
+          @include FontIcon('\24', 'ElegantIcons');
+          font-size: 36px;
+          position: absolute;
+          top:-2px;
+          left: -48px;
+        }
+        &:hover{
+          color: $primary-color;
+        }
+      }
+    }
   }
   .comment-list {
     list-style: none;
-    margin: 0 0 85px;
+    margin: 0 0 180px;
     padding: 0;
   }
   .children {
@@ -3232,79 +3260,71 @@ ul.style-list{
     margin: 0;
     padding-left: 25px;
     position: relative;
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 1px;
-      background: #e1e1e1;
-    }
-    > li {
-      position: relative;
-      &:before {
-        background: #e1e1e1;
-        content: "";
-        height: 1px;
-        left: -25px;
-        position: absolute;
-        top: 25px;
-        width: 12px;
-      }
-    }
   }
 }
 
 .comments-area {
   .comment-item {
-    padding: 25px;
-    background: $gray-bg;
-    margin-bottom: 30px;
-    min-height: 120px;
+    padding: 40px 150px; 
+    margin: 0;
+    min-height: 182px;
+    border-bottom: 1px solid $gray-bg2;
     .comment-avatar {
       float: left;
-      margin-right: 20px;
-      max-width: 70px;
+      margin-right: 30px;
+      max-width: 100px;
     }
     .comment-body {
       padding-left: 90px;
       position: relative;
       .comment-meta {
-        margin: 0 0 12px;
+        margin: 0 0 22px;
         line-height: 15px;
         .comment-author {
-          color: #000000;
+          color: $text;
           font-size: 14px;
-          font-weight: 700;
-          text-transform: none;
+          font-weight: 400;
           display: inline-block;
           padding: 0;
-          margin: 0 10px 0 0;
+          margin: 0 25px 0 0;
           line-height: 15px;
         }
         .comment-metadata {
-          color: $gray-text;
+          color: $text;
+          @include opacity(0.5);
           font-size: 12px;
-          font-weight: bold;
           display: inline-block;
+          margin-left: 23px;
+          position: relative;
+          &:before{
+            @include FontIcon('\f111', 'FontAwesome');
+            position: absolute;
+            left: -26px;
+            top: 0;
+            color: $primary-color;
+            font-size: 7px;
+          }
         }
       }
       .comment-content{
+        line-height: 24px;
         p:last-child{
           margin: 0;
         }
       }
       .reply {
-        font-size: 14px;
-        font-weight: bold;
-        letter-spacing: 0.075em;
+        font-size: 12px;
+        font-weight: normal;
         line-height: 15px;
         position: absolute;
         right: 0;
         top: 0;
+        text-transform: uppercase;
         a{
-          color: #4ad1e5;
+          color: $text;
+          &:hover{
+            color: $primary-color;
+          }
         }
       }
     }
@@ -3317,25 +3337,77 @@ ul.style-list{
  * 13.4 Comment Form
  */
 .comment-respond {
-  margin-bottom: 30px;
+  padding: 95px 0 100px;
+  background: $gray-bg2;
+  .comment-reply-title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 75px;
+    margin-right: 150px;
+    margin-left: 150px;
+    line-height: 30px;
+    padding-right: 70px;
+    position: relative;
+    display: inline-block;
+
+    &:before,
+    &:after{
+      content: '';
+      position: absolute;
+      height: 2px;
+      background: $primary-color;
+
+    }
+    &:before{
+      top: 11px;
+      right: 35px;
+      width: 15px;
+    }
+    &:after{
+      top: 18px;
+      right: 0;
+      width: 50px;
+    }
+  }
   .comment-form{
-    textarea,
-    input[type=text] {
-      border: none;
-      border-bottom: 2px solid $border-color;
-      padding: 10px 0;
-      height: auto;
-      &:focus {
-        border-color: $gray-text;
-        color: $gray-text;
+    margin-right: 150px;
+    margin-left: 150px;
+    padding: 60px;
+    background: $white;
+    .comment-form-author,
+    .comment-form-email,
+    .comment-form-comment{
+      position: relative;
+      &:after{
+        @include FontIcon('\e107', 'ElegantIcons');
+        font-size: 18px;
+        @include opacity(0.35);
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        text-align: center;
+        width: 50px;
+        line-height: 50px;
       }
     }
-    textarea{
-      height: 55px;
-      width: 100% !important;
+    .comment-form-email{
+      &:after{
+        @include FontIcon('\e010', 'ElegantIcons');
+      }
     }
-    .form-submit {
-      padding-top: 15px;
+    .comment-form-comment{
+      &:after{
+        @include FontIcon('\e104', 'ElegantIcons');
+      }
+    }
+    textarea,
+    input{
+      padding-right: 50px;
+    }
+    textarea{
+      height: 155px;
+      width: 100% !important;
     }
   }
 }
