@@ -43,6 +43,12 @@ include_once('templates/headers/header1.php');
                                             <a href="#" class="quickview" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_search"></i></a>
                                         </div>
                                         <div class="price">$340.00</div>
+
+                                        <div>
+                                            <span>SOLD OUT</span>
+                                            <span>- 15%</span>
+                                        </div>
+
                                     </div><!-- .product-content -->
 
                                     <div class="product-attribute">
@@ -505,7 +511,7 @@ include_once('templates/headers/header1.php');
         </div><!-- .page-section -->
     </div><!-- #main -->
 
-    <img src="previews/08-product-grid-3-columns.jpg" class="preview-image" style="top: 0;" />
+    <img src="previews/08-product-grid-3-columns.jpg" class="preview-image" style="top: 0;display: none" />
 
 <?php
 

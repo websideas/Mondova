@@ -101,6 +101,23 @@
     init_ecommerce();
 
 
+    $( 'body' )
+        .on( 'click', '.testi-navigation li', function() {
+            var $this = $(this),
+                $parent = $this.closest('.testi-navigation'),
+                $collection = $parent.find('li'),
+                $sync = $parent.data('sync'),
+                $index = $( $collection ).index( $this),
+                $owl = $('#'+$sync).data('owlCarousel');
+
+            $owl.goTo($index);
+            $collection.removeClass('active');
+            $this.addClass('active');
+
+        });
+
+
+
     /* ---------------------------------------------
      Back to top
      --------------------------------------------- */
@@ -186,7 +203,7 @@
                 options.itemsTablet = [768,options.tablet];
             }
             if(typeof options.navigationText === "undefined"){
-                options.navigationText = ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'];
+                options.navigationText = ['<i class="arrow_left"></i>', '<i class="arrow_right"></i>'];
             }
             if(typeof options.mobile !== "undefined"){
                 options.itemsMobile = [479,options.mobile];
@@ -522,7 +539,7 @@
             afterAction : syncPosition,
             autoHeight: true,
             responsiveRefreshRate : 200,
-            navigationText: ['<i class="fa fa-chevron-left"></i>','<i class="fa fa-chevron-right"></i>'],
+            navigationText: ['<i class="arrow_left"></i>','<i class="arrow_right"></i>'],
         });
 
         sync2.owlCarousel({
