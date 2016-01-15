@@ -4,7 +4,7 @@ global $revolution;
 $revolution = 'slideshow1';
 
 include_once('templates/headers/head.php');
-include_once('templates/headers/header2.php');
+include_once('templates/headers/header1.php');
 include_once('templates/slideshows/slideshow1.php');
 
 ?>
