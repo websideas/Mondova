@@ -182,6 +182,8 @@ p {
   top: 0;
   @include translate(x);
   @include opacity();
+  max-width: none;
+  pointer-events:none;
 }
 .kt-column-bg{
   @include css3-prefix('background-size', 'cover');
@@ -369,7 +371,7 @@ blockquote {
   color: $text;
 
   p {
-    padding: 18px 29px;
+    padding: 18px 0 18px 30px;
     border-left: 2px solid $primary-color;
   }
 
@@ -2867,7 +2869,7 @@ ul.style-list{
   &.page-header-bg{
     &.page-header-single{
       background-image:url("../images/blog/single-thumb.jpg"); 
-      padding: 190px 0 295px;
+      padding: 130px 0 295px;
       &:before{
         display: none;
       }
@@ -3035,6 +3037,88 @@ ul.style-list{
       }
     }
   }
+
+  .tags-links{
+    a{
+      font-size: 12px!important;
+      text-transform: uppercase;
+      color: $text;
+      line-height: 26px;
+      padding: 0 12px;
+      border: 2px solid $border-color;
+      @include transition();
+      display: inline-block;
+      margin: 0 7px 9px 0;
+      &:hover,
+      &:focus{
+        border-color: $text;
+      }
+    }
+  }
+
+  .post-pagination{
+    padding: 40px 0;
+    border-top: 2px solid $gray-text;
+    border-bottom: 2px solid $gray-text;
+    .previous-post{
+      float: left;
+      width: 40%;
+      padding-left: 130px;
+      position: relative;
+      min-height: 100px;
+      .previous-post-thumbnail{
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+    .next-post{
+      float: right;
+      width: 40%;
+      text-align: right;
+      padding-right: 130px;
+      position: relative;
+      min-height: 100px;
+      .next-post-thumbnail{
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .next-post-label{
+        &:after{
+          @include FontIcon('\24', 'ElegantIcons');
+          right: 0;
+        }
+      }
+    }
+    .next-post-label,
+    .previous-post-label{
+      font-size: 14px;
+      color: $border-color;
+      text-transform: uppercase;
+      padding-top: 25px;
+      margin-bottom: 10px;
+      display: block;
+      line-height: normal;
+      position: relative;
+      &:after{
+        @include FontIcon('\23', 'ElegantIcons');
+        position: absolute;
+        top: -5px;
+        left: 0;
+        font-size: 24px;
+        color: $text;
+        line-height: 1;
+      }
+    }
+    .next-post-title,
+    .previous-post-title{
+      line-height: 23px;
+      margin: 0;
+      text-transform: none;
+      font-size: 14px;
+    }
+  }
 }
 
 /*
@@ -3042,6 +3126,19 @@ ul.style-list{
  */
 .comments-area {
   margin-bottom: 55px;
+  .comment-title{
+    background: $gray-bg2;
+    padding: 80px 0;
+    margin-bottom: 40px;
+    .comments-title{
+      font-size: 24px;
+      margin: 0;
+      float: left;
+      span{
+        color: $primary-color;
+      }
+    }
+  }
   .comment-list {
     list-style: none;
     margin: 0 0 85px;
