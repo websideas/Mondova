@@ -28,108 +28,36 @@ include_once('templates/headers/header1.php');
 
         <div class="page-section">
             <div class="container">
-                <h3 class="gray mar-bottom-50">Style 1</h3>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="kt-accordion style1">
-                            <h3 class="kt-accortion-title">Section 1</h3>
-                            <div class="kt-accordion-content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor nisl, aliquet in ex a, faucibus imperdiet purus. Ut imperdiet orci ex, ut semper
-                            </div>
-                            <h3 class="kt-accortion-title">Section 2</h3>
-                            <div class="kt-accordion-content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor nisl, aliquet in ex a, faucibus imperdiet purus. Ut imperdiet orci ex, ut semper
-                                suscipit faucibus urna.
-                            </div>
-                            <h3 class="kt-accortion-title">Section 3</h3>
-                            <div class="kt-accordion-content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor nisl, aliquet in ex a, faucibus imperdiet purus. Ut imperdiet orci ex, ut semper
-                            </div>
-                        </div>
+                <!-- nav-pills, nav-tabs -->
+                <!-- Nav tabs -->
+                <ul class="nav nav-border" role="tablist">
+                    <li class="active"><a href="#denim-shirts" data-toggle="tab">Denim Shirts</a></li>
+                    <li><a href="#briefs" data-toggle="tab">Briefs</a></li>
+                    <li><a href="#cardigans" data-toggle="tab">Cardigans</a></li>
+                    <li><a href="#coats" data-toggle="tab">Coats</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="denim-shirts">
+                        <p>In iaculis tellus in dignissim faucibus. Curabitur sagittis egestas orci non sollicitudin. Ut et dictum nunc. Aenean non lorem in leo pellentesque eleifend. Donec commodo, lectus eget sodales ornare, sem risus sollicitudin nibh, a venenatis metus mauris porta nibh. Sed eget molestie ex. Praesent sit amet arcu sit amet sem venenatis rhoncus. Duis in lorem a turpis consequat iaculis. Vivamus vel dolor egestas, sagittis erat in, congue nibh. Aliquam ex nisi, ornare in dolor at, maximus pulvinar sapien. </p>
+                        <p>Ut ornare porttitor varius. Nam dapibus venenatis ultrices. In nec lectus ac tellus laoreet suscipit. Morbi facilisis enim a mollis tincidunt. Praesent pretium sollicitudin lacus eget tincidunt. Integer elementum eros id feugiat faucibus. In aliquet magna vitae suscipit pretium. Pellentesque dignissim massa eu mollis ultricies. Pellentesque eu ornare tortor, nec sollicitudin nunc. Aenean nec feugiat quam, eu hendrerit erat. Nulla facilisi. </p>
                     </div>
-                    <div class="col-md-4">
-                        <div class="kt-accordion style2">
-                            <h3 class="kt-accortion-title">Section 1</h3>
-                            <div class="kt-accordion-content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor nisl, aliquet in ex a, faucibus imperdiet purus. Ut imperdiet orci ex, ut semper
-                            </div>
-                            <h3 class="kt-accortion-title">Section 2</h3>
-                            <div class="kt-accordion-content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor nisl, aliquet in ex a, faucibus imperdiet purus. Ut imperdiet orci ex, ut semper
-                            </div>
-                            <h3 class="kt-accortion-title">Section 3</h3>
-                            <div class="kt-accordion-content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor nisl, aliquet in ex a, faucibus imperdiet purus. Ut imperdiet orci ex, ut semper
-                            </div>
-                        </div>
+                    <div class="tab-pane fade" id="briefs">
+                        <p>Ut ornare porttitor varius. Nam dapibus venenatis ultrices. In nec lectus ac tellus laoreet suscipit. Morbi facilisis enim a mollis tincidunt. Praesent pretium sollicitudin lacus eget tincidunt. Integer elementum eros id feugiat faucibus. In aliquet magna vitae suscipit pretium. Pellentesque dignissim massa eu mollis ultricies. Pellentesque eu ornare tortor, nec sollicitudin nunc. Aenean nec feugiat quam, eu hendrerit erat. Nulla facilisi. </p>
+                        <p>In iaculis tellus in dignissim faucibus. Curabitur sagittis egestas orci non sollicitudin. Ut et dictum nunc. Aenean non lorem in leo pellentesque eleifend. Donec commodo, lectus eget sodales ornare, sem risus sollicitudin nibh, a venenatis metus mauris porta nibh. Sed eget molestie ex. Praesent sit amet arcu sit amet sem venenatis rhoncus. Duis in lorem a turpis consequat iaculis. Vivamus vel dolor egestas, sagittis erat in, congue nibh. Aliquam ex nisi, ornare in dolor at, maximus pulvinar sapien. </p>
                     </div>
-                    <div class="col-md-4">
-                        <div class="kt-accordion style3">
-                            <h3 class="kt-accortion-title">Section 1</h3>
-                            <div class="kt-accordion-content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor nisl, aliquet in ex a, faucibus imperdiet purus. Ut imperdiet orci ex, ut semper
-                            </div>
-                            <h3 class="kt-accortion-title">Section 2</h3>
-                            <div class="kt-accordion-content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor nisl, aliquet in ex a, faucibus imperdiet purus. Ut imperdiet orci ex, ut semper
-                            </div>
-                            <h3 class="kt-accortion-title">Section 3</h3>
-                            <div class="kt-accordion-content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dolor nisl, aliquet in ex a, faucibus imperdiet purus. Ut imperdiet orci ex, ut semper
-                            </div>
-                        </div>
+                    <div class="tab-pane fade" id="cardigans">
+                        <p>Donec tempor arcu ex, nec scelerisque massa hendrerit sit amet. Aenean porttitor id lacus eget scelerisque. Quisque placerat nunc ac egestas finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non lacus fringilla, luctus eros eget, euismod ipsum. In elit mi, porttitor sit amet velit et, aliquam imperdiet orci. Aliquam at diam accumsan, vehicula quam at, scelerisque ipsum. Ut dui odio, cursus sed mattis in, rutrum nec justo. Sed efficitur justo velit, at tristique erat tincidunt eget. Aenean aliquam mollis mauris sed finibus. Donec ullamcorper lorem id ligula interdum, et ultrices libero ultrices. In vitae sapien eget urna lacinia tempor.</p>
+                        <p>Ut ornare porttitor varius. Nam dapibus venenatis ultrices. In nec lectus ac tellus laoreet suscipit. Morbi facilisis enim a mollis tincidunt. Praesent pretium sollicitudin lacus eget tincidunt. Integer elementum eros id feugiat faucibus. In aliquet magna vitae suscipit pretium. Pellentesque dignissim massa eu mollis ultricies. Pellentesque eu ornare tortor, nec sollicitudin nunc. Aenean nec feugiat quam, eu hendrerit erat. Nulla facilisi. </p>
+                    </div>
+                    <div class="tab-pane fade" id="coats">
+                        <p>Ut ornare porttitor varius. Nam dapibus venenatis ultrices. In nec lectus ac tellus laoreet suscipit. Morbi facilisis enim a mollis tincidunt. Praesent pretium sollicitudin lacus eget tincidunt. Integer elementum eros id feugiat faucibus. In aliquet magna vitae suscipit pretium. Pellentesque dignissim massa eu mollis ultricies. Pellentesque eu ornare tortor, nec sollicitudin nunc. Aenean nec feugiat quam, eu hendrerit erat. Nulla facilisi. </p>
+                        <p>Donec tempor arcu ex, nec scelerisque massa hendrerit sit amet. Aenean porttitor id lacus eget scelerisque. Quisque placerat nunc ac egestas finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non lacus fringilla, luctus eros eget, euismod ipsum. In elit mi, porttitor sit amet velit et, aliquam imperdiet orci. Aliquam at diam accumsan, vehicula quam at, scelerisque ipsum. Ut dui odio, cursus sed mattis in, rutrum nec justo. Sed efficitur justo velit, at tristique erat tincidunt eget. Aenean aliquam mollis mauris sed finibus. Donec ullamcorper lorem id ligula interdum, et ultrices libero ultrices. In vitae sapien eget urna lacinia tempor.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="page-section bg-gray">
-            <div class="container">
-                <h3 class="gray mar-bottom-50">Style 2</h3>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="kt-accordion style4">
-                            <h3 class="kt-accortion-title">Section 1</h3>
-                            <div class="kt-accordion-content">
-                                Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
-                                ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
-                                amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-                                odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-                            </div>
-                            <h3 class="kt-accortion-title">Section 2</h3>
-                            <div class="kt-accordion-content">
-                                Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-                                purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-                                velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-                                suscipit faucibus urna.
-                            </div>
-                            <h3 class="kt-accortion-title">Section 3</h3>
-                            <div class="kt-accordion-content">
-                                Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-                                Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-                                ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-                                lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="kt-tab-container">
-                            <ul class="tabs clearfix">
-                                <li><a href="#tab1-1">Section 1</a></li>
-                                <li><a href="#tab1-2">Section 2</a></li>
-                                <li><a href="#tab1-3">Section 3</a></li>
-                            </ul>
-                            <div id="tab1-1" class="kt-tab-content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit metus erat, quis varius nibh malesuada ut. In et nunc massa. Pellentesque augue dolor, bibendum id leo sit amet, viverra aliquam sapien. Sed vitae tellus facilisis. stra, per inceptos himenaeos. Morbi nec bibendum massa. Curabitur sollicitudin augue odio, at vulputate quam pulvinar nec.</p>
-                            </div>
-                            <div id="tab1-2" class="kt-tab-content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit metus erat, quis varius nibh malesuada ut. In et nunc massa. Pellentesque augue dolor, bibendum id leo sit amet, viverra aliquam sapien. Sed vitae tellus facilisis. stra, per inceptos himenaeos. Morbi nec bibendum massa. Curabitur sollicitudin augue odio, at vulputate quam pulvinar nec. Curabitur non congue magna. Etiam mattis, ante non malesuada feugiat, </p>
-                            </div>
-                            <div id="tab1-3" class="kt-tab-content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit metus erat, quis varius nibh malesuada ut. In et nunc massa. Pellentesque augue dolor, bibendum id leo sit amet, viverra aliquam sapien. Sed vitae tellus facilisis. stra, per inceptos himenaeos. Morbi nec bibendum massa. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+
             </div>
         </div>
 

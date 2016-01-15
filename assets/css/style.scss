@@ -120,7 +120,7 @@ img:not([draggable]), embed, object, video {
 }
 
 p {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .appear-animate .wow {
@@ -198,7 +198,7 @@ p {
 .black{ color: #111 !important; }
 .gray{ color: $gray-text!important; }
 
-.bg-gray{  background: $gray-bg; }
+.bg-gray{  background: #f7f8fa; }
 .bg-lightgreen{  background: #c7db9c; }
 .bg-wheat{  background: #f4dc86; }
 .bg-sky{  background: #a7c8eb; }
@@ -1277,33 +1277,40 @@ select:not([multiple]) {
 /*
  * 10.1 Heading Section
  */
-.kt-heading-wrapper{
+.kt-heading{
   margin-bottom: 50px;
   text-transform: uppercase;
   position: relative;
   text-align: center;
-  .font-backend{
-    color: $border-color2;
+  &-backend{
+    color: #f0f1f3;
     @include translate();
     font-size: 100px;
-    z-index: -1;
     font-weight: bold;
+    line-height: 1;
+    white-space: nowrap;
   }
-  .kt-heading-title{
+
+  &-title,
+  &-subtitle{
+    position: relative;
+  }
+
+  &-title{
     font-size: 50px;
     line-height: 1;
     margin: 0;
     font-weight: bold;
   }
-  .kt-heading-subtitle{
+  &-subtitle{
     font-size: 24px;
     line-height: 1;
-    margin-top: 10px;
+    margin-top: 15px;
   }
 
   &.text-left,
   &.text-right{
-    .font-backend{
+    .kt-heading-backend{
       @include transform(translateY(-50%));
       left: 0;
     }
@@ -1311,7 +1318,7 @@ select:not([multiple]) {
 
   &.text-right{
     text-align: right;
-    .font-backend{
+    .kt-heading-backend{
       left: auto;
       right: 0;
     }
@@ -1319,6 +1326,14 @@ select:not([multiple]) {
   &.text-left{
     text-align: left;
   }
+
+
+  &.style-2{
+    .kt-heading-backend{
+      font-size: 50px;
+    }
+  }
+
 }
 
 
@@ -1586,6 +1601,72 @@ ul.style-list{
 /*
  * 10.6 Tabs
  */
+
+.nav-border {
+  margin-bottom: 30px;
+  > li {
+    float: left;
+    > a {
+      position: relative;
+      color: $text;
+      padding: 6px 25px;
+      text-transform: uppercase;
+
+      &:before,
+      &:after{
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        @include transition('all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s');
+        visibility: hidden;
+      }
+      &:before{
+        left: 0;
+        bottom: 0;
+        border-left: 2px solid $primary-color;
+        border-bottom: 2px solid $primary-color;
+      }
+      &:after{
+        top: 0;
+        right: 0;
+        border-right: 2px solid $primary-color;
+        border-top: 2px solid $primary-color;
+      }
+    }
+
+
+    + li {
+      margin-left: 5px;
+    }
+
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        &:before,
+        &:after{
+          width: 100%;
+          height: 10px;
+          visibility: visible;
+        }
+      }
+    }
+
+    &.active > a,
+    &.active > a:hover,
+    &.active > a:focus,
+    a:hover{
+      background: none;
+      color: $primary-color;
+    }
+
+  }
+}
+
+
+
+
 .kt-tab-container{
   margin-bottom: 30px;
   .tabs{
@@ -1594,6 +1675,8 @@ ul.style-list{
     margin: 0 0 30px;
     background: #fff;
     @include box-shadow(0, 2px, 4px, rgba(#000000, 0.05));
+
+
     li{
       float: left;
       margin-right: 15px;

@@ -123,7 +123,7 @@ img:not([draggable]), embed, object, video {
   height: auto; }
 
 p {
-  margin-bottom: 30px; }
+  margin-bottom: 20px; }
 
 .appear-animate .wow {
   visibility: hidden; }
@@ -246,7 +246,7 @@ p {
   color: #f1f1f1 !important; }
 
 .bg-gray {
-  background: #f2f2f2; }
+  background: #f7f8fa; }
 
 .bg-lightgreen {
   background: #c7db9c; }
@@ -1342,13 +1342,13 @@ select:not([multiple]) {
 /*
  * 10.1 Heading Section
  */
-.kt-heading-wrapper {
+.kt-heading {
   margin-bottom: 50px;
   text-transform: uppercase;
   position: relative;
   text-align: center; }
-  .kt-heading-wrapper .font-backend {
-    color: #f5f5f5;
+  .kt-heading-backend {
+    color: #f0f1f3;
     position: absolute;
     -webkit-transform: translate(-50%, -50%);
     -khtml-transform: translate(-50%, -50%);
@@ -1359,18 +1359,21 @@ select:not([multiple]) {
     top: 50%;
     left: 50%;
     font-size: 100px;
-    z-index: -1;
-    font-weight: bold; }
-  .kt-heading-wrapper .kt-heading-title {
+    font-weight: bold;
+    line-height: 1;
+    white-space: nowrap; }
+  .kt-heading-title, .kt-heading-subtitle {
+    position: relative; }
+  .kt-heading-title {
     font-size: 50px;
     line-height: 1;
     margin: 0;
     font-weight: bold; }
-  .kt-heading-wrapper .kt-heading-subtitle {
+  .kt-heading-subtitle {
     font-size: 24px;
     line-height: 1;
-    margin-top: 10px; }
-  .kt-heading-wrapper.text-left .font-backend, .kt-heading-wrapper.text-right .font-backend {
+    margin-top: 15px; }
+  .kt-heading.text-left .kt-heading-backend, .kt-heading.text-right .kt-heading-backend {
     -webkit-transform: translateY(-50%);
     -khtml-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -1378,13 +1381,15 @@ select:not([multiple]) {
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
     left: 0; }
-  .kt-heading-wrapper.text-right {
+  .kt-heading.text-right {
     text-align: right; }
-    .kt-heading-wrapper.text-right .font-backend {
+    .kt-heading.text-right .kt-heading-backend {
       left: auto;
       right: 0; }
-  .kt-heading-wrapper.text-left {
+  .kt-heading.text-left {
     text-align: left; }
+  .kt-heading.style-2 .kt-heading-backend {
+    font-size: 50px; }
 
 /*
  * 10.2 Hightlight
@@ -1606,6 +1611,48 @@ ul.style-list {
 /*
  * 10.6 Tabs
  */
+.nav-border {
+  margin-bottom: 30px; }
+  .nav-border > li {
+    float: left; }
+    .nav-border > li > a {
+      position: relative;
+      color: #3b3e43;
+      padding: 6px 25px;
+      text-transform: uppercase; }
+      .nav-border > li > a:before, .nav-border > li > a:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        -webkit-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+        -khtml-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+        -moz-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+        -ms-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+        -o-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+        visibility: hidden; }
+      .nav-border > li > a:before {
+        left: 0;
+        bottom: 0;
+        border-left: 2px solid #d1c45a;
+        border-bottom: 2px solid #d1c45a; }
+      .nav-border > li > a:after {
+        top: 0;
+        right: 0;
+        border-right: 2px solid #d1c45a;
+        border-top: 2px solid #d1c45a; }
+    .nav-border > li + li {
+      margin-left: 5px; }
+    .nav-border > li.active > a:before, .nav-border > li.active > a:after, .nav-border > li.active > a:hover:before, .nav-border > li.active > a:hover:after, .nav-border > li.active > a:focus:before, .nav-border > li.active > a:focus:after {
+      width: 100%;
+      height: 10px;
+      visibility: visible; }
+    .nav-border > li.active > a, .nav-border > li.active > a:hover, .nav-border > li.active > a:focus,
+    .nav-border > li a:hover {
+      background: none;
+      color: #d1c45a; }
+
 .kt-tab-container {
   margin-bottom: 30px; }
   .kt-tab-container .tabs {
