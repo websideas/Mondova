@@ -2011,7 +2011,8 @@ ul.style-list {
       -o-transition: all 0.2s ease-in-out 0s;
       transition: all 0.2s ease-in-out 0s;
       letter-spacing: 0;
-      white-space: nowrap; }
+      white-space: nowrap;
+      font-size: 36px; }
       .banner-content h3:before, .banner-content h3:after {
         content: '';
         position: absolute;

@@ -9,6 +9,39 @@ include_once('templates/headers/header1.php');
 <div id="main">
 
 
+    <div class="page-section no-padding">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <div class="banner banner-dark no-margin">
+                    <img alt="" src="assets/images/banner/1.jpg">
+                    <div class="banner-content">
+                        <h3 class="white">new men's</h3>
+                        <p>best fashion for men</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="banner banner-dark no-margin">
+                    <img alt="" src="assets/images/banner/2.jpg">
+                    <div class="banner-content">
+                        <h3 class="white">new model</h3>
+                        <p>best fashion for men</p>
+                    </div>
+                    <a href="#" class="banner-link"></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="banner banner-dark no-margin">
+                    <img alt="" src="assets/images/banner/3.jpg">
+                    <div class="banner-content">
+                        <h3 class="white">new stock</h3>
+                        <p>best store collection</p>
+                    </div>
+                    <a href="#" class="banner-link"></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="page-section">
         <div class="container">
@@ -24,7 +57,7 @@ include_once('templates/headers/header1.php');
 
                 <div class="col-md-7">
                     <!-- Nav tabs -->
-                    <ul class="nav nav-border pull-right" role="tablist">
+                    <ul class="nav nav-border pull-right mar-top-35" role="tablist">
 
                         <li><a href="#briefs" data-toggle="tab">Briefs</a></li>
                         <li><a href="#cardigans" data-toggle="tab">Cardigans</a></li>
@@ -60,11 +93,6 @@ include_once('templates/headers/header1.php');
 
 
 
-
-
-
-
-
         </div>
     </div>
 
@@ -73,39 +101,6 @@ include_once('templates/headers/header1.php');
 
 
 
-    <div class="page-section no-padding">
-        <div class="row no-gutters">
-            <div class="col-md-4">
-                <div class="banner banner-dark no-margin">
-                    <img alt="" src="assets/images/banner/1.jpg">
-                    <div class="banner-content">
-                        <h3 class="white">new men's</h3>
-                        <p>best fashion for men</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="banner banner-dark no-margin">
-                    <img alt="" src="assets/images/banner/2.jpg">
-                    <div class="banner-content">
-                        <h3 class="white">new model</h3>
-                        <p>best fashion for men</p>
-                    </div>
-                    <a href="#" class="banner-link"></a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="banner banner-dark no-margin">
-                    <img alt="" src="assets/images/banner/3.jpg">
-                    <div class="banner-content">
-                        <h3 class="white">new stock</h3>
-                        <p>best store collection</p>
-                    </div>
-                    <a href="#" class="banner-link"></a>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 
@@ -188,7 +183,7 @@ include_once('templates/headers/header1.php');
 
 </div><!-- #main -->
 
-<img src="previews/01-homepage-V1.jpg" class="preview-image" style="top: -2730px;display: none1" />
+<img src="previews/01-homepage-V1.jpg" class="preview-image" style="top: -2208px;display: none1" />
 
 <?php
 

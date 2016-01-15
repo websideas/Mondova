@@ -2025,6 +2025,7 @@ ul.style-list{
       @include transition();
       letter-spacing: 0;
       white-space: nowrap;
+      font-size: 36px;
       &:before,
       &:after{
         content: '';
