@@ -23,12 +23,13 @@
 .pad-bottom-lg{  padding-bottom: 150px; }
 
 
-$numbers: 5, 10, 15, 20, 30, 35, 40, 50, 60, 70, 80, 90;
+$numbers: 5, 10, 15, 20, 30, 35, 40, 50, 60, 70, 80, 90, 100, 110;
 @each $number in $numbers {
   .mar-top-#{$number} {  margin-top: #{$number}px;  }
   .mar-bottom-#{$number} {  margin-bottom: #{$number}px;  }
   .pad-top-#{$number} {  padding-top: #{$number}px;  }
   .pad-bottom-#{$number} {  padding-bottom: #{$number}px;  }
+  .pad-#{$number} {  padding: #{$number}px;  }
 }
 
 .remove-mar-top {  margin-top: 0!important;  }

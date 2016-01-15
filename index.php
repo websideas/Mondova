@@ -9,11 +9,44 @@ include_once('templates/headers/header1.php');
 <div id="main">
 
 
+    <div class="page-section no-padding">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <div class="banner banner-dark no-margin">
+                    <img alt="" src="assets/images/banner/1.jpg">
+                    <div class="banner-content">
+                        <h3 class="white">new men's</h3>
+                        <p class="letter-spacing">best fashion for men</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="banner banner-dark no-margin">
+                    <img alt="" src="assets/images/banner/2.jpg">
+                    <div class="banner-content">
+                        <h3 class="white">new model</h3>
+                        <p class="letter-spacing">best fashion for men</p>
+                    </div>
+                    <a href="#" class="banner-link"></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="banner banner-dark no-margin">
+                    <img alt="" src="assets/images/banner/3.jpg">
+                    <div class="banner-content">
+                        <h3 class="white">new stock</h3>
+                        <p class="letter-spacing">best store collection</p>
+                    </div>
+                    <a href="#" class="banner-link"></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="page-section">
         <div class="container">
 
-            <div class="row mar-bottom-40">
+            <div class="row mar-bottom-20">
                 <div class="col-md-5">
                     <div class="kt-heading text-left">
                         <div class="kt-heading-backend">men's</div>
@@ -24,7 +57,7 @@ include_once('templates/headers/header1.php');
 
                 <div class="col-md-7">
                     <!-- Nav tabs -->
-                    <ul class="nav nav-border pull-right" role="tablist">
+                    <ul class="nav nav-border pull-right mar-top-35" role="tablist">
 
                         <li><a href="#briefs" data-toggle="tab">Briefs</a></li>
                         <li><a href="#cardigans" data-toggle="tab">Cardigans</a></li>
@@ -60,11 +93,6 @@ include_once('templates/headers/header1.php');
 
 
 
-
-
-
-
-
         </div>
     </div>
 
@@ -73,39 +101,6 @@ include_once('templates/headers/header1.php');
 
 
 
-    <div class="page-section no-padding">
-        <div class="row no-gutters">
-            <div class="col-md-4">
-                <div class="banner banner-dark no-margin">
-                    <img alt="" src="assets/images/banner/1.jpg">
-                    <div class="banner-content">
-                        <h3 class="white">new men's</h3>
-                        <p>best fashion for men</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="banner banner-dark no-margin">
-                    <img alt="" src="assets/images/banner/2.jpg">
-                    <div class="banner-content">
-                        <h3 class="white">new model</h3>
-                        <p>best fashion for men</p>
-                    </div>
-                    <a href="#" class="banner-link"></a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="banner banner-dark no-margin">
-                    <img alt="" src="assets/images/banner/3.jpg">
-                    <div class="banner-content">
-                        <h3 class="white">new stock</h3>
-                        <p>best store collection</p>
-                    </div>
-                    <a href="#" class="banner-link"></a>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 
@@ -179,6 +174,69 @@ include_once('templates/headers/header1.php');
                 <h3 class="kt-heading-title">testimonials</h3>
                 <div class="kt-heading-subtitle">what the client say</div>
             </div><!-- .kt-heading-wrapper -->
+
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="bg-white pad-top-110 pad-bottom-100 box-shadow">
+                        <div class="owl-carousel-kt no-gutters no-margin">
+                            <div class="owl-carousel kt-owl-carousel" id="testi-carousel-01" data-options='{"pagination": false, "navigation": true, "desktop": 1, "tablet" : 1, "mobile" : 1}'>
+
+                                <div class="testi-item">
+                                    <div class="testi-item-inner">
+                                        <div class="testi-item-infos">
+                                            <div class="testi-item-author">dan counsell</div>
+                                            <div class="testi-item-info">creative director</div>
+                                        </div>
+                                        <div class="testi-item-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam<br/>nonummy nibh euismod tincidunt ut laoreet dolore magna<br/>aliquam erat volutpat.</div>
+                                    </div>
+                                </div>
+                                <div class="testi-item">
+                                    <div class="testi-item-inner">
+                                        <div class="testi-item-infos">
+                                            <div class="testi-item-author">CuongDV</div>
+                                            <div class="testi-item-info">creative director</div>
+                                        </div>
+                                        <div class="testi-item-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam<br/>nonummy nibh euismod tincidunt ut laoreet dolore magna<br/>aliquam erat volutpat.</div>
+                                    </div>
+                                </div>
+                                <div class="testi-item">
+                                    <div class="testi-item-inner">
+                                        <div class="testi-item-infos">
+                                            <div class="testi-item-author">TienThang</div>
+                                            <div class="testi-item-info">creative director</div>
+                                        </div>
+                                        <div class="testi-item-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam<br/>nonummy nibh euismod tincidunt ut laoreet dolore magna<br/>aliquam erat volutpat.</div>
+                                    </div>
+                                </div>
+                                <div class="testi-item">
+                                    <div class="testi-item-inner">
+                                        <div class="testi-item-infos">
+                                            <div class="testi-item-author">HongNguyen</div>
+                                            <div class="testi-item-info">creative director</div>
+                                        </div>
+                                        <div class="testi-item-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam<br/>nonummy nibh euismod tincidunt ut laoreet dolore magna<br/>aliquam erat volutpat.</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="bg-white box-shadow">
+                        <ul class="testi-navigation" data-sync="testi-carousel-01">
+                            <li class="active"><img src="assets/images/testi/1.jpg" alt=""></li>
+                            <li><img src="assets/images/testi/2.jpg" alt=""></li>
+                            <li><img src="assets/images/testi/3.jpg" alt=""></li>
+                            <li><img src="assets/images/testi/4.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -188,7 +246,7 @@ include_once('templates/headers/header1.php');
 
 </div><!-- #main -->
 
-<img src="previews/01-homepage-V1.jpg" class="preview-image" style="top: -2730px;display: none1" />
+<img src="previews/01-homepage-V1.jpg" class="preview-image" style="top: -3415px;display: none;" />
 
 <?php
 

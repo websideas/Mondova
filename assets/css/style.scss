@@ -191,13 +191,14 @@ p {
   background-repeat: no-repeat;
 }
 
-.letter-spacing{  letter-spacing: 0.2em; }
+.letter-spacing{  letter-spacing: 0.3em; }
 .text-nomal{ text-transform: none; }
 
 .white{ color: #fff !important; }
 .black{ color: #111 !important; }
 .gray{ color: $gray-text!important; }
 
+.bg-white{  background: $white; }
 .bg-gray{  background: #f7f8fa; }
 .bg-lightgreen{  background: #c7db9c; }
 .bg-wheat{  background: #f4dc86; }
@@ -206,17 +207,8 @@ p {
 .bg-aquamarine{  background: #bce5d3; }
 .bg-purple{background: #d1aece;}
 
-.bg-gradient-gray{
-  position: relative;
-  &:before{
-    content: '';
-    width: 100%;
-    height: 50%;
-    position: absolute;
-    background: $gray-bg;
-    top: 0;
-    left: 0;
-  }
+.box-shadow{
+  @include box-shadow(1px, 0, 3px, rgba(0, 0, 0, 0.05));
 }
 
 /* ==============================
@@ -1267,7 +1259,7 @@ select:not([multiple]) {
  * 10.1 Heading Section
  */
 .kt-heading{
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   text-transform: uppercase;
   position: relative;
   text-align: center;
@@ -1968,8 +1960,7 @@ ul.style-list{
   position: relative;
   text-align: center;
   overflow: hidden;
-  margin-bottom: 30px;
-
+  margin-bottom: 70px;
   &-dark{
     &:after{
       content: '';
@@ -2002,6 +1993,9 @@ ul.style-list{
     z-index: 10;
     padding: 30px 0;
     text-transform: uppercase;
+    @include transition();
+    letter-spacing: 0;
+
 
     > *:last-child{
       margin-bottom: 0;
@@ -2010,12 +2004,12 @@ ul.style-list{
     h3{
       display: inline-block;
       position: relative;
-      min-width: 280px;
+      min-width: 270px;
       padding: 0 18px;
       line-height: 75px;
-      @include transition();
-      letter-spacing: 0;
+
       white-space: nowrap;
+      font-size: 36px;
       &:before,
       &:after{
         content: '';
@@ -2052,8 +2046,8 @@ ul.style-list{
 
   &:hover{
     .banner-content{
+      letter-spacing: .2em;
       h3{
-        letter-spacing: .2em;
         &:before,
         &:after{
           height: 0;
@@ -2210,22 +2204,74 @@ ul.style-list{
 /*
  * 10.20 Testimonials
  */
-.testimonial-posts{
-  &.light{
-    color: #FFFFFF;
-    .testimonial-author{
-      color: #FFFFFF;
-    }
-    .owl-pagination{
-      .owl-page{
-        background: #FFFFFF;
-        &:hover,
-        &.active{
-          background: #e5e5e5;
-        }
-      }
-    }
+.testi-item{
+  text-align: center;
+  &-inner{
+    max-width: 80%;
+    margin: 0 auto;
+  }
 
+  &-content{
+    position: relative;
+    font-size: 14px;
+    line-height: 25px;
+    &:before{
+      @include FontIcon('\f10d');
+      @include translate();
+      font-size: 50px;
+      color: #f1f1f2;
+      z-index: -1;
+    }
+  }
+  &-infos{
+    position: relative;
+    padding-bottom: 13px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    &:after{
+      @include translate(x);
+      bottom: 0;
+      width: 50px;
+      content: '';
+      height: 2px;
+      background: $primary-color;
+
+    }
+  }
+  &-author{
+    font-size: 30px;
+    line-height: 40px;
+
+  }
+  &-info{
+    font-size: 14px;
+    color: #8f9498;
+  }
+}
+
+
+.testi-navigation{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  @include clearfix();
+  li{
+    width: 50%;
+    float: left;
+    padding: 17px;
+    display: inline-block;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+    cursor: pointer;
+    @include transition();
+
+    &:hover,
+    &.active{
+      @extend .box-shadow;
+      filter: none;
+      -webkit-filter: grayscale(0%);
+    }
   }
 }
 
@@ -4950,7 +4996,10 @@ table.compare{
   margin-right: -15px;
   margin-bottom: 50px;
   position: relative;
-  cursor: url(../images/drag.png) 16 9, ew-resize !important;
+
+  .owl-wrapper{
+    cursor: url(../images/drag.png) 16 9, ew-resize !important;
+  }
 
   &.no-gutters{
     margin-left: 0;
@@ -4960,13 +5009,6 @@ table.compare{
         padding-left: 0;
         padding-right: 0;
       }
-    }
-  }
-
-  &.big-width{
-    .owl-carousel-kt-inner{
-      max-width: 1550px;
-      margin: 0 auto;
     }
   }
 
@@ -5019,13 +5061,6 @@ table.compare{
     }
   }
 
-  .owl-buttons {
-    @include opacity(0);
-    @include transition(all 1s ease);
-    > div{
-      cursor: pointer;
-    }
-  }
 
   &:hover{
     .owl-buttons{
@@ -5064,12 +5099,14 @@ table.compare{
         }
       }
     }
+  }
 
+  .owl-controls{
+    margin: 80px 0 0;
   }
 
   .owl-pagination{
     text-align: center;
-    margin: 40px 0 0;
     .owl-page{
       background: #d7d7d7;
       cursor: pointer;
@@ -5085,6 +5122,37 @@ table.compare{
       }
     }
   }
+
+  .owl-buttons {
+    /*@include opacity(0);*/
+    @include transition(all 1s ease);
+    position: relative;
+    text-align: center;
+    &:before{
+      content: '';
+      height: 100%;
+      width: 2px;
+      @include translate();
+      background: #f7f8fa;
+    }
+    > div{
+      cursor: pointer;
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      line-height: 40px;
+      font-size: 24px;
+      color: $text;
+      margin: 0 10px;
+      @include transition();
+      &:hover{
+        color: $primary-color;
+      }
+
+    }
+  }
+
+
   &.pagination-before{
     .owl-pagination{
       margin: 0 0 40px;

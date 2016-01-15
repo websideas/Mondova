@@ -62,6 +62,9 @@
 .pad-bottom-5 {
   padding-bottom: 5px; }
 
+.pad-5 {
+  padding: 5px; }
+
 .mar-top-10 {
   margin-top: 10px; }
 
@@ -73,6 +76,9 @@
 
 .pad-bottom-10 {
   padding-bottom: 10px; }
+
+.pad-10 {
+  padding: 10px; }
 
 .mar-top-15 {
   margin-top: 15px; }
@@ -86,6 +92,9 @@
 .pad-bottom-15 {
   padding-bottom: 15px; }
 
+.pad-15 {
+  padding: 15px; }
+
 .mar-top-20 {
   margin-top: 20px; }
 
@@ -97,6 +106,9 @@
 
 .pad-bottom-20 {
   padding-bottom: 20px; }
+
+.pad-20 {
+  padding: 20px; }
 
 .mar-top-30 {
   margin-top: 30px; }
@@ -110,6 +122,9 @@
 .pad-bottom-30 {
   padding-bottom: 30px; }
 
+.pad-30 {
+  padding: 30px; }
+
 .mar-top-35 {
   margin-top: 35px; }
 
@@ -121,6 +136,9 @@
 
 .pad-bottom-35 {
   padding-bottom: 35px; }
+
+.pad-35 {
+  padding: 35px; }
 
 .mar-top-40 {
   margin-top: 40px; }
@@ -134,6 +152,9 @@
 .pad-bottom-40 {
   padding-bottom: 40px; }
 
+.pad-40 {
+  padding: 40px; }
+
 .mar-top-50 {
   margin-top: 50px; }
 
@@ -145,6 +166,9 @@
 
 .pad-bottom-50 {
   padding-bottom: 50px; }
+
+.pad-50 {
+  padding: 50px; }
 
 .mar-top-60 {
   margin-top: 60px; }
@@ -158,6 +182,9 @@
 .pad-bottom-60 {
   padding-bottom: 60px; }
 
+.pad-60 {
+  padding: 60px; }
+
 .mar-top-70 {
   margin-top: 70px; }
 
@@ -169,6 +196,9 @@
 
 .pad-bottom-70 {
   padding-bottom: 70px; }
+
+.pad-70 {
+  padding: 70px; }
 
 .mar-top-80 {
   margin-top: 80px; }
@@ -182,6 +212,9 @@
 .pad-bottom-80 {
   padding-bottom: 80px; }
 
+.pad-80 {
+  padding: 80px; }
+
 .mar-top-90 {
   margin-top: 90px; }
 
@@ -193,6 +226,39 @@
 
 .pad-bottom-90 {
   padding-bottom: 90px; }
+
+.pad-90 {
+  padding: 90px; }
+
+.mar-top-100 {
+  margin-top: 100px; }
+
+.mar-bottom-100 {
+  margin-bottom: 100px; }
+
+.pad-top-100 {
+  padding-top: 100px; }
+
+.pad-bottom-100 {
+  padding-bottom: 100px; }
+
+.pad-100 {
+  padding: 100px; }
+
+.mar-top-110 {
+  margin-top: 110px; }
+
+.mar-bottom-110 {
+  margin-bottom: 110px; }
+
+.pad-top-110 {
+  padding-top: 110px; }
+
+.pad-bottom-110 {
+  padding-bottom: 110px; }
+
+.pad-110 {
+  padding: 110px; }
 
 .remove-mar-top {
   margin-top: 0 !important; }
