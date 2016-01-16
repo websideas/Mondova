@@ -920,6 +920,11 @@ select:not([multiple]) {
     left: 0;
     background: rgba(59, 62, 67, 0.85); }
 
+.page-section.page-header-2 {
+  padding: 130px 0 300px; }
+  .page-section.page-header-2 .page-header-icon {
+    font-size: 70px; }
+
 .page-header {
   border: none;
   margin: 0;
@@ -2347,6 +2352,65 @@ ul.style-list {
       color: #000;
       margin: 10px 0 2px;
       line-height: normal; }
+
+/*
+ * 10.22 Team
+ */
+.team {
+  margin-bottom: 30px;
+  text-align: center; }
+  .team .avatar {
+    border: 15px solid #FFFFFF;
+    -webkit-box-shadow: 1px 0 3px 0 rgba(0, 0, 0, 0.05);
+    -khtml-box-shadow: 1px 0 3px 0 rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 1px 0 3px 0 rgba(0, 0, 0, 0.05);
+    -ms-box-shadow: 1px 0 3px 0 rgba(0, 0, 0, 0.05);
+    -o-box-shadow: 1px 0 3px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 1px 0 3px 0 rgba(0, 0, 0, 0.05);
+    margin-bottom: 28px;
+    overflow: hidden; }
+    .team .avatar img {
+      -webkit-transition: all 0.5s ease 0s;
+      -khtml-transition: all 0.5s ease 0s;
+      -moz-transition: all 0.5s ease 0s;
+      -ms-transition: all 0.5s ease 0s;
+      -o-transition: all 0.5s ease 0s;
+      transition: all 0.5s ease 0s; }
+  .team .team-name {
+    font-size: 18px;
+    color: #3b3e43;
+    margin-bottom: 3px; }
+  .team .team-agency {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #8f9498;
+    line-height: normal; }
+  .team:hover img {
+    -webkit-transform: scale(1.2);
+    -khtml-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2); }
+
+/*
+ * 10.23 Iconbox
+ */
+.kt-icon-box {
+  border: 1px solid #f7f8fa;
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 75px; }
+  .kt-icon-box .icon-box-icon {
+    font-size: 50px;
+    color: #d1c45a;
+    margin-bottom: 37px; }
+  .kt-icon-box .icon-box-title {
+    font-size: 18px;
+    color: #3b3e43; }
+  .kt-icon-box .icon-box-content {
+    line-height: 24px;
+    color: #3b3e43; }
 
 /* ==============================
    11. Widgets
@@ -5050,45 +5114,206 @@ table.compare tr td {
 /* ==============================
    19. Main content
    ============================== */
+.page-content {
+  padding: 75px 60px;
+  background: #FFFFFF;
+  margin-top: -170px;
+  position: relative; }
+  .page-content .page-title-wrap {
+    margin-bottom: 75px; }
+    .page-content .page-title-wrap .page-title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      margin: 0; }
+    .page-content .page-title-wrap .page-subtitle {
+      filter: alpha(opacity=35);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";
+      -webkit-opacity: 0.35;
+      -khtml-opacity: 0.35;
+      -moz-opacity: 0.35;
+      -ms-opacity: 0.35;
+      -o-opacity: 0.35;
+      opacity: 0.35;
+      text-transform: uppercase;
+      text-align: center; }
+
+.block-style {
+  position: relative;
+  border: 2px solid #f7f8fa; }
+  .block-style .block-style-inner {
+    padding: 30px; }
+  .block-style .block-style-inner:after,
+  .block-style .block-style-inner:before, .block-style:before, .block-style:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -khtml-transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+    -ms-transition: all 0.2s ease-in-out 0s;
+    -o-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+    filter: alpha(opacity=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-opacity: 1;
+    -khtml-opacity: 1;
+    -moz-opacity: 1;
+    -ms-opacity: 1;
+    -o-opacity: 1;
+    opacity: 1; }
+  .block-style:before {
+    left: -2px;
+    bottom: -2px;
+    border-left: 2px solid #d1c45a;
+    border-bottom: 2px solid #d1c45a; }
+  .block-style:after {
+    top: -2px;
+    right: -2px;
+    border-right: 2px solid #d1c45a;
+    border-top: 2px solid #d1c45a; }
+  .block-style .block-style-inner:before {
+    bottom: -2px;
+    right: -2px;
+    border-right: 2px solid #d1c45a;
+    border-bottom: 2px solid #d1c45a; }
+  .block-style .block-style-inner:after {
+    left: -2px;
+    top: -2px;
+    border-left: 2px solid #d1c45a;
+    border-top: 2px solid #d1c45a; }
+  .block-style:hover .block-style-inner:after,
+  .block-style:hover .block-style-inner:before, .block-style:hover:before, .block-style:hover:after {
+    width: 20px;
+    height: 20px;
+    filter: alpha(opacity=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-opacity: 1;
+    -khtml-opacity: 1;
+    -moz-opacity: 1;
+    -ms-opacity: 1;
+    -o-opacity: 1;
+    opacity: 1; }
+
+.page-title-divider {
+  margin-bottom: 82px; }
+  .page-title-divider h3 {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 48px;
+    padding-bottom: 22px;
+    margin: 0; }
+  .page-title-divider .divider {
+    position: relative;
+    height: 2px;
+    width: 100px;
+    margin: 0 auto; }
+    .page-title-divider .divider:before, .page-title-divider .divider:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: #ebebec;
+      content: ""; }
+    .page-title-divider .divider:before {
+      left: auto;
+      right: 0; }
+    .page-title-divider .divider .divider-inner {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      margin-left: -10px; }
+      .page-title-divider .divider .divider-inner:after {
+        width: 6px;
+        height: 6px;
+        background: #d1c45a;
+        content: "";
+        -webkit-transform: translatey(-50%) translatex(-50%) rotate(45deg);
+        -khtml-transform: translatey(-50%) translatex(-50%) rotate(45deg);
+        -moz-transform: translatey(-50%) translatex(-50%) rotate(45deg);
+        -ms-transform: translatey(-50%) translatex(-50%) rotate(45deg);
+        -o-transform: translatey(-50%) translatex(-50%) rotate(45deg);
+        transform: translatey(-50%) translatex(-50%) rotate(45deg);
+        position: absolute;
+        top: 50%;
+        left: 50%; }
+
 /*
  * 19.1 About page
  */
-.about-left {
-  margin-left: 30px;
-  margin-bottom: 30px; }
+.about-content {
+  background: url(../images/about-bg.png) no-repeat center center;
+  padding: 145px 15px; }
 
 /*
  * 19.2 Contact page
  */
-.contact-details {
-  background: #f2f2f2;
-  padding: 65px 35px;
-  margin-bottom: 30px;
-  color: #f1f1f1; }
-  .contact-details p {
-    line-height: 36px;
-    margin-bottom: 40px; }
-  .contact-details .social-nav li a {
-    color: #f1f1f1; }
-    .contact-details .social-nav li a:hover {
-      color: #000000; }
-
 .contactform {
-  margin-bottom: 30px; }
-  .contactform h4 {
-    margin-bottom: 30px; }
-  .contactform input[type="text"],
+  padding: 50px 118px; }
+  .contactform input,
   .contactform textarea {
-    padding: 15px 0;
-    line-height: normal;
-    border: none;
-    border-bottom: 2px solid #e3e3e3;
-    height: auto; }
-    .contactform input[type="text"]:focus,
-    .contactform textarea:focus {
-      border-color: #f1f1f1; }
+    text-transform: uppercase;
+    padding-right: 50px; }
   .contactform textarea {
-    width: 100% !important; }
+    width: 100% !important;
+    height: 155px; }
+  .contactform .form-name,
+  .contactform .form-email,
+  .contactform .form-mobile,
+  .contactform .form-website,
+  .contactform .form-comment {
+    position: relative; }
+    .contactform .form-name:after,
+    .contactform .form-email:after,
+    .contactform .form-mobile:after,
+    .contactform .form-website:after,
+    .contactform .form-comment:after {
+      font-family: "ElegantIcons";
+      content: "";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      filter: alpha(opacity=35);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";
+      -webkit-opacity: 0.35;
+      -khtml-opacity: 0.35;
+      -moz-opacity: 0.35;
+      -ms-opacity: 0.35;
+      -o-opacity: 0.35;
+      opacity: 0.35;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      text-align: center;
+      width: 50px;
+      line-height: 50px; }
+  .contactform .form-email:after {
+    font-family: "ElegantIcons";
+    content: "";
+    font-style: normal;
+    font-weight: normal; }
+  .contactform .form-mobile:after {
+    font-family: "ElegantIcons";
+    content: "";
+    font-style: normal;
+    font-weight: normal; }
+  .contactform .form-website:after {
+    font-family: "ElegantIcons";
+    content: "";
+    font-style: normal;
+    font-weight: normal; }
+  .contactform .form-comment:after {
+    font-family: "ElegantIcons";
+    content: "";
+    font-style: normal;
+    font-weight: normal; }
 
 /*
  * 19.3 404 page

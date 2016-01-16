@@ -785,6 +785,13 @@ select:not([multiple]) {
   }
 }
 
+.page-section.page-header-2{
+  padding:130px 0 300px;
+  .page-header-icon{
+    font-size: 70px;
+  }
+}
+
 .page-header{
   border: none;
   margin: 0;
@@ -2352,6 +2359,63 @@ ul.style-list{
       margin: 10px 0 2px;
       line-height: normal;
     }
+  }
+}
+/*
+ * 10.22 Team
+ */
+
+.team{
+  margin-bottom: 30px;
+  text-align: center;
+  .avatar{
+    border: 15px solid $white;
+    @include box-shadow(1px, 0, 3px, rgba(0,0,0,0.05));
+    margin-bottom: 28px;
+    overflow: hidden;
+    img{
+      @include transition('all 0.5s ease 0s');
+    }
+  }
+  .team-name{
+    font-size: 18px;
+    color: $text;
+    margin-bottom: 3px;
+  }
+  .team-agency{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: $gray-agency;
+    line-height: normal;
+  }
+  &:hover{
+    img{
+      @include transform(scale(1.2)); 
+    }
+  }
+}
+
+/*
+ * 10.23 Iconbox
+ */
+
+.kt-icon-box{
+  border: 1px solid $gray-bg2;
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 75px;
+  .icon-box-icon{
+    font-size: 50px;
+    color: $primary-color;
+    margin-bottom: 37px;
+  }
+  .icon-box-title{
+    font-size: 18px;
+    color: $text;
+  }
+  .icon-box-content{
+    line-height: 24px;
+    color: $text;
   }
 }
 
@@ -5341,57 +5405,193 @@ table.compare{
 /* ==============================
    19. Main content
    ============================== */
+
+.page-content{
+  padding:75px 60px;
+  background: $white;
+  margin-top: -170px;
+  position: relative;
+  .page-title-wrap{
+    margin-bottom: 75px;
+    .page-title{
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      margin: 0;
+    }
+    .page-subtitle{
+      @include opacity(0.35);
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+}
+
+.block-style{
+  position: relative;
+  border: 2px solid $gray-bg2;
+  .block-style-inner{
+    padding: 30px;
+  }
+  .block-style-inner:after,
+  .block-style-inner:before,
+  &:before,
+  &:after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    @include transition();
+    @include opacity(1);
+  }
+  &:before{
+    left: -2px;
+    bottom: -2px;
+    border-left: 2px solid $primary-color;
+    border-bottom: 2px solid $primary-color;
+  }
+  &:after{
+    top: -2px;
+    right: -2px;
+    border-right: 2px solid $primary-color;
+    border-top: 2px solid $primary-color;
+  }
+  .block-style-inner:before{
+    bottom: -2px;
+    right: -2px;
+    border-right: 2px solid $primary-color;
+    border-bottom: 2px solid $primary-color;
+  }
+  .block-style-inner:after{
+    left: -2px;
+    top: -2px;
+    border-left: 2px solid $primary-color;
+    border-top: 2px solid $primary-color;
+  }
+  &:hover{
+    .block-style-inner:after,
+    .block-style-inner:before,
+    &:before,
+    &:after{
+      width: 20px;
+      height: 20px;
+      @include opacity(1);
+    }
+  }
+}
+
+.page-title-divider{
+  margin-bottom: 82px;
+  h3{
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 48px;
+  padding-bottom: 22px;
+  margin: 0;
+  }
+  .divider{
+    position: relative;
+    height: 2px;
+    width: 100px;
+    margin: 0 auto;
+    &:before,
+    &:after{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: $border-color;
+      content: "";
+    }
+    &:before{
+      left: auto;
+      right: 0;
+    }
+    .divider-inner{
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      margin-left: -10px;
+      &:after{
+        width: 6px;
+        height: 6px;
+        background: $primary-color;
+        content: "";
+        @include transform(translatey(-50%) translatex(-50%) rotate(45deg) );
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+    }
+  }
+}
+
 /*
  * 19.1 About page
  */
 
-
-.about-left{
-  margin-left: 30px;
-  margin-bottom: 30px;
+.about-content{
+  background: url(../images/about-bg.png) no-repeat center center;
+  padding: 145px 15px;
 }
 
 /*
  * 19.2 Contact page
  */
-.contact-details{
-  background: $gray-bg;
-  padding: 65px 35px;
-  margin-bottom: 30px;
-  color: $gray-text;
-  p{
-    line-height: 36px;
-    margin-bottom: 40px;
-  }
-  .social-nav{
-    li{
-      a{
-        color: $gray-text;
-        &:hover{
-          color: #000000;
-        }
-      }
-    }
-  }
-}
 .contactform{
-  margin-bottom: 30px;
-  h4{
-    margin-bottom: 30px;
-  }
-  input[type="text"],
+  padding:50px 118px;
+  input,
   textarea{
-    padding: 15px 0;
-    line-height: normal;
-    border: none;
-    border-bottom: 2px solid #e3e3e3;
-    height: auto;
-    &:focus{
-      border-color: $gray-text;
-    }
+    text-transform: uppercase;
+    padding-right: 50px;
   }
   textarea{
     width: 100%!important;
+    height: 155px;
+  }
+  .form-name,
+  .form-email,
+  .form-mobile,
+  .form-website,
+  .form-comment{
+    position: relative;
+    &:after{
+      @include FontIcon('\e107', 'ElegantIcons');
+      font-size: 18px;
+      @include opacity(0.35);
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      text-align: center;
+      width: 50px;
+      line-height: 50px;
+    }
+  }
+  .form-email{
+    &:after{
+      @include FontIcon('\e010', 'ElegantIcons');
+    }
+  }
+  .form-mobile{
+    &:after{
+      @include FontIcon('\e00b', 'ElegantIcons');
+    }
+  }
+  .form-website{
+    &:after{
+      @include FontIcon('\e0e3', 'ElegantIcons');
+    }
+  }
+  .form-comment{
+    &:after{
+      @include FontIcon('\e104', 'ElegantIcons');
+    }
   }
 }
 /*
