@@ -26,8 +26,8 @@ include_once('templates/headers/header1.php');
                     <div class="page-subtitle">creative online fashion shop</div>
                 </div>
 
-                <div class="block-image">
-                    <div class="image-inner">
+                <div class="block-style">
+                    <div class="block-style-inner">
                         <img class="img-responsive" src="assets/images/about-thumb.jpg" alt="" />
                     </div>
                 </div>
@@ -39,33 +39,37 @@ include_once('templates/headers/header1.php');
                 </div>
             </div>
         </div>
-        <div class="page-section bg-gray">
+        <div class="page-section bg-gray pad-bottom-60">
+            <div class="page-title-divider">
+                <h3>our team</h3>
+                <div class="divider"><div class="divider-inner"></div></div>
+            </div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
                         <div class="team">
-                            <div class="avatar"><img src="assets/images/team-1.jpg" alt="" class="img-responsive" /></div>
+                            <div class="avatar"><img src="assets/images/team/1.jpg" alt="" class="img-responsive" /></div>
                             <h3 class="team-name">Zaki warfel</h3>
                             <div class="team-agency">creative director</div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="team">
-                            <div class="avatar"><img src="assets/images/team-2.jpg" alt="" class="img-responsive" /></div>
+                            <div class="avatar"><img src="assets/images/team/2.jpg" alt="" class="img-responsive" /></div>
                             <h3 class="team-name">Andree waashen</h3>
                             <div class="team-agency">art director</div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="team">
-                            <div class="avatar"><img src="assets/images/team-3.jpg" alt="" class="img-responsive" /></div>
+                            <div class="avatar"><img src="assets/images/team/3.jpg" alt="" class="img-responsive" /></div>
                             <h3 class="team-name">Geek andko</h3>
                             <div class="team-agency">team leader</div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="team">
-                            <div class="avatar"><img src="assets/images/team-4.jpg" alt="" class="img-responsive" /></div>
+                            <div class="avatar"><img src="assets/images/team/4.jpg" alt="" class="img-responsive" /></div>
                             <h3 class="team-name">Dustin lamont</h3>
                             <div class="team-agency">creative designer</div>
                         </div>
@@ -75,7 +79,7 @@ include_once('templates/headers/header1.php');
         </div>
     </div><!-- #main -->
     
-    <img src="previews/20-about-us.jpg" class="preview-image" style="top: 0;display: none1;max-width:none;" />
+    <img src="previews/20-about-us.jpg" class="preview-image" style="top: 0;display: none;max-width:none;" />
 <?php
 
 include_once('templates/footers/footer3.php');
