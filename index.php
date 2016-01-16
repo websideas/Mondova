@@ -162,7 +162,7 @@ include_once('templates/headers/header1.php');
                 <div class="kt-heading-backend">Women</div>
                 <h3 class="kt-heading-title">what's hot</h3>
                 <div class="kt-heading-subtitle">New Arrvial</div>
-            </div><!-- .kt-heading-wrapper -->
+            </div><!-- .kt-heading -->
         </div>
     </div>
 
@@ -240,6 +240,9 @@ include_once('templates/headers/header1.php');
         </div>
     </div>
 
+
+
+    blog-title
 
 
 

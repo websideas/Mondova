@@ -107,6 +107,7 @@
         <a href="#">Blog</a>
         <ul class="sub-menu-dropdown">
             <li><a href="blog-list-sidebar.php">List</a></li>
+            <li><a href="blog-fullwidth.php">Full width</a></li>
             <li>
                 <a href="blog-list-sidebar.php">Grid</a>
                 <ul class="sub-menu-dropdown">
