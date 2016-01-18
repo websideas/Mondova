@@ -7,19 +7,15 @@ include_once('templates/headers/head.php');
 
 ?>
 
-<div class="wrapper-404">
+<div class="wrapper-404" style="background-image:url(assets/images/bg-404.jpg)">
     <div id="error404">
-
-        <h1>404</h1>
-        <h4>Oops, page not found.</h4>
-        <p>It looks like nothing was found at this location. <br />Click the link below to return home.</p>
-        <p class="no-margin"><a href="index.php">Return home <i class="icon-Right-3"></i></a></p>
+		<h4>the page you are looking for does not exist</h4>
+        <h1>404 error</h1>
+        <p class="no-margin"><a class="btn btn-default" href="index.php">please return to homepage</a></p>
 
     </div><!-- #main -->
 </div>
-
+<img src="previews/29-404-page.jpg" class="preview-image" style="top: 0;display: none1;max-width:none;" />
 
 <?php
 include_once('templates/footers/foot.php');
-
-

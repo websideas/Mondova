@@ -48,28 +48,60 @@ include_once('templates/headers/header1.php');
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
                         <div class="team">
-                            <div class="avatar"><img src="assets/images/team/1.jpg" alt="" class="img-responsive" /></div>
+                            <div class="avatar">
+                                <img src="assets/images/team/1.jpg" alt="" class="img-responsive" />
+                                <div class="socials-team">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
                             <h3 class="team-name">Zaki warfel</h3>
                             <div class="team-agency">creative director</div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="team">
-                            <div class="avatar"><img src="assets/images/team/2.jpg" alt="" class="img-responsive" /></div>
+                            <div class="avatar">
+                                <img src="assets/images/team/2.jpg" alt="" class="img-responsive" />
+                                <div class="socials-team">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
                             <h3 class="team-name">Andree waashen</h3>
                             <div class="team-agency">art director</div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="team">
-                            <div class="avatar"><img src="assets/images/team/3.jpg" alt="" class="img-responsive" /></div>
+                            <div class="avatar">
+                                <img src="assets/images/team/3.jpg" alt="" class="img-responsive" />
+                                <div class="socials-team">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
                             <h3 class="team-name">Geek andko</h3>
                             <div class="team-agency">team leader</div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="team">
-                            <div class="avatar"><img src="assets/images/team/4.jpg" alt="" class="img-responsive" /></div>
+                            <div class="avatar">
+                                <img src="assets/images/team/4.jpg" alt="" class="img-responsive" />
+                                <div class="socials-team">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
                             <h3 class="team-name">Dustin lamont</h3>
                             <div class="team-agency">creative designer</div>
                         </div>

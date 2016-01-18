@@ -387,7 +387,6 @@
      Google Map Short code
      --------------------------------------------- */
     function init_VCGoogleMap() {
-        var styleMap =  [{"stylers":[{"saturation":-100},{"gamma":0.8},{"lightness":4},{"visibility":"on"}]},{"featureType":"landscape.natural","stylers":[{"visibility":"on"},{"color":"#5dff00"},{"gamma":4.97},{"lightness":-5},{"saturation":100}]}];
         $(".googlemap").each(function () {
             var mapObj = $(this),
                 scrollwheel = (mapObj.data('scrollwheel') == '1') ? false : true;
@@ -398,7 +397,6 @@
                         zoom: mapObj.data('zoom'),
                         mapTypeId: mapObj.data('type').toLowerCase(),
                         scrollwheel: scrollwheel,
-                        styles: styleMap
                     }
                 }
             });
@@ -454,10 +452,12 @@
             }
         });
 
+
+        $('#payment ul.payment_methods li:first').addClass('active');
         $('.input-radio', '#payment').on('change', function(){
             var val = $('.input-radio:checked', '#payment').val();
-            $('.payment_box', '#payment').hide();
-            $('.payment_method_'+val, '#payment ').show();
+            $('.payment_box', '#payment').hide().closest('li').removeClass('active');
+            $('.payment_method_'+val, '#payment ').show().closest('li').addClass('active');
         });
 
         if (typeof $.fn.easyZoom !== "undefined") {
@@ -480,6 +480,11 @@
 
             });
         }
+
+        $('body').on('click','.woocommerce .showlogin',function(e){
+            e.preventDefault();
+            $(this).parent().next('.login').slideToggle();
+        });
 
     }
 
