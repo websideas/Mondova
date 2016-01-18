@@ -101,6 +101,7 @@
             <li><a href="shortcode-banner.php">Banner</a></li>
             <li><a href="shortcode-messagebox.php">Message Box</a></li>
             <li><a href="shortcode-typography.php">Typography</a></li>
+            <li><a href="shortcode-iconbox.php">Icon box</a></li>
         </ul>
     </li>
     <li>
