@@ -1,6 +1,6 @@
 <div class="col-md-3 col-sm-12 col-xs-12 side-bar">
 
-    <div class="widget-container widget_product_categories">
+    <div class="widget widget_product_categories">
         <h3 class="widget-title">Categories</h3>
         <ul class="product-categories">
             <li><a href="#">Women fashion<span class="count">(256)</span></a></li>
@@ -21,7 +21,7 @@
     </div><!-- .widget_product_categories -->
 
 
-    <div class="widget-container widget_layered_nav">
+    <div class="widget widget_layered_nav">
         <h3 class="widget-title">size</h3>
         <ul class="sizes">
             <li><a href="#">M</a></li>
@@ -32,7 +32,7 @@
         </ul>
     </div>
 
-    <div class="widget-container widget_layered_nav">
+    <div class="widget widget_layered_nav">
         <h3 class="widget-title">Color</h3>
         <ul class="colors">
             <li><a href="#"><i class="-filter-color" style="background-color:green;"></i>Green</a></li>
@@ -51,7 +51,7 @@
     </div>
 
 
-    <div class="widget-container widget_price_filter">
+    <div class="widget widget_price_filter">
         <h3 class="widget-title">price range</h3>
         <form method="get" action="#">
             <div class="price_slider_wrapper">
@@ -62,7 +62,7 @@
     </div>
 
 
-    <div class="widget-container widget_manufacturer">
+    <div class="widget widget_manufacturer">
         <h3 class="widget-title">Manufacturer</h3>
         <ul class="product-categories">
             <li><a href="#">Charles Owo<span class="count">(256)</span></a></li>
@@ -73,8 +73,29 @@
             <li><a href="#">Fluent<span class="count">(155)</span></a></li>
         </ul>
     </div>
+    <div class="widget widget_products">
+        <h3 class="widget-title">New products</h3>
+        <ul class="product_list_widget">
+            <li>
+                <a href="#">
+                    <img alt="" class="" src="assets/images/product/widget/1.jpg">
+                    <span class="product-title">Greatest of All Time</span>
+                </a>
+                <span class="amount">345,00 $</span>
+                <div title="Rated 4.50 out of 5" class="star-rating"><span style="width:80%"><strong class="rating">4.50</strong> out of 5</span></div>
+            </li>
+            <li>
+                <a href="#">
+                    <img alt="" class="" src="assets/images/product/widget/2.jpg">
+                    <span class="product-title">Greatest of All Time</span>
+                </a>
+                <span class="amount">345,00 $</span>
+                <div title="Rated 4.50 out of 5" class="star-rating"><span style="width:90%"><strong class="rating">4.50</strong> out of 5</span></div>
+            </li>
+        </ul>
+    </div>
 
-    <div class="widget-container widget_product_tag_cloud">
+    <div class="widget widget_product_tag_cloud">
         <h3 class="widget-title">popular tags</h3>
         <div class="tagcloud">
             <a href="#">Shoes</a>

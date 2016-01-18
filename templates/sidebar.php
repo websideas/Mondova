@@ -1,6 +1,6 @@
 <div class="col-md-3 col-sm-12 col-xs-12 side-bar">
 
-    <div class="widget-container widget_social">
+    <div class="widget widget_social">
         <ul class="social-nav">
             <li>
                 <a target="_blank" href="#">
@@ -23,14 +23,14 @@
         </ul>
     </div>
 
-    <div class="widget-container widget_search">
+    <div class="widget widget_search">
         <form action="#" class="searchform" method="get">
             <input type="text" name="s" value="" placeholder="Type and hit enter ...">
             <button class="submit"><i class="icon_search"></i></button>
         </form>
     </div>
 
-    <div class="widget-container widget_categories">
+    <div class="widget widget_categories">
         <h3 class="widget-title">Categories</h3>
         <ul class="product-categories">
             <li>
@@ -46,7 +46,7 @@
         </ul>
     </div><!-- .widget_categories -->
 
-    <div class="widget-container widget_kt_posts">
+    <div class="widget widget_kt_posts">
         <h3 class="widget-title">Recent posts</h3>
         <ul class="kt-posts-widget">
             <li>
@@ -87,7 +87,7 @@
 
 
 
-    <div class="widget-container widget_recent_comments">
+    <div class="widget widget_recent_comments">
         <h3 class="widget-title">Recent comments</h3>
         <ul>
             <li><a class="comment-author-link" href="#">Drew Minns</a> on <a href="#">In purus nibh, venenatis non eleifend eget</a></li>
@@ -97,9 +97,7 @@
         </ul>
     </div>
 
-
-
-    <div class="widget-container widget_archive">
+    <div class="widget widget_archive">
         <h3 class="widget-title">Archives</h3>
         <ul>
             <li><a href="#">May 2015<span>(173)</span></a></li>

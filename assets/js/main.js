@@ -189,7 +189,8 @@
         $('.kt-owl-carousel').each(function(){
 
             var objCarousel = $(this),
-                options = $(objCarousel).data('options') || {};
+                options = $(objCarousel).data('options') || {},
+                func_cb;
             options.theme = 'owl-kttheme';
 
             if(typeof options.desktop !== "undefined"){
@@ -208,6 +209,9 @@
             if(typeof options.mobile !== "undefined"){
                 options.itemsMobile = [479,options.mobile];
             }
+
+            func_cb =  window[options.callback];
+
             options.afterInit  = function(elem) {
                 if(typeof options.outer !== "undefined" && options.navigation){
                     var $buttons = elem.find('.owl-buttons');
@@ -217,7 +221,17 @@
                     var $pagination = elem.find('.owl-pagination');
                     $pagination.prependTo(objCarousel.closest('.owl-carousel-kt'));
                 }
+                if( typeof func_cb === 'function'){
+                    func_cb( 'afterInit',   elem );
+                }
             };
+
+            options.afterUpdate = function(elem){
+                if( typeof func_cb === 'function'){
+                    func_cb( 'afterUpdate',   elem );
+                }
+            };
+
             objCarousel.imagesLoaded(function() {
                 objCarousel.owlCarousel(options);
             });
@@ -605,3 +619,20 @@
     }
 
 })(jQuery); // End of use strict
+function kt_products_carousel( _type, elem ){
+    "use strict"; // Start of use strict
+
+    var $wrapper = elem.closest('.widget_products_carousel');
+
+    console.log($wrapper);
+
+    if( _type === 'afterInit' ) {
+        console.log('afterInit');
+
+    }
+
+    if( _type == 'afterUpdate'){
+        console.log('afterUpdate');
+    }
+
+}

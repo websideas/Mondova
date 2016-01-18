@@ -241,15 +241,318 @@ include_once('templates/headers/header1.php');
     </div>
 
 
+    <div class="page-section">
+        <div class="container">
+            <div class="row no-gutters row-flex row-content-middle">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="col-inner">
+                        <img alt="blog5" class="img-responsive " src="assets/images/blog/12.jpg">
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="col-inner">
+                        <div class="kt-heading no-margin pad-md">
+                            <div class="kt-heading-backend">the blog</div>
+                            <h3 class="kt-heading-title">the blog</h3>
+                            <div class="kt-heading-subtitle">latest news</div>
+                        </div><!-- .kt-heading -->
+                    </div>
+                </div>
+            </div>
 
-    blog-title
+            <div class="blog-posts blog-posts-full">
+                <div class="blog-post">
+                    <div class="row no-gutters row-flex row-content-middle">
+                        <div class="col-md-6 col-sm-12 col-xs-12 text-center">
+                            <div class="col-inner">
+                                <div class="blog-post-content">
+                                    <h4 class="blog-post-title">
+                                        <a href="blog-singlepost-standard.php">Blog demo</a>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam</p>
+                                    <p class="entry-more"><a href="#" class="more-link"><span>Read More</span></a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="col-inner">
+                                <div class="blog-post-infos">
+                                    <a href="blog-singlepost-standard.php" class="blog-post-thumbnail">
+                                        <img src="assets/images/blog/13.jpg" alt=""/>
+                                    </a>
+                                    <div class="blog-post-meta">
+                                        <span class="cat-links"><a href="#">the blog</a></span>
+                                        <span class="author vcard">By <a href="#">Author</a></span>
+                                        <span class="meta-date">20.11.2015</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+
+    <div class="page-section bg-gray">
+        <div class="container">
+
+            <div class="row mar-bottom-100">
+                <div class="col-md-4">
+                    <div class="bg-white box-shadow" style="padding: 40px 30px;">
+
+                        <div class="widget widget_products_carousel no-margin">
+                            <h3 class="widget-title">Top items</h3>
+
+                            <div class="owl-carousel-kt  no-margin">
+                                <div class="owl-carousel kt-owl-carousel" data-options='{"pagination": false, "navigation": true, "desktop": 1, "tablet" : 1, "mobile" : 1, "callback": "kt_products_carousel"}'>
+
+                                    <ul class="product_list_widget">
+                                        <li>
+                                            <a href="#">
+                                                <img alt="" class="" src="assets/images/product/widget/1.jpg">
+                                                <span class="product-title">Greatest of All Time</span>
+                                            </a>
+                                            <span class="amount">345,00 $</span>
+                                            <div title="Rated 4.50 out of 5" class="star-rating"><span style="width:80%"><strong class="rating">4.50</strong> out of 5</span></div>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img alt="" class="" src="assets/images/product/widget/2.jpg">
+                                                <span class="product-title">Quiksilver T-Shirt </span>
+                                            </a>
+                                            <span class="amount">345,00 $</span>
+                                            <div title="Rated 4.50 out of 5" class="star-rating"><span style="width:90%"><strong class="rating">4.50</strong> out of 5</span></div>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="product_list_widget">
+                                        <li>
+                                            <a href="#">
+                                                <img alt="" class="" src="assets/images/product/widget/3.jpg">
+                                                <span class="product-title">Greatest of All Time</span>
+                                            </a>
+                                            <span class="amount">345,00 $</span>
+                                            <div title="Rated 4.50 out of 5" class="star-rating"><span style="width:80%"><strong class="rating">4.50</strong> out of 5</span></div>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img alt="" class="" src="assets/images/product/widget/4.jpg">
+                                                <span class="product-title">Greatest of All Time</span>
+                                            </a>
+                                            <span class="amount">345,00 $</span>
+                                            <div title="Rated 4.50 out of 5" class="star-rating"><span style="width:90%"><strong class="rating">4.50</strong> out of 5</span></div>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="product_list_widget">
+                                        <li>
+                                            <a href="#">
+                                                <img alt="" class="" src="assets/images/product/widget/5.jpg">
+                                                <span class="product-title">Greatest of All Time</span>
+                                            </a>
+                                            <span class="amount">345,00 $</span>
+                                            <div title="Rated 4.50 out of 5" class="star-rating"><span style="width:90%"><strong class="rating">4.50</strong> out of 5</span></div>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img alt="" class="" src="assets/images/product/widget/6.jpg">
+                                                <span class="product-title">Greatest of All Time</span>
+                                            </a>
+                                            <span class="amount">345,00 $</span>
+                                            <div title="Rated 4.50 out of 5" class="star-rating"><span style="width:90%"><strong class="rating">4.50</strong> out of 5</span></div>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-white box-shadow" style="padding: 40px 30px;">
+
+                        <div class="widget widget_products_carousel no-margin">
+                            <h3 class="widget-title">new collection</h3>
+
+                            <div class="owl-carousel-kt  no-margin">
+                                <div class="owl-carousel kt-owl-carousel" data-options='{"pagination": false, "navigation": true, "desktop": 1, "tablet" : 1, "mobile" : 1, "callback": "kt_products_carousel"}'>
+                                    <ul class="product_list_widget">
+                                        <li>
+                                            <a href="#">
+                                                <img alt="" class="" src="assets/images/product/widget/3.jpg">
+                                                <span class="product-title">Greatest of All Time</span>
+                                            </a>
+                                            <span class="amount">345,00 $</span>
+                                            <div title="Rated 4.50 out of 5" class="star-rating"><span style="width:80%"><strong class="rating">4.50</strong> out of 5</span></div>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img alt="" class="" src="assets/images/product/widget/4.jpg">
+                                                <span class="product-title">Greatest of All Time</span>
+                                            </a>
+                                            <span class="amount">345,00 $</span>
+                                            <div title="Rated 4.50 out of 5" class="star-rating"><span style="width:90%"><strong class="rating">4.50</strong> out of 5</span></div>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_list_widget">
+                                        <li>
+                                            <a href="#">
+                                                <img alt="" class="" src="assets/images/product/widget/1.jpg">
+                                                <span class="product-title">Greatest of All Time</span>
+                                            </a>
+                                            <span class="amount">345,00 $</span>
+                                            <div title="Rated 4.50 out of 5" class="star-rating"><span style="width:80%"><strong class="rating">4.50</strong> out of 5</span></div>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img alt="" class="" src="assets/images/product/widget/2.jpg">
+                                                <span class="product-title">Quiksilver T-Shirt </span>
+                                            </a>
+                                            <span class="amount">345,00 $</span>
+                                            <div title="Rated 4.50 out of 5" class="star-rating"><span style="width:90%"><strong class="rating">4.50</strong> out of 5</span></div>
+                                        </li>
+                                    </ul>
+
+
+
+                                    <ul class="product_list_widget">
+                                        <li>
+                                            <a href="#">
+                                                <img alt="" class="" src="assets/images/product/widget/5.jpg">
+                                                <span class="product-title">Greatest of All Time</span>
+                                            </a>
+                                            <span class="amount">345,00 $</span>
+                                            <div title="Rated 4.50 out of 5" class="star-rating"><span style="width:90%"><strong class="rating">4.50</strong> out of 5</span></div>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img alt="" class="" src="assets/images/product/widget/6.jpg">
+                                                <span class="product-title">Greatest of All Time</span>
+                                            </a>
+                                            <span class="amount">345,00 $</span>
+                                            <div title="Rated 4.50 out of 5" class="star-rating"><span style="width:90%"><strong class="rating">4.50</strong> out of 5</span></div>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-white box-shadow" style="padding: 40px 30px;">
+
+                        <div class="widget widget_products_carousel no-margin">
+                            <h3 class="widget-title">best seller</h3>
+
+                            <div class="owl-carousel-kt  no-margin">
+                                <div class="owl-carousel kt-owl-carousel" data-options='{"pagination": false, "navigation": true, "desktop": 1, "tablet" : 1, "mobile" : 1, "callback": "kt_products_carousel"}'>
+                                    <ul class="product_list_widget">
+                                        <li>
+                                            <a href="#">
+                                                <img alt="" class="" src="assets/images/product/widget/5.jpg">
+                                                <span class="product-title">Greatest of All Time</span>
+                                            </a>
+                                            <span class="amount">345,00 $</span>
+                                            <div title="Rated 4.50 out of 5" class="star-rating"><span style="width:90%"><strong class="rating">4.50</strong> out of 5</span></div>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img alt="" class="" src="assets/images/product/widget/6.jpg">
+                                                <span class="product-title">Greatest of All Time</span>
+                                            </a>
+                                            <span class="amount">345,00 $</span>
+                                            <div title="Rated 4.50 out of 5" class="star-rating"><span style="width:90%"><strong class="rating">4.50</strong> out of 5</span></div>
+                                        </li>
+                                    </ul>
+                                    <ul class="product_list_widget">
+                                        <li>
+                                            <a href="#">
+                                                <img alt="" class="" src="assets/images/product/widget/1.jpg">
+                                                <span class="product-title">Greatest of All Time</span>
+                                            </a>
+                                            <span class="amount">345,00 $</span>
+                                            <div title="Rated 4.50 out of 5" class="star-rating"><span style="width:80%"><strong class="rating">4.50</strong> out of 5</span></div>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img alt="" class="" src="assets/images/product/widget/2.jpg">
+                                                <span class="product-title">Quiksilver T-Shirt </span>
+                                            </a>
+                                            <span class="amount">345,00 $</span>
+                                            <div title="Rated 4.50 out of 5" class="star-rating"><span style="width:90%"><strong class="rating">4.50</strong> out of 5</span></div>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="product_list_widget">
+                                        <li>
+                                            <a href="#">
+                                                <img alt="" class="" src="assets/images/product/widget/3.jpg">
+                                                <span class="product-title">Greatest of All Time</span>
+                                            </a>
+                                            <span class="amount">345,00 $</span>
+                                            <div title="Rated 4.50 out of 5" class="star-rating"><span style="width:80%"><strong class="rating">4.50</strong> out of 5</span></div>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img alt="" class="" src="assets/images/product/widget/4.jpg">
+                                                <span class="product-title">Greatest of All Time</span>
+                                            </a>
+                                            <span class="amount">345,00 $</span>
+                                            <div title="Rated 4.50 out of 5" class="star-rating"><span style="width:90%"><strong class="rating">4.50</strong> out of 5</span></div>
+                                        </li>
+                                    </ul>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="owl-carousel-kt no-mar-bottom">
+                <div class="owl-carousel kt-owl-carousel" data-options='{"pagination": false, "navigation": false, "desktop": 5, "desktopsmall": 4, "tablet" : 3, "mobile" : 2}'>
+                    <div class="client-item">
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="tHE LOGO BRAND 1"><img src="assets/images/logos/1.png" class="img-responsive" alt=""/> </a>
+                    </div>
+                    <div class="client-item">
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="tHE LOGO BRAND 2"><img src="assets/images/logos/2.png" class="img-responsive" alt=""/> </a>
+                    </div>
+                    <div class="client-item">
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="tHE LOGO BRAND 3"><img src="assets/images/logos/3.png" class="img-responsive" alt=""/> </a>
+                    </div>
+                    <div class="client-item">
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="tHE LOGO BRAND 4"><img src="assets/images/logos/4.png" class="img-responsive" alt=""/> </a>
+                    </div>
+                    <div class="client-item">
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="tHE LOGO BRAND 5"><img src="assets/images/logos/5.png" class="img-responsive" alt=""/> </a>
+                    </div>
+                    <div class="client-item">
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="tHE LOGO BRAND 6"><img src="assets/images/logos/3.png" class="img-responsive" alt=""/> </a>
+                    </div>
+                    <div class="client-item">
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="tHE LOGO BRAND 7"><img src="assets/images/logos/2.png" class="img-responsive" alt=""/> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
 </div><!-- #main -->
 
-<img src="previews/01-homepage-V1.jpg" class="preview-image" style="top: -3415px;display: none;" />
+<img src="previews/01-homepage-V1.jpg" class="preview-image" style="top: -3353px;display: none;" />
 
 <?php
 
