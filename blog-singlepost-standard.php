@@ -95,7 +95,7 @@ include_once('templates/headers/header1.php');
             </div>
         </div>
 
-        <div class="page-section pad-top-15">
+        <div class="page-section pad-top-15 pad-bottom-90">
             <div class="container">
                 <div class="post-pagination clearfix">
                     <a href="#" class="previous-post">
@@ -223,7 +223,7 @@ include_once('templates/headers/header1.php');
                                 <div class="col-sm-6"><p class="comment-form-email"><input type="text" placeholder="Email" aria-required="true" size="30" value="" name="email" id="email"></p></div>
                             </div>
                             <p class="comment-form-comment"><textarea placeholder="Comment" name="comment"></textarea></p>
-                            <p class="form-submit no-margin"><input type="submit" value="Submit" class="btn btn-default btn-lg" name="submit"></p>
+                            <p class="form-submit no-margin"><button type="submit" class="btn btn-default btn-lg" name="submit">Post Comment</button></p>
                         </form><!-- .comment-form -->
                     </div>
                 </div><!-- .comment-respond -->

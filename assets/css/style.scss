@@ -501,15 +501,17 @@ select:not([multiple]) {
    ============================== */
 
 .btn {
-  @include border-radius(0);
-  border: 2px solid transparent;
-  display: inline-block;
+  position: relative;
+  text-align: center;
   line-height: 1.42857;
-  padding: 8px 26px;
-  font-weight: 400;
-  font-size: 14px;
-  text-transform: uppercase;
+  padding: 10px 35px;
+  display: inline-block;
   font-family: $button-text;
+  text-transform: uppercase;
+  color: $text;
+  font-size: 14px;
+  @include border-radius(0);
+
   &:focus,
   &:active:focus,
   &.active:focus {
@@ -530,12 +532,12 @@ select:not([multiple]) {
     font-size: 10px;
   }
   &.btn-lg {
-    padding: 10px 60px;
-    font-size: 18px;
+    padding: 14px 35px;
+    font-size: 16px;
   }
   &.btn-xlg {
     padding: 12px 65px;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   /* Button shapes */
@@ -556,9 +558,39 @@ select:not([multiple]) {
 
   /* Button style */
   &.btn-default {
-    background: #000000;
-    color: #FFFFFF;
-    border-color: #000000;
+    border: none;
+    background: none;
+    color: $text;
+    &:before,
+    &:after{
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 10px;
+      @include transition('all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s');
+    }
+    &:before{
+      left: 0;
+      bottom: 0;
+      border-left: 2px solid $primary-color;
+      border-bottom: 2px solid $primary-color;
+    }
+    &:after{
+      top: 0;
+      right: 0;
+      border-right: 2px solid $primary-color;
+      border-top: 2px solid $primary-color;
+    }
+    &:focus,
+    &:hover{
+      background: none;
+      color: $text;
+      &:before,
+      &:after{
+        height: 50%;
+      }
+    }
   }
   &.btn-animation{
     span{
@@ -584,60 +616,15 @@ select:not([multiple]) {
       }
     }
   }
-  &.btn-gray {
-    background: $gray-bg;
-    color: $gray-darker;
-    border-color:$gray-bg;
-    &:hover{
-      background: #000000;
-      color: #FFFFFF;
-      border-color: #000000;
-    }
-  }
-  &.btn-light{
-    border-color: #FFFFFF;
-    background: #FFFFFF;
-    color: #000000;
-    &:hover{
-      background: #000000;
-      color: #FFFFFF;
-      border-color: #000000;
-    }
-  }
-
-  &.btn-dark-b {
-    background: none;
-    color: #000000;
-    border-color: #000000;
-  }
-  &.btn-light-b{
-    border: 2px solid #FFFFFF;
-    background: none;
-    font-family: $font-stack;
-    font-weight: normal;
-    color: #FFFFFF;
-    &:hover{
-      background: #FFFFFF;
-      color: #000000;
-    }
-  }
-
-  &.btn-medium{
-    background: $gray-bg;
-    border: 1px solid #f0f0f0;
-    color: #000;
-    letter-spacing: 0.2em;
-    &:hover{
-      background: #000000;
-      border-color: #000000;
-      color: #fff;
-    }
-  }
 
   &.btn-accent{
     background: $primary-color;
     border: 2px solid $primary-color;
     color: $white;
+    &[required]:after{
+      content: "";
+      background: red;
+    }
     &:hover{
       background: $text;
       border-color: $text;
@@ -645,48 +632,18 @@ select:not([multiple]) {
     }
   }
 
-  &.btn-addtocart{
-    background: #ffffff;
-    color: #000000;
-    width: 100%;
-    height: 48px;
-    font-size: 14px;
-    border-color: #ffffff;
-    padding: 0 45px;
-    line-height: 44px;
-    &:hover{
-      background: #000000;
-      color: #FFFFFF;
-      border-color: #000000;
-    }
-  }
-  &.btn-addtocart-b{
-    background: none;
-    color: #000000;
-    height: 48px;
-    font-size: 14px;
-    border-color: #000000;
-    padding: 0 45px;
-    line-height: 44px;
-    &:hover{
-      background: #000000;
-      color: #FFFFFF;
-      border-color: #000000;
+  &.btn-dark{
+    background: $text;
+    color: $white;
+    &:hover,
+    &:focus{
+      background: $primary-color;
     }
   }
 
   &.btn-fullwidth{
     width: 100%;
   }
-
-  &.btn-default,
-  &.btn-dark-b{
-    &:hover{
-      background: $primary-color;
-      color: #FFFFFF;
-      border-color: $primary-color;
-    }
-  }  
 }
 
 .more-link{
@@ -798,9 +755,23 @@ select:not([multiple]) {
 }
 
 .page-section.page-header-2{
-  padding:130px 0 300px;
+  padding:130px 0 0;
   .page-header-icon{
     font-size: 70px;
+  }
+  .page-header-text{
+    background: $white;
+    margin-top: 130px;
+    padding: 75px 30px 15px;
+    h1{
+      color: $black;
+    }
+    .subtitle{
+      @include opacity(0.35);
+      text-align: center;
+      text-transform: uppercase;
+      color: $text;
+    }
   }
 }
 
@@ -3797,7 +3768,7 @@ ul.style-list{
       padding-right: 50px;
     }
     textarea{
-      height: 155px;
+      height: 150px;
       width: 100% !important;
     }
   }
@@ -4414,6 +4385,50 @@ ul.style-list{
 /*
  * 15.3 Product Detail
  */
+
+.quantity-group{
+  position: relative;
+  display: inline-block;
+  input{
+    border: 2px solid $border-color;
+    background: none;
+    padding: 0 20px 0 5px;
+    width: 50px;
+    height: 30px;
+    font-size: 14px;
+    @include css3-prefix('appearance', 'textfield');
+    display: block;
+    &:focus{
+      border-color: $text;
+    }
+  }
+  .quantity-minus,
+  .quantity-plus{
+    position: absolute;
+    height: 50%;
+    width: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    padding: 0;
+    i{
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      @include transform(translatex(-50%));
+      line-height: 10px;
+    }
+  }
+  .quantity-minus{
+    top: auto;
+    bottom: 0;
+    i{
+      top: 0;
+    }
+  }
+}
 
 .product-main{
   .product-detail-thumbarea{
@@ -5156,11 +5171,6 @@ table.cart{
         }
       }
     }
-    .qty{
-      width: 60px;
-      margin: 0 auto;
-      text-align: center;
-    }
     span.amount{
       font-size: 18px;
     }
@@ -5344,21 +5354,18 @@ table.compare{
         text-align: center;
       }
       .add_to_wishlist{
-        width: 60px;
-        height: 48px;
-        border:2px solid #e3e3e3;
+        width: 44px;
+        height: 44px;
+        border:2px solid $border-color;
         text-align: center;
         display: inline-block;
         vertical-align: middle;
         i{
-          color: #999;
-          line-height: 44px;
+          color: $text;
+          line-height: 40px;
         }
         &:hover{
-          border-color: #000;
-          i{
-            color: #000;
-          }
+          border-color: $text;
         }
       }
       .add_to_cart_button{
@@ -5825,9 +5832,8 @@ table.compare{
    ============================== */
 
 .page-content{
-  padding:75px 60px;
+  padding:60px 60px 65px;
   background: $white;
-  margin-top: -170px;
   position: relative;
   .page-title-wrap{
     margin-bottom: 75px;
@@ -5962,7 +5968,7 @@ table.compare{
  * 19.2 Contact page
  */
 .contactform{
-  padding:50px 118px;
+  padding:50px 118px 46px;
   input,
   textarea{
     text-transform: uppercase;
@@ -5970,7 +5976,7 @@ table.compare{
   }
   textarea{
     width: 100%!important;
-    height: 155px;
+    height: 150px;
   }
   .form-name,
   .form-email,
@@ -6052,12 +6058,7 @@ table.compare{
   }
   p{
     a{
-      color: #74cdd7;
-      i{
-        font-size: 20px;
-        vertical-align: middle;
-        margin-left: 15px;
-      }
+      color: $white;
     }
   }
 }

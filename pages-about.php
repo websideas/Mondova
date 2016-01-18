@@ -13,6 +13,10 @@ include_once('templates/headers/header1.php');
             <div class="container">
                 <div class="page-header-content text-center">
                     <div class="page-header-icon"><span class="icon_lightbulb_alt"></span></div>
+                    <div class="page-header-text">
+                        <h1>welcome to mondova</h1>
+                        <div class="subtitle">creative online fashion shop</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -21,10 +25,6 @@ include_once('templates/headers/header1.php');
     <div id="main">
         <div class="container">
             <div class="page-content">
-                <div class="page-title-wrap">
-                    <h3 class="page-title">welcome to mondova</h3>
-                    <div class="page-subtitle">creative online fashion shop</div>
-                </div>
 
                 <div class="block-style">
                     <div class="block-style-inner">
@@ -116,5 +116,3 @@ include_once('templates/headers/header1.php');
 
 include_once('templates/footers/footer3.php');
 include_once('templates/footers/foot.php');
-
-

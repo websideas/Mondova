@@ -99,6 +99,7 @@
 
     init_productcarouselwoo($("#sync1"), $("#sync2"));
     init_ecommerce();
+    init_woo_quantily();
 
 
     $( 'body' )
@@ -621,6 +622,33 @@
         }
 
 
+    }
+
+    /* ---------------------------------------------
+     Woocommercer Quantily
+     --------------------------------------------- */
+    function init_woo_quantily(){
+        $('body').on('click','.quantity-group .quantity-plus',function(){
+            var obj_qty = $(this).closest('.quantity-group').find('input.qty'),
+                val_qty = parseInt(obj_qty.val()),
+                min_qty = parseInt(obj_qty.attr('min')),
+                max_qty = parseInt(obj_qty.attr('max')),
+                step_qty = parseInt(obj_qty.attr('step'));
+            val_qty = val_qty + step_qty;
+            if(max_qty && val_qty > max_qty){ val_qty = max_qty; }
+            obj_qty.val(val_qty);
+        });
+        $('body').on('click','.quantity-group .quantity-minus',function(){
+            var obj_qty = $(this).closest('.quantity-group').find('input.qty'),
+                val_qty = parseInt(obj_qty.val()),
+                min_qty = parseInt(obj_qty.attr('min')),
+                max_qty = parseInt(obj_qty.attr('max')),
+                step_qty = parseInt(obj_qty.attr('step'));
+            val_qty = val_qty - step_qty;
+            if(min_qty && val_qty < min_qty){ val_qty = min_qty; }
+            if(!min_qty && val_qty < 0){ val_qty = 0; }
+            obj_qty.val(val_qty);
+        });
     }
 
 })(jQuery); // End of use strict

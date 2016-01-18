@@ -37,13 +37,17 @@ include_once('templates/headers/header1.php');
                                 <tbody>
                                 <tr class="cart_item">
                                     <td class="product-thumbnail">
-                                        <a href="#" class="attachment-shop_thumbnail wp-post-image"><img width="100" src="assets/images/product/1.jpg" alt=""></a>
+                                        <a href="#" class="attachment-shop_thumbnail wp-post-image"><img src="assets/images/product/thumb/1.jpg" alt=""></a>
                                     </td>
                                     <td class="product-name">
                                         <a href="#">Wisi enim ad minim veniam exerci</a>
                                     </td>
                                     <td class="product-quantity">
-                                        <input type="text" size="4" class="input-text qty text" title="Qty" value="1" name="qty" />
+                                        <div class="quantity-group">
+                                            <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+                                            <button class="quantity-plus" type="button"><i class="fa fa-angle-up"></i></button>
+                                            <button class="quantity-minus" type="button"><i class="fa fa-angle-down"></i></button>
+                                        </div>
                                     </td>
                                     <td class="product-price">
                                         <span class="amount">$1000.00</span>
@@ -57,13 +61,17 @@ include_once('templates/headers/header1.php');
                                 </tr>
                                 <tr class="cart_item">
                                     <td class="product-thumbnail">
-                                        <a href="#" class="attachment-shop_thumbnail wp-post-image"><img width="100" src="assets/images/product/6.jpg" alt=""></a>
+                                        <a href="#" class="attachment-shop_thumbnail wp-post-image"><img width="100" src="assets/images/product/thumb/2.jpg" alt=""></a>
                                     </td>
                                     <td class="product-name">
                                         <a href="#">Option congue nihil imperdiet doming</a>
                                     </td>
                                     <td class="product-quantity">
-                                        <input type="text" size="4" class="input-text qty text" title="Qty" value="1" name="qty" />
+                                        <div class="quantity-group">
+                                            <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+                                            <button class="quantity-plus" type="button"><i class="fa fa-angle-up"></i></button>
+                                            <button class="quantity-minus" type="button"><i class="fa fa-angle-down"></i></button>
+                                        </div>
                                     </td>
                                     <td class="product-price">
                                         <span class="amount">$1000.00</span>

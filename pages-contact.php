@@ -14,6 +14,10 @@ include_once('templates/headers/header1.php');
             <div class="container">
                 <div class="page-header-content text-center">
                     <div class="page-header-icon"><span class="icon_lightbulb_alt"></span></div>
+                    <div class="page-header-text">
+                        <h1>contact form</h1>
+                        <div class="subtitle">leave a message</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -22,10 +26,6 @@ include_once('templates/headers/header1.php');
     <div id="main">
         <div class="container">
             <div class="page-content pad-bottom-30">
-                <div class="page-title-wrap">
-                    <h3 class="page-title">contact form</h3>
-                    <div class="page-subtitle">leave a message</div>
-                </div>
 
                 <div class="block-style mar-bottom-60">
                     <div class="block-style-inner">
@@ -47,7 +47,7 @@ include_once('templates/headers/header1.php');
                                 </div>
                             </div>
                             <p class="form-comment"><textarea name="message" placeholder="Comment"></textarea></p>
-                            <p class="no-margin"><input type="submit" class="btn btn-default" value="Send" /></p>
+                            <p class="no-margin text-center"><button type="submit" class="btn btn-default btn-lg">Send</button></p>
 
                         </form>
                     </div>

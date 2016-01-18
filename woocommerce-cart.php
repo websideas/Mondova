@@ -47,7 +47,11 @@ include_once('templates/headers/header1.php');
                                                 <span class="amount">120$</span>
                                             </td>
                                             <td class="product-quantity">
-                                                <input type="text" size="4" class="input-text qty text" title="Qty" value="1" name="qty" >
+                                                <div class="quantity-group">
+                                                    <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+                                                    <button class="quantity-plus" type="button"><i class="fa fa-angle-up"></i></button>
+                                                    <button class="quantity-minus" type="button"><i class="fa fa-angle-down"></i></button>
+                                                </div>
                                             </td>
                                             <td class="product-subtotal">
                                                 <span class="amount">120$</span>
@@ -64,7 +68,11 @@ include_once('templates/headers/header1.php');
                                                 <span class="amount">220$</span>
                                             </td>
                                             <td class="product-quantity">
-                                                <input type="text" size="4" class="input-text qty text" title="Qty" value="2" name="qty" />
+                                                <div class="quantity-group">
+                                                    <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+                                                    <button class="quantity-plus" type="button"><i class="fa fa-angle-up"></i></button>
+                                                    <button class="quantity-minus" type="button"><i class="fa fa-angle-down"></i></button>
+                                                </div>
                                             </td>
                                             <td class="product-subtotal">
                                                 <span class="amount">440$</span>
@@ -81,7 +89,11 @@ include_once('templates/headers/header1.php');
                                                 <span class="amount">320$</span>
                                             </td>
                                             <td class="product-quantity">
-                                                <input type="text" size="4" class="input-text qty text" title="Qty" value="3" name="qty" />
+                                                <div class="quantity-group">
+                                                    <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+                                                    <button class="quantity-plus" type="button"><i class="fa fa-angle-up"></i></button>
+                                                    <button class="quantity-minus" type="button"><i class="fa fa-angle-down"></i></button>
+                                                </div>
                                             </td>
                                             <td class="product-subtotal">
                                                 <span class="amount">960$</span>
@@ -89,8 +101,8 @@ include_once('templates/headers/header1.php');
                                         </tr>
                                         <tr>
                                             <td class="actions" colspan="6">
-                                                <button class="btn btn-default">Continue shopping</button>
-                                                <button class="btn btn-dark">update shopping cart</button>
+                                                <button class="btn btn-default btn-lg">Continue shopping</button>
+                                                <button class="btn btn-dark btn-lg">update shopping cart</button>
                                             </td>
                                         </tr>
                                         </tbody>

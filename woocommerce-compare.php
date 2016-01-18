@@ -108,22 +108,40 @@ include_once('templates/headers/header1.php');
                         </tr>
                         <tr>
                             <td class="compare-title">Quantity</td>
-                            <td><input type="text" name="qty" value="1" title="Qty" class="input-text qty text" size="4" /></td>
-                            <td><input type="text" name="qty" value="1" title="Qty" class="input-text qty text" size="4" /></td>
-                            <td><input type="text" name="qty" value="1" title="Qty" class="input-text qty text" size="4" /></td>
+                            <td>
+                                <div class="quantity-group">
+                                    <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+                                    <button class="quantity-plus" type="button"><i class="fa fa-angle-up"></i></button>
+                                    <button class="quantity-minus" type="button"><i class="fa fa-angle-down"></i></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="quantity-group">
+                                    <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+                                    <button class="quantity-plus" type="button"><i class="fa fa-angle-up"></i></button>
+                                    <button class="quantity-minus" type="button"><i class="fa fa-angle-down"></i></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="quantity-group">
+                                    <input type="number" size="4" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+                                    <button class="quantity-plus" type="button"><i class="fa fa-angle-up"></i></button>
+                                    <button class="quantity-minus" type="button"><i class="fa fa-angle-down"></i></button>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td class="compare-title">Action</td>
                             <td class="actions">
-                                <button class="btn btn-addtocart-b">Add To Cart</button>
+                                <button class="btn btn-accent">Add To Cart</button>
                                 <a title="" data-placement="top" data-toggle="tooltip" class="add_to_wishlist" href="#" data-original-title="Add to wishlist"><i class="fa fa-heart"></i></a>
                             </td>
                             <td class="actions">
-                                <button class="btn btn-addtocart-b">Add To Cart</button>
+                                <button class="btn btn-accent">Add To Cart</button>
                                 <a title="" data-placement="top" data-toggle="tooltip" class="add_to_wishlist" href="#" data-original-title="Add to wishlist"><i class="fa fa-heart"></i></a>
                             </td>
                             <td class="actions">
-                                <button class="btn btn-addtocart-b">Add To Cart</button>
+                                <button class="btn btn-accent">Add To Cart</button>
                                 <a title="" data-placement="top" data-toggle="tooltip" class="add_to_wishlist" href="#" data-original-title="Add to wishlist"><i class="fa fa-heart"></i></a>
                             </td>
                         </tr>
