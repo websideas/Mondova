@@ -22,7 +22,7 @@ include_once('templates/headers/header1.php');
             <div class="container">
                 <div class="woocommerce">
                     <div class="woocommerce-info">Returning customer? <a class="showlogin" href="#">Click here to login</a></div>
-                    <form class="login" method="post">
+                    <form class="login" style="display:none;" method="post">
 
                         <p>If you have shopped with us before, please enter your details in the boxes below. If you are a new customer please proceed to the Billing &amp; Shipping section.</p>
 
@@ -236,7 +236,7 @@ include_once('templates/headers/header1.php');
                                                     <noscript>Since your browser does not support JavaScript, or it is disabled, please ensure you click the <em>Update Totals</em> button before placing your order. You may be charged more than the amount stated above if you fail to do so.<br/>
                                                         <button type="submit" class="btn btn-medium style1">Update Totals</button>
                                                     </noscript>
-                                                    <button id="place_order" class="btn btn-accent btn-fullwidth btn-lg">Place Order</button>
+                                                    <button id="place_order" class="btn btn-accent btn-fullwidth btn-lg btn-animation"><span>Place Order<i class="fa fa-long-arrow-right"></i></span></button>
                                                 </div>
                                             </div>
                                         </div>

@@ -3,22 +3,15 @@ global $shadow;
 $shadow = ' ';
 
 include_once('templates/headers/head.php');
-include_once('templates/headers/header2.php');
+include_once('templates/headers/header1.php');
 
 ?>
-    <div class="page-section bg-gray small-section">
+    <div class="page-section page-header-bg small-section">
         <div class="page-header">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <ol class="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li class="active">My account</li>
-                        </ol>
-                    </div>
-                    <div class="col-md-8 text-right">
-                        <h1>My account</h1>
-                    </div>
+                <div class="page-header-content text-center">
+                    <h1>My Account</h1>
+                    <div class="page-header-divider"><span class="icon_key"></span></div>
                 </div>
             </div>
         </div>
@@ -40,7 +33,7 @@ include_once('templates/headers/header2.php');
                                 <input type="password" id="password1" name="password" class="input-bg" />
                             </p>
                             <p class="form-row">         
-                                <input type="submit" value="Login" name="login" class="btn btn-dark-b" />
+                                <input type="submit" value="Login" name="login" class="btn btn-accent" />
                                 <label class="inline" for="rememberme1">
                                     <input type="checkbox" value="forever" id="rememberme1" name="rememberme" /> Remember me               
                                 </label>
@@ -62,7 +55,7 @@ include_once('templates/headers/header2.php');
                                 <input type="password" id="reg_password" name="password" class="input-bg" />
                             </p>
                             <p class="form-row no-margin">             
-                                <input type="submit" value="Register" name="register" class="btn btn-dark-b" />
+                                <input type="submit" value="Register" name="register" class="btn btn-accent" />
                             </p>
                         </form>
                     </div>

@@ -57,7 +57,6 @@
   15.4 Checkout page
   15.5 My Cart page
   15.6 Compare page
-  15.6 Compare page
   15.7 My Account page
   15.8 QuickView
 16. Slideshow and owl carousel
@@ -507,9 +506,8 @@ select:not([multiple]) {
   display: inline-block;
   line-height: 1.42857;
   padding: 8px 26px;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 14px;
-  letter-spacing: 0.15em;
   text-transform: uppercase;
   font-family: $button-text;
   &:focus,
@@ -566,7 +564,7 @@ select:not([multiple]) {
     span{
       @include transform(translateX(0));
       @include transition("all .3s ease-in-out 0s");
-      display: block;
+      display: inline-block;
       position: relative;
       i{
         @include opacity(0);
@@ -628,7 +626,6 @@ select:not([multiple]) {
     background: $gray-bg;
     border: 1px solid #f0f0f0;
     color: #000;
-    font-weight: bold;
     letter-spacing: 0.2em;
     &:hover{
       background: #000000;
@@ -641,7 +638,6 @@ select:not([multiple]) {
     background: $primary-color;
     border: 2px solid $primary-color;
     color: $white;
-    font-weight: bold;
     &:hover{
       background: $text;
       border-color: $text;
@@ -4794,6 +4790,7 @@ form.checkout{
       margin: 0;
       position: relative;
       line-height: normal;
+      cursor: pointer;
       &:before{
         background: $white;
         border: 2px solid $border-color;
@@ -4879,6 +4876,7 @@ form.checkout{
             line-height: 22px;
             margin: 0;
             position: relative;
+            cursor: pointer;
             &:before{
               content: "";
               width:16px;
@@ -4958,6 +4956,7 @@ form.checkout{
           margin: 0;
           font-weight: 400;
           position: relative;
+          cursor: pointer;
           &:before{
             content: "";
             width:16px;
@@ -5020,6 +5019,7 @@ form.checkout{
         line-height: 24px;
         font-size: 12px;
         position: relative;
+        cursor: pointer;
         &:before{
           background: $white;
           border: 2px solid $border-color;
@@ -5048,7 +5048,6 @@ form.checkout{
 
 form.login{
   margin-top: 10px;
-  display: none;
   p{
     margin-bottom: 10px;
     label{
@@ -5068,43 +5067,57 @@ form.login{
  * 15.5 My Cart page
  */
 
+.woocommerce{
+  .remove{
+    width: 30px;
+    height: 30px;
+    border: 2px solid $border-color;
+    text-align: center;
+    display: block;
+    line-height: 26px;
+    font-size: 14px;
+    color: $text;
+    &:hover{
+      border-color: $text;
+    }
+  }
+}
+
 .table-cart-form{
   margin-bottom: 45px;
+  margin-right: -20px;
 }
 table.cart{
   width: 100%;
-  text-align: center;
+  text-align: left;
   thead{
     th{
-      border:1px solid #f0f0f0;
-      padding: 12px;
-      text-align: center;
-      font-size: 14px;
-      font-family: $heading-font;
-      letter-spacing: 0.2em;
+      border:none;
+      padding: 12px 27px;
+      text-align: left;
+      font-size: 16px;
+      font-weight: 700;
       text-transform: uppercase;
       line-height: normal;
-      color: #000;
+      color: $text;
+      background: $gray-bg2;
+      &.product-name{
+        width: 40%;
+      }
     }
   }
   td{
-    padding: 14px;
-    border:1px solid #f0f0f0;
+    padding: 47px 36px;
+    border-bottom:2px solid $border-color3;
     font-size: 14px;
     &.product-name{
       a{
-        letter-spacing: 0.075em;
-        font-family: $heading-font;
-        font-weight: bold;
+        font-weight: 400;
+        line-height: 23px;
+        color: $text;
         &:hover{
           text-decoration: underline;
         }
-      }
-    }
-    &.product-thumbnail{
-      img{
-        max-width: 100px;
-        margin: 0 auto;
       }
     }
     .qty{
@@ -5112,95 +5125,136 @@ table.cart{
       margin: 0 auto;
       text-align: center;
     }
+    span.amount{
+      font-size: 18px;
+    }
     &.actions{
-      padding: 31px 31px 21px;
-      button{
-        margin: 0 15px 10px;
-        color: #010101;
-        &:hover,&:focus{
-          background: #000;
-          color: #fff;
-        }
+      padding: 40px 0;
+      border: none;
+      button:nth-child(2){
+        float: right;
       }
+    }
+  }
+  th{
+    &.product-thumbnail{
+      width: 170px;
     }
   }
 }
 
 
 .cart-collaterals{
+  margin-left: 20px;
+  border-left: 2px solid $border-color3;
+  padding-left: 30px;
+  overflow: hidden;
+  .coupon-form{
+    margin-top: 12px;
+    input{
+      margin-bottom: 20px;
+      height: 40px;
+    }
+  }
   h5{
-    padding: 12px 0;
-    border: 1px solid #f0f0f0;
-    text-align: center;
-    margin: 0;
-    letter-spacing: 0.2em;
+    position: relative;
+    padding-right: 70px;
+    display: inline-block;
+    margin-bottom: 38px;
+    font-size: 18px;
+    font-weight: 700;
+    &:before,
+    &:after{
+      content: '';
+      position: absolute;
+      height: 2px;
+      background: $primary-color;
+
+    }
+    &:before{
+      top: 8px;
+      right: 35px;
+      width: 15px;
+    }
+    &:after{
+      top: 15px;
+      right: 0;
+      width: 50px;
+    }
   }
   .cart-collaterals-inner{
-    padding: 22px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #f0f0f0;
-    border-left: 1px solid #f0f0f0;
-    border-right: 1px solid #f0f0f0;
+    padding:0 0 50px;
+    margin-bottom: 36px;
+    border-bottom: 2px solid $border-color3;
     p{
       margin-bottom: 20px;
       font-size: 14px;
-      line-height: 24px;
-    }
-  }
-  .cart_totals{
-    table{
-      width: 100%;
-      tr{
-        &.order-total{
-          td{
-            color: #000;
-          }
-        }
-        th,td{
-          padding: 15px 0;
-          line-height: normal;
-          font-size: 14px;
-          color: #666;
-          font-weight: bold;
-        }
-      }
+      line-height: 20px;
     }
   }
   .cart_totals{
     .cart-collaterals-inner{
-      border-bottom: 1px solid #f0f0f0;
-      margin-bottom: 20px;
+      padding-bottom: 5px;
+      margin-bottom: 22px;
     }
-  }
-  .button-checkout{
-    text-align: center;
-    border: 1px solid #f0f0f0;
-    border-top: none;
-    padding: 20px;
-  }
-  .coupon-form{
-    input{
-      margin-bottom: 20px;
+    p{
+      margin-bottom: 24px;
+    }
+    table{
+      width: 100%;
+      tr{
+        &.order-total{
+          th,td{
+            font-size: 24px;
+            text-transform: uppercase;
+            font-weight: 400;
+            padding-top: 0;
+            span.amount{
+              color: $primary-color;
+            }
+          }
+        }
+        &.cart-subtotal{
+          td,th{
+            padding-bottom: 5px;
+          }
+          th{
+            text-transform: uppercase;
+            font-weight: 400;
+          }
+        }
+        th,td{
+          padding: 0 0 15px;
+          line-height: normal;
+          font-size: 14px;
+        }
+      }
     }
   }
   .shipping_calculator{
-    select{
-      font-size: 12px;
-      letter-spacing: 0.075em;
-    }
-    .row{
-      margin-left: -10px;
-      margin-right: -10px;
-      > div{
-        padding-right: 10px;
-        padding-left: 10px;
+    .form-group{
+      position: relative;
+      padding-left: 125px;
+      margin-bottom: 20px;
+      label{
+        position: absolute;
+        left: 0;
+        top:0;
+        line-height: 40px;
+        margin: 0;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+      select,
+      input{
+        height: 40px;
+        font-size: 12px;
       }
     }
-    button{
-      padding:9px 0;
-      text-align: center;
-      width: 100%;
-      letter-spacing: 0.18em;
+    .form-button{
+      margin-top: 35px;
+      padding-left: 125px;
     }
   }
 }
@@ -5214,23 +5268,19 @@ table.compare{
   tr{
     td{
       padding: 28px 22px;
-      border: 1px solid #eee;
+      border: 1px solid $border-color;
       &.compare-title{
         padding: 28px 20px;
-        background: #fafafa;
+        background: none;
         font-size:14px;
         font-family: $heading-font;
-        font-weight: bold;
-        letter-spacing: 0.075em;
         color: #222;
         min-width: 160px;
+        text-transform: uppercase;
       }
       &.product-thumbnail{
         font-size:14px;
-        font-family: $heading-font;
-        font-weight: bold;
-        letter-spacing: 0.075em;
-        color: #000;
+        font-weight: 400;
         a:hover{
           text-decoration: underline;
         }
@@ -5246,11 +5296,11 @@ table.compare{
         font-size: 14px;
       }
       .instock{
-        color: #6fd9e9;
+        color: $primary-color;
         font-weight: normal;
       }
       .outstock{
-        color: #8ec78e;
+        color: $gray-light;
         font-weight: normal;
       }
       .qty{
@@ -5289,24 +5339,23 @@ table.compare{
 
 #customer_login{
   h5{
-    border: 1px solid #f0f0f0;
-    letter-spacing: 0.2em;
+    border: 1px solid $border-color;
     margin: 0;
     padding: 10px 0;
     text-align: center;
   }
   form{
     padding: 20px;
-    border: 1px solid #f0f0f0;
+    border: 1px solid $border-color;
     border-top: none;
-    margin-bottom: 30px;
+    margin:0 0 30px;
     label{
       font-size: 14px;
       font-weight: normal;
       line-height: normal;
       margin-bottom: 10px;
-      letter-spacing: 0.075em;
       display: block;
+      text-transform: uppercase;
       &.inline{
         display: inline-block;
         margin-left: 10px;

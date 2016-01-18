@@ -3,22 +3,15 @@ global $shadow;
 $shadow = ' ';
 
 include_once('templates/headers/head.php');
-include_once('templates/headers/header2.php');
+include_once('templates/headers/header1.php');
 
 ?>
-    <div class="page-section bg-gray small-section">
+    <div class="page-section page-header-bg small-section">
         <div class="page-header">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <ol class="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li class="active">Compare</li>
-                        </ol>
-                    </div>
-                    <div class="col-md-8 text-right">
-                        <h1>Compare</h1>
-                    </div>
+                <div class="page-header-content text-center">
+                    <h1>Compare</h1>
+                    <div class="page-header-divider"><span class="icon_documents_alt"></span></div>
                 </div>
             </div>
         </div>
@@ -32,13 +25,13 @@ include_once('templates/headers/header2.php');
                         <tr>
                             <td class="compare-title">Product Image</td>
                             <td class="product-thumbnail">
-                                <a href="#" class="attachment-shop_thumbnail wp-post-image"><img src="assets/images/product/product-1.jpg" alt="">Sample Product 01</a>
+                                <a href="#" class="attachment-shop_thumbnail wp-post-image"><img src="assets/images/product/1.jpg" alt="">Sample Product 01</a>
                             </td>
                             <td class="product-thumbnail">
-                                <a href="#" class="attachment-shop_thumbnail wp-post-image"><img src="assets/images/product/product-18.jpg" alt="">Sample Product 02</a>
+                                <a href="#" class="attachment-shop_thumbnail wp-post-image"><img src="assets/images/product/2.jpg" alt="">Sample Product 02</a>
                             </td>
                             <td class="product-thumbnail">
-                                <a href="#" class="attachment-shop_thumbnail wp-post-image"><img src="assets/images/product/product-3.jpg" alt="">Sample Product 03</a>
+                                <a href="#" class="attachment-shop_thumbnail wp-post-image"><img src="assets/images/product/3.jpg" alt="">Sample Product 03</a>
                             </td>
                         </tr>
                         <tr>

@@ -3,22 +3,15 @@ global $shadow;
 $shadow = ' ';
 
 include_once('templates/headers/head.php');
-include_once('templates/headers/header2.php');
+include_once('templates/headers/header1.php');
 
 ?>
-    <div class="page-section bg-gray small-section">
+    <div class="page-section page-header-bg small-section">
         <div class="page-header">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <ol class="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li class="active">Wishlist</li>
-                        </ol>
-                    </div>
-                    <div class="col-md-8 text-right">
-                        <h1>Wishlist</h1>
-                    </div>
+                <div class="page-header-content text-center">
+                    <h1>Wishlist</h1>
+                    <div class="page-header-divider"><span class="icon_heart_alt"></span></div>
                 </div>
             </div>
         </div>
@@ -33,22 +26,21 @@ include_once('templates/headers/header2.php');
                             <table class="shop_table cart">
                                 <thead>
                                 <tr>
-
-                                    <th class="product-thumbnail">Item</th>
+                                    <th class="product-thumbnail">Product</th>
                                     <th class="product-name">Description</th>
                                     <th class="product-quantity">Quantity</th>
                                     <th class="product-price">Unit Price</th>
                                     <th class="product-subtotal">Subtotal</th>
-                                    <th class="product-remove">&nbsp;</th>
+                                    <th class="product-remove">Remove</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr class="cart_item">
                                     <td class="product-thumbnail">
-                                        <a href="#" class="attachment-shop_thumbnail wp-post-image"><img src="assets/images/product/product-1.jpg" alt=""></a>
+                                        <a href="#" class="attachment-shop_thumbnail wp-post-image"><img width="100" src="assets/images/product/1.jpg" alt=""></a>
                                     </td>
                                     <td class="product-name">
-                                        <a href="#">Sample Product 01</a>
+                                        <a href="#">Wisi enim ad minim veniam exerci</a>
                                     </td>
                                     <td class="product-quantity">
                                         <input type="text" size="4" class="input-text qty text" title="Qty" value="1" name="qty" />
@@ -60,15 +52,15 @@ include_once('templates/headers/header2.php');
                                         <span class="amount">$1000.00</span>
                                     </td>
                                     <td class="product-remove">
-                                        <a href="#"><i class="fa fa-times"></i></a>
+                                        <a class="remove" href="#"><i class="icon_close"></i></a>
                                     </td>
                                 </tr>
                                 <tr class="cart_item">
                                     <td class="product-thumbnail">
-                                        <a href="#" class="attachment-shop_thumbnail wp-post-image"><img src="assets/images/product/product-6.jpg" alt=""></a>
+                                        <a href="#" class="attachment-shop_thumbnail wp-post-image"><img width="100" src="assets/images/product/6.jpg" alt=""></a>
                                     </td>
                                     <td class="product-name">
-                                        <a href="#">Sample Product 02</a>
+                                        <a href="#">Option congue nihil imperdiet doming</a>
                                     </td>
                                     <td class="product-quantity">
                                         <input type="text" size="4" class="input-text qty text" title="Qty" value="1" name="qty" />
@@ -80,7 +72,7 @@ include_once('templates/headers/header2.php');
                                         <span class="amount">$1000.00</span>
                                     </td>
                                     <td class="product-remove">
-                                        <a href="#"><i class="fa fa-times"></i></a>
+                                        <a class="remove" href="#"><i class="icon_close"></i></a>
                                     </td>
                                 </tr>
                                 </tbody>

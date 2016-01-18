@@ -57,7 +57,6 @@
   15.4 Checkout page
   15.5 My Cart page
   15.6 Compare page
-  15.6 Compare page
   15.7 My Account page
   15.8 QuickView
 16. Slideshow and owl carousel
@@ -665,9 +664,8 @@ select:not([multiple]) {
   display: inline-block;
   line-height: 1.42857;
   padding: 8px 26px;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 14px;
-  letter-spacing: 0.15em;
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
   /* Button size */
@@ -720,7 +718,7 @@ select:not([multiple]) {
     -ms-transition: all .3s ease-in-out 0s;
     -o-transition: all .3s ease-in-out 0s;
     transition: all .3s ease-in-out 0s;
-    display: block;
+    display: inline-block;
     position: relative; }
     .btn.btn-animation span i {
       filter: alpha(opacity=0);
@@ -795,7 +793,6 @@ select:not([multiple]) {
     background: #f2f2f2;
     border: 1px solid #f0f0f0;
     color: #000;
-    font-weight: bold;
     letter-spacing: 0.2em; }
     .btn.btn-medium:hover {
       background: #000000;
@@ -804,8 +801,7 @@ select:not([multiple]) {
   .btn.btn-accent {
     background: #d1c45a;
     border: 2px solid #d1c45a;
-    color: #FFFFFF;
-    font-weight: bold; }
+    color: #FFFFFF; }
     .btn.btn-accent:hover {
       background: #3b3e43;
       border-color: #3b3e43;
@@ -4649,7 +4645,8 @@ form.checkout {
       color: #3b3e43;
       margin: 0;
       position: relative;
-      line-height: normal; }
+      line-height: normal;
+      cursor: pointer; }
       form.checkout .form-checkbox label:before {
         background: #FFFFFF;
         border: 2px solid #ebebec;
@@ -4713,7 +4710,8 @@ form.checkout {
         font-weight: 400;
         line-height: 22px;
         margin: 0;
-        position: relative; }
+        position: relative;
+        cursor: pointer; }
         #order_review .shop_table tfoot ul#shipping_method li label:before {
           content: "";
           width: 16px;
@@ -4787,7 +4785,8 @@ form.checkout {
         #payment .payment_methods li .payment_method_title label {
           margin: 0;
           font-weight: 400;
-          position: relative; }
+          position: relative;
+          cursor: pointer; }
           #payment .payment_methods li .payment_method_title label:before {
             content: "";
             width: 16px;
@@ -4857,7 +4856,8 @@ form.checkout {
     margin: 0 0 30px;
     line-height: 24px;
     font-size: 12px;
-    position: relative; }
+    position: relative;
+    cursor: pointer; }
     #payment .place-order .accept-term label:before {
       background: #FFFFFF;
       border: 2px solid #ebebec;
@@ -4888,8 +4888,7 @@ form.checkout {
       line-height: 21px; }
 
 form.login {
-  margin-top: 10px;
-  display: none; }
+  margin-top: 10px; }
   form.login p {
     margin-bottom: 10px; }
     form.login p label {
@@ -4904,120 +4903,160 @@ form.login {
 /*
  * 15.5 My Cart page
  */
+.woocommerce .remove {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ebebec;
+  text-align: center;
+  display: block;
+  line-height: 26px;
+  font-size: 14px;
+  color: #3b3e43; }
+  .woocommerce .remove:hover {
+    border-color: #3b3e43; }
+
 .table-cart-form {
-  margin-bottom: 45px; }
+  margin-bottom: 45px;
+  margin-right: -20px; }
 
 table.cart {
   width: 100%;
-  text-align: center; }
+  text-align: left; }
   table.cart thead th {
-    border: 1px solid #f0f0f0;
-    padding: 12px;
-    text-align: center;
-    font-size: 14px;
-    font-family: "Oswald", sans-serif;
-    letter-spacing: 0.2em;
+    border: none;
+    padding: 12px 27px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
     text-transform: uppercase;
     line-height: normal;
-    color: #000; }
+    color: #3b3e43;
+    background: #f7f8fa; }
+    table.cart thead th.product-name {
+      width: 40%; }
   table.cart td {
-    padding: 14px;
-    border: 1px solid #f0f0f0;
+    padding: 47px 36px;
+    border-bottom: 2px solid #ececec;
     font-size: 14px; }
     table.cart td.product-name a {
-      letter-spacing: 0.075em;
-      font-family: "Oswald", sans-serif;
-      font-weight: bold; }
+      font-weight: 400;
+      line-height: 23px;
+      color: #3b3e43; }
       table.cart td.product-name a:hover {
         text-decoration: underline; }
-    table.cart td.product-thumbnail img {
-      max-width: 100px;
-      margin: 0 auto; }
     table.cart td .qty {
       width: 60px;
       margin: 0 auto;
       text-align: center; }
+    table.cart td span.amount {
+      font-size: 18px; }
     table.cart td.actions {
-      padding: 31px 31px 21px; }
-      table.cart td.actions button {
-        margin: 0 15px 10px;
-        color: #010101; }
-        table.cart td.actions button:hover, table.cart td.actions button:focus {
-          background: #000;
-          color: #fff; }
+      padding: 40px 0;
+      border: none; }
+      table.cart td.actions button:nth-child(2) {
+        float: right; }
+  table.cart th.product-thumbnail {
+    width: 170px; }
 
-.cart-collaterals h5 {
-  padding: 12px 0;
-  border: 1px solid #f0f0f0;
-  text-align: center;
-  margin: 0;
-  letter-spacing: 0.2em; }
-.cart-collaterals .cart-collaterals-inner {
-  padding: 22px;
-  margin-bottom: 30px;
-  border-bottom: 1px solid #f0f0f0;
-  border-left: 1px solid #f0f0f0;
-  border-right: 1px solid #f0f0f0; }
-  .cart-collaterals .cart-collaterals-inner p {
-    margin-bottom: 20px;
-    font-size: 14px;
-    line-height: 24px; }
-.cart-collaterals .cart_totals table {
-  width: 100%; }
-  .cart-collaterals .cart_totals table tr.order-total td {
-    color: #000; }
-  .cart-collaterals .cart_totals table tr th, .cart-collaterals .cart_totals table tr td {
-    padding: 15px 0;
-    line-height: normal;
-    font-size: 14px;
-    color: #666;
-    font-weight: bold; }
-.cart-collaterals .cart_totals .cart-collaterals-inner {
-  border-bottom: 1px solid #f0f0f0;
-  margin-bottom: 20px; }
-.cart-collaterals .button-checkout {
-  text-align: center;
-  border: 1px solid #f0f0f0;
-  border-top: none;
-  padding: 20px; }
-.cart-collaterals .coupon-form input {
-  margin-bottom: 20px; }
-.cart-collaterals .shipping_calculator select {
-  font-size: 12px;
-  letter-spacing: 0.075em; }
-.cart-collaterals .shipping_calculator .row {
-  margin-left: -10px;
-  margin-right: -10px; }
-  .cart-collaterals .shipping_calculator .row > div {
-    padding-right: 10px;
-    padding-left: 10px; }
-.cart-collaterals .shipping_calculator button {
-  padding: 9px 0;
-  text-align: center;
-  width: 100%;
-  letter-spacing: 0.18em; }
+.cart-collaterals {
+  margin-left: 20px;
+  border-left: 2px solid #ececec;
+  padding-left: 30px;
+  overflow: hidden; }
+  .cart-collaterals .coupon-form {
+    margin-top: 12px; }
+    .cart-collaterals .coupon-form input {
+      margin-bottom: 20px;
+      height: 40px; }
+  .cart-collaterals h5 {
+    position: relative;
+    padding-right: 70px;
+    display: inline-block;
+    margin-bottom: 38px;
+    font-size: 18px;
+    font-weight: 700; }
+    .cart-collaterals h5:before, .cart-collaterals h5:after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      background: #d1c45a; }
+    .cart-collaterals h5:before {
+      top: 8px;
+      right: 35px;
+      width: 15px; }
+    .cart-collaterals h5:after {
+      top: 15px;
+      right: 0;
+      width: 50px; }
+  .cart-collaterals .cart-collaterals-inner {
+    padding: 0 0 50px;
+    margin-bottom: 36px;
+    border-bottom: 2px solid #ececec; }
+    .cart-collaterals .cart-collaterals-inner p {
+      margin-bottom: 20px;
+      font-size: 14px;
+      line-height: 20px; }
+  .cart-collaterals .cart_totals .cart-collaterals-inner {
+    padding-bottom: 5px;
+    margin-bottom: 22px; }
+  .cart-collaterals .cart_totals p {
+    margin-bottom: 24px; }
+  .cart-collaterals .cart_totals table {
+    width: 100%; }
+    .cart-collaterals .cart_totals table tr.order-total th, .cart-collaterals .cart_totals table tr.order-total td {
+      font-size: 24px;
+      text-transform: uppercase;
+      font-weight: 400;
+      padding-top: 0; }
+      .cart-collaterals .cart_totals table tr.order-total th span.amount, .cart-collaterals .cart_totals table tr.order-total td span.amount {
+        color: #d1c45a; }
+    .cart-collaterals .cart_totals table tr.cart-subtotal td, .cart-collaterals .cart_totals table tr.cart-subtotal th {
+      padding-bottom: 5px; }
+    .cart-collaterals .cart_totals table tr.cart-subtotal th {
+      text-transform: uppercase;
+      font-weight: 400; }
+    .cart-collaterals .cart_totals table tr th, .cart-collaterals .cart_totals table tr td {
+      padding: 0 0 15px;
+      line-height: normal;
+      font-size: 14px; }
+  .cart-collaterals .shipping_calculator .form-group {
+    position: relative;
+    padding-left: 125px;
+    margin-bottom: 20px; }
+    .cart-collaterals .shipping_calculator .form-group label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      line-height: 40px;
+      margin: 0;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 12px; }
+    .cart-collaterals .shipping_calculator .form-group select,
+    .cart-collaterals .shipping_calculator .form-group input {
+      height: 40px;
+      font-size: 12px; }
+  .cart-collaterals .shipping_calculator .form-button {
+    margin-top: 35px;
+    padding-left: 125px; }
 
 /*
  * 15.6 Compare page
  */
 table.compare tr td {
   padding: 28px 22px;
-  border: 1px solid #eee; }
+  border: 1px solid #ebebec; }
   table.compare tr td.compare-title {
     padding: 28px 20px;
-    background: #fafafa;
+    background: none;
     font-size: 14px;
     font-family: "Oswald", sans-serif;
-    font-weight: bold;
-    letter-spacing: 0.075em;
     color: #222;
-    min-width: 160px; }
+    min-width: 160px;
+    text-transform: uppercase; }
   table.compare tr td.product-thumbnail {
     font-size: 14px;
-    font-family: "Oswald", sans-serif;
-    font-weight: bold;
-    letter-spacing: 0.075em;
-    color: #000; }
+    font-weight: 400; }
     table.compare tr td.product-thumbnail a:hover {
       text-decoration: underline; }
     table.compare tr td.product-thumbnail img {
@@ -5028,10 +5067,10 @@ table.compare tr td {
   table.compare tr td .amount {
     font-size: 14px; }
   table.compare tr td .instock {
-    color: #6fd9e9;
+    color: #d1c45a;
     font-weight: normal; }
   table.compare tr td .outstock {
-    color: #8ec78e;
+    color: #afb0b1;
     font-weight: normal; }
   table.compare tr td .qty {
     max-width: 60px;
@@ -5058,23 +5097,22 @@ table.compare tr td {
  * 15.7 My Account page
  */
 #customer_login h5 {
-  border: 1px solid #f0f0f0;
-  letter-spacing: 0.2em;
+  border: 1px solid #ebebec;
   margin: 0;
   padding: 10px 0;
   text-align: center; }
 #customer_login form {
   padding: 20px;
-  border: 1px solid #f0f0f0;
+  border: 1px solid #ebebec;
   border-top: none;
-  margin-bottom: 30px; }
+  margin: 0 0 30px; }
   #customer_login form label {
     font-size: 14px;
     font-weight: normal;
     line-height: normal;
     margin-bottom: 10px;
-    letter-spacing: 0.075em;
-    display: block; }
+    display: block;
+    text-transform: uppercase; }
     #customer_login form label.inline {
       display: inline-block;
       margin-left: 10px; }
