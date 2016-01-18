@@ -33,9 +33,9 @@ $numbers: 5, 10, 15, 20, 30, 35, 40, 50, 60, 70, 80, 90, 100, 110;
   .pad-#{$number} {  padding: #{$number}px;  }
 }
 
-.remove-mar-top {  margin-top: 0!important;  }
-.remove-mar-bottom {  margin-bottom: 0!important;  }
+.no-mar-top {  margin-top: 0!important;  }
+.no-mar-bottom {  margin-bottom: 0!important;  }
 .no-margin {  margin: 0!important;  }
-.remove-pad-top {  padding-top: 0!important;  }
-.remove-pad-bottom {  padding-bottom: 0!important;  }
+.no-pad-top {  padding-top: 0!important;  }
+.no-pad-bottom {  padding-bottom: 0!important;  }
 .no-padding {  padding: 0!important; }

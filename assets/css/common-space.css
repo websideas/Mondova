@@ -257,19 +257,19 @@
 .pad-110 {
   padding: 110px; }
 
-.remove-mar-top {
+.no-mar-top {
   margin-top: 0 !important; }
 
-.remove-mar-bottom {
+.no-mar-bottom {
   margin-bottom: 0 !important; }
 
 .no-margin {
   margin: 0 !important; }
 
-.remove-pad-top {
+.no-pad-top {
   padding-top: 0 !important; }
 
-.remove-pad-bottom {
+.no-pad-bottom {
   padding-bottom: 0 !important; }
 
 .no-padding {
