@@ -84,7 +84,7 @@ include_once('templates/headers/header1.php');
                 </div>
             </div>
         </div>
-        <div class="googlemap" style="height:500px;" data-zoom="17" data-scrollwheel="1" data-style="8" data-location="3211 Grant McConachie Way, Richmond, BC V7B 0A4, Canada" data-type="roadmap" data-iconmap="assets/images/icon-map.png"></div>
+        <div class="googlemap" style="height:500px;" data-zoom="17" data-scrollwheel="1" data-location="110 E 25th Street, 2nd Floor New York, NY 10010 Unites States" data-type="roadmap" data-iconmap="assets/images/icon-map.png"></div>
     </div><!-- #main -->
 <img src="previews/21-contact-us.jpg" class="preview-image" style="top: 0;display: none;max-width:none;" />
 <?php
