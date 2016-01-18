@@ -750,7 +750,7 @@ select:not([multiple]) {
   }
 
   &.small-section{
-    padding: 85px 0;
+    padding: 40px 0;
   }
 
   &.bg-scroll{
@@ -2494,6 +2494,42 @@ ul.style-list{
   }
 }
 
+
+
+.flip-box{
+  text-align: center;
+
+
+  &-front{
+    position: relative;
+    padding: 30px 0;
+    text-transform: uppercase;
+    .flip-box-icon{
+      @include translate();
+      font-size: 70px;
+      color: #f0f0f0;
+      z-index: -1;
+    }
+    .flip-box-title{
+      font-size: 18px;
+    }
+    .flip-box-subtitle{
+      font-size: 14px;
+      letter-spacing: .2em;
+    }
+
+  }
+
+  &.active{
+    &.flip-box-front{
+      .flip-box-icon{
+
+      }
+    }
+  }
+
+
+}
 /* ==============================
    11. Widgets
    ============================== */
