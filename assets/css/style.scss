@@ -2494,7 +2494,7 @@ ul.style-list{
   &.active{
     &.flip-box-front{
       .flip-box-icon{
-
+        
       }
     }
   }
@@ -2504,7 +2504,6 @@ ul.style-list{
 /* ==============================
    11. Widgets
    ============================== */
-
 
 .searchform {
   margin: 0 auto;
@@ -2529,17 +2528,14 @@ ul.style-list{
   }
 }
 
-
 .widget{
   margin-bottom: 55px;
-
   .widget-title{
     font-size: 24px;
     margin: 0 0 40px;
     text-transform: uppercase;
     font-weight: bold;
   }
-
   &.widget_nav_menu,
   &.widget_categories,
   &.widget_archive,
