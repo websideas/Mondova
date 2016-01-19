@@ -22,7 +22,7 @@ include_once('templates/headers/header1.php');
 
     <div id="main">
 
-        <div class="page-section bg-gray">
+        <div class="page-section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-sm-4">
@@ -30,26 +30,26 @@ include_once('templates/headers/header1.php');
                             <div class="icon-box-icon">
                                 <span class="icon_pin_alt"></span>
                             </div>
-                            <h3 class="icon-box-title">address</h3>
+                            <div class="icon-box-title">address</div>
                             <div class="icon-box-content">Mondova shop center <br />123 Sky Tower, Los angeles</div>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
-                        <div class="kt-icon-box">
+                        <div class="kt-icon-box style-2">
                             <div class="icon-box-icon">
                                 <span class="icon_mobile"></span>
                             </div>
-                            <h3 class="icon-box-title">Phone</h3>
+                            <div class="icon-box-title">Phone</div>
                             <div class="icon-box-content">Phone: +(800) 123 456 789 <br />Fax: +(400) 456 123 789</div>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
-                        <div class="kt-icon-box">
+                        <div class="kt-icon-box style-3">
                             <div class="icon-box-icon">
-                                <span class="icon_mail_alt"></span>
+                                <span class="fa fa-diamond"></span>
                             </div>
-                            <h3 class="icon-box-title">Email</h3>
-                            <div class="icon-box-content">tonydat@mondova.com <br />thankforlove</div>
+                            <div class="icon-box-title">Promotion</div>
+                            <div class="icon-box-content">Free deal this week's</div>
                         </div>
                     </div>
                 </div>
@@ -60,14 +60,12 @@ include_once('templates/headers/header1.php');
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="flip-box">
-                            <div class="flip-box-front">
-                                <div class="flip-box-icon">
-                                    <i class="fa fa-diamond"></i>
-                                </div>
-                                <div class="flip-box-title">Promotion</div>
-                                <div class="flip-box-subtitle">Free deal this week's</div>
+                        <div class="kt-icon-box style-3">
+                            <div class="icon-box-icon">
+                                <i class="fa fa-diamond"></i>
                             </div>
+                            <div class="icon-box-title">Promotion</div>
+                            <div class="icon-box-content">Free deal this week's</div>
                         </div>
                     </div>
 
