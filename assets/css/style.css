@@ -2112,6 +2112,49 @@ ul.style-list {
     text-align: right; }
 
 /*
+ * 10.13 Category Banner
+ */
+.category-banner {
+  position: relative; }
+  .category-banner-button {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    border: 2px solid #FFFFFF;
+    padding: 2px;
+    text-align: center;
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -khtml-transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+    -ms-transition: all 0.2s ease-in-out 0s;
+    -o-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s; }
+    .category-banner-button a {
+      background: #FFFFFF;
+      width: 100%;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #3b3e43;
+      display: block;
+      padding: 10px; }
+  .category-banner-content {
+    font-size: 18px;
+    position: absolute;
+    left: 30px;
+    bottom: 40px;
+    right: 30px;
+    text-align: center; }
+  .category-banner:hover .category-banner-button {
+    bottom: 50%;
+    -webkit-transform: translatey(50%);
+    -khtml-transform: translatey(50%);
+    -moz-transform: translatey(50%);
+    -ms-transform: translatey(50%);
+    -o-transform: translatey(50%);
+    transform: translatey(50%); }
+
+/*
  * 10.15 Single Image
  */
 .single-image {
