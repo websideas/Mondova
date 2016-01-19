@@ -2,69 +2,54 @@
 
 include_once('templates/headers/head.php');
 include_once('templates/headers/header1.php');
-include_once('templates/slideshows/carousel.php');
 
 ?>
 
     <div id="main">
 
         <div class="page-section no-padding">
-            <div class="owl-carousel-kt no-gutters navigation-center-inner no-margin">
-                <div class="owl-carousel kt-owl-carousel" data-options='{"pagination": false, "navigation": true, "desktop": 3, "desktopsmall": 2, "tablet" : 2, "mobile" : 1}'>
+            <div class="row no-gutters">
+                <div class="col-md-3 col-sm-6">
                     <div class="category-banner">
-                        <img src="assets/images/banner/banner-01.jpg" alt="" />
+                        <img src="assets/images/product/category/1.jpg" alt="" />
                         <div class="category-banner-content">
-                            <h1 class="white">Living room</h1>
-                            <ul class="">
-                                <li><a href="#">Bed</a> </li>
-                                <li><a href="#">Pillow</a></li>
-                                <li><a href="#">Lamp</a></li>
-                                <li><a href="#">Mattress</a></li>
-                                <li><a href="#">Blanket</a></li>
-                            </ul>
-                            <a href="#" class="btn btn-light-b">Shop now</a>
+                            OUTLET: Up to 70% Off
+                        </div>
+                        <div class="category-banner-button">
+                            <a href="#">New In Accessories</a>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
                     <div class="category-banner">
-                        <img src="assets/images/banner/banner-02.jpg" alt="" />
+                        <img src="assets/images/product/category/2.jpg" alt="" />
                         <div class="category-banner-content">
-                            <h1 class="white">Bed room</h1>
-                            <ul class="">
-                                <li><a href="#">Bed</a> </li>
-                                <li><a href="#">Pillow</a></li>
-                                <li><a href="#">Lamp</a></li>
-                                <li><a href="#">Mattress</a></li>
-                                <li><a href="#">Blanket</a></li>
-                            </ul>
-                            <a href="#" class="btn btn-light-b">Shop now</a>
+                            OUTLET: Up to 70% Off
+                        </div>
+                        <div class="category-banner-button">
+                            <a href="#">New In shoes</a>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
                     <div class="category-banner">
-                        <img src="assets/images/banner/banner-03.jpg" alt="" />
+                        <img src="assets/images/product/category/3.jpg" alt="" />
                         <div class="category-banner-content">
-                            <h1 class="white">Living room</h1>
-                            <ul class="">
-                                <li><a href="#">Bed</a> </li>
-                                <li><a href="#">Pillow</a></li>
-                                <li><a href="#">Lamp</a></li>
-                                <li><a href="#">Mattress</a></li>
-                                <li><a href="#">Blanket</a></li>
-                            </ul>
-                            <a href="#" class="btn btn-light-b">Shop now</a>
+                            OUTLET: Up to 70% Off
+                        </div>
+                        <div class="category-banner-button">
+                            <a href="#">New In Bag</a>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
                     <div class="category-banner">
-                        <img src="assets/images/banner/banner-01.jpg" alt="" />
+                        <img src="assets/images/product/category/4.jpg" alt="" />
                         <div class="category-banner-content">
-                            <h1 class="white">dining room</h1>
-                            <ul class="">
-                                <li><a href="#">Bed</a> </li>
-                                <li><a href="#">Pillow</a></li>
-                                <li><a href="#">Lamp</a></li>
-                                <li><a href="#">Mattress</a></li>
-                                <li><a href="#">Blanket</a></li>
-                            </ul>
-                            <a href="#" class="btn btn-light-b">Shop now</a>
+                            OUTLET: Up to 70% Off
+                        </div>
+                        <div class="category-banner-button">
+                            <a href="#">New In watch</a>
                         </div>
                     </div>
                 </div>
@@ -489,6 +474,8 @@ include_once('templates/slideshows/carousel.php');
 
 
     </div><!-- #main -->
+
+    <img src="previews/03-homepage-V3-copy.jpg" class="preview-image" style="top: 0;display: none;max-width:none;" />
 <?php
 
 include_once('templates/footers/footer3.php');

@@ -2115,6 +2115,46 @@ ul.style-list{
   }
 }
 
+/*
+ * 10.13 Category Banner
+ */
+.category-banner{
+  position: relative;
+  &-button{
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    border: 2px solid $white;
+    padding: 2px;
+    text-align: center;
+    @include transition();
+    a{
+      background: $white;
+      width: 100%;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: $text;
+      display: block;
+      padding: 10px;
+    }
+  }
+  &-content{
+    font-size: 18px;
+    position: absolute;
+    left: 30px;
+    bottom: 40px;
+    right: 30px;
+    text-align: center;
+  }
+  &:hover{
+    .category-banner-button{
+      bottom: 50%;
+      @include transform(translatey(50%));
+    }
+  }
+}
+
 
 /*
  * 10.15 Single Image
