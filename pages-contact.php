@@ -9,7 +9,7 @@ include_once('templates/headers/header1.php');
 
 ?>
 
-    <div class="page-section page-header-2 small-section" style="background-image:url(assets/images/contact.jpg);">
+    <div class="page-section page-header-2 small-section" style="background-image:url(assets/images/background/contact.jpg);">
         <div class="page-header">
             <div class="container">
                 <div class="page-header-content text-center">

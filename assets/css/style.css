@@ -885,7 +885,7 @@ select:not([multiple]) {
    7. Page Header
    ============================== */
 .page-section.page-header-bg {
-  background-image: url("../images/page-header.jpg");
+  background-image: url("../images/background/page-header.jpg");
   padding: 160px 0 150px; }
   .page-section.page-header-bg:before {
     content: "";
@@ -5946,7 +5946,7 @@ table.compare tr td {
  * 19.1 About page
  */
 .about-content {
-  background: url(../images/about-bg.png) no-repeat center center;
+  background: url(../images/background/about-bg.png) no-repeat center center;
   padding: 145px 15px; }
 
 /*
