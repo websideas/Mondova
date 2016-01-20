@@ -260,8 +260,8 @@ include_once('templates/headers/header1.php');
         <div class="page-section pad-bottom-5">
             <div class="container">
 
-                <div class="page-title-divider">
-                    <h3>our team</h3>
+                <div class="kt-heading style4 mar-bottom-80">
+                    <h3 class="kt-heading-title">our team</h3>
                     <div class="divider"><div class="divider-inner"></div></div>
                 </div>
 
