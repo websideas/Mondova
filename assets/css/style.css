@@ -806,43 +806,6 @@ select:not([multiple]) {
     .btn-dark:hover, .btn-dark:focus {
       background: #d1c45a; }
 
-.more-link {
-  position: relative;
-  text-align: center;
-  line-height: 1.42857;
-  padding: 10px 35px;
-  display: inline-block;
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  color: #3b3e43;
-  font-size: 14px; }
-  .more-link:before, .more-link:after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 10px;
-    -webkit-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
-    -khtml-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
-    -moz-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
-    -ms-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
-    -o-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s; }
-  .more-link:before {
-    left: 0;
-    bottom: 0;
-    border-left: 2px solid #d1c45a;
-    border-bottom: 2px solid #d1c45a; }
-  .more-link:after {
-    top: 0;
-    right: 0;
-    border-right: 2px solid #d1c45a;
-    border-top: 2px solid #d1c45a; }
-  .more-link:hover {
-    color: #3b3e43; }
-    .more-link:hover:before, .more-link:hover:after {
-      height: 50%; }
-
 /* ==============================
    6. Sections styles
    ============================== */
