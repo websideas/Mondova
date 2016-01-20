@@ -32,6 +32,32 @@ include_once('templates/headers/header1.php');
                     </div>
                 </div>
 
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="contact-info">
+                            <ul>
+                                <li><i class="icon_pin_alt"></i> <a href="#">James Street, Vancouver, BC, Canada</a></li>
+                                <li><i class="icon_map_alt"></i><a href="#">3211 Grant McConachie Way, Richmond,<br/>BC V7B 0A4, Canada</a></li>
+                                <li><i class="icon_mobile"></i><a href="#">+ (400) 0123 456 789</a></li>
+                                <li><i class="icon_printer"></i><span>+ (800) 0123 456 789</span></li>
+                                <li><i class="icon_mail_alt"></i><span>demoemail@domain.com</span></li>
+                                <li><i class="icon_clock_alt"></i><span>Support 24/7</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="contact-info">
+                            <ul>
+                                <li><i class="fa fa-map-marker"></i>81 Gordon Rd, Mandurah  WA 6210, New York</li>
+                                <li><i class="fa fa-phone"></i>(00) 123 456 789</li>
+                                <li><i class="fa fa-envelope"></i>demoemail@domain.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="page-section about-content text-center mar-top-70">
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
                     <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum</p>

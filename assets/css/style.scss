@@ -226,6 +226,7 @@ p {
   @include opacity();
   max-width: none;
   pointer-events:none;
+  z-index: 999;
 }
 .kt-column-bg{
   @include css3-prefix('background-size', 'cover');
@@ -548,28 +549,28 @@ select:not([multiple]) {
   }
 
   /* Button size */
-  &.btn-xs {
+  &-xs {
     padding: 6px 10px;
     font-size: 8px;
   }
-  &.btn-sm {
+  &-sm {
     padding: 8px 20px;
     font-size: 10px;
   }
-  &.btn-lg {
+  &-lg {
     padding: 14px 35px;
     font-size: 16px;
   }
-  &.btn-xlg {
+  &-xlg {
     padding: 12px 65px;
     font-size: 18px;
   }
 
   /* Button shapes */
-  &.btn-round {
+  &-round {
     border-radius: 3px;
   }
-  &.btn-circle {
+  &-circle {
     border-radius: 30px;
   }
 
@@ -582,7 +583,7 @@ select:not([multiple]) {
   }
 
   /* Button style */
-  &.btn-default {
+  &-default {
     border: none;
     background: none;
     color: $text;
@@ -617,7 +618,7 @@ select:not([multiple]) {
       }
     }
   }
-  &.btn-animation{
+  &-animation{
     span{
       @include transform(translateX(0));
       @include transition("all .3s ease-in-out 0s");
@@ -642,7 +643,7 @@ select:not([multiple]) {
     }
   }
 
-  &.btn-accent{
+  &-accent{
     background: $primary-color;
     border: 2px solid $primary-color;
     color: $white;
@@ -657,7 +658,7 @@ select:not([multiple]) {
     }
   }
 
-  &.btn-dark{
+  &-dark{
     background: $text;
     color: $white;
     &:hover,
@@ -665,52 +666,8 @@ select:not([multiple]) {
       background: $primary-color;
     }
   }
-
-  &.btn-fullwidth{
-    width: 100%;
-  }
 }
 
-.more-link{
-  position: relative;
-  text-align: center;
-  line-height: 1.42857;
-  padding: 10px 35px;
-  display: inline-block;
-  font-family: $button-text;
-  text-transform: uppercase;
-  color: $text;
-  font-size: 14px;
-
-  &:before,
-  &:after{
-    content: '';
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 10px;
-    @include transition('all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s');
-  }
-  &:before{
-    left: 0;
-    bottom: 0;
-    border-left: 2px solid $primary-color;
-    border-bottom: 2px solid $primary-color;
-  }
-  &:after{
-    top: 0;
-    right: 0;
-    border-right: 2px solid $primary-color;
-    border-top: 2px solid $primary-color;
-  }
-  &:hover{
-    color: $text;
-    &:before,
-    &:after{
-      height: 50%;
-    }
-  }
-}
 
 
 /* ==============================
@@ -863,15 +820,108 @@ select:not([multiple]) {
     margin-top: 27px;
   }
 
-  .header-cart{
+  .shopping-bag{
     float: right;
     margin-left: 60px;
     margin-top: 6px;
+    position: relative;
+    z-index: 3;
+    .shopping-bag-content{
+      position: absolute;
+      border: 1px solid #eaeaea;
+      right: 0;
+      top: 100%;
+      background: $white;
+      @include box-shadow(0, 2px, 3px, rgba(0, 0, 0, 0.05));
+      width: 325px;
+      padding: 35px 30px 30px;
+      .cart_block_desc{
+        margin-bottom: 30px;
+        span{
+          color: $primary-color;
+        }
+      }
+    }
+
+    .bag-products{
+      .bag-product{
+        @include clearfix();
+        position: relative;
+
+        figure{
+          float: left;
+          width: 75px;
+          margin-right: 17px;
+        }
+        &-details{
+          overflow: hidden;
+        }
+        &-title{
+          color: $text;
+          display: block;
+          font-size: 14px;
+          line-height: 22px;
+          margin-top: -3px;
+          margin-bottom: 3px;
+          padding-right: 10px;
+          &:hover{
+            color: $primary-color;
+          }
+        }
+        &-price{
+          font-size: 18px;
+          line-height: 22px;
+        }
+        &-qty{
+          font-size: 12px;
+          span{
+            color: $primary-color;
+          }
+        }
+        .remove{
+          position: absolute;
+          right: 0;
+          top: 0;
+          color: #c9cacb;
+          line-height: 1;
+          &:before{
+            @include FontIcon("\4d", 'ElegantIcons');
+          }
+          &:hover{
+            color: $text;
+          }
+        }
+
+
+
+        + .bag-product{
+          margin-top: 20px;
+        }
+
+
+
+      }
+    }
+
+    .bag-total{
+      margin-top: 30px;
+      .amount{
+        float: right;
+        font-size: 24px;
+      }
+    }
+    .bag-buttons{
+      margin-top: 30px;
+    }
+
+  }
+
+  .header-cart{
     color: $text;
     font-size: 36px;
     position: relative;
     line-height: 42px;
-    margin-right: 8px;
+    margin-right: 13px;
     span{
       font-family: $second-font;
       font-size: 12px;
@@ -880,8 +930,8 @@ select:not([multiple]) {
       height: 25px;
       line-height: 25px;
       position: absolute;
-      right: -8px;
-      top: -8px;
+      right: -2px;
+      top: -2px;
       background: $primary-color;
       text-align: center;
       @include border-radius(50%);
@@ -922,12 +972,14 @@ select:not([multiple]) {
   margin: 0;
   padding: 0;
   list-style: none;
+  position: relative;
+  z-index: 10;
+
   > li{
     display: inline-block;
     position: relative;
-    padding-right: 47px;
-    &:last-child{
-      padding: 0;
+    + li{
+      margin-left: 47px;
     }
     > a{
       text-transform: uppercase;
@@ -939,6 +991,67 @@ select:not([multiple]) {
       }
       &:hover{
         color: $primary-color;
+      }
+    }
+    > ul{
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      width: 100px;
+      margin: 0 0 0 -50px;
+      padding: 5px 0;
+      list-style: none;
+      background: #FFFFFF;
+      visibility: hidden;
+      @include opacity(0);
+      @include transform(translate(0, 40px));
+      @include transition('opacity 0.5s ease-in-out, transform 0.5s ease-in-out');
+      border: 1px solid #eaeaea;
+      @include box-shadow(0, 2px, 3px, rgba(0, 0, 0, 0.05));
+
+      &:before{
+        top: -4px;
+        content: "";
+        display: block;
+        height: 8px;
+        width: 8px;
+        background: $white;
+        position: absolute;
+        @include transform(rotate(45deg));
+        left: 50%;
+        margin-left: -4px;
+        border-top: 1px solid #eaeaea;
+        border-left: 1px solid #eaeaea;
+
+      }
+
+      li{
+        > span,
+        > a{
+          color: $text;
+          display: block;
+          font-size: 12px;
+          line-height: 17px;
+          padding: 8px 0 8px 10px;
+          text-transform: uppercase;
+          img{
+            float: left;
+            margin-right: 5px;
+            margin-top: 3px;
+          }
+        }
+        a:hover{
+          background: #eaeaea;
+        }
+      }
+
+    }
+
+    &:hover{
+      > ul{
+        @include opacity(1);
+        @include transform(translate(0, 0));
+        visibility: visible;
       }
     }
   }
@@ -1022,11 +1135,11 @@ select:not([multiple]) {
 
       ul.sub-menu-dropdown,
       .kt-megamenu-wrapper{
-        background: #FFFFFF;
         position: absolute;
         top: 100%;
         left: 0;
         visibility: hidden;
+        background: #FFFFFF;
         line-height: normal;
         text-align: left;
         padding: 40px 30px 30px;
@@ -1246,41 +1359,78 @@ select:not([multiple]) {
 /* ==============================
    9. Footer
    ============================== */
+#footer-outer{
+  position: relative;
+}
+#footer{
+  position: relative;
+  background: #373a3e;
+  color: #7b7e83;
+  &:before{
+    content: '';
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #3b3e43;
+    display: block;
+  }
+}
 
+.footer-padding-left{
+  padding-left: 40px;
+}
+.footer-padding-right{
+  padding-right: 40px;
+}
 
 #footer-top{
-  background: $gray-bg;
-  padding: 85px 0 60px;
+  padding: 40px 0 10px;
 }
 #footer-area{
-  padding: 80px 0 30px;
+  padding: 95px 0 30px;
   position: relative;
-  .footer-area-inner{
-    padding: 82px 80px 40px;
-  }
+  color: $footer-color;
 
-  .footer-area-right{
-    background-size: cover;
-    padding: 80px 85px;
-    color: #FFFFFF;
-    .widget-title{
-      color: #FFFFFF;
+  a{
+    color: $footer-color;
+    &:hover{
+      color: $footer-color-hover;
     }
   }
-  .widget-container{
-    margin-bottom: 30px;
-    border: none;
-    padding: 0;
-    .widget-title{
-      text-transform: uppercase;
-      margin: 0 0 35px;
-      letter-spacing: 0.2em;
+
+  .widget{
+    margin-bottom: 35px;
+    .widget-title {
+      position: relative;
+      font-size: 18px;
+      font-weight: normal;
+      margin: 0 0 65px;
+      letter-spacing: .2em;
+      padding-bottom: 18px;
+      color: $white;
+      &:after{
+        content: '';
+        position: absolute;
+        display: block;
+        width: 15px;
+        height: 2px;
+        background: $primary-color;
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+    .contact-info ul li i{
+      color: $footer-color-dark;
     }
   }
 }
 #footer-bottom{
   padding: 25px 0;
   background: $gray-bg;
+  position: relative;
   .widget-container{
     margin: 0;
     padding: 0;
@@ -1289,25 +1439,10 @@ select:not([multiple]) {
       text-transform: uppercase;
     }
   }
-  .social-nav{
-    margin-top: 8px;
-  }
 }
 #footer-copyright{
-  padding: 35px 0;
-  text-align: center;
-  .container{
-    .social-nav,
-    .footer-copyright{
-      margin-bottom: 15px;
-    }
-    .footer-copyright{
-      font-size: 14px;
-    }
-    > *:last-child{
-      margin-bottom: 0;
-    }
-  }
+  position: relative;
+  padding: 10px 0 65px;
 }
 
 /* ==============================
@@ -1537,7 +1672,7 @@ select:not([multiple]) {
  */
 ul.style-list{
   padding: 0;
-  margin: 0 0 30px;
+  margin: 0 0 $shortcode;
   list-style: none;
   li{
     padding-left: 52px;
@@ -1598,7 +1733,7 @@ ul.style-list{
   border-radius: 0;
   position: relative;
   line-height: 24px;
-  margin-bottom: 30px;
+  margin-bottom: $shortcode;
   .alert_title{
     font-size: 18px;
     letter-spacing: 0.05em;
@@ -1710,7 +1845,7 @@ ul.style-list{
  */
 
 .nav-border {
-  margin-bottom: 30px;
+  margin-bottom: $shortcode;
   > li {
     float: left;
     > a {
@@ -1833,7 +1968,7 @@ ul.style-list{
 
 
 .kt-tab-container{
-  margin-bottom: 30px;
+  margin-bottom: $shortcode;
   .tabs{
     padding: 0;
     list-style: none;
@@ -1876,7 +2011,7 @@ ul.style-list{
  * 10.7 Accordion
  */
 .kt-accordion{
-  margin: 0 0 30px;
+  margin: 0 0 $shortcode;
   .kt-accortion-title{
     padding: 20px 30px;
     font-size: 14px;
@@ -1991,74 +2126,101 @@ ul.style-list{
  */
 
 .social-nav{
-  margin: 0;
+  margin: 0 0 $shortcode;
   padding: 0;
   list-style: none;
 
-  li{
-    display: inline-block;
-    padding: 0 3px;
-    font-size: 14px;
-    a{
-      display: inline-block;
-      border: 2px solid $border-color;
-      width: 73px;
-      height: 73px;
-      text-align: center;
-      line-height: 20px;
-      color: $text;
-      padding-top: 14px;
-      position: relative;
-      @include transition();
+  a{
+    @include transition();
+  }
 
-      &:before,
-      &:after{
-        content: '';
-        position: absolute;
+  &.style-1{
+    li{
+      font-size: 14px;
+      line-height: 21px;
+      + li{
+        margin-top: 30px;
+      }
+      a{
         display: block;
-        width: 0;
-        height: 0;
-        @include transition();
-        @include opacity(0);
-      }
-      &:before{
-        left: -2px;
-        bottom: -2px;
-        border-left: 2px solid $primary-color;
-        border-bottom: 2px solid $primary-color;
-      }
-      &:after{
-        top: -2px;
-        right: -2px;
-        border-right: 2px solid $primary-color;
-        border-top: 2px solid $primary-color;
-      }
-      i{
-        font-size: 18px;
-      }
-      span{
-        display: block;
-        font-size: 10px;
-        letter-spacing: .1em;
-      }
-      &:hover{
-        border-color: $text;
-        &:before,
-        &:after{
-          width: 20px;
-          height: 20px;
-          @include opacity(1);
+        color: $text;
+        &:hover{
+          color: $primary-color;
+        }
+        i{
+          margin-right: 12px;
+          min-width: 50px;
         }
       }
     }
-    &:first-child{
-      padding-left: 0;
+  }
 
-    }
-    &:last-child{
-      padding-right: 0;
+  &.style-2{
+    li{
+      display: inline-block;
+      font-size: 14px;
+      margin-bottom: 14px;
+      + li{
+        margin-left: 12px;
+      }
+      a{
+        display: inline-block;
+        border: 2px solid $border-color;
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        line-height: 20px;
+        color: $text;
+        padding-top: 18px;
+        position: relative;
+        text-transform: uppercase;
+
+
+
+        &:before,
+        &:after{
+          content: '';
+          position: absolute;
+          display: block;
+          width: 0;
+          height: 0;
+          @include transition();
+          @include opacity(0);
+        }
+        &:before{
+          left: -2px;
+          bottom: -2px;
+          border-left: 2px solid $primary-color;
+          border-bottom: 2px solid $primary-color;
+        }
+        &:after{
+          top: -2px;
+          right: -2px;
+          border-right: 2px solid $primary-color;
+          border-top: 2px solid $primary-color;
+        }
+        i{
+          font-size: 18px;
+        }
+        span{
+          display: block;
+          font-size: 10px;
+          letter-spacing: .1em;
+        }
+        &:hover{
+          border-color: $text;
+          &:before,
+          &:after{
+            width: 20px;
+            height: 20px;
+            @include opacity(1);
+          }
+        }
+      }
     }
   }
+
+
 }
 /*
  * 10.10 Newsletter
@@ -2154,7 +2316,7 @@ ul.style-list{
   position: relative;
   text-align: center;
   overflow: hidden;
-  margin-bottom: 70px;
+  margin-bottom: $shortcode;
   &-dark{
     &:after{
       content: '';
@@ -2304,6 +2466,7 @@ ul.style-list{
  */
 .category-banner{
   position: relative;
+  margin-bottom: $shortcode;
   &-button{
     position: absolute;
     left: 30px;
@@ -2389,7 +2552,7 @@ ul.style-list{
  * 10.15 Single Image
  */
 .single-image{
-  margin: 0 0 30px;
+  margin-bottom: $shortcode;
   overflow: hidden;
   img{
     @include transition('all 1s ease-in-out 0s');
@@ -2420,100 +2583,6 @@ ul.style-list{
   }
   &:hover{
     @include opacity(1);
-  }
-}
-
-/*
- * 10.17 About
- */
-.about-wrapper{
-  padding: 58px 43px 30px;
-  color: #FFFFFF;
-  @include css3-prefix('background-size', 'cover');
-  background-position: center 550px;
-  margin: 0 0 30px;
-  .about-title{
-    color: #FFFFFF;
-    margin: 0 0 30px;
-    letter-spacing: 0.2em;
-  }
-}
-
-
-/*
- * 10.18 collection
- */
-.collection-wrapper{
-  position: relative;
-  overflow: hidden;
-
-  .left-collection{
-    position: absolute;
-    top:0;
-    left:0;
-    width: 45%;
-  }
-
-  .right-collection{
-    position: absolute;
-    right:0;
-    bottom:0;
-    width: 41.6667%;
-  }
-
-  .front-collection{
-    margin-top: 225px;
-    margin-bottom: 80px;
-    position: relative;
-    .collection-image{
-      text-align: center;
-      img{
-        margin: 0 auto;
-      }
-    }
-  }
-
-  .collection-content{
-    width: 33.3333%;
-    .collection-desc{
-      margin-bottom: 5px;
-    }
-  }
-}
-
-/*
- * 10.19 Box colored
- */
-.box-colored{
-  margin-bottom: 30px;
-  color: #FFFFFF;
-  text-align: center;
-  .box-colored-image{
-    margin: 0 0 30px;
-    overflow: hidden;
-    img{
-      @include transition('all 1s ease-in-out 0s');
-      @include transform(scale(1));
-    }
-  }
-  &:hover{
-    img{
-      @include transform(scale(1.2));
-    }
-  }
-  .box-colored-title{
-    color: #FFFFFF;
-    font-size: 14px;
-    letter-spacing: 0.2em;
-    margin: 0 0 30px;
-    a{
-      padding: 55px 20px;
-      color: #FFFFFF;
-      display: block;
-    }
-  }
-  :last-child{
-    margin-bottom: 0;
   }
 }
 
@@ -2558,7 +2627,6 @@ ul.style-list{
   &-author{
     font-size: 30px;
     line-height: 40px;
-
   }
   &-info{
     font-size: 14px;
@@ -2568,7 +2636,7 @@ ul.style-list{
 
 
 .testi-navigation{
-  margin: 0;
+  margin: 0 0 $shortcode;
   padding: 0;
   list-style: none;
   @include clearfix();
@@ -2599,8 +2667,8 @@ ul.style-list{
 .product-countdown{
   background: #fff;
   padding: 30px;
-  box-shadow:0 0 6px 0 rgba(0,0,0,0.05);
-  margin-bottom: 30px;
+  box-shadow:0 0 6px 0 rgba($black,0.05);
+  margin-bottom: $shortcode;
 
   .countdown-wrap{
     width:60px;
@@ -2633,7 +2701,7 @@ ul.style-list{
  */
 
 .team{
-  margin-bottom: 30px;
+  margin-bottom: $shortcode;
   text-align: center;
   .avatar{
     border: 15px solid $white;
@@ -2710,17 +2778,54 @@ ul.style-list{
   }
 }
 
+
+.contact-info{
+  margin-bottom: $shortcode;
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include clearfix();
+    li{
+      float: left;
+      width: 50%;
+      position: relative;
+      margin-bottom: 50px;
+      padding-left: 20px;
+      line-height: 24px;
+      font-size: 14px;
+      &:nth-child(2n+1){
+        clear: both;
+      }
+      i{
+        position: absolute;
+        left: 0;
+        font-size: 36px;
+        color: #f0f0f0;
+        top: -5px;
+      }
+      span,
+      a{
+        position: relative;
+      }
+      a{
+        color: $text;
+        &:hover{
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
 /*
  * 10.23 Iconbox
  */
 
 .kt-icon-box{
   position: relative;
-  &:not([class *= style-]){
-
-  }
-
-  &.style-2{
+  margin-bottom: $shortcode;
+  &:not([class*=" style-"]){
     border: 1px solid $gray-bg2;
     margin-bottom: 30px;
     text-align: center;
@@ -2743,8 +2848,7 @@ ul.style-list{
     }
   }
 
-
-  &.style-3{
+  &.style-2{
     text-align: center;
     text-transform: uppercase;
     padding: 30px 0;
@@ -2800,7 +2904,15 @@ ul.style-list{
     }
   }
 
+}
 
+
+.payment-list{
+  img{
+    + img {
+      margin-left: 20px;
+    }
+  }
 }
 
 /*
@@ -2880,7 +2992,6 @@ ul.style-list{
     text-transform: uppercase;
     font-weight: bold;
   }
-  &.widget_nav_menu,
   &.widget_categories,
   &.widget_archive,
   &.widget_product_categories,
@@ -2969,6 +3080,63 @@ ul.style-list{
               &:hover,
               &:hover span{
                 color: $text;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  &.widget_nav_menu{
+    > ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      > li{
+        > a{
+          color: $text;
+          position: relative;
+          display: block;
+          @include transition();
+
+          &:before{
+            position: absolute;
+            left:0;
+            top: 0;
+            @include FontIcon('\f105');
+            @include opacity(0);
+            @include transition();
+          }
+
+          &:hover{
+            color: $primary-color;
+            padding-left: 17px;
+            &:before{
+              @include opacity(1);
+            }
+          }
+        }
+        + li{
+          margin-top: 20px;
+        }
+
+        ul{
+          padding-left: 15px;
+          margin: 15px 0 0;
+          list-style: none;
+          li {
+            a{
+              color: $text;
+              display: block;
+              &:before{
+                @include FontIcon("\35", 'ElegantIcons');
+                padding-right: 10px;
+              }
+              &:hover{
+                color: $primary-color;
               }
             }
           }
@@ -3281,6 +3449,14 @@ ul.style-list{
     }
   }
 
+  &.widget_contact_info{
+    .contact-info{
+      margin: 0;
+    }
+  }
+
+
+
 }
 
 .side-bar{
@@ -3306,6 +3482,19 @@ ul.style-list{
       top: 15px;
       right: 0;
       width: 50px;
+    }
+  }
+
+  .widget_social{
+    .social-nav{
+      &.style-2{
+        margin: 0 0 -14px;
+        li{
+          &:nth-child(3n+1){
+            margin-left: 0;
+          }
+        }
+      }
     }
   }
 }
@@ -6209,26 +6398,30 @@ table.compare{
    ============================== */
 #back-to-top{
   width: 50px;
-  height: 50px;
-  background: #fff;
+  height: 70px;
+  border: 2px solid $white;
   text-align: center;
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
+  position: absolute;
+
+  bottom: 70px;
   z-index: 100;
   cursor: pointer;
-  display: none;
-  @include box-shadow(0, 2px, 4px, rgba(0, 0, 0, 0.12));
-  color: #000000;
+  font-size: 14px;
+  color: $white;
+  text-transform: uppercase;
+  padding-top: 10px;
+  overflow: hidden;
+  @include transition(all 0.4s ease);
+  @include calc('right', '(100% - 1495px) / 2');
+
   i{
     font-size: 18px;
-    line-height: 50px;
-    @include transition(all 0.4s ease);
+    line-height: 20px;
+    display: block;
   }
   &:hover{
-    i{
-      @include transform(scale(1.5));
-    }
+    color: $primary-color;
+    border-color: $primary-color;
   }
 }
 

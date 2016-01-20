@@ -6,9 +6,8 @@
 ////[Table of contents]
 
 ////1. Fonts
-////2. Color
-////3. Header height
-////4. Hamburger
+////2. Color codes
+////3. Common space
 
 
 //// 1. Fonts ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -48,19 +47,26 @@ $gray-agency: #8f9498;
 $author: #4c5258;
 
 
-//// 3. Header height ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+$footer-bg: #373a3e;
+$footer-bg-dark: #3b3e43;
+$footer-color: #7b7e83;
+$footer-color-dark: #434549;
+$footer-color-hover: $white;
+
+
+//// 3. Common space ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 $navbar-height: 58px;
 $navbar-height-mobile: 80px;
 $navbar-height-sticky: 60px;
 
+$shortcode: 30px;
 
-//// 4. Hamburger ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 $hamburger-heighticon: 12px;
 $hamburger-widthline: 20px;
 $hamburger-heightline: 2px;
-
 $hamburger-transition-time: 0.4s;
 $hamburger-rotation: 45deg;
 $hamburger-translateY: ($hamburger-heighticon / 2);
 $hamburger-translateX: 0;
+

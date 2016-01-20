@@ -179,7 +179,7 @@ include_once('templates/headers/header1.php');
 
                     <div class="bg-white pad-top-110 pad-bottom-100 box-shadow">
                         <div class="owl-carousel-kt no-gutters no-margin">
-                            <div class="owl-carousel kt-owl-carousel" id="testi-carousel-01" data-options='{"pagination": false, "navigation": true, "desktop": 1, "tablet" : 1, "mobile" : 1}'>
+                            <div class="owl-carousel kt-owl-carousel" id="testi-carousel-01" data-options='{"pagination": false, "navigation": true, "desktop": 1, "tablet" : 1, "mobile" : 1, "callback" : "kt_products_carousel"}'>
 
                                 <div class="testi-item">
                                     <div class="testi-item-inner">
@@ -548,10 +548,9 @@ include_once('templates/headers/header1.php');
     </div>
 
 
-
 </div><!-- #main -->
 
-<img src="previews/01-homepage-V1.jpg" class="preview-image" style="top: -3353px;display: none;" />
+<img src="previews/22-my-cart.jpg" class="preview-image" style="top: 0;display: none;" />
 
 <?php
 
