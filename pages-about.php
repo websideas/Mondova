@@ -8,7 +8,7 @@ include_once('templates/headers/header1.php');
 
 ?>
 
-    <div class="page-section page-header-2 small-section" style="background-image:url(assets/images/about.jpg);">
+    <div class="page-section page-header-2 small-section" style="background-image:url(assets/images/background/about.jpg);">
         <div class="page-header">
             <div class="container">
                 <div class="page-header-content text-center">
