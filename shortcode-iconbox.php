@@ -35,7 +35,7 @@ include_once('templates/headers/header1.php');
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
-                        <div class="kt-icon-box style-2">
+                        <div class="kt-icon-box">
                             <div class="icon-box-icon">
                                 <span class="icon_mobile"></span>
                             </div>
@@ -44,7 +44,7 @@ include_once('templates/headers/header1.php');
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
-                        <div class="kt-icon-box style-3">
+                        <div class="kt-icon-box style-2">
                             <div class="icon-box-icon">
                                 <span class="fa fa-diamond"></span>
                             </div>

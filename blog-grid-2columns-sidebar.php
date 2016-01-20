@@ -179,10 +179,10 @@ include_once('templates/headers/header1.php');
         </div><!-- .page-section -->
 
     </div><!-- #main -->
-
+    <img src="previews/15-blog-grid-2-columns-with-sidebar.jpg" class="preview-image" style="top: 0;display: none;" />
 <?php
 
-include_once('templates/footers/footer3.php');
+include_once('templates/footers/footer1.php');
 include_once('templates/footers/foot.php');
 
 

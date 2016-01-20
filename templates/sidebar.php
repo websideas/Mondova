@@ -1,23 +1,35 @@
 <div class="col-md-3 col-sm-12 col-xs-12 side-bar">
 
     <div class="widget widget_social">
-        <ul class="social-nav">
+        <ul class="social-nav style-2">
             <li>
                 <a target="_blank" href="#">
                     <i class="fa fa-facebook"></i>
-                    <span>FACEBOOK</span>
+                    <span>Facebook</span>
                 </a>
             </li>
             <li>
                 <a target="_blank" href="#">
                     <i class="fa fa-twitter"></i>
-                    <span>TWITTER</span>
+                    <span>Twitter</span>
                 </a>
             </li>
             <li>
                 <a target="_blank" href="#">
                     <i class="fa fa-google-plus"></i>
-                    <span>GOOGLE+</span>
+                    <span>Google+</span>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="#">
+                    <i class="fa fa-pinterest-p"></i>
+                    <span>Pinterest</span>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="#">
+                    <i class="fa fa-tumblr"></i>
+                    <span>Tumblr</span>
                 </a>
             </li>
         </ul>
@@ -33,9 +45,7 @@
     <div class="widget widget_categories">
         <h3 class="widget-title">Categories</h3>
         <ul class="product-categories">
-            <li>
-                <a href="#">Fashion<span class="count">(256)</span></a>
-            </li>
+            <li><a href="#">Fashion<span class="count">(256)</span></a></li>
             <li><a href="#">Lifestyle<span class="count">(24)</span></a></li>
             <li><a href="#">Shirt<span class="count">(173)</span></a></li>
             <li><a href="#">Trends<span class="count">(36)</span></a></li>

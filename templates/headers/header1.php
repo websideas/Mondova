@@ -1,6 +1,5 @@
 
 
-<!-- header-full-center -->
 <header id="header">
 
 
@@ -12,36 +11,82 @@
                         <li>
                             <a href="#"><i class="icon_lock_alt"></i>My Account</a>
                         </li>
-                        <li>
+                        <li class="language-switcher">
                             <a href="#"><i class="icon_ribbon_alt"></i>language</a>
+                            <ul class="list-lang">
+                                <li><span class="current"><img alt="en" src="http://demo.snstheme.com/wp/simen/wp-content/themes/snssimen/assets/img/en.jpg"><span>English</span></span></li>
+                                <li><a href="#" title="Russian"><img alt="ru" src="http://demo.snstheme.com/wp/simen/wp-content/themes/snssimen/assets/img/ru.jpg"><span>Russian</span></a></li>
+                                <li><a href="#" title="Brazil"><img alt="bra" src="http://demo.snstheme.com/wp/simen/wp-content/themes/snssimen/assets/img/bra.jpg"><span>Brazil</span></a></li>
+                                <li><a href="#" title="France"><img alt="fr" src="http://demo.snstheme.com/wp/simen/wp-content/themes/snssimen/assets/img/fr.jpg"><span>France</span></a></li>
+                            </ul>
                         </li>
-                        <li>
+                        <li class="currency-switcher">
                             <a href="#"><i class="icon_currency"></i>Currency</a>
+                            <ul>
+                                <li><a href="#">USD</a></li>
+                                <li><a href="#">EUR</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 text-center">
                     <div class="branding">
                         <h1 class="logo">
-                            <a href="index.php"><img src="assets/images/logo.png" title="Delphinus" alt="Delphinus"/></a>
+                            <a href="index.php"><img src="assets/images/logo.png" title="Mondova" alt="Mondova"/></a>
                         </h1>
                     </div><!-- .branding -->
                 </div>
 
                 <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12">
-
                     <div class="header-right">
-                        <a href="woocommerce-cart.php" class="header-cart">
-                            <i class="icon_bag_alt"></i>
-                            <span>03</span>
-                        </a>
+                        <div class="shopping-bag">
+                            <a href="woocommerce-cart.php" class="header-cart">
+                                <i class="icon_bag_alt"></i>
+                                <span>03</span>
+                            </a>
+                            <div class="shopping-bag-content">
+                                <p class="cart_block_desc">You have <span>3 item(s)</span> in your shopping bag.</p>
+                                <div class="bag-products">
+                                    <div class="bag-product">
+                                        <figure>
+                                            <a class="bag-product-img" href="#">
+                                                <img class="img-responsive" alt="" src="assets/images/product/cart/1.jpg"/>
+                                            </a>
+                                        </figure>
+                                        <div class="bag-product-details">
+                                            <a class="bag-product-title" href="#">Wisi enim ad minim</a>
+                                            <div class="bag-product-price">$120,00</div>
+                                            <div class="bag-product-qty">Qty: <span>01</span></div>
+                                        </div>
+                                        <a href="#" class="remove" title="Remove this item"></a>
+                                    </div><!-- .bag-product -->
+
+                                    <div class="bag-product">
+                                        <figure>
+                                            <a class="bag-product-img" href="#">
+                                                <img class="img-responsive" alt="" src="assets/images/product/cart/2.jpg"/>
+                                            </a>
+                                        </figure>
+                                        <div class="bag-product-details">
+                                            <a class="bag-product-title" href="#">Le grand cartable</a>
+                                            <div class="bag-product-price">$440,00</div>
+                                            <div class="bag-product-qty">Qty: <span>02</span></div>
+                                        </div>
+                                        <a href="#" class="remove" title="Remove this item"></a>
+                                    </div><!-- .bag-product -->
+                                </div><!-- .bag-products -->
+                                <p class="bag-total">Total: <span class="amount"> $1520,00</span></p>
+                                <p class="bag-buttons">
+                                    <a href="woocommerce-cart.php" class="btn btn-default">View Cart</a>
+                                    <a href="woocommerce-checkout.php" class="btn">Checkout</a>
+                                </p><!-- .bag-buttons -->
+                            </div>
+                        </div>
                         <form action="#" class="searchform" method="get">
                             <input type="text" name="s" value="" placeholder="Search">
                             <button class="submit"><i class="icon_search"></i></button>
                         </form>
-
                     </div>
-
                 </div>
             </div>
         </div><!-- .container -->

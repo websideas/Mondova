@@ -95,7 +95,6 @@
     init_backtotop();
     init_matchHeight();
     init_productsMasonry();
-    init_backtotop();
 
     init_productcarouselwoo($("#sync1"), $("#sync2"));
     init_ecommerce();
@@ -124,21 +123,7 @@
      --------------------------------------------- */
     function init_backtotop(){
 
-        $('body').append('<div id="back-to-top"><i class="fa fa-angle-up"></i></div>');
         var $backtotop = $('#back-to-top');
-
-        $backtotop.hide();
-
-        $(window).scroll(function() {
-            var heightbody = $('body').outerHeight(),
-                window_height = $(window).outerHeight(),
-                top_pos = heightbody/2-25;
-            if($(window).scrollTop() + window_height/2 >= top_pos) {
-                $backtotop.fadeIn();
-            } else {
-                $backtotop.fadeOut();
-            }
-        });
 
         $backtotop.on('click', function(e) {
             e.preventDefault();
@@ -226,12 +211,19 @@
                     func_cb( 'afterInit',   elem );
                 }
             };
-
             options.afterUpdate = function(elem){
                 if( typeof func_cb === 'function'){
                     func_cb( 'afterUpdate',   elem );
                 }
             };
+
+            options.afterMove = function(elem){
+                if( typeof func_cb === 'function'){
+                    func_cb( 'afterMove',   elem );
+                }
+            };
+
+
 
             objCarousel.imagesLoaded(function() {
                 objCarousel.owlCarousel(options);
@@ -652,20 +644,15 @@
     }
 
 })(jQuery); // End of use strict
+
+
+
 function kt_products_carousel( _type, elem ){
     "use strict"; // Start of use strict
-
-    var $wrapper = elem.closest('.widget_products_carousel');
-
-    console.log($wrapper);
-
-    if( _type === 'afterInit' ) {
-        console.log('afterInit');
-
+    if( _type == 'afterMove'){
+        var $data = elem.data('owlCarousel'),
+            $navigation = $('ul[data-sync='+elem.attr('id')+']');
+        $('li', $navigation).removeClass('active');
+        $('li:eq('+$data.currentItem+')', $navigation).addClass('active');
     }
-
-    if( _type == 'afterUpdate'){
-        console.log('afterUpdate');
-    }
-
 }
