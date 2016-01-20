@@ -2120,6 +2120,20 @@ ul.style-list {
     text-align: left; }
   .banner.banner-right {
     text-align: right; }
+  .banner.style2 .banner-content h3 {
+    min-width: 0;
+    padding: 0;
+    font-size: 24px;
+    line-height: 44px; }
+    .banner.style2 .banner-content h3:before {
+      border-left: none; }
+    .banner.style2 .banner-content h3:after {
+      border-right: none; }
+    .banner.style2 .banner-content h3:after, .banner.style2 .banner-content h3:before {
+      width: 0;
+      border-color: #FFFFFF; }
+  .banner.style2:hover .banner-content h3:after, .banner.style2:hover .banner-content h3:before {
+    width: 100%; }
 
 /*
  * 10.13 Category Banner
