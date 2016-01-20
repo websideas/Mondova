@@ -106,35 +106,78 @@ include_once('templates/slideshows/slideshow1.php');
 
         <div class="page-section">
             <div class="container">
-                <div class="owl-carousel-kt no-gutters no-margin">
-                    <div class="owl-carousel kt-owl-carousel" id="blog-carousel-01" data-options='{"pagination": false, "navigation": true, "desktop": 1, "tablet" : 1, "mobile" : 1}'>
+                <div class="bg-gray pad-bottom-100 clearfix">
+                    <div class="blog-carousel owl-carousel-kt no-gutters no-mar-bottom">
+                        <h3 class="blog-carousel-title">The Blog</h3>
+                        <div class="owl-carousel kt-owl-carousel" id="blog-carousel-01" data-options='{"pagination": false, "navigation": true, "desktop": 1, "tablet" : 1, "mobile" : 1}'>
 
-                        <div class="blog-carousel-item">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6">
-                                    <a class="blog-post-thumbnail" href="blog-singlepost-standard.php">
-                                        <img alt="" src="assets/images/blog/1.jpg">
-                                    </a>
-                                </div>
-                                <div class="col-md-6 col-sm-6">
-                                    <div class="blog-post-content">
-                                        <div class="blog-post-inner">
-                                            <div class="blog-post-meta">
-                                                <span class="cat-links"><a href="#">the blog</a></span>
-                                                <span class="author vcard">By <a href="#">Author</a></span>
-                                                <span class="post-date">20.11.2015</span>
+                            <div class="blog-carousel-item">
+                                <div class="row">
+                                    <div class="col-md-5 col-sm-5">
+                                        <a class="blog-post-thumbnail" href="blog-singlepost-standard.php">
+                                            <img alt="" src="assets/images/blog/carousel/1.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-7 col-sm-7">
+                                        <div class="blog-post-content">
+                                            <div class="blog-post-inner">
+                                                <div class="blog-post-meta">
+                                                    <span class="cat-links"><a href="#">the blog</a></span>
+                                                    <span class="author vcard">By <a href="#">Author</a></span>
+                                                    <span class="post-date">20.11.2015</span>
+                                                </div>
+                                                <h4 class="blog-post-title">
+                                                    <a href="blog-singlepost-standard.php">Lorem ipsum dolor sit amet consectetuer</a>
+                                                </h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip </p>
+                                                <div><a href="#" class="btn btn-default">view all blog</a></div>
                                             </div>
-                                            <h4 class="blog-post-title">
-                                                <a href="blog-singlepost-standard.php">Lorem ipsum dolor sit amet consectetuer</a>
-                                            </h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip </p>
-                                            <div><a href="#" class="btn btn-default">view all blog</a></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
+                            <div class="blog-carousel-item">
+                                <div class="row">
+                                    <div class="col-md-5 col-sm-5">
+                                        <a class="blog-post-thumbnail" href="blog-singlepost-standard.php">
+                                            <img alt="" src="assets/images/blog/carousel/1.jpg">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-7 col-sm-7">
+                                        <div class="blog-post-content">
+                                            <div class="blog-post-inner">
+                                                <div class="blog-post-meta">
+                                                    <span class="cat-links"><a href="#">the blog</a></span>
+                                                    <span class="author vcard">By <a href="#">Author</a></span>
+                                                    <span class="post-date">20.11.2015</span>
+                                                </div>
+                                                <h4 class="blog-post-title">
+                                                    <a href="blog-singlepost-standard.php">Blog 1</a>
+                                                </h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip </p>
+                                                <div><a href="#" class="btn btn-default">view all blog</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-section bg-gray">
+            <div class="container">
+                <div class="pad-top-60 pad-bottom-60 bg-white box-shadow">
+                    <div class="newletter-wrapper text-center">
+                        <h3 class="newletter-title">newsletter</h3>
+                        <div class="newletter-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</div>
+                        <form class="newletter-form">
+                            <input type="email" name="email" class="email" placeholder="Type your email..." />
+                            <button class="btn btn-default">submit</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -142,7 +185,7 @@ include_once('templates/slideshows/slideshow1.php');
 
     </div><!-- #main -->
 
-    <img src="previews/02-homepage-V2.jpg" class="preview-image" style="top: -52px;display: none;max-width:none;" />
+    <img src="previews/02-homepage-V2.jpg" class="preview-image" style="top: -2559px;display: none1;max-width:none;" />
 <?php
 
 include_once('templates/footers/footer2.php');

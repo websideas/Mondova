@@ -2951,9 +2951,115 @@ ul.style-list {
 /*
  * 10.25 Blog Carousel
  */
+.blog-carousel {
+  margin-top: -50px; }
+  .blog-carousel .blog-carousel-title {
+    font-size: 36px;
+    font-weight: 700;
+    position: absolute;
+    -webkit-transform-origin: left bottom 0;
+    -khtml-transform-origin: left bottom 0;
+    -moz-transform-origin: left bottom 0;
+    -ms-transform-origin: left bottom 0;
+    -o-transform-origin: left bottom 0;
+    transform-origin: left bottom 0;
+    -webkit-transform: rotate(-90deg);
+    -khtml-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    bottom: 0;
+    margin: 0;
+    z-index: 10;
+    left: 89px; }
+  .blog-carousel.owl-carousel-kt .owl-controls {
+    margin: 0; }
+    .blog-carousel.owl-carousel-kt .owl-controls .owl-buttons {
+      position: absolute;
+      right: 60px;
+      bottom: 0; }
+
 .blog-carousel-item {
-  background: #f7f8fa;
-  padding: 55px 120px 100px; }
+  padding: 0 60px 0 120px; }
+  .blog-carousel-item .blog-post-thumbnail {
+    display: block;
+    margin-right: 25px; }
+  .blog-carousel-item .blog-post-content {
+    margin-left: 25px; }
+    .blog-carousel-item .blog-post-content p {
+      margin-bottom: 40px; }
+  .blog-carousel-item .blog-post-meta {
+    line-height: normal;
+    margin-bottom: 20px;
+    margin-top: 105px; }
+    .blog-carousel-item .blog-post-meta span {
+      font-size: 14px;
+      color: #c9cacb;
+      text-transform: uppercase; }
+      .blog-carousel-item .blog-post-meta span a {
+        color: #c9cacb; }
+      .blog-carousel-item .blog-post-meta span:after {
+        content: '/';
+        padding-left: 8px;
+        padding-right: 4px; }
+      .blog-carousel-item .blog-post-meta span:last-child:after {
+        content: ''; }
+  .blog-carousel-item .blog-post-title {
+    font-size: 24px;
+    text-transform: none;
+    padding-bottom: 25px;
+    position: relative;
+    line-height: 32px;
+    margin-bottom: 42px; }
+    .blog-carousel-item .blog-post-title a {
+      color: #3b3e43; }
+    .blog-carousel-item .blog-post-title:after, .blog-carousel-item .blog-post-title:before {
+      position: absolute;
+      height: 2px;
+      background: #d1c45a;
+      content: "";
+      width: 50px;
+      bottom: 0;
+      left: 0; }
+    .blog-carousel-item .blog-post-title:after {
+      width: 15px;
+      bottom: 7px; }
+
+/*
+ * 10.26 Newletter
+ */
+.newletter-wrapper {
+  padding: 0 80px;
+  max-width: 880px;
+  margin: 0 auto; }
+  .newletter-wrapper .newletter-title {
+    font-size: 36px;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 50px;
+    margin-bottom: 45px; }
+    .newletter-wrapper .newletter-title:after, .newletter-wrapper .newletter-title:before {
+      width: 75px;
+      height: 2px;
+      background: #f1f1f1;
+      content: "";
+      -webkit-transform: translatex(-50%) rotate(45deg);
+      -khtml-transform: translatex(-50%) rotate(45deg);
+      -moz-transform: translatex(-50%) rotate(45deg);
+      -ms-transform: translatex(-50%) rotate(45deg);
+      -o-transform: translatex(-50%) rotate(45deg);
+      transform: translatex(-50%) rotate(45deg);
+      position: absolute;
+      bottom: 0;
+      left: 50%; }
+    .newletter-wrapper .newletter-title:after {
+      -webkit-transform: translatex(-50%) rotate(-45deg);
+      -khtml-transform: translatex(-50%) rotate(-45deg);
+      -moz-transform: translatex(-50%) rotate(-45deg);
+      -ms-transform: translatex(-50%) rotate(-45deg);
+      -o-transform: translatex(-50%) rotate(-45deg);
+      transform: translatex(-50%) rotate(-45deg); }
 
 /* ==============================
    11. Widgets

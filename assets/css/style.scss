@@ -2952,9 +2952,122 @@ ul.style-list{
  * 10.25 Blog Carousel
  */
 
+.blog-carousel{
+  margin-top: -50px;
+  .blog-carousel-title{
+    font-size: 36px;
+    font-weight: 700;
+    position: absolute;
+    @include transform-origin(left bottom 0);
+    @include transform(rotate(-90deg));
+    bottom: 0;
+    margin: 0;
+    z-index: 10;
+    left: 89px;
+  }
+  &.owl-carousel-kt{
+    .owl-controls{
+      margin:0;
+      .owl-buttons{
+        position: absolute;
+        right: 60px;
+        bottom: 0;
+      }
+    }
+  }
+}
+
 .blog-carousel-item{
-  background: $gray-bg2;
-  padding: 55px 120px 100px;
+  padding: 0 60px 0 120px;
+  .blog-post-thumbnail{
+    display: block;
+    margin-right: 25px;
+  }
+  .blog-post-content{
+    margin-left: 25px;
+    p{
+      margin-bottom: 40px;
+    }
+  }
+  .blog-post-meta{
+    line-height: normal;
+    margin-bottom: 20px;
+    margin-top: 105px;
+    span{
+      font-size: 14px;
+      color: #c9cacb;
+      text-transform: uppercase;
+      a{
+        color: #c9cacb;
+      }
+      &:after{
+        content: '/';
+        padding-left: 8px;
+        padding-right: 4px;
+      }
+      &:last-child{
+        &:after{
+          content: '';
+        }
+      }
+    }
+  }
+  .blog-post-title{
+    font-size: 24px;
+    text-transform: none;
+    padding-bottom: 25px;
+    position: relative;
+    line-height: 32px;
+    margin-bottom: 42px;
+    a{
+      color: $text;
+    }
+    &:after,
+    &:before{
+      position: absolute;
+      height: 2px;
+      background: $primary-color;
+      content: "";
+      width: 50px;
+      bottom: 0;
+      left: 0;
+    }
+    &:after{
+      width: 15px;
+      bottom: 7px;
+    }
+  }
+}
+
+/*
+ * 10.26 Newletter
+ */
+
+.newletter-wrapper{
+  padding: 0 80px;
+  max-width: 880px;
+  margin: 0 auto;
+  .newletter-title{
+    font-size: 36px;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 50px;
+    margin-bottom: 45px;
+    &:after,
+    &:before{
+      width: 75px;
+      height: 2px;
+      background: $gray-text;
+      content: "";
+      @include transform(translatex(-50%) rotate(45deg) );
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+    }
+    &:after{
+      @include transform(translatex(-50%) rotate(-45deg) );
+    }
+  }
 }
 
 /* ==============================
