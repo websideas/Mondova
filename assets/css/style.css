@@ -958,17 +958,6 @@ select:not([multiple]) {
    ============================== */
 #header-content {
   padding: 27px 0 35px; }
-  #header-content .top-navigation {
-    margin-top: 40px; }
-  #header-content .header-right {
-    margin-top: 27px; }
-    #header-content .header-right:before, #header-content .header-right:after {
-      content: " ";
-      display: table; }
-    #header-content .header-right:after {
-      clear: both; }
-    #header-content .header-right > * {
-      float: right; }
   #header-content .searchform {
     width: 260px;
     float: left; }
@@ -987,6 +976,19 @@ select:not([multiple]) {
       -ms-transform: scale(-1, 1) translateY(-50%);
       -o-transform: scale(-1, 1) translateY(-50%);
       transform: scale(-1, 1) translateY(-50%); }
+  #header-content .header-left {
+    margin-top: 40px; }
+  #header-content .header-right {
+    margin-top: 27px; }
+    #header-content .header-right:before, #header-content .header-right:after {
+      content: " ";
+      display: table; }
+    #header-content .header-right:after {
+      clear: both; }
+    #header-content .header-right .top-navigation {
+      margin-top: 14px; }
+    #header-content .header-right > * {
+      float: right; }
 
 .header-wishlist,
 .header-cart {
@@ -1339,8 +1341,9 @@ select:not([multiple]) {
       visibility: visible; }
 
 #nav {
-  border-top: 2px solid #3b3e43;
-  position: relative; }
+  border-top: 2px solid #3b3e43; }
+  #nav .main-nav-inner {
+    position: relative; }
   #nav #main-navigation {
     margin: 0;
     padding: 0;
@@ -1631,8 +1634,6 @@ select:not([multiple]) {
     text-align: left; }
     #header.header2 #nav #main-navigation > li:first-child {
       margin-left: 0; }
-      #header.header2 #nav #main-navigation > li:first-child a {
-        padding-left: 0; }
   #header.header2 .woocommerce-product-search {
     margin-right: 86px;
     width: 600px;
@@ -1664,23 +1665,24 @@ select:not([multiple]) {
       height: 26px;
       line-height: 26px;
       top: 6px; }
-  #header.header3 .navbar-container, #header.header4 .navbar-container, #header.header5 .navbar-container {
+  #header.header3 .navbar-container, #header.header4 .navbar-container, #header.header5 .navbar-container, #header.header7 .navbar-container {
     background: #3b3e43; }
-  #header.header3 #nav, #header.header4 #nav, #header.header5 #nav {
+  #header.header3 #nav, #header.header4 #nav, #header.header5 #nav, #header.header7 #nav {
     border: none; }
-    #header.header3 #nav #main-navigation > li > a, #header.header4 #nav #main-navigation > li > a, #header.header5 #nav #main-navigation > li > a {
+    #header.header3 #nav #main-navigation > li > a, #header.header4 #nav #main-navigation > li > a, #header.header5 #nav #main-navigation > li > a, #header.header7 #nav #main-navigation > li > a {
       color: #FFFFFF; }
-      #header.header3 #nav #main-navigation > li > a:before, #header.header3 #nav #main-navigation > li > a:after, #header.header4 #nav #main-navigation > li > a:before, #header.header4 #nav #main-navigation > li > a:after, #header.header5 #nav #main-navigation > li > a:before, #header.header5 #nav #main-navigation > li > a:after {
+      #header.header3 #nav #main-navigation > li > a:before, #header.header3 #nav #main-navigation > li > a:after, #header.header4 #nav #main-navigation > li > a:before, #header.header4 #nav #main-navigation > li > a:after, #header.header5 #nav #main-navigation > li > a:before, #header.header5 #nav #main-navigation > li > a:after, #header.header7 #nav #main-navigation > li > a:before, #header.header7 #nav #main-navigation > li > a:after {
         display: none; }
     #header.header3 #nav #main-navigation > li.active > a, #header.header3 #nav #main-navigation > li:hover > a,
     #header.header3 #nav #main-navigation > li > a:hover, #header.header4 #nav #main-navigation > li.active > a, #header.header4 #nav #main-navigation > li:hover > a,
     #header.header4 #nav #main-navigation > li > a:hover, #header.header5 #nav #main-navigation > li.active > a, #header.header5 #nav #main-navigation > li:hover > a,
-    #header.header5 #nav #main-navigation > li > a:hover {
+    #header.header5 #nav #main-navigation > li > a:hover, #header.header7 #nav #main-navigation > li.active > a, #header.header7 #nav #main-navigation > li:hover > a,
+    #header.header7 #nav #main-navigation > li > a:hover {
       color: #d1c45a; }
   #header.header3 .searchform {
     margin-top: 25px;
     width: 400px; }
-  #header.header4 #main-nav-tool, #header.header5 #main-nav-tool {
+  #header.header4 #main-nav-tool, #header.header5 #main-nav-tool, #header.header6 #main-nav-tool, #header.header7 #main-nav-tool {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -1693,12 +1695,26 @@ select:not([multiple]) {
     transform: translateY(-50%);
     top: 50%;
     right: 0; }
-    #header.header4 #main-nav-tool li a, #header.header5 #main-nav-tool li a {
-      color: #FFFFFF; }
-      #header.header4 #main-nav-tool li a:hover, #header.header5 #main-nav-tool li a:hover {
-        color: #d1c45a; }
+  #header.header4 #main-nav-tool li a, #header.header5 #main-nav-tool li a, #header.header7 #main-nav-tool li a {
+    color: #FFFFFF; }
+    #header.header4 #main-nav-tool li a:hover, #header.header5 #main-nav-tool li a:hover, #header.header7 #main-nav-tool li a:hover {
+      color: #d1c45a; }
   #header.header4 #topheader {
     border-bottom: 2px solid #3b3e43; }
+  #header.header5 .header-right .top-navigation {
+    margin-right: 40px; }
+  #header.header6 #nav {
+    border-top-color: #ebebec; }
+  #header.header6 #main-nav-tool li a {
+    color: #3b3e43; }
+    #header.header6 #main-nav-tool li a:hover {
+      color: #d1c45a; }
+  #header.header7 .navbar-container {
+    margin-bottom: -30px; }
+  #header.header7 .main-nav-inner {
+    margin: 0 25px; }
+  #header.header7 .apply-sticky {
+    max-width: 1170px; }
 
 .header-sticky-background {
   width: 100%;

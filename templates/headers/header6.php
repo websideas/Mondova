@@ -1,7 +1,7 @@
 
-<header id="header" class="header5">
+<header id="header" class="header6">
     <div id="header-content">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12 header-left">
                     <ul class="top-navigation">
@@ -37,10 +37,6 @@
                 <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12 header-right">
                     <?php include_once('templates/shopping-cart.php'); ?>
                     <?php include_once('templates/shopping-wishlist.php'); ?>
-                    <ul class="top-navigation">
-                        <li><a href="#"><i class="icon_lock_alt"></i>CheckOut</a></li>
-                        <li><a href="#"><i class="icon_currency"></i>Compare</a></li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -48,17 +44,20 @@
 
     <div class="navbar-container sticky-header">
         <div class="apply-sticky">
-            <div class="header-sticky-background bg-text"></div>
-            <div class="container">
-                <nav class="main-nav" id="nav">
-                    <?php include_once('templates/menu.php'); ?>
-                    <ul id="main-nav-tool">
-                        <li class="mini-search">
-                            <a href="#"><i class="icon_search"></i></a>
-                        </li>
-                    </ul>
-                </nav><!-- #nav -->
-            </div>
+            <div class="header-sticky-background bg-white"></div>
+            <nav class="main-nav" id="nav">
+                <div class="container">
+
+                    <div class="main-nav-inner">
+                        <?php include_once('templates/menu.php'); ?>
+                        <ul id="main-nav-tool">
+                            <li class="mini-search">
+                                <a href="#"><i class="icon_search"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav><!-- #nav -->
         </div>
     </div>
 </header><!-- #header -->
