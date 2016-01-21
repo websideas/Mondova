@@ -1,8 +1,4 @@
-
-
-<header id="header">
-
-
+<header id="header" class="header1">
     <div id="header-content">
         <div class="container">
             <div class="row">
@@ -14,10 +10,10 @@
                         <li class="language-switcher">
                             <a href="#"><i class="icon_ribbon_alt"></i>language</a>
                             <ul class="list-lang">
-                                <li><span class="current"><img alt="en" src="http://demo.snstheme.com/wp/simen/wp-content/themes/snssimen/assets/img/en.jpg"><span>English</span></span></li>
-                                <li><a href="#" title="Russian"><img alt="ru" src="http://demo.snstheme.com/wp/simen/wp-content/themes/snssimen/assets/img/ru.jpg"><span>Russian</span></a></li>
-                                <li><a href="#" title="Brazil"><img alt="bra" src="http://demo.snstheme.com/wp/simen/wp-content/themes/snssimen/assets/img/bra.jpg"><span>Brazil</span></a></li>
-                                <li><a href="#" title="France"><img alt="fr" src="http://demo.snstheme.com/wp/simen/wp-content/themes/snssimen/assets/img/fr.jpg"><span>France</span></a></li>
+                                <li><span class="current"><img alt="en" src="assets/images/lang/en.jpg"><span>English</span></span></li>
+                                <li><a href="#" title="Russian"><img alt="ru" src="assets/images/lang/ru.jpg"><span>Russian</span></a></li>
+                                <li><a href="#" title="Brazil"><img alt="bra" src="assets/images/lang/bra.jpg"><span>Brazil</span></a></li>
+                                <li><a href="#" title="France"><img alt="fr" src="assets/images/lang/fr.jpg"><span>France</span></a></li>
                             </ul>
                         </li>
                         <li class="currency-switcher">
@@ -74,11 +70,26 @@
                                         </div>
                                         <a href="#" class="remove" title="Remove this item"></a>
                                     </div><!-- .bag-product -->
+
+                                    <div class="bag-product">
+                                        <figure>
+                                            <a class="bag-product-img" href="#">
+                                                <img class="img-responsive" alt="" src="assets/images/product/cart/3.jpg"/>
+                                            </a>
+                                        </figure>
+                                        <div class="bag-product-details">
+                                            <a class="bag-product-title" href="#">Congue nihil imperdiet</a>
+                                            <div class="bag-product-price">$990,00</div>
+                                            <div class="bag-product-qty">Qty: <span>03</span></div>
+                                        </div>
+                                        <a href="#" class="remove" title="Remove this item"></a>
+                                    </div><!-- .bag-product -->
+
                                 </div><!-- .bag-products -->
                                 <p class="bag-total">Total: <span class="amount"> $1520,00</span></p>
                                 <p class="bag-buttons">
-                                    <a href="woocommerce-cart.php" class="btn btn-default">View Cart</a>
-                                    <a href="woocommerce-checkout.php" class="btn">Checkout</a>
+                                    <span><a href="woocommerce-cart.php" class="btn btn-default btn-block">View Cart</a></span>
+                                    <span><a href="woocommerce-checkout.php" class="btn btn-dark btn-block">Checkout</a></span>
                                 </p><!-- .bag-buttons -->
                             </div>
                         </div>
@@ -93,11 +104,13 @@
     </div><!-- #header-content -->
 
     <div class="navbar-container sticky-header">
-        <div class="container">
-            <nav class="main-nav" id="nav">
-                <?php include_once('templates/menu.php'); ?>
-            </nav><!-- #nav -->
+        <div class="apply-sticky">
+            <div class="header-sticky-background bg-white"></div>
+            <div class="container">
+                <nav class="main-nav" id="nav">
+                    <?php include_once('templates/menu.php'); ?>
+                </nav><!-- #nav -->
+            </div>
         </div>
     </div>
-
 </header><!-- #header -->

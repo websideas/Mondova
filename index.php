@@ -270,7 +270,7 @@ include_once('templates/headers/header1.php');
                                         <a href="blog-singlepost-standard.php">Blog demo</a>
                                     </h4>
                                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam</p>
-                                    <p class="entry-more"><a href="#" class="more-link"><span>Read More</span></a></p>
+                                    <p class="entry-more"><a href="#" class="btn btn-default"><span>Read More</span></a></p>
                                 </div>
                             </div>
                         </div>

@@ -42,14 +42,13 @@
         /**==============================
          ***  Sticky header
          ===============================**/
-        /*
+
         if ($.fn.ktSticky) {
-            $('.navbar-container.sticky-header').ktSticky({
-                contentSticky : '',
-                offset: 50
+            $('.sticky-header').ktSticky({
+                contentSticky : ''
             });
         }
-        */
+
         /**==============================
          ***  Disable mobile menu in desktop
          ===============================**/
