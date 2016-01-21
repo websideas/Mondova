@@ -1,4 +1,5 @@
-<header id="header" class="header1">
+
+<header id="header" class="header6">
     <div id="header-content">
         <div class="container">
             <div class="row">
@@ -35,25 +36,28 @@
 
                 <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12 header-right">
                     <?php include_once('templates/shopping-cart.php'); ?>
-                    <form action="#" class="searchform" method="get">
-                        <input type="text" name="s" value="" placeholder="Search">
-                        <button class="submit"><i class="icon_search"></i></button>
-                    </form>
+                    <?php include_once('templates/shopping-wishlist.php'); ?>
                 </div>
             </div>
-        </div><!-- .container -->
+        </div>
     </div><!-- #header-content -->
 
     <div class="navbar-container sticky-header">
         <div class="apply-sticky">
             <div class="header-sticky-background bg-white"></div>
-            <div class="container">
-                <nav class="main-nav" id="nav">
+            <nav class="main-nav" id="nav">
+                <div class="container">
+
                     <div class="main-nav-inner">
                         <?php include_once('templates/menu.php'); ?>
+                        <ul id="main-nav-tool">
+                            <li class="mini-search">
+                                <a href="#"><i class="icon_search"></i></a>
+                            </li>
+                        </ul>
                     </div>
-                </nav><!-- #nav -->
-            </div>
+                </div>
+            </nav><!-- #nav -->
         </div>
     </div>
 </header><!-- #header -->

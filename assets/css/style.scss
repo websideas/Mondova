@@ -809,11 +809,6 @@ select:not([multiple]) {
    8. Header
    ============================== */
 
-
-#header{
-
-}
-
 #header-content{
   padding: 27px 0 35px;
 
@@ -839,6 +834,9 @@ select:not([multiple]) {
   .header-right{
     @include clearfix();
     margin-top: 27px;
+    .top-navigation{
+      margin-top: 14px;
+    }
     > *{
       float: right;
     }
@@ -1150,7 +1148,10 @@ select:not([multiple]) {
 
 #nav{
   border-top: 2px solid $text;
-  position: relative;
+  .main-nav-inner{
+    position: relative;
+  }
+
   #main-navigation{
     margin: 0;
     padding: 0;
@@ -1491,7 +1492,8 @@ select:not([multiple]) {
   }
   &.header3,
   &.header4,
-  &.header5{
+  &.header5,
+  &.header7{
     .navbar-container{
       background: $text;
     }
@@ -1516,7 +1518,6 @@ select:not([multiple]) {
     }
   }
 
-
   &.header3{
     .searchform{
       margin-top: 25px;
@@ -1524,13 +1525,22 @@ select:not([multiple]) {
     }
   }
   &.header4,
-  &.header5{
+  &.header5,
+  &.header6,
+  &.header7{
     #main-nav-tool{
       list-style: none;
       margin: 0;
       padding: 0;
       @include translate(y);
       right: 0;
+    }
+  }
+
+  &.header4,
+  &.header5,
+  &.header7{
+    #main-nav-tool {
       li{
         a{
           color: $white;
@@ -1542,13 +1552,44 @@ select:not([multiple]) {
     }
   }
 
+
   &.header4{
     #topheader{
       border-bottom: 2px solid $text;
     }
   }
   &.header5{
-
+    .header-right{
+      .top-navigation{
+        margin-right: 40px;
+      }
+    }
+  }
+  &.header6{
+    #nav{
+      border-top-color: $border-color;
+    }
+    #main-nav-tool {
+      li{
+        a{
+          color: $text;
+          &:hover{
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+  &.header7{
+    .navbar-container{
+      margin-bottom: -30px;
+    }
+    .main-nav-inner{
+      margin:0 25px;
+    }
+    .apply-sticky{
+      max-width: 1170px;
+    }
   }
 }
 
