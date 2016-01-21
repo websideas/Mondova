@@ -3,7 +3,7 @@
     <div id="header-content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12">
+                <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12 header-left">
                     <ul class="top-navigation">
                         <li>
                             <a href="#"><i class="icon_lock_alt"></i>My Account</a>
@@ -34,15 +34,13 @@
                     </div><!-- .branding -->
                 </div>
 
-                <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12">
-                    <div class="header-right">
-                        <?php include_once('templates/shopping-cart.php'); ?>
-                        <?php include_once('templates/shopping-wishlist.php'); ?>
-                        <ul class="top-navigation">
-                            <li><a href="#"><i class="icon_lock_alt"></i>CheckOut</a></li>
-                            <li class="currency-switcher"><a href="#"><i class="icon_currency"></i>Compare</a></li>
-                        </ul>
-                    </div>
+                <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12 header-right">
+                    <?php include_once('templates/shopping-cart.php'); ?>
+                    <?php include_once('templates/shopping-wishlist.php'); ?>
+                    <ul class="top-navigation">
+                        <li><a href="#"><i class="icon_lock_alt"></i>CheckOut</a></li>
+                        <li><a href="#"><i class="icon_currency"></i>Compare</a></li>
+                    </ul>
                 </div>
             </div>
         </div>

@@ -29,10 +29,10 @@
         <div class="topheader-right">
             <ul class="top-navigation">
                 <li>
-                    <a href="#"><i class="icon_heart_alt"></i>Wishlist</a>
+                    <a href="#"><i class="icon_check"></i>Checkout</a>
                 </li>
                 <li>
-                    <a href="#"><i class="icon_check"></i>Checkout</a>
+                    <a href="#"><i class="icon_check"></i>Compare</a>
                 </li>
             </ul>
         </div>

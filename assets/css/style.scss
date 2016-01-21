@@ -812,16 +812,6 @@ select:not([multiple]) {
 
 #header-content{
   padding: 27px 0 35px;
-  .top-navigation{
-    margin-top: 40px;
-  }
-  .header-right{
-    @include clearfix();
-    margin-top: 27px;
-    > *{
-      float: right;
-    }
-  }
 
   .searchform{
     width: 260px;
@@ -839,7 +829,16 @@ select:not([multiple]) {
       @include transform(scale(-1, 1) translateY(-50%));
     }
   }
-
+  .header-left{
+    margin-top: 40px;
+  }
+  .header-right{
+    @include clearfix();
+    margin-top: 27px;
+    > *{
+      float: right;
+    }
+  }
 }
 
 .header-wishlist,
@@ -1444,9 +1443,6 @@ select:not([multiple]) {
         text-align: left;
         > li:first-child{
           margin-left: 0;
-          a{
-            padding-left: 0;
-          }
         }
       }
     }
