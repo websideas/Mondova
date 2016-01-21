@@ -315,7 +315,7 @@ include_once('templates/headers/header1.php');
     <img src="previews/03-homepage-V3.jpg" class="preview-image" style="top: -914px;display: none;max-width:none;" />
 <?php
 
-include_once('templates/footers/footer3.php');
+include_once('templates/footers/footer1.php');
 include_once('templates/footers/foot.php');
 
 

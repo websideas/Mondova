@@ -238,7 +238,7 @@ include_once('templates/headers/header1.php');
 <img src="previews/19-blog-single.jpg" class="preview-image" style="top: 0;display: none;max-width:none;" />
 <?php
 
-include_once('templates/footers/footer3.php');
+include_once('templates/footers/footer1.php');
 include_once('templates/footers/foot.php');
 
 

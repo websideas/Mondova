@@ -5,7 +5,6 @@ $revolution = 'slideshow1';
 
 include_once('templates/headers/head.php');
 include_once('templates/headers/header1.php');
-include_once('templates/slideshows/slideshow1.php');
 
 ?>
     <div id="main">
@@ -196,5 +195,5 @@ include_once('templates/slideshows/slideshow1.php');
     <img src="previews/02-homepage-V2.jpg" class="preview-image" style="top: -2559px;display: none;max-width:none;" />
 <?php
 
-include_once('templates/footers/footer2.php');
+include_once('templates/footers/footer1.php');
 include_once('templates/footers/foot.php');

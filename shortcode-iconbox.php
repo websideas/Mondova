@@ -1,24 +1,10 @@
 <?php
-global $shadow, $googlemap;
-$shadow = ' ';
-$googlemap = true;
-
 
 include_once('templates/headers/head.php');
 include_once('templates/headers/header1.php');
 
 ?>
 
-    <div class="page-section page-header-bg small-section">
-        <div class="page-header">
-            <div class="container">
-                <div class="page-header-content text-center">
-                    <h1>Icon Box</h1>
-                    <div class="page-header-divider"><i class="icon_images"></i></div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div id="main">
 
