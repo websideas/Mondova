@@ -94,6 +94,8 @@
     init_backtotop();
     init_matchHeight();
     init_productsMasonry();
+    init_backtotop();
+    init_VCComingSoon();
 
     init_productcarouselwoo($("#sync1"), $("#sync2"));
     init_ecommerce();
@@ -639,6 +641,20 @@
             if(min_qty && val_qty < min_qty){ val_qty = min_qty; }
             if(!min_qty && val_qty < 0){ val_qty = 0; }
             obj_qty.val(val_qty);
+        });
+    }
+
+    /* ---------------------------------------------
+     VC Coming Soon
+     --------------------------------------------- */
+    function init_VCComingSoon() {
+        var coming_html = '<div class="value-time">%D</div> <div class="value-time">%H</div> <div class="value-time">%M</div> <div class="value-time">%S</div>';
+        $('.coming-soon').each(function () {
+            var date = $(this).data('date');
+            $(this).countdown(date, function (event) {
+                $(this).html( event.strftime(coming_html) );
+            });
+
         });
     }
 

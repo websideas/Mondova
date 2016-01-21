@@ -161,7 +161,7 @@ include_once('templates/headers/header1.php');
                                     </div>
                                     <p>Checkout with multiple address</p>
                                     <div class="button-checkout">
-                                        <a class="btn btn-accent btn-fullwidth btn-lg btn-animation" href="woocommerce-checkout.php">
+                                        <a class="btn btn-accent btn-block btn-lg btn-animation" href="woocommerce-checkout.php">
                                             <span>proceed to checkout <i class="fa fa-long-arrow-right"></i></span>
                                         </a>
                                     </div>

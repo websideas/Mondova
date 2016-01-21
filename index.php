@@ -8,7 +8,6 @@ include_once('templates/headers/header1.php');
 
 <div id="main">
 
-
     <div class="page-section no-padding">
         <div class="row no-gutters">
             <div class="col-md-4">
