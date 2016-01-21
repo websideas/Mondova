@@ -23,6 +23,11 @@
  * Author:  http://themeforest.net/user/Kite-Themes
 ------------------------------------------------------------- */
 /* 1. Styles for devices(>1300px) */
+@media (min-width: 1400px) {
+  .container-fluid {
+    padding-left: 140px;
+    padding-right: 140px; } }
+/* 1. Styles for devices(>1300px) */
 @media (min-width: 1300px) {
   .container {
     width: 1200px; }

@@ -41,8 +41,8 @@ include_once('templates/slideshows/slideshow1.php');
 
         <div class="page-section pad-bottom-55">
             <div class="container">
-                <div class="kt-heading style4 mar-bottom-55">
-                    <h3 class="kt-heading-title">best collection</h3>
+                <div class="kt-heading-2 style1 mar-bottom-55">
+                    <h3 class="kt-heading-title"><span>best collection</span></h3>
                     <div class="divider"><div class="divider-inner"></div></div>
                 </div>
 
@@ -85,7 +85,7 @@ include_once('templates/slideshows/slideshow1.php');
             <div class="container">
                 <div class="row">
                     <div class="col-md-7 col-sm-7">
-                        <div class="text-center pad-top-100 pad-bottom-110">
+                        <div class="text-center pad-top-100 pad-bottom-30">
                             <div class="coming-soon clearfix mar-bottom-50" data-date="2016/5/19">
                                 <div class="value-time">266</div>
                                 <div class="value-time">09</div>
@@ -170,22 +170,30 @@ include_once('templates/slideshows/slideshow1.php');
         </div>
         <div class="page-section bg-gray">
             <div class="container">
-                <div class="pad-top-60 pad-bottom-60 bg-white box-shadow">
+                <div class="pad-top-60 pad-bottom-60 bg-white box-shadow mar-bottom-100">
                     <div class="newletter-wrapper text-center">
                         <h3 class="newletter-title">newsletter</h3>
-                        <div class="newletter-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</div>
-                        <form class="newletter-form">
-                            <input type="email" name="email" class="email" placeholder="Type your email..." />
-                            <button class="btn btn-default">submit</button>
-                        </form>
+                        <div class="kt_mailchimp-before">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</div>
+                        <div class="kt-mailchimp-wrapper ">
+                            <form method="post" action="#" class="mailchimp-form clearfix mailchimp-layout-1"> 
+                                <div class="mailchimp-input-email">
+                                    <input type="text" placeholder="Type your email..." class="mailchimp-email" name="email">
+                                </div> 
+                                <div class="mailchimp-input-button">
+                                    <button type="submit" class="btn btn-default btn-lg mailchimp-submit"><span>Subscribe</span></button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
+
+                <?php include_once('client-carousel.php'); ?>
             </div>
         </div>
 
     </div><!-- #main -->
 
-    <img src="previews/02-homepage-V2.jpg" class="preview-image" style="top: -2559px;display: none1;max-width:none;" />
+    <img src="previews/02-homepage-V2.jpg" class="preview-image" style="top: -2559px;display: none;max-width:none;" />
 <?php
 
 include_once('templates/footers/footer2.php');
