@@ -2,7 +2,7 @@
 
 
 include_once('templates/headers/head.php');
-include_once('templates/headers/header1.php');
+include_once('templates/headers/header3.php');
 
 ?>
 
@@ -550,7 +550,7 @@ include_once('templates/headers/header1.php');
 
 </div><!-- #main -->
 
-<img src="previews/22-my-cart.jpg" class="preview-image" style="top: 0;display: none;" />
+<img src="previews/header-style.jpg" class="preview-image" style="top: -1090px;display: none;" />
 
 <?php
 

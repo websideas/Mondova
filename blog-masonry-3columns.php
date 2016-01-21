@@ -246,7 +246,7 @@ include_once('templates/headers/header1.php');
 
 <?php
 
-include_once('templates/footers/footer3.php');
+include_once('templates/footers/footer1.php');
 include_once('templates/footers/foot.php');
 
 

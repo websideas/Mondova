@@ -252,7 +252,7 @@ include_once('templates/headers/header1.php');
     <img src="previews/24-checkout.jpg" class="preview-image" style="top: -2px;display: none;max-width:none;" />
 <?php
 
-include_once('templates/footers/footer3.php');
+include_once('templates/footers/footer1.php');
 include_once('templates/footers/foot.php');
 
 
