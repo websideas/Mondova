@@ -5,11 +5,102 @@ $revolution = 'slideshow2';
 
 include_once('templates/headers/head.php');
 include_once('templates/headers/header1.php');
-include_once('templates/slideshows/slideshow2.php');
 
 ?>
 
     <div id="main">
+
+        <div class="page-section no-padding">
+            <div class="row no-gutters">
+                <div class="col-md-6">
+                    <div class="featured-box">
+                        <div class="row no-gutters row-flex row-content-middle">
+                            <div class="col-md-6 col-sm-6">
+                                <img src="assets/images/featured/1.jpg" alt="" />
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="col-inner">
+                                    <div class="featured-content">
+                                        <h4>Delaware Plimsolls</h4>
+                                        <h3>Circle</h3>
+                                        <div class="featured-button"><a href="#">SHOP NOW</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="featured-box">
+                        <div class="row no-gutters row-flex row-content-middle">
+                            <div class="col-md-6 col-sm-6">
+                                <img src="assets/images/featured/2.jpg" alt="" />
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="col-inner">
+                                    <div class="featured-content">
+                                        <h4>Animal Skull Head</h4>
+                                        <h3>Burnish</h3>
+                                        <div class="featured-button"><a href="#">SHOP NOW</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-md-6">
+                    <div class="featured-box align-right">
+                        <div class="row no-gutters row-flex row-content-middle">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="col-inner">
+                                    <div class="featured-content">
+                                        <h4>Pocket Square In Ditsy Print</h4>
+                                        <h3>fabric</h3>
+                                        <div class="featured-button"><a href="#">SHOP NOW</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <img src="assets/images/featured/3.jpg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="featured-box align-right">
+                        <div class="row no-gutters row-flex row-content-middle">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="col-inner">
+                                    <div class="featured-content">
+                                        <h4>Esprit Alec Holdall</h4>
+                                        <h3>Podium</h3>
+                                        <div class="featured-button"><a href="#">SHOP NOW</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <img src="assets/images/featured/4.jpg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-md-6 col-sm-6">
+                    <div class="featured-box style2">
+                        <img src="assets/images/featured/5.jpg" alt="" />
+                        <div class="featured-button"><a href="#">SHOP NOW</a></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="featured-box style2">
+                        <img src="assets/images/featured/6.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <div class="page-section">
             <div class="container-fluid">

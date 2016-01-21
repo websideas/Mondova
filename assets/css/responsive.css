@@ -26,7 +26,12 @@
 @media (min-width: 1400px) {
   .container-fluid {
     padding-left: 140px;
-    padding-right: 140px; } }
+    padding-right: 140px; }
+
+  .featured-box .featured-content {
+    padding: 10px 10px 10px 120px; }
+  .featured-box.align-right .featured-content {
+    padding: 10px 120px 10px 10px; } }
 /* 1. Styles for devices(>1300px) */
 @media (min-width: 1300px) {
   .container {

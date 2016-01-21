@@ -1802,33 +1802,25 @@ select:not([multiple]) {
       line-height: 48px;
       padding-bottom: 22px;
       margin: 0;
-    }
-    .divider{
       position: relative;
-      height: 2px;
-      width: 100px;
-      margin: 0 auto;
       &:before,
       &:after{
         position: absolute;
         bottom: 0;
-        left: 0;
+        left: 50%;
         width: 40px;
         height: 2px;
         background: $border-color;
         content: "";
+        margin-left: 10px;
       }
       &:before{
         left: auto;
-        right: 0;
+        right: 50%;
+        margin-right: 10px;
       }
-      .divider-inner{
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        margin-left: -10px;
+      .span{
+        display: block;
         &:after{
           width: 6px;
           height: 6px;
@@ -2727,6 +2719,11 @@ ul.style-list{
 
 
   &.style2{
+    &.banner-dark{
+      &:after{
+        background: rgba($text,.15);
+      }
+    }
     .banner-content{
       h3{
         min-width: 0;
@@ -2753,6 +2750,11 @@ ul.style-list{
           &:before{
             width: 100%;
           }
+        }
+      }
+      &.banner-dark{
+        &:after{
+          background: rgba($text,.5);
         }
       }
     }
@@ -3400,6 +3402,112 @@ ul.style-list{
     }
   }
 }
+
+/*
+ * 10.27 Featured box
+ */
+
+.featured-box{
+  .featured-content{
+    padding: 10px 10px 10px 40px;
+    h4{
+      font-weight: 300;
+      text-transform: none;
+      margin: 0;
+      color: $text;
+    }
+    h3{
+      font-size: 74px;
+      font-weight: 700;
+      line-height: 74px;
+      margin-bottom: 60px;
+      color: $text;
+    }
+    .featured-button{
+      a{
+        color: $text;
+        font-size: 18px;
+        position: relative;
+        display: inline-block;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+        line-height: normal;
+        z-index: 10;
+        &:after{
+          width: 240px;
+          height: 2px;
+          content: "";
+          background: $text;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          @include transition();
+        }
+        &:hover,
+        &:focus{
+          color: $primary-color;
+          &:after{
+            background: $primary-color;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  &.align-right{
+    .featured-content{
+      padding: 10px 40px 10px 10px;
+      text-align: right;
+      .featured-button{
+        a{
+          &:after{
+            left: 0;
+            right: auto;
+          }
+        }
+      }
+    }
+  }
+  &.style2{
+    position: relative;
+    .featured-button{
+      position: absolute;
+      bottom: 60px;
+      left: 60px;
+      a{
+        color: $text;
+        font-size: 30px;
+        position: relative;
+        display: inline-block;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+        line-height: normal;
+        z-index: 10;
+        &:after{
+          width: 360px;
+          height: 2px;
+          content: "";
+          background: $text;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          @include transition();
+        }
+        &:hover,
+        &:focus{
+          color: $primary-color;
+          &:after{
+            background: $primary-color;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 /* ==============================
    11. Widgets
@@ -6771,7 +6879,7 @@ table.compare{
       height: 100%;
       width: 2px;
       @include translate();
-      background: #f7f8fa;
+      background: #e9eaeb;
     }
     > div{
       cursor: pointer;

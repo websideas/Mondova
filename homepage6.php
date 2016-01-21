@@ -26,7 +26,7 @@ include_once('templates/slideshows/slideshow2.php');
 
         <div class="page-section">
             <div class="row no-gutters row-flex row-content-middle">
-                <div class="col-md-3 col-sm-3 bg-dark">
+                <div class="col-md-3 col-sm-3 bg-text">
                     <div class="col-inner">
                         <div class="kt-heading style-3 text-center light no-margin pad-top-130 pad-bottom-130">
                             <div class="kt-heading-backend">men's fashion</div>
@@ -62,7 +62,7 @@ include_once('templates/slideshows/slideshow2.php');
                         <div><a href="#" class="btn btn-default btn-light">view all shop</a></div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-3 bg-dark">
+                <div class="col-md-3 col-sm-3 bg-text">
                     <div class="col-inner">
                         <div class="kt-heading style-3 text-center light no-margin pad-top-130 pad-bottom-130">
                             <div class="kt-heading-backend">women's fashion</div>
@@ -88,7 +88,7 @@ include_once('templates/slideshows/slideshow2.php');
 
         <div class="page-section no-pad-bottom">
             <div class="row no-gutters row-flex row-content-middle">
-                <div class="col-md-3 col-sm-3 bg-dark">
+                <div class="col-md-3 col-sm-3 bg-text">
                     <div class="col-inner">
                         <div class="kt-heading style-3 text-center light no-margin pad-top-130 pad-bottom-130">
                             <div class="kt-heading-backend">Accessories</div>
@@ -115,5 +115,3 @@ include_once('templates/slideshows/slideshow2.php');
 
 include_once('templates/footers/footer1.php');
 include_once('templates/footers/foot.php');
-
-

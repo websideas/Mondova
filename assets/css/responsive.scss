@@ -25,6 +25,17 @@
     padding-left: 140px;
     padding-right: 140px;
   }
+
+  .featured-box{
+    .featured-content{
+      padding: 10px 10px 10px 120px;
+    }
+    &.align-right{
+      .featured-content{
+        padding: 10px 120px 10px 10px;
+      }
+    }
+  }
 }
 
 /* 1. Styles for devices(>1300px) */
