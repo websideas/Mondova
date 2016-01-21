@@ -69,12 +69,12 @@
 
     <div class="navbar-container sticky-header">
         <div class="apply-sticky">
-            <div class="header-sticky-background"></div>
-            <nav class="main-nav" id="nav">
-                <div class="container">
+            <div class="header-sticky-background bg-text"></div>
+            <div class="container">
+                <nav class="main-nav" id="nav">
                     <?php include_once('templates/menu.php'); ?>
-                </div>
-            </nav><!-- #nav -->
+                </nav><!-- #nav -->
+            </div>
         </div>
     </div>
 </header><!-- #header -->

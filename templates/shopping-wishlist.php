@@ -1,7 +1,7 @@
 <div class="shopping-bag shopping-bag-wishlist">
     <a href="woocommerce-wishlist.php" class="header-wishlist">
         <i class="icon_heart_alt"></i>
-        <span>03</span>
+        <span>02</span>
     </a>
     <div class="shopping-bag-content">
         <p class="cart_block_desc">You have <span>2 item(s)</span> in wishlist.</p>

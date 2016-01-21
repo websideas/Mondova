@@ -308,6 +308,9 @@ p {
 .bg-gray2 {
   background: #efefef; }
 
+.bg-text {
+  background: #3b3e43; }
+
 .bg-lightgreen {
   background: #c7db9c; }
 
@@ -962,6 +965,8 @@ select:not([multiple]) {
       display: table; }
     #header-content .header-right:after {
       clear: both; }
+    #header-content .header-right > * {
+      float: right; }
   #header-content .searchform {
     width: 260px;
     float: left; }
@@ -1010,7 +1015,7 @@ select:not([multiple]) {
 
 .shopping-bag {
   float: right;
-  margin-left: 60px;
+  margin-left: 30px;
   margin-top: 6px;
   position: relative;
   z-index: 3; }
@@ -1206,6 +1211,11 @@ select:not([multiple]) {
   padding: 12px 0;
   position: relative;
   z-index: 200; }
+  #topheader:before, #topheader:after {
+    content: " ";
+    display: table; }
+  #topheader:after {
+    clear: both; }
 
 .topheader-left {
   float: left; }
@@ -1327,7 +1337,8 @@ select:not([multiple]) {
       visibility: visible; }
 
 #nav {
-  border-top: 2px solid #3b3e43; }
+  border-top: 2px solid #3b3e43;
+  position: relative; }
   #nav #main-navigation {
     margin: 0;
     padding: 0;
@@ -1620,8 +1631,6 @@ select:not([multiple]) {
       margin-left: 0; }
       #header.header2 #nav #main-navigation > li:first-child a {
         padding-left: 0; }
-  #header.header2 .shopping-bag {
-    margin-left: 30px; }
   #header.header2 .woocommerce-product-search {
     margin-right: 86px;
     width: 600px;
@@ -1653,21 +1662,41 @@ select:not([multiple]) {
       height: 26px;
       line-height: 26px;
       top: 6px; }
+  #header.header3 .navbar-container, #header.header4 .navbar-container, #header.header5 .navbar-container {
+    background: #3b3e43; }
+  #header.header3 #nav, #header.header4 #nav, #header.header5 #nav {
+    border: none; }
+    #header.header3 #nav #main-navigation > li > a, #header.header4 #nav #main-navigation > li > a, #header.header5 #nav #main-navigation > li > a {
+      color: #FFFFFF; }
+      #header.header3 #nav #main-navigation > li > a:before, #header.header3 #nav #main-navigation > li > a:after, #header.header4 #nav #main-navigation > li > a:before, #header.header4 #nav #main-navigation > li > a:after, #header.header5 #nav #main-navigation > li > a:before, #header.header5 #nav #main-navigation > li > a:after {
+        display: none; }
+    #header.header3 #nav #main-navigation > li.active > a, #header.header3 #nav #main-navigation > li:hover > a,
+    #header.header3 #nav #main-navigation > li > a:hover, #header.header4 #nav #main-navigation > li.active > a, #header.header4 #nav #main-navigation > li:hover > a,
+    #header.header4 #nav #main-navigation > li > a:hover, #header.header5 #nav #main-navigation > li.active > a, #header.header5 #nav #main-navigation > li:hover > a,
+    #header.header5 #nav #main-navigation > li > a:hover {
+      color: #d1c45a; }
   #header.header3 .searchform {
     margin-top: 25px;
     width: 400px; }
-  #header.header3 .shopping-bag {
-    margin-left: 30px; }
-  #header.header3 #nav {
-    background: #3b3e43;
-    border: none; }
-    #header.header3 #nav #main-navigation > li > a {
+  #header.header4 #main-nav-tool, #header.header5 #main-nav-tool {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    -khtml-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 50%;
+    right: 0; }
+    #header.header4 #main-nav-tool li a, #header.header5 #main-nav-tool li a {
       color: #FFFFFF; }
-      #header.header3 #nav #main-navigation > li > a:before, #header.header3 #nav #main-navigation > li > a:after {
-        display: none; }
-    #header.header3 #nav #main-navigation > li.active > a, #header.header3 #nav #main-navigation > li:hover > a,
-    #header.header3 #nav #main-navigation > li > a:hover {
-      color: #d1c45a; }
+      #header.header4 #main-nav-tool li a:hover, #header.header5 #main-nav-tool li a:hover {
+        color: #d1c45a; }
+  #header.header4 #topheader {
+    border-bottom: 2px solid #3b3e43; }
 
 .header-sticky-background {
   width: 100%;

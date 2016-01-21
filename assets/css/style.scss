@@ -245,6 +245,7 @@ p {
 .bg-white{  background: $white; }
 .bg-gray{  background: #f7f8fa; }
 .bg-gray2{ background: #efefef; }
+.bg-text{background: $text;}
 .bg-lightgreen{  background: #c7db9c; }
 .bg-wheat{  background: #f4dc86; }
 .bg-sky{  background: #a7c8eb; }
@@ -817,6 +818,9 @@ select:not([multiple]) {
   .header-right{
     @include clearfix();
     margin-top: 27px;
+    > *{
+      float: right;
+    }
   }
 
   .searchform{
@@ -863,7 +867,7 @@ select:not([multiple]) {
 
 .shopping-bag{
   float: right;
-  margin-left: 60px;
+  margin-left: 30px;
   margin-top: 6px;
   position: relative;
   z-index: 3;
@@ -1027,6 +1031,7 @@ select:not([multiple]) {
   padding: 12px 0;
   position: relative;
   z-index: 200;
+  @include clearfix();
 }
 
 .topheader-left{
@@ -1142,6 +1147,7 @@ select:not([multiple]) {
 
 #nav{
   border-top: 2px solid $text;
+  position: relative;
   #main-navigation{
     margin: 0;
     padding: 0;
@@ -1444,9 +1450,7 @@ select:not([multiple]) {
         }
       }
     }
-    .shopping-bag{
-      margin-left: 30px;
-    }
+
     .woocommerce-product-search{
       margin-right: 86px;
       width: 600px;
@@ -1485,16 +1489,13 @@ select:not([multiple]) {
       }
     }
   }
-  &.header3{
-    .searchform{
-      margin-top: 25px;
-      width: 400px;
-    }
-    .shopping-bag{
-      margin-left: 30px;
+  &.header3,
+  &.header4,
+  &.header5{
+    .navbar-container{
+      background: $text;
     }
     #nav{
-      background: $text;
       border: none;
       #main-navigation{
         > li{
@@ -1513,6 +1514,41 @@ select:not([multiple]) {
         }
       }
     }
+  }
+
+
+  &.header3{
+    .searchform{
+      margin-top: 25px;
+      width: 400px;
+    }
+  }
+  &.header4,
+  &.header5{
+    #main-nav-tool{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      @include translate(y);
+      right: 0;
+      li{
+        a{
+          color: $white;
+          &:hover{
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  &.header4{
+    #topheader{
+      border-bottom: 2px solid $text;
+    }
+  }
+  &.header5{
+
   }
 }
 
