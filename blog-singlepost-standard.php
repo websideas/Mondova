@@ -98,115 +98,107 @@ include_once('templates/headers/header1.php');
         <div class="page-section pad-top-15 pad-bottom-90">
             <div class="container">
                 <div class="post-pagination clearfix">
-                    <a href="#" class="previous-post">
-                        <span class="previous-post-label">Previous Post</span>
-                        <div class="previous-post-meta">
-                            <div class="previous-post-thumbnail"><img src="assets/images/blog/single-prev.jpg" alt="" class="img-responsive" /></div>
-                            <h6 class="previous-post-title">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</h6>
-                        </div><!-- previous-post-meta -->
-                    </a>
-                  
-                    <a href="#" class="next-post">
-                        <span class="next-post-label">Next Post</span>
-                        <div class="next-post-meta">
-                            <div class="next-post-thumbnail"><img src="assets/images/blog/single-next.jpg" alt="" class="img-responsive" /></div>
-                            <h6 class="next-post-title">Duis autem vel eum iriure dolor in hendrerit in vul putate velit esse molestie consequat</h6>
-                        </div><!-- next-post-meta -->
-                    </a>
+                    <div class="previous-post">
+                        <a href="#" class="image-link">
+                            <img class="img-responsive" src="assets/images/blog/single-prev.jpg" alt="">
+                        </a>
+                        <div class="content">
+                            <a class="title-link" href="#">
+                                <span class="title-link-label">Previous Post</span>
+                                <span class="title-link-title">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="next-post">
+                        <a href="#" class="image-link">
+                            <img class="img-responsive" src="assets/images/blog/single-next.jpg" alt="">
+                        </a>
+                        <div class="content">
+                            <a class="title-link" href="#">
+                                <span class="title-link-label">Next Post</span>
+                                <span class="title-link-title">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt</span>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
-
-        <div class="page-section pad-top-10">
-            
-            <div class="comments-area" id="comments">
-                <div class="comment-title">
-                    <div class="container">
-                        <h4 class="comments-title">There are <span>205</span> comments</h4>
-                        <div class="leave-comment"><a href="#comment-respond">leave a comment</a></div>
-                    </div>
+        <div class="comments-area" id="comments">
+            <div class="page-section bg-gray3 pad-sm comment-title">
+                <div class="container">
+                    <h4 class="comment-text pull-left">There are <span>205</span> comments</h4>
+                    <div class="leave-comment pull-right"><a href="#comment-respond"><i class="arrow_right"></i> leave a comment</a></div>
                 </div>
+            </div>
+
+            <div class="page-section pad-top-40 pad-bottom-40">
+
                 <div class="container">
                     <ol class="comment-list">
                         <li class="comment">
                             <article class="comment-item">
                                 <div class="comment-avatar">
-                                    <img src="http://placehold.it/100x100/" alt="">
+                                    <img src="assets/images/avatar/1.jpg" alt="">
                                 </div>
-
                                 <div class="comment-body">
-
                                     <footer class="comment-meta">
-                                        <h5 class="comment-author vcard">Jonathan doe</h5><!-- .comment-author -->
-                                        <div class="comment-metadata">
+                                        <h5 class="comment-author vcard"><a href="#">Jonathan doe</a></h5><!-- .comment-author -->
+                                        <div class="comment-date">
                                             <time datetime="2015-08-07T14:58:33+00:00">Dec 23, 2015 at 3:35 am</time>
                                         </div><!-- .comment-metadata -->
                                     </footer><!-- .comment-meta -->
-
                                     <div class="comment-content">
                                         <p>Proin est purus, elementum eu tempus ut, molestie vel magna. Sed id lorem a felis lobortis tristique. Mauris ac auctor nibh. Cras venenatis neque eget pellentesque posuere.</p>
                                     </div><!-- .comment-content -->
-
-                                    <div class="reply">
+                                    <div class="comment-actions">
                                         <a href="#" class="comment-reply-link">Reply</a>
                                     </div>
-
                                 </div><!-- .comment-body -->
                             </article><!-- .comment-item -->
-
                         </li>
 
                         <li class="comment">
                             <article class="comment-item">
                                 <div class="comment-avatar">
-                                    <img src="http://placehold.it/100x100/" alt="">
+                                    <img src="assets/images/avatar/2.jpg" alt="">
                                 </div>
 
                                 <div class="comment-body">
-
                                     <footer class="comment-meta">
                                         <h5 class="comment-author vcard">Super Junaid</h5><!-- .comment-author -->
-                                        <div class="comment-metadata">
+                                        <div class="comment-date">
                                             <time datetime="2015-08-07T14:58:33+00:00">Dec 23, 2015 at 3:35 am</time>
                                         </div><!-- .comment-metadata -->
                                     </footer><!-- .comment-meta -->
-
                                     <div class="comment-content">
                                         <p>Proin est purus, elementum eu tempus ut, molestie vel magna. Sed id lorem a felis lobortis tristique. Mauris ac auctor nibh. Cras venenatis neque eget pellentesque posuere.</p>
                                     </div><!-- .comment-content -->
-
-                                    <div class="reply">
+                                    <div class="comment-actions">
                                         <a href="#" class="comment-reply-link">Reply</a>
                                     </div>
-
                                 </div><!-- .comment-body -->
                             </article><!-- .comment-item -->
-
                         </li>
 
                         <li class="comment">
                             <article class="comment-item">
                                 <div class="comment-avatar">
-                                    <img src="http://placehold.it/100x100/" alt="">
+                                    <img src="assets/images/avatar/3.jpg" alt="">
                                 </div>
-
                                 <div class="comment-body">
-
                                     <footer class="comment-meta">
                                         <h5 class="comment-author vcard">tony chester</h5><!-- .comment-author -->
-                                        <div class="comment-metadata">
+                                        <div class="comment-date">
                                             <time datetime="2015-08-07T14:58:33+00:00">Dec 23, 2015 at 3:35 am</time>
                                         </div><!-- .comment-metadata -->
                                     </footer><!-- .comment-meta -->
-
                                     <div class="comment-content">
                                         <p>Maecenas euismod faucibus dolor a finibus.</p>
                                     </div><!-- .comment-content -->
-
-                                    <div class="reply">
+                                    <div class="comment-actions">
                                         <a href="#" class="comment-reply-link">Reply</a>
                                     </div>
-
                                 </div><!-- .comment-body -->
                             </article><!-- .comment-item -->
                         </li>
@@ -214,9 +206,11 @@ include_once('templates/headers/header1.php');
                     </ol><!-- .comment-list -->
                 </div>
 
-                <div id="comment-respond" class="comment-respond">
-                    <div class="container">
-                        <h4 class="comment-reply-title">leave a comment</h4>
+            </div>
+            <div id="comment-respond" class="comment-respond">
+                <div class="container">
+                    <div class="comment-form-outer">
+                        <h4 class="comment-reply-title">leave a comment<small><a href="#" id="cancel-comment-reply-link" style="display: none;" rel="nofollow"><i class="icon_close_alt"></i> </a></small></h4>
                         <form class="comment-form" id="commentform" method="post" action="#">
                             <div class="row">
                                 <div class="col-sm-6"><p class="comment-form-author"><input type="text" placeholder="Name" aria-required="true" size="30" value="" name="author" id="author"></p></div>
@@ -226,16 +220,22 @@ include_once('templates/headers/header1.php');
                             <p class="form-submit no-margin"><button type="submit" class="btn btn-default btn-lg" name="submit">Post Comment</button></p>
                         </form><!-- .comment-form -->
                     </div>
-                </div><!-- .comment-respond -->
-                
-            </div><!-- .comments-area -->
+                </div>
+            </div>
 
-        </div>
+
+        </div><!-- .comments-area -->
+
+
+
+
+
+
 
     </div><!-- #main -->
 
 
-<img src="previews/19-blog-single.jpg" class="preview-image" style="top: 0;display: none;max-width:none;" />
+<img src="previews/19-blog-single.jpg" class="preview-image" style="top: -18px;display: none;" />
 <?php
 
 include_once('templates/footers/footer1.php');

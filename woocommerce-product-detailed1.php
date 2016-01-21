@@ -158,79 +158,88 @@ include_once('templates/headers/header1.php');
                                         <h3 class="comments-title">3 reviews</h3>
 
                                         <ol class="comment-list">
-                                            <li class="comment" itemtype="http://schema.org/Review" itemscope="" itemprop="review">
-                                                <div class="comment-item clearfix">
+                                            <li class="comment">
+                                                <article class="comment-item">
                                                     <div class="comment-avatar">
-                                                        <img width="100" height="100" class="avatar avatar-100 photo" srcset="http://0.gravatar.com/avatar/f0cde930b42c79145194679d5b6e3b1d?s=200&amp;d=mm&amp;r=g 2x" src="http://0.gravatar.com/avatar/f0cde930b42c79145194679d5b6e3b1d?s=100&amp;d=mm&amp;r=g" alt="">
+                                                        <img src="assets/images/avatar/1.jpg" alt="">
                                                     </div>
                                                     <div class="comment-body">
-                                                        <div class="comment-meta">
-                                                            <h5 itemprop="author" class="author_name">Kenny Minh</h5>
-                                                            <span class="comment-date"><time datetime="2013-06-07T11:54:32+00:00" itemprop="datePublished">January 06, 2015</time></span>
-                                                            <div title="Rated 5 out of 5" class="star-rating" itemtype="http://schema.org/Rating" itemscope="" itemprop="reviewRating">
-                                                                <span style="width:80%"><strong itemprop="ratingValue">4</strong> out of 5</span>
+                                                        <footer class="comment-meta">
+                                                            <h5 class="comment-author vcard"><a href="#">Jonathan doe</a></h5><!-- .comment-author -->
+                                                            <div class="comment-date">
+                                                                <time datetime="2015-08-07T14:58:33+00:00">Dec 23, 2015 at 3:35 am</time>
+                                                            </div><!-- .comment-metadata -->
+                                                            <div title="Rated 5 out of 5" class="star-rating">
+                                                                <span style="width:80%"><strong>4</strong> out of 5</span>
                                                             </div>
-                                                        </div>
-                                                        <div class="description" itemprop="description">
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ante turpis, aliquet et vestibulum dictum, commodo vel tortor.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li><!-- #comment-## -->
-                                            <li class="comment" itemtype="http://schema.org/Review" itemscope="" itemprop="review">
-                                                <div class="comment-item clearfix">
-                                                    <div class="comment-avatar">
-                                                        <img width="100" height="100" class="avatar avatar-100 photo" srcset="http://0.gravatar.com/avatar/f0cde930b42c79145194679d5b6e3b1d?s=200&amp;d=mm&amp;r=g 2x" src="http://0.gravatar.com/avatar/f0cde930b42c79145194679d5b6e3b1d?s=100&amp;d=mm&amp;r=g" alt="">
-                                                    </div>
-                                                    <div class="comment-body">
-                                                        <div class="comment-meta">
-                                                            <h5 itemprop="author" class="author_name">Kenny Minh</h5>
-                                                            <span class="comment-date"><time datetime="2013-06-07T11:54:32+00:00" itemprop="datePublished">January 06, 2015</time></span>
-                                                            <div title="Rated 5 out of 5" class="star-rating" itemtype="http://schema.org/Rating" itemscope="" itemprop="reviewRating">
-                                                                <span style="width:80%"><strong itemprop="ratingValue">4</strong> out of 5</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="description" itemprop="description">
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ante turpis, aliquet et vestibulum dictum, commodo vel tortor.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li><!-- #comment-## -->
-                                            <li class="comment" itemtype="http://schema.org/Review" itemscope="" itemprop="review">
-                                                <div class="comment-item clearfix">
-                                                    <div class="comment-avatar">
-                                                        <img width="100" height="100" class="avatar avatar-100 photo" srcset="http://0.gravatar.com/avatar/f0cde930b42c79145194679d5b6e3b1d?s=200&amp;d=mm&amp;r=g 2x" src="http://0.gravatar.com/avatar/f0cde930b42c79145194679d5b6e3b1d?s=100&amp;d=mm&amp;r=g" alt="">
-                                                    </div>
-                                                    <div class="comment-body">
-                                                        <div class="comment-meta">
-                                                            <h5 itemprop="author" class="author_name">Kenny Minh</h5>
-                                                            <span class="comment-date"><time datetime="2013-06-07T11:54:32+00:00" itemprop="datePublished">January 06, 2015</time></span>
-                                                            <div title="Rated 5 out of 5" class="star-rating" itemtype="http://schema.org/Rating" itemscope="" itemprop="reviewRating">
-                                                                <span style="width:80%"><strong itemprop="ratingValue">4</strong> out of 5</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="description" itemprop="description">
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ante turpis, aliquet et vestibulum dictum, commodo vel tortor.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li><!-- #comment-## -->
+                                                        </footer><!-- .comment-meta -->
+                                                        <div class="comment-content">
+                                                            <p>Proin est purus, elementum eu tempus ut, molestie vel magna. Sed id lorem a felis lobortis tristique. Mauris ac auctor nibh. Cras venenatis neque eget pellentesque posuere.</p>
+                                                        </div><!-- .comment-content -->
+                                                    </div><!-- .comment-body -->
+                                                </article><!-- .comment-item -->
+                                            </li>
 
-                                        </ol>
+                                            <li class="comment">
+                                                <article class="comment-item">
+                                                    <div class="comment-avatar">
+                                                        <img src="assets/images/avatar/2.jpg" alt="">
+                                                    </div>
+
+                                                    <div class="comment-body">
+                                                        <footer class="comment-meta">
+                                                            <h5 class="comment-author vcard">Super Junaid</h5><!-- .comment-author -->
+                                                            <div class="comment-date">
+                                                                <time datetime="2015-08-07T14:58:33+00:00">Dec 23, 2015 at 3:35 am</time>
+                                                            </div><!-- .comment-metadata -->
+                                                            <div title="Rated 5 out of 5" class="star-rating">
+                                                                <span style="width:80%"><strong>4</strong> out of 5</span>
+                                                            </div>
+                                                        </footer><!-- .comment-meta -->
+                                                        <div class="comment-content">
+                                                            <p>Proin est purus, elementum eu tempus ut, molestie vel magna. Sed id lorem a felis lobortis tristique. Mauris ac auctor nibh. Cras venenatis neque eget pellentesque posuere.</p>
+                                                        </div><!-- .comment-content -->
+                                                    </div><!-- .comment-body -->
+                                                </article><!-- .comment-item -->
+                                            </li>
+
+                                            <li class="comment">
+                                                <article class="comment-item">
+                                                    <div class="comment-avatar">
+                                                        <img src="assets/images/avatar/3.jpg" alt="">
+                                                    </div>
+                                                    <div class="comment-body">
+                                                        <footer class="comment-meta">
+                                                            <h5 class="comment-author vcard">tony chester</h5><!-- .comment-author -->
+                                                            <div class="comment-date">
+                                                                <time datetime="2015-08-07T14:58:33+00:00">Dec 23, 2015 at 3:35 am</time>
+                                                            </div><!-- .comment-metadata -->
+                                                            <div title="Rated 5 out of 5" class="star-rating">
+                                                                <span style="width:80%"><strong>4</strong> out of 5</span>
+                                                            </div>
+                                                        </footer><!-- .comment-meta -->
+                                                        <div class="comment-content">
+                                                            <p>Maecenas euismod faucibus dolor a finibus.</p>
+                                                        </div><!-- .comment-content -->
+                                                    </div><!-- .comment-body -->
+                                                </article><!-- .comment-item -->
+                                            </li>
+
+                                        </ol><!-- .comment-list -->
 
 
                                     </div>
 
                                     <div id="review_form">
                                         <div id="respond" class="comment-respond">
-                                            <h3 class="comment-reply-title">Here you can review this item.</h3>
+                                            <h3 class="comment-reply-title">Add a Review</h3>
                                             <form action="#" method="post" id="commentform" class="comment-form">
 
                                                 <p class="comment-form-author"><input type="text" aria-required="true" size="30" value="" placeholder="Your Name" name="author" id="author"></p>
                                                 <p class="comment-form-email"><input type="text" aria-required="true" size="30" value="" placeholder="Your email" name="email" id="email"></p>
                                                 <p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" placeholder="Your review"></textarea></p>
 
-                                                <p class="comment-form-rating">
+                                                <div class="comment-form-rating">
                                                     <select name="rating" id="rating">
                                                         <option value="">Rate&hellip;</option>
                                                         <option value="5">Perfect</option>
@@ -239,7 +248,7 @@ include_once('templates/headers/header1.php');
                                                         <option value="2">Not that bad</option>
                                                         <option value="1">Very Poor</option>
                                                     </select>
-                                                </p>
+                                                </div>
                                                 <p class="form-submit">
                                                     <button name="submit" type="submit" id="submit" class="btn btn-default btn-lg" />Add Review</button>
                                                 </p>
