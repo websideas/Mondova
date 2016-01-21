@@ -726,7 +726,8 @@ select:not([multiple]) {
     font-size: 10px; }
   .btn-lg {
     padding: 14px 35px;
-    font-size: 16px; }
+    font-size: 16px;
+    min-width: 180px; }
   .btn-xlg {
     padding: 12px 65px;
     font-size: 18px; }
@@ -764,11 +765,11 @@ select:not([multiple]) {
       right: 0;
       border-right: 2px solid #d1c45a;
       border-top: 2px solid #d1c45a; }
-    .btn-default:focus, .btn-default:hover {
+    .btn-default:active, .btn-default:active:focus, .btn-default:active:hover, .btn-default:focus, .btn-default:hover {
       background: none;
       border-color: transparent;
       color: #3b3e43; }
-      .btn-default:focus:before, .btn-default:focus:after, .btn-default:hover:before, .btn-default:hover:after {
+      .btn-default:active:before, .btn-default:active:after, .btn-default:active:focus:before, .btn-default:active:focus:after, .btn-default:active:hover:before, .btn-default:active:hover:after, .btn-default:focus:before, .btn-default:focus:after, .btn-default:hover:before, .btn-default:hover:after {
         height: 50%; }
   .btn-animation span {
     -webkit-transform: translateX(0);
@@ -844,6 +845,8 @@ select:not([multiple]) {
       color: #FFFFFF; }
   .btn-light {
     color: #FFFFFF; }
+    .btn-light:hover, .btn-light:focus {
+      color: #FFFFFF; }
 
 /* ==============================
    6. Sections styles
@@ -1939,22 +1942,21 @@ select:not([multiple]) {
       left: auto;
       right: 50%;
       margin-right: 10px; }
-    .kt-heading-2.style1 .kt-heading-title .span {
-      display: block; }
-      .kt-heading-2.style1 .kt-heading-title .span:after {
-        width: 6px;
-        height: 6px;
-        background: #d1c45a;
-        content: "";
-        -webkit-transform: translatey(-50%) translatex(-50%) rotate(45deg);
-        -khtml-transform: translatey(-50%) translatex(-50%) rotate(45deg);
-        -moz-transform: translatey(-50%) translatex(-50%) rotate(45deg);
-        -ms-transform: translatey(-50%) translatex(-50%) rotate(45deg);
-        -o-transform: translatey(-50%) translatex(-50%) rotate(45deg);
-        transform: translatey(-50%) translatex(-50%) rotate(45deg);
-        position: absolute;
-        top: 50%;
-        left: 50%; }
+    .kt-heading-2.style1 .kt-heading-title span:after {
+      width: 6px;
+      height: 6px;
+      background: #d1c45a;
+      content: "";
+      -webkit-transform: translatex(-50%) rotate(45deg);
+      -khtml-transform: translatex(-50%) rotate(45deg);
+      -moz-transform: translatex(-50%) rotate(45deg);
+      -ms-transform: translatex(-50%) rotate(45deg);
+      -o-transform: translatex(-50%) rotate(45deg);
+      transform: translatex(-50%) rotate(45deg);
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-bottom: -2px; }
 
 /*
  * 10.2 Hightlight

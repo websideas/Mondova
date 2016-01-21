@@ -561,6 +561,7 @@ select:not([multiple]) {
   &-lg {
     padding: 14px 35px;
     font-size: 16px;
+    min-width: 180px;
   }
   &-xlg {
     padding: 12px 65px;
@@ -609,6 +610,9 @@ select:not([multiple]) {
       border-right: 2px solid $primary-color;
       border-top: 2px solid $primary-color;
     }
+    &:active,
+    &:active:focus,
+    &:active:hover,
     &:focus,
     &:hover{
       background: none;
@@ -672,6 +676,10 @@ select:not([multiple]) {
 
   &-light{
     color: $white;
+    &:hover,
+    &:focus{
+      color: $white;
+    }
   }
 }
 
@@ -1856,17 +1864,17 @@ select:not([multiple]) {
         right: 50%;
         margin-right: 10px;
       }
-      .span{
-        display: block;
+      span{
         &:after{
           width: 6px;
           height: 6px;
           background: $primary-color;
           content: "";
-          @include transform(translatey(-50%) translatex(-50%) rotate(45deg) );
+          @include transform(translatex(-50%) rotate(45deg) );
           position: absolute;
-          top: 50%;
+          bottom: 0;
           left: 50%;
+          margin-bottom: -2px;
         }
       }
     }
