@@ -669,6 +669,10 @@ select:not([multiple]) {
       color: $white;
     }
   }
+
+  &-light{
+    color: $white;
+  }
 }
 
 
@@ -1744,8 +1748,35 @@ select:not([multiple]) {
       font-size: 50px;
     }
   }
-  
-  &.style3{
+  &.style-3{
+    .kt-heading-backend{
+      font-size: 50px;
+    }
+    .kt-heading-title{
+      font-size: 50px;
+      padding-bottom: 40px;
+    }
+    .kt-heading-subtitle{
+      margin: -30px 0 0;
+    }
+  }
+  &.light{
+    .kt-heading-backend{
+      color: $white;
+      @include opacity(0.05);
+    }
+    .kt-heading-subtitle,
+    .kt-heading-title{
+      color: $white;
+    }
+  }
+}
+
+.kt-heading-2{
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+  &.style2{
     .kt-heading-title{
       border: 2px solid $text;
       padding: 2px;
@@ -1760,7 +1791,7 @@ select:not([multiple]) {
     }
   }
 
-  &.style4{
+  &.style1{
     .kt-heading-title{
       font-size: 36px;
       font-weight: 700;
@@ -2141,6 +2172,7 @@ ul.style-list{
 }
 
 .nav{
+  &.nav-style4,
   &.nav-style2{
     text-align: center;
     margin-bottom: 80px;
@@ -2189,6 +2221,37 @@ ul.style-list{
         a{
           color: $text;
           border-color: $text;
+        }
+      }
+    }
+  }
+  &.nav-style4{
+    padding-bottom: 75px;
+    margin-bottom: 105px;
+    position: relative;
+    &:after,
+    &:before{
+      width: 75px;
+      height: 2px;
+      background: $gray-text;
+      content: "";
+      @include transform(translatex(-50%) rotate(45deg) );
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+    }
+    &:after{
+      @include transform(translatex(-50%) rotate(-45deg) );
+    }
+    li{
+      margin: 0 30px;
+      a{
+        padding: 0;
+        border:none;
+      }
+      &.active{
+        a{
+          color: $primary-color;
         }
       }
     }
@@ -3276,7 +3339,7 @@ ul.style-list{
 
 .newletter-wrapper{
   padding: 0 80px;
-  max-width: 880px;
+  max-width: 960px;
   margin: 0 auto;
   .newletter-title{
     font-size: 36px;
@@ -3297,6 +3360,39 @@ ul.style-list{
     }
     &:after{
       @include transform(translatex(-50%) rotate(-45deg) );
+    }
+  }
+  .kt_mailchimp-before{
+    margin-bottom: 52px;
+  }
+  .mailchimp-form{
+    &.mailchimp-layout-1{
+      .mailchimp-input-email{
+        margin-bottom: 30px;
+      }
+    }
+    &.mailchimp-layout-2{
+      position: relative;
+      .mailchimp-submit{
+        position: absolute;
+        height: 100%;
+        width: 50px;
+        font-size: 0;
+        right: 0;
+        top: 0;
+        padding: 0;
+        border: none;
+        &:after{
+          @include FontIcon("\e010", 'ElegantIcons');
+          font-size: 18px;
+          border: none;
+          line-height: 50px;
+          color: $gray-text;
+        }
+        &:before{
+          border: none;
+        }
+      }
     }
   }
 }
@@ -4867,6 +4963,7 @@ ul.style-list{
       display: block;
       img {
         @include transition('all 0.4s ease-in-out');
+        width: 100%;
         &.first-img {
           @include opacity(1);
         }
@@ -6795,12 +6892,24 @@ table.compare{
   }
 }
 
+.block-image{
+  img{
+    width: 100%;
+  }
+}
+
+.block-image,
 .block-style{
   position: relative;
   border: 2px solid $gray-bg2;
   .block-style-inner{
     padding: 30px;
   }
+  .block-image-inner{
+    padding: 13px;
+  }
+  .block-image-inner:after,
+  .block-image-inner:before,
   .block-style-inner:after,
   .block-style-inner:before,
   &:before,
@@ -6825,12 +6934,14 @@ table.compare{
     border-right: 2px solid $primary-color;
     border-top: 2px solid $primary-color;
   }
+  .block-image-inner:before,
   .block-style-inner:before{
     bottom: -2px;
     right: -2px;
     border-right: 2px solid $primary-color;
     border-bottom: 2px solid $primary-color;
   }
+  .block-image-inner:after,
   .block-style-inner:after{
     left: -2px;
     top: -2px;
@@ -6838,6 +6949,8 @@ table.compare{
     border-top: 2px solid $primary-color;
   }
   &:hover{
+    .block-image-inner:after,
+    .block-image-inner:before,
     .block-style-inner:after,
     .block-style-inner:before,
     &:before,

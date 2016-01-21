@@ -58,7 +58,7 @@ include_once('templates/headers/header1.php');
 
         <div class="page-section pad-bottom-45">
             <div class="container">
-                <div class="kt-heading style3 mar-bottom-60">
+                <div class="kt-heading-2 style2 mar-bottom-60">
                     <h3 class="kt-heading-title"><span>Shop For Men</span></h3>
                 </div>
 
@@ -90,6 +90,72 @@ include_once('templates/headers/header1.php');
                         <p>Donec tempor arcu ex, nec scelerisque massa hendrerit sit amet. Aenean porttitor id lacus eget scelerisque. Quisque placerat nunc ac egestas finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non lacus fringilla, luctus eros eget, euismod ipsum. In elit mi, porttitor sit amet velit et, aliquam imperdiet orci. Aliquam at diam accumsan, vehicula quam at, scelerisque ipsum. Ut dui odio, cursus sed mattis in, rutrum nec justo. Sed efficitur justo velit, at tristique erat tincidunt eget. Aenean aliquam mollis mauris sed finibus. Donec ullamcorper lorem id ligula interdum, et ultrices libero ultrices. In vitae sapien eget urna lacinia tempor.</p>
                     </div>
                     <div class="tab-pane fade" id="dresses">
+                        <p>Ut ornare porttitor varius. Nam dapibus venenatis ultrices. In nec lectus ac tellus laoreet suscipit. Morbi facilisis enim a mollis tincidunt. Praesent pretium sollicitudin lacus eget tincidunt. Integer elementum eros id feugiat faucibus. In aliquet magna vitae suscipit pretium. Pellentesque dignissim massa eu mollis ultricies. Pellentesque eu ornare tortor, nec sollicitudin nunc. Aenean nec feugiat quam, eu hendrerit erat. Nulla facilisi. </p>
+                        <p>Donec tempor arcu ex, nec scelerisque massa hendrerit sit amet. Aenean porttitor id lacus eget scelerisque. Quisque placerat nunc ac egestas finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non lacus fringilla, luctus eros eget, euismod ipsum. In elit mi, porttitor sit amet velit et, aliquam imperdiet orci. Aliquam at diam accumsan, vehicula quam at, scelerisque ipsum. Ut dui odio, cursus sed mattis in, rutrum nec justo. Sed efficitur justo velit, at tristique erat tincidunt eget. Aenean aliquam mollis mauris sed finibus. Donec ullamcorper lorem id ligula interdum, et ultrices libero ultrices. In vitae sapien eget urna lacinia tempor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="bg-gray2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-sm-5">
+                        <img src="assets/images/coming-soon-2.png" alt="" />
+                    </div>
+                    <div class="col-md-7 col-sm-7">
+                        <div class="text-center pad-top-100 pad-bottom-30">
+                            <div class="coming-soon clearfix mar-bottom-50" data-date="2016/5/19">
+                                <div class="value-time">266</div>
+                                <div class="value-time">09</div>
+                                <div class="value-time">53</div>
+                                <div class="value-time">59</div>
+                            </div>
+                            <h1 class="text-bold mar-bottom-40">NEW IN CLOTHING</h1>
+                            <p class="box-special mar-bottom-50">Pull & Bear Parka Jacket With Faux Fur Lined Hood</p>
+                            <div><a href="#" class="btn btn-default btn-lg">view details</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="page-section pad-bottom-45">
+            <div class="container">
+                <div class="kt-heading-2 style2 mar-bottom-60">
+                    <h3 class="kt-heading-title"><span>Shop For Women</span></h3>
+                </div>
+
+                <!-- nav-pills, nav-tabs -->                                                            
+                <!-- Nav tabs -->
+                <ul class="nav nav-style3" role="tablist">
+                    <li class="active"><a href="#denim-shirts2" data-toggle="tab">Briefs</a></li>
+                    <li><a href="#briefs2" data-toggle="tab">Cardigans</a></li>
+                    <li><a href="#cardigans2" data-toggle="tab">Coats</a></li>
+                    <li><a href="#coats2" data-toggle="tab">Denim Shirts</a></li>
+                    <li><a href="#dresses2" data-toggle="tab">Dresses</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="denim-shirts2">
+                        <?php include('templates/product-tab1.php'); ?>
+                    </div>
+                    <div class="tab-pane fade" id="briefs2">
+                        <p>Ut ornare porttitor varius. Nam dapibus venenatis ultrices. In nec lectus ac tellus laoreet suscipit. Morbi facilisis enim a mollis tincidunt. Praesent pretium sollicitudin lacus eget tincidunt. Integer elementum eros id feugiat faucibus. In aliquet magna vitae suscipit pretium. Pellentesque dignissim massa eu mollis ultricies. Pellentesque eu ornare tortor, nec sollicitudin nunc. Aenean nec feugiat quam, eu hendrerit erat. Nulla facilisi. </p>
+                        <p>In iaculis tellus in dignissim faucibus. Curabitur sagittis egestas orci non sollicitudin. Ut et dictum nunc. Aenean non lorem in leo pellentesque eleifend. Donec commodo, lectus eget sodales ornare, sem risus sollicitudin nibh, a venenatis metus mauris porta nibh. Sed eget molestie ex. Praesent sit amet arcu sit amet sem venenatis rhoncus. Duis in lorem a turpis consequat iaculis. Vivamus vel dolor egestas, sagittis erat in, congue nibh. Aliquam ex nisi, ornare in dolor at, maximus pulvinar sapien. </p>
+                    </div>
+                    <div class="tab-pane fade" id="cardigans2">
+                        <p>Donec tempor arcu ex, nec scelerisque massa hendrerit sit amet. Aenean porttitor id lacus eget scelerisque. Quisque placerat nunc ac egestas finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non lacus fringilla, luctus eros eget, euismod ipsum. In elit mi, porttitor sit amet velit et, aliquam imperdiet orci. Aliquam at diam accumsan, vehicula quam at, scelerisque ipsum. Ut dui odio, cursus sed mattis in, rutrum nec justo. Sed efficitur justo velit, at tristique erat tincidunt eget. Aenean aliquam mollis mauris sed finibus. Donec ullamcorper lorem id ligula interdum, et ultrices libero ultrices. In vitae sapien eget urna lacinia tempor.</p>
+                        <p>Ut ornare porttitor varius. Nam dapibus venenatis ultrices. In nec lectus ac tellus laoreet suscipit. Morbi facilisis enim a mollis tincidunt. Praesent pretium sollicitudin lacus eget tincidunt. Integer elementum eros id feugiat faucibus. In aliquet magna vitae suscipit pretium. Pellentesque dignissim massa eu mollis ultricies. Pellentesque eu ornare tortor, nec sollicitudin nunc. Aenean nec feugiat quam, eu hendrerit erat. Nulla facilisi. </p>
+                    </div>
+                    <div class="tab-pane fade" id="coats2">
+                        <p>Ut ornare porttitor varius. Nam dapibus venenatis ultrices. In nec lectus ac tellus laoreet suscipit. Morbi facilisis enim a mollis tincidunt. Praesent pretium sollicitudin lacus eget tincidunt. Integer elementum eros id feugiat faucibus. In aliquet magna vitae suscipit pretium. Pellentesque dignissim massa eu mollis ultricies. Pellentesque eu ornare tortor, nec sollicitudin nunc. Aenean nec feugiat quam, eu hendrerit erat. Nulla facilisi. </p>
+                        <p>Donec tempor arcu ex, nec scelerisque massa hendrerit sit amet. Aenean porttitor id lacus eget scelerisque. Quisque placerat nunc ac egestas finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non lacus fringilla, luctus eros eget, euismod ipsum. In elit mi, porttitor sit amet velit et, aliquam imperdiet orci. Aliquam at diam accumsan, vehicula quam at, scelerisque ipsum. Ut dui odio, cursus sed mattis in, rutrum nec justo. Sed efficitur justo velit, at tristique erat tincidunt eget. Aenean aliquam mollis mauris sed finibus. Donec ullamcorper lorem id ligula interdum, et ultrices libero ultrices. In vitae sapien eget urna lacinia tempor.</p>
+                    </div>
+                    <div class="tab-pane fade" id="dresses2">
                         <p>Ut ornare porttitor varius. Nam dapibus venenatis ultrices. In nec lectus ac tellus laoreet suscipit. Morbi facilisis enim a mollis tincidunt. Praesent pretium sollicitudin lacus eget tincidunt. Integer elementum eros id feugiat faucibus. In aliquet magna vitae suscipit pretium. Pellentesque dignissim massa eu mollis ultricies. Pellentesque eu ornare tortor, nec sollicitudin nunc. Aenean nec feugiat quam, eu hendrerit erat. Nulla facilisi. </p>
                         <p>Donec tempor arcu ex, nec scelerisque massa hendrerit sit amet. Aenean porttitor id lacus eget scelerisque. Quisque placerat nunc ac egestas finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non lacus fringilla, luctus eros eget, euismod ipsum. In elit mi, porttitor sit amet velit et, aliquam imperdiet orci. Aliquam at diam accumsan, vehicula quam at, scelerisque ipsum. Ut dui odio, cursus sed mattis in, rutrum nec justo. Sed efficitur justo velit, at tristique erat tincidunt eget. Aenean aliquam mollis mauris sed finibus. Donec ullamcorper lorem id ligula interdum, et ultrices libero ultrices. In vitae sapien eget urna lacinia tempor.</p>
                     </div>
@@ -160,50 +226,9 @@ include_once('templates/headers/header1.php');
             </div>
         </div>
 
-        <div class="page-section pad-bottom-45">
-            <div class="container">
-                <div class="kt-heading style3 mar-bottom-60">
-                    <h3 class="kt-heading-title"><span>Shop For Women</span></h3>
-                </div>
-
-                <!-- nav-pills, nav-tabs -->                                                            
-                <!-- Nav tabs -->
-                <ul class="nav nav-style3" role="tablist">
-                    <li class="active"><a href="#denim-shirts2" data-toggle="tab">Briefs</a></li>
-                    <li><a href="#briefs2" data-toggle="tab">Cardigans</a></li>
-                    <li><a href="#cardigans2" data-toggle="tab">Coats</a></li>
-                    <li><a href="#coats2" data-toggle="tab">Denim Shirts</a></li>
-                    <li><a href="#dresses2" data-toggle="tab">Dresses</a></li>
-                </ul>
-
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <div class="tab-pane active" id="denim-shirts2">
-                        <?php include('templates/product-tab1.php'); ?>
-                    </div>
-                    <div class="tab-pane fade" id="briefs2">
-                        <p>Ut ornare porttitor varius. Nam dapibus venenatis ultrices. In nec lectus ac tellus laoreet suscipit. Morbi facilisis enim a mollis tincidunt. Praesent pretium sollicitudin lacus eget tincidunt. Integer elementum eros id feugiat faucibus. In aliquet magna vitae suscipit pretium. Pellentesque dignissim massa eu mollis ultricies. Pellentesque eu ornare tortor, nec sollicitudin nunc. Aenean nec feugiat quam, eu hendrerit erat. Nulla facilisi. </p>
-                        <p>In iaculis tellus in dignissim faucibus. Curabitur sagittis egestas orci non sollicitudin. Ut et dictum nunc. Aenean non lorem in leo pellentesque eleifend. Donec commodo, lectus eget sodales ornare, sem risus sollicitudin nibh, a venenatis metus mauris porta nibh. Sed eget molestie ex. Praesent sit amet arcu sit amet sem venenatis rhoncus. Duis in lorem a turpis consequat iaculis. Vivamus vel dolor egestas, sagittis erat in, congue nibh. Aliquam ex nisi, ornare in dolor at, maximus pulvinar sapien. </p>
-                    </div>
-                    <div class="tab-pane fade" id="cardigans2">
-                        <p>Donec tempor arcu ex, nec scelerisque massa hendrerit sit amet. Aenean porttitor id lacus eget scelerisque. Quisque placerat nunc ac egestas finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non lacus fringilla, luctus eros eget, euismod ipsum. In elit mi, porttitor sit amet velit et, aliquam imperdiet orci. Aliquam at diam accumsan, vehicula quam at, scelerisque ipsum. Ut dui odio, cursus sed mattis in, rutrum nec justo. Sed efficitur justo velit, at tristique erat tincidunt eget. Aenean aliquam mollis mauris sed finibus. Donec ullamcorper lorem id ligula interdum, et ultrices libero ultrices. In vitae sapien eget urna lacinia tempor.</p>
-                        <p>Ut ornare porttitor varius. Nam dapibus venenatis ultrices. In nec lectus ac tellus laoreet suscipit. Morbi facilisis enim a mollis tincidunt. Praesent pretium sollicitudin lacus eget tincidunt. Integer elementum eros id feugiat faucibus. In aliquet magna vitae suscipit pretium. Pellentesque dignissim massa eu mollis ultricies. Pellentesque eu ornare tortor, nec sollicitudin nunc. Aenean nec feugiat quam, eu hendrerit erat. Nulla facilisi. </p>
-                    </div>
-                    <div class="tab-pane fade" id="coats2">
-                        <p>Ut ornare porttitor varius. Nam dapibus venenatis ultrices. In nec lectus ac tellus laoreet suscipit. Morbi facilisis enim a mollis tincidunt. Praesent pretium sollicitudin lacus eget tincidunt. Integer elementum eros id feugiat faucibus. In aliquet magna vitae suscipit pretium. Pellentesque dignissim massa eu mollis ultricies. Pellentesque eu ornare tortor, nec sollicitudin nunc. Aenean nec feugiat quam, eu hendrerit erat. Nulla facilisi. </p>
-                        <p>Donec tempor arcu ex, nec scelerisque massa hendrerit sit amet. Aenean porttitor id lacus eget scelerisque. Quisque placerat nunc ac egestas finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non lacus fringilla, luctus eros eget, euismod ipsum. In elit mi, porttitor sit amet velit et, aliquam imperdiet orci. Aliquam at diam accumsan, vehicula quam at, scelerisque ipsum. Ut dui odio, cursus sed mattis in, rutrum nec justo. Sed efficitur justo velit, at tristique erat tincidunt eget. Aenean aliquam mollis mauris sed finibus. Donec ullamcorper lorem id ligula interdum, et ultrices libero ultrices. In vitae sapien eget urna lacinia tempor.</p>
-                    </div>
-                    <div class="tab-pane fade" id="dresses2">
-                        <p>Ut ornare porttitor varius. Nam dapibus venenatis ultrices. In nec lectus ac tellus laoreet suscipit. Morbi facilisis enim a mollis tincidunt. Praesent pretium sollicitudin lacus eget tincidunt. Integer elementum eros id feugiat faucibus. In aliquet magna vitae suscipit pretium. Pellentesque dignissim massa eu mollis ultricies. Pellentesque eu ornare tortor, nec sollicitudin nunc. Aenean nec feugiat quam, eu hendrerit erat. Nulla facilisi. </p>
-                        <p>Donec tempor arcu ex, nec scelerisque massa hendrerit sit amet. Aenean porttitor id lacus eget scelerisque. Quisque placerat nunc ac egestas finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non lacus fringilla, luctus eros eget, euismod ipsum. In elit mi, porttitor sit amet velit et, aliquam imperdiet orci. Aliquam at diam accumsan, vehicula quam at, scelerisque ipsum. Ut dui odio, cursus sed mattis in, rutrum nec justo. Sed efficitur justo velit, at tristique erat tincidunt eget. Aenean aliquam mollis mauris sed finibus. Donec ullamcorper lorem id ligula interdum, et ultrices libero ultrices. In vitae sapien eget urna lacinia tempor.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="page-section">
             <div class="container">
-                <div class="kt-heading style3 mar-bottom-80">
+                <div class="kt-heading-2 style2 mar-bottom-80">
                     <div class="kt-heading-title"><span>our blogs</span></div>
                 </div>
                 <div class="blog-posts blog-posts-grid mar-bottom-20">
@@ -281,31 +306,7 @@ include_once('templates/headers/header1.php');
 
         <div class="page-section bg-gray">
             <div class="container">
-                <div class="owl-carousel-kt no-mar-bottom">
-                    <div class="owl-carousel kt-owl-carousel" data-options='{"pagination": false, "navigation": false, "desktop": 5, "desktopsmall": 4, "tablet" : 3, "mobile" : 2}'>
-                        <div class="client-item">
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="tHE LOGO BRAND 1"><img src="assets/images/logos/1.png" class="img-responsive" alt=""/> </a>
-                        </div>
-                        <div class="client-item">
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="tHE LOGO BRAND 2"><img src="assets/images/logos/2.png" class="img-responsive" alt=""/> </a>
-                        </div>
-                        <div class="client-item">
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="tHE LOGO BRAND 3"><img src="assets/images/logos/3.png" class="img-responsive" alt=""/> </a>
-                        </div>
-                        <div class="client-item">
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="tHE LOGO BRAND 4"><img src="assets/images/logos/4.png" class="img-responsive" alt=""/> </a>
-                        </div>
-                        <div class="client-item">
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="tHE LOGO BRAND 5"><img src="assets/images/logos/5.png" class="img-responsive" alt=""/> </a>
-                        </div>
-                        <div class="client-item">
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="tHE LOGO BRAND 6"><img src="assets/images/logos/3.png" class="img-responsive" alt=""/> </a>
-                        </div>
-                        <div class="client-item">
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="tHE LOGO BRAND 7"><img src="assets/images/logos/2.png" class="img-responsive" alt=""/> </a>
-                        </div>
-                    </div>
-                </div>
+                <?php include_once('client-carousel.php'); ?>
             </div>
         </div>
 

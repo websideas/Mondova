@@ -40,7 +40,7 @@ include_once('templates/headers/header1.php');
             </div>
         </div>
         <div class="page-section bg-gray pad-bottom-60">
-            <div class="kt-heading style4 mar-bottom-80">
+            <div class="kt-heading-2 style1 mar-bottom-80">
                 <h3 class="kt-heading-title">our team</h3>
                 <div class="divider"><div class="divider-inner"></div></div>
             </div>

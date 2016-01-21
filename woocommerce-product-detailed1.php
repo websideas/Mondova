@@ -260,7 +260,7 @@ include_once('templates/headers/header1.php');
         <div class="page-section pad-bottom-5">
             <div class="container">
 
-                <div class="kt-heading style4 mar-bottom-80">
+                <div class="kt-heading-2 style1 mar-bottom-80">
                     <h3 class="kt-heading-title">our team</h3>
                     <div class="divider"><div class="divider-inner"></div></div>
                 </div>
@@ -462,7 +462,9 @@ include_once('templates/headers/header1.php');
             </div>
         </div>
 
-
+        <div class="page-section bg-gray">
+            <div class="container"><?php include_once('client-carousel.php'); ?></div>
+        </div>
     </div><!-- #main -->
 
     <img src="previews/12-product-details.jpg" class="preview-image" style="top: 18px;display: none;max-width:none;" />
