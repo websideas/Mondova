@@ -46,6 +46,18 @@ include_once('templates/slideshows/slideshow1.php');
 
     <div class="page-section">
         <div class="container">
+            <div class="col-md-6 col-sm-6">
+                <div classs="block-image">
+                    <div class="block-image-inner">
+                        <img src="assets/images/featured/7.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-section">
+        <div class="container">
 
             <div class="row mar-bottom-20">
                 <div class="col-md-5">
