@@ -767,12 +767,15 @@ select:not([multiple]) {
       right: 0;
       border-right: 2px solid #d1c45a;
       border-top: 2px solid #d1c45a; }
-    .btn-default:focus, .btn-default:hover {
+    .btn-default:active, .btn-default:focus, .btn-default:hover {
       background: none;
       border-color: transparent;
       color: #3b3e43; }
-      .btn-default:focus:before, .btn-default:focus:after, .btn-default:hover:before, .btn-default:hover:after {
+      .btn-default:active:before, .btn-default:active:after, .btn-default:focus:before, .btn-default:focus:after, .btn-default:hover:before, .btn-default:hover:after {
         height: 50%; }
+    .btn-default:active:focus, .btn-default:active:hover {
+      background: none;
+      border-color: transparent; }
   .btn-animation span {
     -webkit-transform: translateX(0);
     -khtml-transform: translateX(0);
@@ -7135,6 +7138,16 @@ table.compare tr td {
     top: -2px;
     right: -2px;
     border-right: 2px solid #d1c45a;
+    border-top: 2px solid #d1c45a; }
+  .block-style .block-style-inner:before {
+    bottom: -2px;
+    right: -2px;
+    border-right: 2px solid #d1c45a;
+    border-bottom: 2px solid #d1c45a; }
+  .block-style .block-style-inner:after {
+    left: -2px;
+    top: -2px;
+    border-left: 2px solid #d1c45a;
     border-top: 2px solid #d1c45a; }
   .block-style:hover .block-style-inner:after,
   .block-style:hover .block-style-inner:before, .block-style:hover:before, .block-style:hover:after {
