@@ -103,8 +103,8 @@ include_once('templates/headers/header3.php');
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-4 col-sm-12 col-xs-12">
-                        <div class="block-image">
-                            <div class="block-image-inner">
+                        <div class="block-style pad-small">
+                            <div class="block-style-inner">
                                 <img src="assets/images/banner/11.jpg" alt="" />
                             </div>
                         </div>
@@ -515,8 +515,8 @@ include_once('templates/headers/header3.php');
                     </div>
 
                     <div class="col-md-4 col-sm-12 col-xs-12 pull-right">
-                        <div class="block-image">
-                            <div class="block-image-inner">
+                        <div class="block-style pad-small">
+                            <div class="block-style-inner">
                                 <img src="assets/images/banner/12.jpg" alt="" />
                             </div>
                         </div>
@@ -540,8 +540,8 @@ include_once('templates/headers/header3.php');
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-4 col-sm-12 col-xs-12">
-                        <div class="block-image">
-                            <div class="block-image-inner">
+                        <div class="block-style pad-small">
+                            <div class="block-style-inner">
                                 <img src="assets/images/banner/11.jpg" alt="" />
                             </div>
                         </div>

@@ -15,8 +15,8 @@ include_once('templates/slideshows/slideshow2.php');
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="block-image">
-                            <div class="block-image-inner">
+                        <div class="block-style pad-small">
+                            <div class="block-style-inner">
                                 <img src="assets/images/banner/11.jpg" alt="" />
                             </div>
                         </div>
