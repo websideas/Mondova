@@ -25,7 +25,7 @@
 .pad-sm{ padding: 80px 0; }
 
 
-$numbers: 5, 10, 15, 20, 30, 35, 40, 45, 50, 55, 60, 65, 70, 80, 90, 100, 110, 120, 130;
+$numbers: 5, 10, 15, 20, 30, 35, 40, 45, 50, 55, 60, 65, 70, 80, 90, 100, 110, 120, 130,140,150,160,170,180,190, 200;
 @each $number in $numbers {
   .mar-top-#{$number} {  margin-top: #{$number}px;  }
   .mar-bottom-#{$number} {  margin-bottom: #{$number}px;  }

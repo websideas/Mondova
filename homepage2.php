@@ -9,7 +9,7 @@ include_once('templates/slideshows/slideshow1.php');
 
 ?>
     <div id="main">
-        <div class="page-section no-padding-top pad-bottom-70">
+        <div class="page-section no-pad-top pad-bottom-70 mar-top-mi-200">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-sm-4">
