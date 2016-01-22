@@ -564,7 +564,6 @@ select:not([multiple]) {
   &-lg {
     padding: 14px 35px;
     font-size: 16px;
-    min-width: 180px;
   }
   &-xlg {
     padding: 12px 65px;
@@ -613,9 +612,6 @@ select:not([multiple]) {
       border-right: 2px solid $primary-color;
       border-top: 2px solid $primary-color;
     }
-    &:active,
-    &:active:focus,
-    &:active:hover,
     &:focus,
     &:hover{
       background: none;
@@ -679,10 +675,6 @@ select:not([multiple]) {
 
   &-light{
     color: $white;
-    &:hover,
-    &:focus{
-      color: $white;
-    }
   }
 }
 
@@ -1828,21 +1820,6 @@ select:not([multiple]) {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 70px;
-  &.style2{
-    .kt-heading-title{
-      border: 2px solid $text;
-      padding: 2px;
-      display: inline-block;
-      span{
-        font-size: 36px;
-        color: $white;
-        background: $text;
-        padding: 13px 18px;
-        display: inline-block;
-      }
-    }
-  }
-
   &.style1{
     .kt-heading-title{
       font-size: 36px;
@@ -1867,18 +1844,32 @@ select:not([multiple]) {
         right: 50%;
         margin-right: 10px;
       }
-      span{
+      .span{
+        display: block;
         &:after{
           width: 6px;
           height: 6px;
           background: $primary-color;
           content: "";
-          @include transform(translatex(-50%) rotate(45deg) );
+          @include transform(translatey(-50%) translatex(-50%) rotate(45deg) );
           position: absolute;
-          bottom: 0;
+          top: 50%;
           left: 50%;
-          margin-bottom: -2px;
         }
+      }
+    }
+  }
+  &.style2{
+    .kt-heading-title{
+      border: 2px solid $text;
+      padding: 2px;
+      display: inline-block;
+      span{
+        font-size: 36px;
+        color: $white;
+        background: $text;
+        padding: 13px 18px;
+        display: inline-block;
       }
     }
   }
@@ -2150,51 +2141,49 @@ ul.style-list{
  * 10.6 Tabs
  */
 
-.nav-border {
-  margin-bottom: $shortcode;
-  > li {
-    float: left;
-    > a {
-      position: relative;
-      color: $text;
-      padding: 6px 25px;
-      text-transform: uppercase;
+.nav{
+  &.nav-border {
+    margin-bottom: $shortcode;
+    > li {
+      display: inline-block;
+      > a {
+        position: relative;
+        color: $text;
+        padding: 6px 25px;
+        text-transform: uppercase;
 
-      &:before,
-      &:after{
-        content: '';
-        position: absolute;
-        display: block;
-        width: 0;
-        @include transition('all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s');
-        visibility: hidden;
+        &:before,
+        &:after{
+          content: '';
+          position: absolute;
+          display: block;
+          width: 0;
+          @include transition('all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s');
+          visibility: hidden;
+        }
+        &:before{
+          left: 0;
+          bottom: 0;
+          border-left: 2px solid $primary-color;
+          border-bottom: 2px solid $primary-color;
+        }
+        &:after{
+          top: 0;
+          right: 0;
+          border-right: 2px solid $primary-color;
+          border-top: 2px solid $primary-color;
+        }
       }
-      &:before{
-        left: 0;
-        bottom: 0;
-        border-left: 2px solid $primary-color;
-        border-bottom: 2px solid $primary-color;
+
+      + li {
+        margin-left: 5px;
       }
-      &:after{
-        top: 0;
-        right: 0;
-        border-right: 2px solid $primary-color;
-        border-top: 2px solid $primary-color;
-      }
-      &:focus{
+
+      &.active > a,
+      > a:hover,
+      > a:focus{
         background: none;
-      }
-    }
-
-
-    + li {
-      margin-left: 5px;
-    }
-
-    &.active > a {
-      &,
-      &:hover,
-      &:focus {
+        color: $primary-color;
         &:before,
         &:after{
           width: 100%;
@@ -2203,75 +2192,82 @@ ul.style-list{
         }
       }
     }
-
-    &.active > a,
-    &.active > a:hover,
-    &.active > a:focus,
-    a:hover{
-      background: none;
-      color: $primary-color;
-    }
-
   }
-}
 
-.nav{
-  &.nav-style4,
-  &.nav-style2{
-    text-align: center;
-    margin-bottom: 80px;
+  &.nav-style2,
+  &.nav-style4{
+    margin-bottom: $shortcode;
     li{
       display: inline-block;
-      margin: 0 20px;
-      a{
+      + li{
+        margin-left: 40px;
+      }
+      > a{
         color: $text;
         text-transform: uppercase;
-        padding: 0 0 5px;
-        border-bottom: 2px solid transparent;
         line-height: normal;
-        &:hover,
-        &:focus{
-          color: $primary-color;
-          background: none;
+        padding: 0;
+      }
+      &.active a,
+      > a:hover,
+      > a:focus{
+        color: $primary-color;
+        background: none;
+      }
+    }
+  }
+
+  &.nav-style2{
+    li{
+      a{
+        padding-bottom: 10px;
+        &:before{
+          width: 0;
+          background: $primary-color;
+          content: '';
+          height: 2px;
+          bottom: 0;
+          @include translate(x);
+          @include transition();
         }
       }
-      &.active{
-        a{
-          border-color: $primary-color;
+      &.active a,
+      > a:hover,
+      > a:focus{
+        &:before{
+          width: 100%;
         }
       }
     }
   }
+
   &.nav-style3{
-    text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: $shortcode;
     li{
-      margin: 0 5px;
       display: inline-block;
+      + li{
+        margin-left: 10px;
+      }
       a{
         color: $gray-text3;
         border: 2px solid $border-color;
         text-transform: uppercase;
         line-height: normal;
         padding: 5px 13px;
-        &:hover,
-        &:focus{
-          color: $text;
-          border-color: $text;
-          background: none;
-        }
       }
-      &.active{
-        a{
-          color: $text;
-          border-color: $text;
-        }
+      &.active a,
+      > a:hover,
+      > a:focus{
+        color: $text;
+        border-color: $text;
+        background: none;
       }
     }
   }
+
   &.nav-style4{
     padding-bottom: 75px;
-    margin-bottom: 105px;
+    margin-bottom: $shortcode;
     position: relative;
     &:after,
     &:before{
@@ -2279,27 +2275,90 @@ ul.style-list{
       height: 2px;
       background: $gray-text;
       content: "";
-      @include transform(translatex(-50%) rotate(45deg) );
+      @include transform(rotate(45deg));
       position: absolute;
-      bottom: 0;
-      left: 50%;
+      bottom: 37px;
+      left: 0;
     }
     &:after{
-      @include transform(translatex(-50%) rotate(-45deg) );
+      @include transform(rotate(-45deg));
     }
     li{
-      margin: 0 30px;
-      a{
-        padding: 0;
-        border:none;
+      + li{
+        margin-left: 60px;
       }
-      &.active{
-        a{
-          color: $primary-color;
-        }
+    }
+
+    &.text-center{
+      &:after,
+      &:before{
+        left: 50%;
+        margin-left: -37px;
       }
     }
   }
+
+  &.nav-woocommerce{
+    margin-bottom: $shortcode;
+    border-bottom: 2px solid $text;
+    li{
+      display: inline-block;
+      + li{
+        margin-left: 95px;
+      }
+      a{
+        color: $gray-text3;
+        text-transform: uppercase;
+        padding: 0 0 18px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          display: block;
+          @include opacity(0);
+          @include transition();
+        }
+        &:before{
+          content: '';
+          width: 0;
+          background: $white;
+          height: 2px;
+          bottom: -2px;
+          margin-left: -10px;
+        }
+        &:after{
+          width: 6px;
+          height: 6px;
+          background: $primary-color;
+          left: 50%;
+          margin-left: -3px;
+          bottom: -4px;
+          @include transform(rotate(45deg));
+        }
+
+      }
+      &.active a,
+      > a:hover,
+      > a:focus{
+        color: $text;
+        background: none;
+        &:before,
+        &:after {
+          @include opacity(1);
+        }
+        &:before{
+          width: 20px;
+        }
+
+      }
+    }
+  }
+
 }
 
 
@@ -5909,6 +5968,11 @@ ul.style-list{
 
 .woocommerce-tabs{
   .nav{
+    margin-bottom: 0;
+    text-align: center;
+  }
+  /*
+  .nav{
     border-bottom: 2px solid $text;
     text-align: center;
     li{
@@ -5940,16 +6004,16 @@ ul.style-list{
           left: 50%;
           display: block;
           @include opacity(0);
-          @include transition();
+
         }
 
         &:before{
-          content: '';
           width: 0;
           background: $white;
           height: 8px;
           bottom: -20px;
           margin-left: -10px;
+          @include transition();
         }
         &:after{
           width: 6px;
@@ -5978,6 +6042,7 @@ ul.style-list{
       }
     }
   }
+  */
   .tab-content{
     .tab-pane{
       background: $white;
@@ -6004,6 +6069,7 @@ ul.style-list{
         margin-bottom: 10px; 
       }
     }
+    /*
     blockquote{
       margin-left: 25px;
       padding: 0 0 0 20px;
@@ -6012,6 +6078,7 @@ ul.style-list{
       font-size: 14px;
       line-height: 30px;
     }
+    */
   }
    
   .comments-area{
@@ -6031,7 +6098,6 @@ ul.style-list{
         position: absolute;
         height: 2px;
         background: $primary-color;
-
       }
       &:before{
         top: 11px;
@@ -6043,9 +6109,6 @@ ul.style-list{
         right: 0;
         width: 50px;
       }
-    }
-    .comment-list{
-      margin: 0;
     }
   }
   .comment-respond{

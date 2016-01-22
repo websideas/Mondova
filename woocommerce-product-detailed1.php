@@ -100,7 +100,7 @@ include_once('templates/headers/header1.php');
                 <div class="woocommerce-tabs">
                     <div class="container">
                         <!-- Nav tabs -->
-                        <ul class="nav clearfix" role="tablist">
+                        <ul class="nav nav-woocommerce" role="tablist">
                             <li role="presentation" class="active"><a href="#tab-description_tab" role="tab" data-toggle="tab">Description</a></li>
                             <li role="presentation"><a href="#tab-additional_information" role="tab" data-toggle="tab">Additional INFO</a></li>
                             <li role="presentation"><a href="#tab-reviews" role="tab" data-toggle="tab">Review</a></li>
@@ -270,7 +270,7 @@ include_once('templates/headers/header1.php');
             <div class="container">
 
                 <div class="kt-heading-2 style1 mar-bottom-80">
-                    <h3 class="kt-heading-title">our team</h3>
+                    <h3 class="kt-heading-title"><span>our team</span></h3>
                     <div class="divider"><div class="divider-inner"></div></div>
                 </div>
 
