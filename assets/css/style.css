@@ -847,6 +847,8 @@ select:not([multiple]) {
       color: #FFFFFF; }
   .btn-light {
     color: #FFFFFF; }
+    .btn-light:hover {
+      color: #FFFFFF; }
 
 /* ==============================
    6. Sections styles
