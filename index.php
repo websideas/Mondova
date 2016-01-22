@@ -47,9 +47,38 @@ include_once('templates/slideshows/slideshow1.php');
     <div class="page-section">
         <div class="container">
             <div class="col-md-6 col-sm-6">
-                <div classs="block-image">
-                    <div class="block-image-inner">
+                <div class="block-style pad-small mar-bottom-65">
+                    <div class="block-style-inner">
                         <img src="assets/images/featured/7.jpg" alt="" />
+                    </div>
+                </div>
+                <div class="kt-heading text-center style-2">
+                    <div class="kt-heading-backend">women fashion</div>
+                    <h3 class="kt-heading-title">w&nbsp;&nbsp;o<br />&nbsp;&nbsp;&nbsp;&nbsp;m&nbsp;&nbsp;e&nbsp;&nbsp;n</h3>
+                </div>
+                <div class="pad-60 bg-gray text-center pad-top-30">
+                    <h4 class="text-nomal" style="font-size:20px;">PETITE Tailored A-Line <br />Shorts</h4>
+                    <div class="bg-white pad-35 box-shadow">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed<br /> diam nonummy nibh euismod tincidunt ut laoreet dolore magna<br /> aliquam erat volutpat. </p>
+                        <a href="#" class="btn btn-default">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="kt-heading text-center style-2">
+                    <div class="kt-heading-backend">men fashion</div>
+                    <h3 class="kt-heading-title">m&nbsp;&nbsp;e<br />&nbsp;n&nbsp;&nbsp;'s</h3>
+                </div>
+                <div class="pad-60 bg-gray text-center pad-top-30 mar-bottom-65">
+                    <h4 class="text-nomal" style="font-size:20px;">SKINNY Shirt with Contrast Panel <br />in Long Sleeve</h4>
+                    <div class="bg-white pad-35 box-shadow">
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed<br /> diam nonummy nibh euismod tincidunt ut laoreet dolore<br /> magna aliquam erat volutpat. </p>
+                        <a href="#" class="btn btn-default">Shop Now</a>
+                    </div>
+                </div>
+                <div class="block-style pad-small">
+                    <div class="block-style-inner">
+                        <img src="assets/images/featured/8.jpg" alt="" />
                     </div>
                 </div>
             </div>
@@ -534,7 +563,7 @@ include_once('templates/slideshows/slideshow1.php');
 
 </div><!-- #main -->
 
-<img src="previews/header-style.jpg" class="preview-image" style="top: -1090px;display: none;" />
+<img src="previews/01-homepage-V1.jpg" class="preview-image" style="top: -16px;display: none;" />
 
 <?php
 

@@ -7348,24 +7348,23 @@ table.compare{
   }
 }
 
-.block-image{
-  img{
-    width: 100%;
-  }
-}
-
-.block-image,
 .block-style{
   position: relative;
   border: 2px solid $gray-bg2;
   .block-style-inner{
     padding: 30px;
+    img{
+      width: 100%;
+    }
+  }
+  &.pad-small{
+    .block-style-inner{
+      padding: 13px;
+    }
   }
   .block-image-inner{
     padding: 13px;
   }
-  .block-image-inner:after,
-  .block-image-inner:before,
   .block-style-inner:after,
   .block-style-inner:before,
   &:before,
@@ -7390,23 +7389,7 @@ table.compare{
     border-right: 2px solid $primary-color;
     border-top: 2px solid $primary-color;
   }
-  .block-image-inner:before,
-  .block-style-inner:before{
-    bottom: -2px;
-    right: -2px;
-    border-right: 2px solid $primary-color;
-    border-bottom: 2px solid $primary-color;
-  }
-  .block-image-inner:after,
-  .block-style-inner:after{
-    left: -2px;
-    top: -2px;
-    border-left: 2px solid $primary-color;
-    border-top: 2px solid $primary-color;
-  }
   &:hover{
-    .block-image-inner:after,
-    .block-image-inner:before,
     .block-style-inner:after,
     .block-style-inner:before,
     &:before,
