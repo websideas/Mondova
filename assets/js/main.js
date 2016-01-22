@@ -176,6 +176,7 @@
         $('.kt-owl-carousel').each(function(){
 
             var objCarousel = $(this),
+                objParent = objCarousel.closest('.owl-carousel-kt'),
                 options = $(objCarousel).data('options') || {},
                 func_cb;
             options.theme = 'owl-kttheme';
@@ -200,10 +201,12 @@
             func_cb =  window[options.callback];
 
             options.afterInit  = function(elem) {
-                if(typeof options.outer !== "undefined" && options.navigation){
+
+                if(objParent.hasClass('navigation-top')){
                     var $buttons = elem.find('.owl-buttons');
-                    $buttons.appendTo(objCarousel.closest('.owl-carousel-kt'));
+                    $buttons.prependTo(objCarousel.closest('.owl-carousel-kt'));
                 }
+
                 if(typeof options.pagbefore !== "undefined" && options.pagination){
                     var $pagination = elem.find('.owl-pagination');
                     $pagination.prependTo(objCarousel.closest('.owl-carousel-kt'));
@@ -227,6 +230,7 @@
 
 
             objCarousel.imagesLoaded(function() {
+                console.log(options);
                 objCarousel.owlCarousel(options);
             });
         });

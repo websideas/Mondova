@@ -106,7 +106,7 @@ include_once('templates/slideshows/slideshow1.php');
 
         <div class="page-section bg-gray">
             <div class="container">
-                <?php include_once('client-carousel.php'); ?>
+                <?php include_once('templates/client-carousel.php'); ?>
             </div>
         </div>
 

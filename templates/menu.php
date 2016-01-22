@@ -103,6 +103,7 @@
             <li><a href="shortcode-typography.php">Typography</a></li>
             <li><a href="shortcode-iconbox.php">Icon box</a></li>
             <li><a href="shortcode-blog-carousel.php">Blog carousel</a></li>
+            <li><a href="shortcode-carousel.php">Carousel</a></li>
         </ul>
     </li>
     <li>

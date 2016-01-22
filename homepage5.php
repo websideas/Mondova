@@ -28,7 +28,7 @@ include_once('templates/slideshows/slideshow2.php');
                         </div>
                         <!-- nav-pills, nav-tabs -->                                                            
                         <!-- Nav tabs -->
-                        <ul class="nav nav-style4" role="tablist">
+                        <ul class="nav nav-style4 text-center" role="tablist">
                             <li class="active"><a href="#men" data-toggle="tab">Men's</a></li>
                             <li><a href="#women" data-toggle="tab">Women</a></li>
                             <li><a href="#collection" data-toggle="tab">collection</a></li>

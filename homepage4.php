@@ -762,7 +762,7 @@ include_once('templates/headers/header3.php');
                     </div>
                 </div>
 
-                <?php include_once('client-carousel.php'); ?>
+                <?php include_once('templates/client-carousel.php'); ?>
             </div>
         </div>
 
