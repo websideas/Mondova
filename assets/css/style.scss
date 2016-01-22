@@ -3145,6 +3145,9 @@ ul.style-list{
         &:hover{
           background: $text;
         }
+        +a{
+          margin-top: 10px;
+        }
       }
     }
   }

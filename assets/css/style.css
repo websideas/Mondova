@@ -3192,6 +3192,8 @@ ul.style-list {
         bottom: 120px; }
       .team .avatar .socials-team a:hover {
         background: #3b3e43; }
+      .team .avatar .socials-team a + a {
+        margin-top: 10px; }
   .team .team-name {
     font-size: 18px;
     color: #3b3e43;

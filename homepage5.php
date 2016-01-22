@@ -65,7 +65,7 @@ include_once('templates/slideshows/slideshow2.php');
 
     </div><!-- #main -->
 
-    <img src="previews/05-homepage-V5.jpg" class="preview-image" style="top: -2559px;display: none1;max-width:none;" />
+    <img src="previews/05-homepage-V5.jpg" class="preview-image" style="top: -2559px;display: none;" />
 <?php
 
 include_once('templates/footers/footer1.php');
