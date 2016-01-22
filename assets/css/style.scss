@@ -675,6 +675,9 @@ select:not([multiple]) {
 
   &-light{
     color: $white;
+    &:hover{
+      color: $white;
+    }
   }
 }
 

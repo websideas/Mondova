@@ -2640,3 +2640,48 @@ opacity:1
   color:#000;
 
 }
+
+
+
+.tparrows.kitethemes{
+  width: 100px;
+  height: 75px;
+  background: none;
+  line-height: 75px;
+  color: #000000;
+}
+.tparrows.kitethemes:after,
+.tparrows.kitethemes:before{
+  background: #e6e6e7;
+  top: 50%;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -e-transform: rotate(45deg);
+  width: 100px;
+}
+.tparrows.kitethemes:before{
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -e-transform: rotate(-45deg);
+}
+.tp-rightarrow.kitethemes{
+  text-align: right;
+}
+.tp-leftarrow.kitethemes span,
+.tp-rightarrow.kitethemes span{
+  font-size: 24px;
+  line-height: 75px;
+  color: #000000;
+}
+.tp-rightarrow.kitethemes span{
+  float: left;
+}
+.tp-leftarrow.kitethemes span{
+  float: right;
+}
