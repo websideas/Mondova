@@ -21,71 +21,6 @@ include_once('templates/headers/header1.php');
     <div id="main">
         <div class="page-section no-padding">
             <div class="row no-gutters">
-                <div class="col-md-4">
-                    <div class="banner banner-dark no-margin">
-                        <img alt="" src="assets/images/banner/1.jpg">
-                        <div class="banner-content">
-                            <h3 class="white">new men's</h3>
-                            <p class="letter-spacing">best fashion for men</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="banner banner-dark no-margin">
-                        <img alt="" src="assets/images/banner/2.jpg">
-                        <div class="banner-content">
-                            <h3 class="white">new model</h3>
-                            <p class="letter-spacing">best fashion for men</p>
-                        </div>
-                        <a href="#" class="banner-link"></a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="banner banner-dark no-margin">
-                        <img alt="" src="assets/images/banner/3.jpg">
-                        <div class="banner-content">
-                            <h3 class="white">new stock</h3>
-                            <p class="letter-spacing">best store collection</p>
-                        </div>
-                        <a href="#" class="banner-link"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="page-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-sm-4">
-                        <div class="banner banner-dark no-margin style2">
-                            <img src="assets/images/banner/8.jpg" alt="">
-                            <div class="banner-content">
-                                <h3 class="white">new COLLECTION</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="banner banner-dark no-margin style2">
-                            <img src="assets/images/banner/9.jpg" alt="">
-                            <div class="banner-content">
-                                <h3 class="white">new stock</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="banner banner-dark no-margin style2">
-                            <img src="assets/images/banner/10.jpg" alt="">
-                            <div class="banner-content">
-                                <h3 class="white">new Models</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="page-section no-padding">
-            <div class="row no-gutters">
                 <div class="col-md-3 col-sm-6">
                     <div class="category-banner">
                         <img src="assets/images/product/category/1.jpg" alt="" />
@@ -195,6 +130,121 @@ include_once('templates/headers/header1.php');
                 </div>
             </div>
         </div>
+        <div class="page-section no-padding">
+            <div class="row no-gutters">
+                <div class="col-md-3">
+                    <div class="banner banner-dark no-margin style1">
+                        <img src="assets/images/banner/4.jpg" alt="">
+                        <div class="banner-content">
+                            <p>best model</p>
+                            <h3 class="white">new model</h3>
+                            <p>shop now</p>
+                        </div>
+                        <a class="banner-link" href="#"></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="banner no-margin style2">
+                        <img src="assets/images/banner/5.jpg" alt="">
+                        <div class="banner-content">
+                            <p>best collection</p>
+                            <h3>new collection</h3>
+                            <p>shop now</p>
+                        </div>
+                        <a class="banner-link" href="#"></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="banner banner-dark no-margin style2">
+                        <img src="assets/images/banner/6.jpg" alt="">
+                        <div class="banner-content">
+                            <p>best store</p>
+                            <h3>new store</h3>
+                            <p>shop now</p>
+                        </div>
+                        <a class="banner-link" href="#"></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="banner banner-dark no-margin style1">
+                        <img src="assets/images/banner/7.jpg" alt="">
+                        <div class="banner-content">
+                            <p>best new arrvials</p>
+                            <h3>new arrvials</h3>
+                            <p>shop now</p>
+                        </div>
+                        <a class="banner-link" href="#"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-section no-padding">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <div class="banner banner-dark no-margin style2 position-bottom banner-right">
+                        <img alt="" src="assets/images/banner/1.jpg">
+                        <div class="banner-content">
+                            <h3>new men's</h3>
+                            <p class="letter-spacing">best fashion for men</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="banner banner-darker no-margin style2 position-bottom banner-right">
+                        <img alt="" src="assets/images/banner/1.jpg">
+                        <div class="banner-content">
+                            <h3>new men's</h3>
+                            <p class="letter-spacing">best fashion for men</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="banner banner-dark no-margin">
+                        <img alt="" src="assets/images/banner/3.jpg">
+                        <div class="banner-content">
+                            <h3>new stock</h3>
+                            <p class="letter-spacing">best store collection</p>
+                        </div>
+                        <a href="#" class="banner-link"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="page-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="banner banner-dark no-margin style2">
+                            <img src="assets/images/banner/8.jpg" alt="">
+                            <div class="banner-content">
+                                <h3 class="white">new COLLECTION</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="banner banner-dark no-margin style2">
+                            <img src="assets/images/banner/9.jpg" alt="">
+                            <div class="banner-content">
+                                <h3 class="white">new stock</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="banner banner-dark no-margin style2">
+                            <img src="assets/images/banner/10.jpg" alt="">
+                            <div class="banner-content">
+                                <h3 class="white">new Models</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
     </div><!-- #main -->
 <?php
