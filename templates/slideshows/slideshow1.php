@@ -3,7 +3,7 @@
     <div id="rev_slider_6_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.1.5">
         <ul>    
             <!-- SLIDE  -->
-            <li data-index="rs-13" data-transition="fade" data-slotamount="default" data-hideafterloop="0"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="assets/images/slideshow/slide1-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+            <li data-index="rs-13" data-transition="fade" data-slotamount="default" data-hideafterloop="0"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="assets/images/slideshow/slide1.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                 <!-- MAIN IMAGE -->
                 <img src="assets/images/slideshow/slide1.jpg"  alt=""  width="1920" height="767" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                 <!-- LAYERS -->
@@ -541,7 +541,7 @@
                 <div class="tp-caption Slide-Button   tp-resizeme" 
                      id="slide-17-layer-6" 
                      data-x="245" 
-                     data-y="center" data-voffset="230" 
+                     data-y="center" data-voffset="225" 
                                 data-width="['auto']"
                     data-height="['auto']"
                     data-transform_idle="o:1;"
@@ -559,6 +559,5 @@
                 </div>
             </li>
         </ul>
-        </div>
     </div><!-- END REVOLUTION SLIDER -->
 </div><!-- .page-section -->

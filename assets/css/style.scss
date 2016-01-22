@@ -7519,3 +7519,198 @@ table.compare{
     }
   }
 }
+
+/* ==============================
+   20. Revolution Slider
+   ============================== */
+
+.rev_slider{
+  .tparrows{
+    &.hades{
+      width: 100px;
+      height: 75px;
+      background: none;
+      line-height: 75px;
+      color: #3b3e43;
+      padding: 0;
+      @include css3-prefix('box-shadow', 'none');
+      &:after,
+      &:before{
+        background: #e6e6e7;
+        top: 50%;
+        content: ""!important;
+        height: 2px;
+        left: 0;
+        position: absolute;
+        @include rotate(45);
+        width: 100px;
+      }
+      &:before{
+        @include rotate(-45);
+      }
+      &.tp-rightarrow{
+        text-align: right;
+        .tp-arr-allwrapper:before{
+          @include FontIcon("\24", 'ElegantIcons');
+          float: left;
+        }
+      }
+      &.tp-leftarrow{
+        .tp-arr-allwrapper:before{
+          @include FontIcon("\23", 'ElegantIcons');
+          float: right;
+        }
+      }
+      .tp-arr-imgholder{
+        display: none!important;
+      }
+      .tp-arr-allwrapper{
+        @include opacity(1);
+        @include rotate(0);
+        width: 100px;
+        height: 75px;
+        background: none;
+        top:0;
+        left:0;
+        font-size: 24px;
+        line-height: 75px;
+        color: $text;
+      }
+    }
+  }
+}
+
+.tp-caption.Slide2-TitleSmall,
+.Slide2-TitleSmall{
+  color:$white;
+  font-size:24px;
+  line-height:25px;
+  font-weight:400;
+  font-style:normal;
+  font-family:$font-stack;
+  padding:0;
+  text-decoration:none;
+  text-align:left;
+  background-color:transparent;
+  border-color:transparent;
+  border-style:none;
+  border-width:0px;
+  border-radius:0;
+}
+.tp-caption.Slide2-TitleBig,
+.Slide2-TitleBig{
+  color:$white;
+  font-size:100px;
+  line-height:100px;
+  font-weight:700;
+  font-style:normal;
+  font-family:$font-stack;
+  padding:0;
+  text-decoration:none;
+  text-align:left;
+  background-color:transparent;
+  border-color:transparent;
+  border-style:none;
+  border-width:0px;
+  border-radius:0;
+}
+.tp-caption.Slide1-TitleBig,
+.Slide1-TitleBig{
+  color:$text;
+  font-size:50px;
+  line-height:50px;
+  font-weight:700;
+  font-style:normal;
+  font-family:$font-stack;
+  padding:0;
+  text-decoration:none;
+  text-align:left;
+  background-color:transparent;
+  border-color:transparent;
+  border-style:none;
+  border-width:0px;
+  border-radius:0;
+}
+.tp-caption.Slide1-TitleSmall,
+.Slide1-TitleSmall{
+  color:$text;
+  font-size:24px;
+  line-height:25px;
+  font-weight:400;
+  font-style:normal;
+  font-family:$font-stack;
+  padding:0;
+  text-decoration:none;
+  text-align:left;
+  background-color:transparent;
+  border-color:transparent;
+  border-style:none;
+  border-width:0px;
+  border-radius:0;
+}
+.tp-caption.Slide3-TitleTop,
+.Slide3-TitleTop{
+  color:$white;
+  font-size:14px;
+  line-height:15px;
+  font-weight:400;
+  font-style:normal;
+  font-family:$font-stack;
+  padding:0;
+  text-decoration:none;
+  text-align:left;
+  background-color:transparent;
+  border-color:transparent;
+  border-style:none;
+  border-width:0px;
+  border-radius:0;
+}
+.tp-caption.Slide5-TitleBig,
+.Slide5-TitleBig{
+  color:$white;
+  font-size:120px;
+  line-height:122px;
+  font-weight:700;
+  font-style:normal;
+  font-family:$font-stack;
+  padding:0;
+  text-decoration:none;
+  text-align:left;
+  background-color:transparent;
+  border-color:transparent;
+  border-style:none;
+  border-width:0px;
+  border-radius:0;
+}
+.tp-caption.Slide6-TitleSmall,
+.Slide6-TitleSmall{
+  color:$white;
+  font-size:120px;
+  line-height:122px;
+  font-weight:700;
+  font-style:normal;
+  font-family:$font-stack;
+  padding:0;
+  text-decoration:none;
+  text-align:left;
+  background-color:transparent;
+  border-color:transparent;
+  border-style:none;
+  border-width:0px;
+  border-radius:0;
+}
+.tp-caption{
+  &.Slide-Button{
+    padding-bottom: 15px;
+    position: relative;
+    &:after{
+      content: "";
+      width: 170px;
+      height: 2px;
+      background: $text;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
