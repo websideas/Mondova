@@ -57,43 +57,37 @@ include_once('templates/slideshows/slideshow1.php');
                 </div>
 
                 <div class="col-md-7">
-                    <!-- Nav tabs -->
                     <ul class="nav nav-border pull-right mar-top-35" role="tablist">
-
                         <li><a href="#briefs" data-toggle="tab">Briefs</a></li>
                         <li><a href="#cardigans" data-toggle="tab">Cardigans</a></li>
                         <li><a href="#coats" data-toggle="tab">Coats</a></li>
                         <li class="active"><a href="#denim-shirts" data-toggle="tab">Denim Shirts</a></li>
-                        <li><a href="#cardigans" data-toggle="tab">Dresses</a></li>
-                        <li><a href="#coats" data-toggle="tab">Jackets</a></li>
-
+                        <li><a href="#dresses" data-toggle="tab">Dresses</a></li>
+                        <li><a href="#jackets" data-toggle="tab">Jackets</a></li>
                     </ul>
                 </div>
-
             </div>
 
-
-            <!-- Tab panes -->
             <div class="tab-content">
-                <div class="tab-pane active" id="denim-shirts">
-                    <?php include_once('templates/product-tab1.php'); ?>
-                </div>
                 <div class="tab-pane fade" id="briefs">
-                    <p>Ut ornare porttitor varius. Nam dapibus venenatis ultrices. In nec lectus ac tellus laoreet suscipit. Morbi facilisis enim a mollis tincidunt. Praesent pretium sollicitudin lacus eget tincidunt. Integer elementum eros id feugiat faucibus. In aliquet magna vitae suscipit pretium. Pellentesque dignissim massa eu mollis ultricies. Pellentesque eu ornare tortor, nec sollicitudin nunc. Aenean nec feugiat quam, eu hendrerit erat. Nulla facilisi. </p>
-                    <p>In iaculis tellus in dignissim faucibus. Curabitur sagittis egestas orci non sollicitudin. Ut et dictum nunc. Aenean non lorem in leo pellentesque eleifend. Donec commodo, lectus eget sodales ornare, sem risus sollicitudin nibh, a venenatis metus mauris porta nibh. Sed eget molestie ex. Praesent sit amet arcu sit amet sem venenatis rhoncus. Duis in lorem a turpis consequat iaculis. Vivamus vel dolor egestas, sagittis erat in, congue nibh. Aliquam ex nisi, ornare in dolor at, maximus pulvinar sapien. </p>
+                    <?php include('templates/product-tab1.php'); ?>
                 </div>
                 <div class="tab-pane fade" id="cardigans">
-                    <p>Donec tempor arcu ex, nec scelerisque massa hendrerit sit amet. Aenean porttitor id lacus eget scelerisque. Quisque placerat nunc ac egestas finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non lacus fringilla, luctus eros eget, euismod ipsum. In elit mi, porttitor sit amet velit et, aliquam imperdiet orci. Aliquam at diam accumsan, vehicula quam at, scelerisque ipsum. Ut dui odio, cursus sed mattis in, rutrum nec justo. Sed efficitur justo velit, at tristique erat tincidunt eget. Aenean aliquam mollis mauris sed finibus. Donec ullamcorper lorem id ligula interdum, et ultrices libero ultrices. In vitae sapien eget urna lacinia tempor.</p>
-                    <p>Ut ornare porttitor varius. Nam dapibus venenatis ultrices. In nec lectus ac tellus laoreet suscipit. Morbi facilisis enim a mollis tincidunt. Praesent pretium sollicitudin lacus eget tincidunt. Integer elementum eros id feugiat faucibus. In aliquet magna vitae suscipit pretium. Pellentesque dignissim massa eu mollis ultricies. Pellentesque eu ornare tortor, nec sollicitudin nunc. Aenean nec feugiat quam, eu hendrerit erat. Nulla facilisi. </p>
+                    <?php include('templates/product-tab2.php'); ?>
                 </div>
                 <div class="tab-pane fade" id="coats">
-                    <p>Ut ornare porttitor varius. Nam dapibus venenatis ultrices. In nec lectus ac tellus laoreet suscipit. Morbi facilisis enim a mollis tincidunt. Praesent pretium sollicitudin lacus eget tincidunt. Integer elementum eros id feugiat faucibus. In aliquet magna vitae suscipit pretium. Pellentesque dignissim massa eu mollis ultricies. Pellentesque eu ornare tortor, nec sollicitudin nunc. Aenean nec feugiat quam, eu hendrerit erat. Nulla facilisi. </p>
-                    <p>Donec tempor arcu ex, nec scelerisque massa hendrerit sit amet. Aenean porttitor id lacus eget scelerisque. Quisque placerat nunc ac egestas finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non lacus fringilla, luctus eros eget, euismod ipsum. In elit mi, porttitor sit amet velit et, aliquam imperdiet orci. Aliquam at diam accumsan, vehicula quam at, scelerisque ipsum. Ut dui odio, cursus sed mattis in, rutrum nec justo. Sed efficitur justo velit, at tristique erat tincidunt eget. Aenean aliquam mollis mauris sed finibus. Donec ullamcorper lorem id ligula interdum, et ultrices libero ultrices. In vitae sapien eget urna lacinia tempor.</p>
+                    <?php include('templates/product-tab3.php'); ?>
+                </div>
+                <div class="tab-pane active" id="denim-shirts">
+                    <?php include('templates/product-tab1.php'); ?>
+                </div>
+                <div class="tab-pane fade" id="dresses">
+                    <?php include('templates/product-tab2.php'); ?>
+                </div>
+                <div class="tab-pane fade" id="jackets">
+                    <?php include('templates/product-tab3.php'); ?>
                 </div>
             </div>
-
-
-
         </div>
     </div>
 
@@ -159,11 +153,55 @@ include_once('templates/slideshows/slideshow1.php');
 
     <div class="page-section">
         <div class="container">
-            <div class="kt-heading text-right">
-                <div class="kt-heading-backend">Women</div>
-                <h3 class="kt-heading-title">what's hot</h3>
-                <div class="kt-heading-subtitle">New Arrvial</div>
-            </div><!-- .kt-heading -->
+
+            <div class="row mar-bottom-20">
+
+
+                <div class="col-md-7">
+                    <ul class="nav nav-border mar-top-35" role="tablist">
+                        <li class="active"><a href="#blazers1" data-toggle="tab">Blazers</a></li>
+                        <li><a href="#cardigans1" data-toggle="tab">Cardigans</a></li>
+                        <li><a href="#coats1" data-toggle="tab">Coats</a></li>
+                        <li><a href="#hoodies1" data-toggle="tab">Hoodies</a></li>
+                        <li><a href="#jackets1" data-toggle="tab">Jackets</a></li>
+                        <li><a href="#jeans1" data-toggle="tab">Jeans</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="kt-heading text-right">
+                        <div class="kt-heading-backend">Women</div>
+                        <h3 class="kt-heading-title">what's hot</h3>
+                        <div class="kt-heading-subtitle">New Arrvial</div>
+                    </div><!-- .kt-heading -->
+                </div>
+
+            </div>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="blazers1">
+                    <?php include('templates/product-tab2.php'); ?>
+                </div>
+                <div class="tab-pane fade" id="cardigans1">
+                    <?php include('templates/product-tab3.php'); ?>
+                </div>
+                <div class="tab-pane fade" id="coats1">
+                    <?php include('templates/product-tab1.php'); ?>
+                </div>
+                <div class="tab-pane" id="hoodies1">
+                    <?php include('templates/product-tab2.php'); ?>
+                </div>
+                <div class="tab-pane fade" id="jackets1">
+                    <?php include('templates/product-tab3.php'); ?>
+                </div>
+                <div class="tab-pane fade" id="jeans1">
+                    <?php include('templates/product-tab1.php'); ?>
+                </div>
+            </div>
+
+
+
         </div>
     </div>
 

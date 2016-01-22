@@ -4,7 +4,7 @@
             <div class="product-content">
                 <span class="posted_in"><a href="#">Dress</a> / <a href="#">T-Shirt</a></span>
                 <a href="woocommerce-product-detailed1.php" class="product-thumbnail">
-                    <img src="assets/images/product/4.jpg" alt=""/>
+                    <img src="assets/images/product/2.jpg" alt=""/>
                 </a>
                 <div class="product-over-tool">
                     <a href="#" class="add_to_cart_button" data-toggle="tooltip" data-placement="top" title="Add to cart"><i class="icon_bag_alt"></i></a>
@@ -34,7 +34,7 @@
             <div class="product-content">
                 <span class="posted_in"><a href="#">Dress</a> / <a href="#">T-Shirt</a></span>
                 <a href="woocommerce-product-detailed1.php" class="product-thumbnail">
-                    <img src="assets/images/product/5.jpg" alt=""/>
+                    <img src="assets/images/product/3.jpg" alt=""/>
                 </a>
                 <div class="product-over-tool">
                     <a href="#" class="add_to_cart_button" data-toggle="tooltip" data-placement="top" title="Add to cart"><i class="icon_bag_alt"></i></a>
@@ -60,7 +60,7 @@
             <div class="product-content">
                 <span class="posted_in"><a href="#">Dress</a> / <a href="#">T-Shirt</a></span>
                 <a href="woocommerce-product-detailed1.php" class="product-thumbnail">
-                    <img src="assets/images/product/6.jpg" alt=""/>
+                    <img src="assets/images/product/4.jpg" alt=""/>
                 </a>
                 <div class="product-over-tool">
                     <a href="#" class="add_to_cart_button" data-toggle="tooltip" data-placement="top" title="Add to cart"><i class="icon_bag_alt"></i></a>
@@ -86,7 +86,7 @@
             <div class="product-content">
                 <span class="posted_in"><a href="#">Dress</a> / <a href="#">T-Shirt</a></span>
                 <a href="woocommerce-product-detailed1.php" class="product-thumbnail">
-                    <img src="assets/images/product/1.jpg" alt=""/>
+                    <img src="assets/images/product/5.jpg" alt=""/>
                 </a>
                 <div class="product-over-tool">
                     <a href="#" class="add_to_cart_button" data-toggle="tooltip" data-placement="top" title="Add to cart"><i class="icon_bag_alt"></i></a>
@@ -112,7 +112,7 @@
             <div class="product-content">
                 <span class="posted_in"><a href="#">Dress</a> / <a href="#">T-Shirt</a></span>
                 <a href="woocommerce-product-detailed1.php" class="product-thumbnail">
-                    <img src="assets/images/product/2.jpg" alt=""/>
+                    <img src="assets/images/product/6.jpg" alt=""/>
                 </a>
                 <div class="product-over-tool">
                     <a href="#" class="add_to_cart_button" data-toggle="tooltip" data-placement="top" title="Add to cart"><i class="icon_bag_alt"></i></a>
@@ -138,7 +138,7 @@
             <div class="product-content">
                 <span class="posted_in"><a href="#">Dress</a> / <a href="#">T-Shirt</a></span>
                 <a href="woocommerce-product-detailed1.php" class="product-thumbnail">
-                    <img src="assets/images/product/3.jpg" alt=""/>
+                    <img src="assets/images/product/1.jpg" alt=""/>
                 </a>
                 <div class="product-over-tool">
                     <a href="#" class="add_to_cart_button" data-toggle="tooltip" data-placement="top" title="Add to cart"><i class="icon_bag_alt"></i></a>

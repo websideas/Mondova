@@ -1,15 +1,18 @@
 <div class="row multi-columns-row">
-    <div class="products products-effect-1">
+    <div class="products products-effect-3">
         <div class="product col-lg-4 col-md-4 col-sm-6 col-xs-6">
             <div class="product-content">
-                <span class="posted_in"><a href="#">Dress</a> / <a href="#">T-Shirt</a></span>
+                <div class="star-rating" title="Rated 4 out of 5">
+                    <span style="width:80%"><span class="rating">4</span> out of 5</span>
+                </div>
+                <a class="title-link" href="woocommerce-product-detailed1.php">Spada Enforcer WP Glove</a>
                 <a href="woocommerce-product-detailed1.php" class="product-thumbnail">
-                    <img src="assets/images/product/4.jpg" alt=""/>
+                    <img src="assets/images/product/1.jpg" alt=""/>
                 </a>
                 <div class="product-over-tool">
-                    <a href="#" class="add_to_cart_button" data-toggle="tooltip" data-placement="top" title="Add to cart"><i class="icon_bag_alt"></i></a>
-                    <a href="#" class="add_to_wishlist" data-toggle="tooltip" data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
-                    <a href="#" class="quickview" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_search"></i></a>
+                    <a href="#" class="add_to_cart_button" data-toggle="tooltip" data-placement="bottom" title="Add to cart"><i class="icon_bag_alt"></i></a>
+                    <a href="#" class="add_to_wishlist" data-toggle="tooltip" data-placement="bottom" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
+                    <a href="#" class="quickview" data-toggle="tooltip" data-placement="bottom" title="Quick view"><i class="icon_search"></i></a>
                 </div>
                 <div class="price">$340.00</div>
             </div><!-- .product-content -->
@@ -32,14 +35,17 @@
 
         <div class="product col-lg-4 col-md-4 col-sm-6 col-xs-6">
             <div class="product-content">
-                <span class="posted_in"><a href="#">Dress</a> / <a href="#">T-Shirt</a></span>
+                <div class="star-rating" title="Rated 4 out of 5">
+                    <span style="width:80%"><span class="rating">4</span> out of 5</span>
+                </div>
+                <a class="title-link" href="woocommerce-product-detailed1.php">Spada Enforcer WP Glove</a>
                 <a href="woocommerce-product-detailed1.php" class="product-thumbnail">
-                    <img src="assets/images/product/5.jpg" alt=""/>
+                    <img src="assets/images/product/2.jpg" alt=""/>
                 </a>
                 <div class="product-over-tool">
-                    <a href="#" class="add_to_cart_button" data-toggle="tooltip" data-placement="top" title="Add to cart"><i class="icon_bag_alt"></i></a>
-                    <a href="#" class="add_to_wishlist" data-toggle="tooltip" data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
-                    <a href="#" class="quickview" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_search"></i></a>
+                    <a href="#" class="add_to_cart_button" data-toggle="tooltip" data-placement="bottom" title="Add to cart"><i class="icon_bag_alt"></i></a>
+                    <a href="#" class="add_to_wishlist" data-toggle="tooltip" data-placement="bottom" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
+                    <a href="#" class="quickview" data-toggle="tooltip" data-placement="bottom" title="Quick view"><i class="icon_search"></i></a>
                 </div>
                 <div class="price">$175,00</div>
             </div><!-- .product-content -->
@@ -58,14 +64,18 @@
 
         <div class="product col-lg-4 col-md-4 col-sm-6 col-xs-6">
             <div class="product-content">
-                <span class="posted_in"><a href="#">Dress</a> / <a href="#">T-Shirt</a></span>
+                <div class="star-rating" title="Rated 4 out of 5">
+                    <span style="width:80%"><span class="rating">4</span> out of 5</span>
+                </div>
+
+                <a class="title-link" href="woocommerce-product-detailed1.php">Spada Enforcer WP Glove</a>
                 <a href="woocommerce-product-detailed1.php" class="product-thumbnail">
-                    <img src="assets/images/product/6.jpg" alt=""/>
+                    <img src="assets/images/product/3.jpg" alt=""/>
                 </a>
                 <div class="product-over-tool">
-                    <a href="#" class="add_to_cart_button" data-toggle="tooltip" data-placement="top" title="Add to cart"><i class="icon_bag_alt"></i></a>
-                    <a href="#" class="add_to_wishlist" data-toggle="tooltip" data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
-                    <a href="#" class="quickview" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_search"></i></a>
+                    <a href="#" class="add_to_cart_button" data-toggle="tooltip" data-placement="bottom" title="Add to cart"><i class="icon_bag_alt"></i></a>
+                    <a href="#" class="add_to_wishlist" data-toggle="tooltip" data-placement="bottom" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
+                    <a href="#" class="quickview" data-toggle="tooltip" data-placement="bottom" title="Quick view"><i class="icon_search"></i></a>
                 </div>
                 <div class="price">$105.00</div>
             </div><!-- .product-content -->
@@ -84,14 +94,18 @@
 
         <div class="product col-lg-4 col-md-4 col-sm-6 col-xs-6">
             <div class="product-content">
-                <span class="posted_in"><a href="#">Dress</a> / <a href="#">T-Shirt</a></span>
+                <div class="star-rating" title="Rated 4 out of 5">
+                    <span style="width:80%"><span class="rating">4</span> out of 5</span>
+                </div>
+
+                <a class="title-link" href="woocommerce-product-detailed1.php">Spada Enforcer WP Glove</a>
                 <a href="woocommerce-product-detailed1.php" class="product-thumbnail">
-                    <img src="assets/images/product/1.jpg" alt=""/>
+                    <img src="assets/images/product/4.jpg" alt=""/>
                 </a>
                 <div class="product-over-tool">
-                    <a href="#" class="add_to_cart_button" data-toggle="tooltip" data-placement="top" title="Add to cart"><i class="icon_bag_alt"></i></a>
-                    <a href="#" class="add_to_wishlist" data-toggle="tooltip" data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
-                    <a href="#" class="quickview" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_search"></i></a>
+                    <a href="#" class="add_to_cart_button" data-toggle="tooltip" data-placement="bottom" title="Add to cart"><i class="icon_bag_alt"></i></a>
+                    <a href="#" class="add_to_wishlist" data-toggle="tooltip" data-placement="bottom" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
+                    <a href="#" class="quickview" data-toggle="tooltip" data-placement="bottom" title="Quick view"><i class="icon_search"></i></a>
                 </div>
                 <div class="price">$445,00</div>
             </div><!-- .product-content -->
@@ -110,14 +124,19 @@
 
         <div class="product col-lg-4 col-md-4 col-sm-6 col-xs-6">
             <div class="product-content">
+                <div class="star-rating" title="Rated 4 out of 5">
+                    <span style="width:80%"><span class="rating">4</span> out of 5</span>
+                </div>
+
+                <a class="title-link" href="woocommerce-product-detailed1.php">Spada Enforcer WP Glove</a>
                 <span class="posted_in"><a href="#">Dress</a> / <a href="#">T-Shirt</a></span>
                 <a href="woocommerce-product-detailed1.php" class="product-thumbnail">
-                    <img src="assets/images/product/2.jpg" alt=""/>
+                    <img src="assets/images/product/5.jpg" alt=""/>
                 </a>
                 <div class="product-over-tool">
-                    <a href="#" class="add_to_cart_button" data-toggle="tooltip" data-placement="top" title="Add to cart"><i class="icon_bag_alt"></i></a>
-                    <a href="#" class="add_to_wishlist" data-toggle="tooltip" data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
-                    <a href="#" class="quickview" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_search"></i></a>
+                    <a href="#" class="add_to_cart_button" data-toggle="tooltip" data-placement="bottom" title="Add to cart"><i class="icon_bag_alt"></i></a>
+                    <a href="#" class="add_to_wishlist" data-toggle="tooltip" data-placement="bottom" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
+                    <a href="#" class="quickview" data-toggle="tooltip" data-placement="bottom" title="Quick view"><i class="icon_search"></i></a>
                 </div>
                 <div class="price">$340.00</div>
             </div><!-- .product-content -->
@@ -138,12 +157,12 @@
             <div class="product-content">
                 <span class="posted_in"><a href="#">Dress</a> / <a href="#">T-Shirt</a></span>
                 <a href="woocommerce-product-detailed1.php" class="product-thumbnail">
-                    <img src="assets/images/product/3.jpg" alt=""/>
+                    <img src="assets/images/product/6.jpg" alt=""/>
                 </a>
                 <div class="product-over-tool">
-                    <a href="#" class="add_to_cart_button" data-toggle="tooltip" data-placement="top" title="Add to cart"><i class="icon_bag_alt"></i></a>
-                    <a href="#" class="add_to_wishlist" data-toggle="tooltip" data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
-                    <a href="#" class="quickview" data-toggle="tooltip" data-placement="top" title="Quick view"><i class="icon_search"></i></a>
+                    <a href="#" class="add_to_cart_button" data-toggle="tooltip" data-placement="bottom" title="Add to cart"><i class="icon_bag_alt"></i></a>
+                    <a href="#" class="add_to_wishlist" data-toggle="tooltip" data-placement="bottom" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
+                    <a href="#" class="quickview" data-toggle="tooltip" data-placement="bottom" title="Quick view"><i class="icon_search"></i></a>
                 </div>
                 <div class="price">$325.00</div>
             </div><!-- .product-content -->

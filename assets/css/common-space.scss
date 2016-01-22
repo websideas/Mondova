@@ -29,9 +29,16 @@ $numbers: 5, 10, 15, 20, 30, 35, 40, 45, 50, 55, 60, 70, 80, 90, 100, 110, 120, 
 @each $number in $numbers {
   .mar-top-#{$number} {  margin-top: #{$number}px;  }
   .mar-bottom-#{$number} {  margin-bottom: #{$number}px;  }
+  .mar-top-#{$number} {  margin-top: #{$number}px;  }
+  .mar-bottom-#{$number} {  margin-bottom: #{$number}px;  }
+
+  .mar-top-mi-#{$number} {  margin-top: -#{$number}px;  }
+  .mar-bottom-mi-#{$number} {  margin-bottom: -#{$number}px;  }
+
   .pad-top-#{$number} {  padding-top: #{$number}px;  }
   .pad-bottom-#{$number} {  padding-bottom: #{$number}px;  }
   .pad-#{$number} {  padding: #{$number}px;  }
+
 }
 
 .no-mar-top {  margin-top: 0!important;  }

@@ -80,6 +80,31 @@ include_once('templates/slideshows/slideshow1.php');
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
         <div class="bg-gray2">
             <div class="container">
