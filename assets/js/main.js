@@ -552,7 +552,7 @@
             afterAction : syncPosition,
             autoHeight: true,
             responsiveRefreshRate : 200,
-            navigationText: ['<i class="arrow_left"></i>','<i class="arrow_right"></i>'],
+            navigationText: ['<i class="arrow_carrot-left"></i>','<i class="arrow_carrot-right"></i>'],
         });
 
         sync2.owlCarousel({
