@@ -2713,7 +2713,54 @@ ul.style-list{
   text-align: center;
   overflow: hidden;
   margin-bottom: $shortcode;
-  &-dark{
+  img{
+    width: 100%;
+  }
+  &-left{
+    text-align: left;
+  }
+  &-right{
+    text-align: right;
+  }
+  &-link{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+  }
+  &.position-bottom{
+    .banner-content{
+      bottom: 0;
+      left: 0;
+      top: auto;
+      @include transform(translate(0px, 0px));
+    }
+  }
+  &-content{
+    width: 100%;
+    @include translate(c);
+    z-index: 10;
+    padding: 30px;
+    @include transition();
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: $white;
+
+    > *:last-child{
+      margin-bottom: 0;
+    }
+    h3{
+      position: relative;
+      white-space: nowrap;
+      display: inline-block;
+      color: $white;
+    }
+  }
+
+  &-dark,
+  &-darker{
     &:after{
       content: '';
       position: absolute;
@@ -2721,46 +2768,36 @@ ul.style-list{
       top: 0;
       width: 100%;
       height: 100%;
-      background: rgba($text,.4);
       z-index: 5;
       @include transition();
     }
-    color: $white;
   }
-  &:hover{
-    &.banner-dark{
+  &-dark{
+    &:after{
+      background: rgba($text,.15);
+    }
+    &:hover{
       &:after{
-        background: rgba($text,.6);
+        background: rgba($text,.5);
+      }
+    }
+  }
+  &-darker{
+    &:after{
+      background: rgba($text,.5);
+    }
+    &:hover{
+      &:after{
+        background: rgba($text,.9);
       }
     }
   }
 
-  img{
-    width: 100%;
-  }
-
-  &-content{
-    width: 100%;
-    @include translate(c);
-    z-index: 10;
-    padding: 30px 0;
-    text-transform: uppercase;
-    @include transition();
-    letter-spacing: 0;
-
-
-    > *:last-child{
-      margin-bottom: 0;
-    }
-
+  &.style1{
     h3{
-      display: inline-block;
-      position: relative;
       min-width: 270px;
       padding: 0 18px;
       line-height: 75px;
-
-      white-space: nowrap;
       font-size: 36px;
       &:before,
       &:after{
@@ -2783,22 +2820,11 @@ ul.style-list{
         border-right: 2px solid $primary-color;
         border-bottom: 2px solid $primary-color;
       }
-
     }
-
-  }
-  &-link{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 15;
-  }
-
-  &:hover{
-    .banner-content{
-      letter-spacing: .2em;
+    &:hover{
+      .banner-content{
+        letter-spacing: .2em;
+      }
       h3{
         &:before,
         &:after{
@@ -2808,59 +2834,39 @@ ul.style-list{
     }
   }
 
-  &.position-bottom{
-    .banner-content{
-      bottom: 0;
-      left: 0;
-      top: auto;
-      @include transform(translate(0px, 0px));
-    }
-  }
-  &.banner-left{
-    text-align: left;
-  }
-  &.banner-right{
-    text-align: right;
-  }
-
 
   &.style2{
-    &.banner-dark{
-      &:after{
-        background: rgba($text,.15);
-      }
-    }
     .banner-content{
       h3{
-        min-width: 0;
-        padding: 0;
         font-size: 24px;
         line-height: 44px;
-        &:before{
-          border-left: none;
-        }
-        &:after{
-          border-right: none;
-        }
         &:after,
         &:before{
           width: 0;
-          border-color: $white;
+          content: '';
+          height: 2px;
+          position: absolute;
+          display: block;
+          background: $white;
+        }
+        &:before{
+          top: 0;
+          left: 0;
+        }
+        &:after{
+          right: 0;
+          bottom: 0;
         }
       }
     }
     &:hover{
       .banner-content{
+        letter-spacing: .2em;
         h3{
-          &:after,
-          &:before{
+          &:before,
+          &:after{
             width: 100%;
           }
-        }
-      }
-      &.banner-dark{
-        &:after{
-          background: rgba($text,.5);
         }
       }
     }
@@ -3355,7 +3361,7 @@ ul.style-list{
  */
 
 .blog-carousel{
-  margin-top: -50px;
+  margin-bottom: $shortcode;
   .blog-carousel-title{
     font-size: 36px;
     font-weight: 700;
@@ -5361,7 +5367,6 @@ ul.style-list{
       .star-rating{
         display: none;
       }
-
     }
 
     &-description{
@@ -5682,6 +5687,7 @@ ul.style-list{
         @include translate();
         @include opacity(0);
         display: block;
+        z-index: 2;
       }
       .title-link{
         color: $white;
@@ -5709,7 +5715,7 @@ ul.style-list{
 
       &-content{
         &:hover{
-          .product-content .star-rating,
+          .star-rating,
           .title-link,
           .product-over-tool,
           .product-thumbnail:before{

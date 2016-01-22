@@ -13,7 +13,7 @@ include_once('templates/slideshows/slideshow1.php');
     <div class="page-section no-padding">
         <div class="row no-gutters">
             <div class="col-md-4">
-                <div class="banner banner-dark no-margin">
+                <div class="banner banner-dark style1 no-margin">
                     <img alt="" src="assets/images/banner/1.jpg">
                     <div class="banner-content">
                         <h3 class="white">new men's</h3>
@@ -22,7 +22,7 @@ include_once('templates/slideshows/slideshow1.php');
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="banner banner-dark no-margin">
+                <div class="banner banner-dark style1 no-margin">
                     <img alt="" src="assets/images/banner/2.jpg">
                     <div class="banner-content">
                         <h3 class="white">new model</h3>
@@ -32,7 +32,7 @@ include_once('templates/slideshows/slideshow1.php');
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="banner banner-dark no-margin">
+                <div class="banner banner-dark style1 no-margin">
                     <img alt="" src="assets/images/banner/3.jpg">
                     <div class="banner-content">
                         <h3 class="white">new stock</h3>
@@ -108,7 +108,7 @@ include_once('templates/slideshows/slideshow1.php');
     <div class="page-section no-padding">
         <div class="row no-gutters">
             <div class="col-md-3">
-                <div class="banner banner-dark no-margin">
+                <div class="banner banner-dark style1 no-margin">
                     <img alt="" src="assets/images/banner/4.jpg">
                     <div class="banner-content">
 
@@ -120,7 +120,7 @@ include_once('templates/slideshows/slideshow1.php');
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="banner banner-dark no-margin">
+                <div class="banner banner-darker style1 no-margin">
                     <img alt="" src="assets/images/banner/5.jpg">
                     <div class="banner-content">
                         <p>best collection</p>
@@ -131,7 +131,7 @@ include_once('templates/slideshows/slideshow1.php');
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="banner banner-dark no-margin">
+                <div class="banner banner-dark style1 no-margin">
                     <img alt="" src="assets/images/banner/6.jpg">
                     <div class="banner-content">
                         <p>best store</p>
@@ -142,7 +142,7 @@ include_once('templates/slideshows/slideshow1.php');
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="banner banner-dark no-margin">
+                <div class="banner banner-darker style1 no-margin">
                     <img alt="" src="assets/images/banner/7.jpg">
                     <div class="banner-content">
                         <p>best new arrvials</p>
@@ -302,7 +302,6 @@ include_once('templates/slideshows/slideshow1.php');
             <div class="row mar-bottom-100">
                 <div class="col-md-4">
                     <div class="bg-white box-shadow" style="padding: 40px 30px;">
-
                         <div class="widget widget_products_carousel no-margin">
                             <h3 class="widget-title">Top items</h3>
 
@@ -507,9 +506,6 @@ include_once('templates/slideshows/slideshow1.php');
                                             <div title="Rated 4.50 out of 5" class="star-rating"><span style="width:90%"><strong class="rating">4.50</strong> out of 5</span></div>
                                         </li>
                                     </ul>
-
-
-
                                 </div>
                             </div>
                         </div>

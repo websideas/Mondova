@@ -1,13 +1,9 @@
 <?php
 
-global $shadow;
-$shadow = ' ';
-
 include_once('templates/headers/head.php');
 include_once('templates/headers/header2.php');
 
 ?>
-
 
     <div class="page-section page-header-bg small-section">
         <div class="page-header">
@@ -19,7 +15,6 @@ include_once('templates/headers/header2.php');
             </div>
         </div>
     </div>
-
 
     <div id="main">
         <div class="page-section">
