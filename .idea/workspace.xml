@@ -21,12 +21,44 @@
     <favorites_list name="mondova" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="style.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/css/style.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.67017543">
+              <caret line="5690" column="32" selection-start-line="5690" selection-start-column="32" selection-end-line="5690" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_mixin.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/_mixin.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-28.125">
+              <caret line="460" column="16" selection-start-line="460" selection-start-column="7" selection-end-line="460" selection-end-column="16" />
+              <folding>
+                <element signature="e#13381#13632#2" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="woocommerce-3columns.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/woocommerce-3columns.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.625">
+              <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/css/_mixin.scss" />
         <option value="$PROJECT_DIR$/templates/product-tab1.php" />
         <option value="$PROJECT_DIR$/assets/libs/bootstrap-sass-3.3.6/assets/stylesheets/_bootstrap-mincer.scss" />
         <option value="$PROJECT_DIR$/assets/css/plugins.css" />
@@ -43,9 +75,7 @@
         <option value="$PROJECT_DIR$/shortcode-iconbox.php" />
         <option value="$PROJECT_DIR$/templates/shopping-cart.php" />
         <option value="$PROJECT_DIR$/assets/css/_variables.scss" />
-        <option value="$PROJECT_DIR$/homepage2.php" />
         <option value="$PROJECT_DIR$/pages-about.php" />
-        <option value="$PROJECT_DIR$/woocommerce-3columns.php" />
         <option value="$PROJECT_DIR$/woocommerce-3columns-sidebar.php" />
         <option value="$PROJECT_DIR$/woocommerce-4columns.php" />
         <option value="$PROJECT_DIR$/woocommerce-cart.php" />
@@ -60,7 +90,6 @@
         <option value="$PROJECT_DIR$/blog-grid-3columns.php" />
         <option value="$PROJECT_DIR$/blog-list-sidebar.php" />
         <option value="$PROJECT_DIR$/blog-masonry-3columns.php" />
-        <option value="$PROJECT_DIR$/homepage3.php" />
         <option value="$PROJECT_DIR$/homepage6.php" />
         <option value="$PROJECT_DIR$/templates/shopping-wishlist.php" />
         <option value="$PROJECT_DIR$/templates/headers/header3.php" />
@@ -75,8 +104,12 @@
         <option value="$PROJECT_DIR$/assets/css/common-space.scss" />
         <option value="$PROJECT_DIR$/blog-singlepost-standard.php" />
         <option value="$PROJECT_DIR$/shortcode-tabs.php" />
-        <option value="$PROJECT_DIR$/assets/css/style.scss" />
+        <option value="$PROJECT_DIR$/homepage2.php" />
+        <option value="$PROJECT_DIR$/homepage3.php" />
         <option value="$PROJECT_DIR$/woocommerce-product-detailed1.php" />
+        <option value="$PROJECT_DIR$/assets/css/_mixin.scss" />
+        <option value="$PROJECT_DIR$/woocommerce-3columns.php" />
+        <option value="$PROJECT_DIR$/assets/css/style.scss" />
       </list>
     </option>
   </component>
@@ -220,6 +253,28 @@
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="style.scss" />
+              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mondova" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mondova" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -290,7 +345,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1002" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -342,21 +397,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.75438595">
           <caret line="111" column="4" selection-start-line="111" selection-start-column="4" selection-end-line="115" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8976109">
-          <caret line="5863" column="0" selection-start-line="5863" selection-start-column="0" selection-end-line="5863" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/_mixin.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7391813">
-          <caret line="74" column="24" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -427,6 +467,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07017544">
           <caret line="25" column="5" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -549,13 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homepage3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-29.375">
-          <caret line="316" column="39" selection-start-line="316" selection-start-column="39" selection-end-line="316" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/homepage5.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="226.25">
@@ -640,43 +674,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/woocommerce-3columns.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.85263157">
-          <caret line="517" column="39" selection-start-line="517" selection-start-column="39" selection-end-line="517" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/common-space.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54385966">
-          <caret line="31" column="11" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog-singlepost-standard.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5614035">
           <caret line="205" column="36" selection-start-line="205" selection-start-column="36" selection-end-line="205" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.2941175">
-          <caret line="5971" column="22" selection-start-line="5971" selection-start-column="22" selection-end-line="5971" selection-end-column="22" />
-          <folding>
-            <element signature="e#54805#55056#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/woocommerce-product-detailed1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44210526">
-          <caret line="277" column="0" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -688,10 +689,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/common-space.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5263158">
+          <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/homepage2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20652173">
-          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.8245614">
+          <caret line="194" column="99" selection-start-line="194" selection-start-column="99" selection-end-line="194" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homepage3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37192982">
+          <caret line="125" column="22" selection-start-line="125" selection-start-column="22" selection-end-line="125" selection-end-column="22" />
+          <folding>
+            <element signature="e#25081#25115#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/woocommerce-product-detailed1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36842105">
+          <caret line="278" column="80" selection-start-line="278" selection-start-column="80" selection-end-line="278" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0551643">
+          <caret line="5622" column="10" selection-start-line="5607" selection-start-column="10" selection-end-line="5607" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/woocommerce-3columns.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.625">
+          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/_mixin.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-28.125">
+          <caret line="460" column="16" selection-start-line="460" selection-start-column="7" selection-end-line="460" selection-end-column="16" />
+          <folding>
+            <element signature="e#13381#13632#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67017543">
+          <caret line="5690" column="32" selection-start-line="5690" selection-start-column="32" selection-end-line="5690" selection-end-column="32" />
           <folding />
         </state>
       </provider>

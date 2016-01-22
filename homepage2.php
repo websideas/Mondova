@@ -47,10 +47,10 @@ include_once('templates/slideshows/slideshow1.php');
 
                 <!-- nav-pills, nav-tabs -->                                                            
                 <!-- Nav tabs -->
-                <ul class="nav nav-style2" role="tablist">
-                    <li class="active"><a href="#denim-shirts" data-toggle="tab">Briefs</a></li>
+                <ul class="nav nav-style2 text-center mar-bottom-80" role="tablist">
+                    <li><a href="#denim-shirts" data-toggle="tab">Briefs</a></li>
                     <li><a href="#briefs" data-toggle="tab">Cardigans</a></li>
-                    <li><a href="#cardigans" data-toggle="tab">Coats</a></li>
+                    <li class="active"><a href="#cardigans" data-toggle="tab">Coats</a></li>
                     <li><a href="#coats" data-toggle="tab">Denim Shirts</a></li>
                     <li><a href="#dresses" data-toggle="tab">Dresses</a></li>
                 </ul>
@@ -192,7 +192,7 @@ include_once('templates/slideshows/slideshow1.php');
 
     </div><!-- #main -->
 
-    <img src="previews/02-homepage-V2.jpg" class="preview-image" style="top: -800px;display: none;max-width:none;" />
+    <img src="previews/02-homepage-V2.jpg" class="preview-image" style="top: -2130px;display: none1;" />
 <?php
 
 include_once('templates/footers/footer1.php');
