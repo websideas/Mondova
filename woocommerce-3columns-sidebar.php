@@ -62,12 +62,17 @@ include_once('templates/headers/header1.php');
 
 
                         <div class="row multi-columns-row">
-                            <div class="products products-effect-2">
+                            <div class="products products-effect-1">
 
 
                                 <div class="product col-lg-4 col-md-4 col-sm-6 col-xs-6">
                                     <div class="product-content">
                                         <span class="posted_in"><a href="#">Dress</a> / <a href="#">T-Shirt</a></span>
+                                        <div class="star-rating" title="Rated 4 out of 5">
+                                            <span style="width:80%"><span class="rating">4</span> out of 5</span>
+                                        </div>
+
+                                        <a class="title-link" href="woocommerce-product-detailed1.php">Spada Enforcer WP Glove</a>
                                         <a href="woocommerce-product-detailed1.php" class="product-thumbnail">
                                             <img src="assets/images/product/1.jpg" alt=""/>
                                         </a>
@@ -94,7 +99,7 @@ include_once('templates/headers/header1.php');
                                             <div class="woocommerce-review-count">3 Reviews</div>
                                             <a class="woocommerce-review-link" href="#">Add your review</a>
                                         </div>
-                                        <div class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam cursus mi luctus fringilla pretium. Duis est justo, pellentesque vitae imperdiet pharetra, varius ut mauris. Cras mauris magna, </div>
+                                        <div class="product-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </div>
                                         <div class="product-tool-list">
                                             <a href="#" class="add_to_cart_button"><i class="icon_bag_alt"></i>Add to cart</a>
                                             <a href="#" class="add_to_wishlist" data-toggle="tooltip"  data-placement="top" title="Add to wishlist"><i class="icon_heart_alt"></i></a>
@@ -554,6 +559,8 @@ include_once('templates/headers/header1.php');
 
 
     </div><!-- #main -->
+
+    <img src="previews/10-product-list-with-sidebar.jpg" class="preview-image" style="top: 6px;display: none;" />
 
 <?php
 

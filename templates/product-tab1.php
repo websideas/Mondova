@@ -1,5 +1,5 @@
 <div class="row multi-columns-row">
-    <div class="products">
+    <div class="products products-effect-1">
         <div class="product col-lg-4 col-md-4 col-sm-6 col-xs-6">
             <div class="product-content">
                 <span class="posted_in"><a href="#">Dress</a> / <a href="#">T-Shirt</a></span>
