@@ -426,21 +426,37 @@ a {
  */
 blockquote {
   background: $gray-bg2;
-  padding: 52px 104px;
+  padding: 70px 124px 70px 134px;
   margin-bottom: 30px;
   border: none;
   position: relative;
   font-size: 18px;
   line-height: 36px;
   color: $text;
-
-  p {
-    padding: 18px 20px 18px 30px;
-    border-left: 2px solid $primary-color;
+  &:before{
+    width: 2px;
+    position: absolute;
+    content: "";
+    background: $primary-color;
+    top: 52px;
+    bottom: 52px;
+    left: 104px;
   }
 
   *:last-child {
     margin-bottom: 0;
+  }
+
+  &.small{
+    margin-left: 25px;
+    padding: 0 0 0 20px;
+    border-left: 2px solid $primary-color;
+    background: none;
+    font-size: 14px;
+    line-height: 30px;
+    &:before{
+      display: none;;
+    }
   }
 }
 
@@ -5861,31 +5877,48 @@ ul.style-list{
         width: 100%;
       }
       .owl-controls{
-        bottom: 8px;
-        margin: 0;
-        position: absolute;
-        right: 9px;
         .owl-buttons{
           > div{
-            width: 60px;
-            height: 48px;
+            top: 50%;
+            margin: 0;
+            position: absolute;
+            width: 30px;
+            height: 30px;
             padding: 0;
             text-align: center;
-            background: #fff;
-            @include css3-prefix('box-shadow', '1px 0 3px rgba(0,0,0,0.1)');
+            background: none;
+            font-size: 30px;
+            @include css3-prefix('box-shadow', 'none');
             @include css3-prefix('opacity', '1');
             @include css3-prefix('border-radius', '0');
             &.owl-prev{
-
+              left: 15px;
             }
             &.owl-next{
-
+              right: 15px;
             }
             i{
-              font-size: 14px;
-              color: #999;
-              line-height: 48px;
+              font-size: 30px;
+              line-height: 30px;
+              color: $text;
             }
+          }
+        }
+      }
+      .woocommerce-main-image{
+        .zoom{
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+          text-align: center;
+          background: #56585c;
+          position: absolute;
+          top: 30px;
+          left: 30px;
+          span{
+            line-height: 50px;
+            font-size: 18px;
+            color: $white;
           }
         }
       }
@@ -5984,6 +6017,7 @@ ul.style-list{
       font-size: 14px;
       text-transform: uppercase;
       font-weight: 400;
+      color: $text;
     }
     .quantity{
       margin-bottom: 30px;
@@ -6023,6 +6057,10 @@ ul.style-list{
           color: $primary-color;
           margin-right: 13px;
         }
+        &:hover,
+        &:focus{
+          color: $primary-color;
+        }
       }
     }
   }
@@ -6036,32 +6074,48 @@ ul.style-list{
 
   .product_meta{
     margin-bottom: 35px;
+    color: $gray-light;
   }
   .product-shareit{
     .social_icons{
-      margin: 0 -11px;
+      margin: 0 0 30px;
       padding: 0;
       list-style: none;
       li{
         float: left;
-        width: 33.33%;
         line-height: normal;
-        padding:0 11px;
+        margin-right: 10px;
+        &:last-child{
+          margin-right: 0;
+        }
         a{
-          color: #999;
-          letter-spacing: 0.15em;
-          padding: 15px 40px;
-          border: 2px solid #e3e3e3;
+          width: 50px;
+          height: 50px;
+          color: $text;
+          border: 2px solid $border-color;
           text-transform: uppercase;
-          font-weight: bold;
           font-size: 14px;
           display: block;
-          &:hover,&:focus{
-            color: #000;
-            border-color: #000;
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+          span{
+            position: absolute;
+            left: 50px;
+            top: 50%;
+            @include transform(translatey(-50%));
+            white-space: nowrap;
+            font-size: 12px;
+            letter-spacing: 0.1em;
+          }
+          &:hover{
+            width: 195px;
           }
           i{
-            display: none;
+            line-height: 46px;
+            display: block;
+            float: left;
+            width: 46px;
           }
         }
       }
@@ -6172,16 +6226,6 @@ ul.style-list{
         margin-bottom: 10px; 
       }
     }
-    /*
-    blockquote{
-      margin-left: 25px;
-      padding: 0 0 0 20px;
-      border-left: 2px solid $primary-color;
-      background: none;
-      font-size: 14px;
-      line-height: 30px;
-    }
-    */
   }
    
   .comments-area{
