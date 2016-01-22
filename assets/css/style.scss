@@ -612,6 +612,7 @@ select:not([multiple]) {
       border-right: 2px solid $primary-color;
       border-top: 2px solid $primary-color;
     }
+    &:active,
     &:focus,
     &:hover{
       background: none;
@@ -620,6 +621,13 @@ select:not([multiple]) {
       &:before,
       &:after{
         height: 50%;
+      }
+    }
+    &:active{
+      &:focus,
+      &:hover{
+        background: none;
+        border-color: transparent;
       }
     }
   }
@@ -7387,6 +7395,18 @@ table.compare{
     top: -2px;
     right: -2px;
     border-right: 2px solid $primary-color;
+    border-top: 2px solid $primary-color;
+  }
+  .block-style-inner:before{
+    bottom: -2px;
+    right: -2px;
+    border-right: 2px solid $primary-color;
+    border-bottom: 2px solid $primary-color;
+  }
+  .block-style-inner:after{
+    left: -2px;
+    top: -2px;
+    border-left: 2px solid $primary-color;
     border-top: 2px solid $primary-color;
   }
   &:hover{
