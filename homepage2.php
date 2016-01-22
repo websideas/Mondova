@@ -43,7 +43,6 @@ include_once('templates/headers/header1.php');
             <div class="container">
                 <div class="kt-heading-2 style1 mar-bottom-55">
                     <h3 class="kt-heading-title"><span>best collection</span></h3>
-                    <div class="divider"><div class="divider-inner"></div></div>
                 </div>
 
                 <!-- nav-pills, nav-tabs -->                                                            

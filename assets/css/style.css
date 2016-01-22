@@ -1932,22 +1932,23 @@ select:not([multiple]) {
       left: auto;
       right: 50%;
       margin-right: 10px; }
-    .kt-heading-2.style1 .kt-heading-title .span {
+    .kt-heading-2.style1 .kt-heading-title span {
       display: block; }
-      .kt-heading-2.style1 .kt-heading-title .span:after {
+      .kt-heading-2.style1 .kt-heading-title span:after {
         width: 6px;
         height: 6px;
         background: #d1c45a;
         content: "";
-        -webkit-transform: translatey(-50%) translatex(-50%) rotate(45deg);
-        -khtml-transform: translatey(-50%) translatex(-50%) rotate(45deg);
-        -moz-transform: translatey(-50%) translatex(-50%) rotate(45deg);
-        -ms-transform: translatey(-50%) translatex(-50%) rotate(45deg);
-        -o-transform: translatey(-50%) translatex(-50%) rotate(45deg);
-        transform: translatey(-50%) translatex(-50%) rotate(45deg);
+        -webkit-transform: translatex(-50%) rotate(45deg);
+        -khtml-transform: translatex(-50%) rotate(45deg);
+        -moz-transform: translatex(-50%) rotate(45deg);
+        -ms-transform: translatex(-50%) rotate(45deg);
+        -o-transform: translatex(-50%) rotate(45deg);
+        transform: translatex(-50%) rotate(45deg);
         position: absolute;
-        top: 50%;
-        left: 50%; }
+        bottom: 0;
+        left: 50%;
+        margin-bottom: -2px; }
   .kt-heading-2.style2 .kt-heading-title {
     border: 2px solid #3b3e43;
     padding: 2px;

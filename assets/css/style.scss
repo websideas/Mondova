@@ -1844,17 +1844,18 @@ select:not([multiple]) {
         right: 50%;
         margin-right: 10px;
       }
-      .span{
+      span{
         display: block;
         &:after{
           width: 6px;
           height: 6px;
           background: $primary-color;
           content: "";
-          @include transform(translatey(-50%) translatex(-50%) rotate(45deg) );
+          @include transform(translatex(-50%) rotate(45deg) );
           position: absolute;
-          top: 50%;
+          bottom: 0;
           left: 50%;
+          margin-bottom: -2px;
         }
       }
     }
