@@ -6,6 +6,7 @@ $revolution = 'slideshow1';
 include_once('templates/headers/head.php');
 include_once('templates/headers/header1.php');
 
+
 ?>
     <div id="main">
 
