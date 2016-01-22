@@ -45,6 +45,13 @@ include_once('templates/headers/header1.php');
                                             </div>
                                             <div class="price">$340.00</div>
                                             <span class="onsale">Sale!</span>
+
+                                            <div class="star-rating" title="Rated 4 out of 5">
+                                                <span style="width:80%"><span class="rating">4</span> out of 5</span>
+                                            </div>
+
+                                            <a class="title-link" href="woocommerce-product-detailed1.php">Spada Enforcer WP Glove</a>
+
                                         </div><!-- .product-content -->
 
                                         <div class="product-attribute">
@@ -87,6 +94,12 @@ include_once('templates/headers/header1.php');
                                             </div>
                                             <div class="price">$340.00</div>
                                             <span class="onsale">Sale!</span>
+
+                                            <div class="star-rating" title="Rated 4 out of 5">
+                                                <span style="width:80%"><span class="rating">4</span> out of 5</span>
+                                            </div>
+
+                                            <a class="title-link" href="woocommerce-product-detailed1.php">Spada Enforcer WP Glove</a>
 
                                         </div><!-- .product-content -->
 

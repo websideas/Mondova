@@ -22,24 +22,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="style.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.67017543">
-              <caret line="5690" column="32" selection-start-line="5690" selection-start-column="32" selection-end-line="5690" selection-end-column="32" />
+            <state vertical-scroll-proportion="-7.5">
+              <caret line="5371" column="0" selection-start-line="5371" selection-start-column="0" selection-end-line="5371" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_mixin.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/_mixin.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-28.125">
-              <caret line="460" column="16" selection-start-line="460" selection-start-column="7" selection-end-line="460" selection-end-column="16" />
-              <folding>
-                <element signature="e#13381#13632#2" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -47,8 +35,60 @@
       <file leaf-file-name="woocommerce-3columns.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/woocommerce-3columns.php">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-20.625">
+              <caret line="33" column="53" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product-tab1.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/product-tab1.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-23.125">
+              <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="woocommerce-3columns-sidebar.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/woocommerce-3columns-sidebar.php">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-15.625">
-              <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+              <caret line="64" column="48" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
+              <folding>
+                <element signature="e#46156#46187#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="woocommerce-4columns.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/woocommerce-4columns.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.54385966">
+              <caret line="31" column="66" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="woocommerce-shop.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/woocommerce-shop.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.875">
+              <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homepage3.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/homepage3.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-27.5">
+              <caret line="314" column="4" selection-start-line="314" selection-start-column="4" selection-end-line="314" selection-end-column="102" />
               <folding />
             </state>
           </provider>
@@ -59,7 +99,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/product-tab1.php" />
         <option value="$PROJECT_DIR$/assets/libs/bootstrap-sass-3.3.6/assets/stylesheets/_bootstrap-mincer.scss" />
         <option value="$PROJECT_DIR$/assets/css/plugins.css" />
         <option value="$PROJECT_DIR$/assets/css/responsive.scss" />
@@ -76,15 +115,12 @@
         <option value="$PROJECT_DIR$/templates/shopping-cart.php" />
         <option value="$PROJECT_DIR$/assets/css/_variables.scss" />
         <option value="$PROJECT_DIR$/pages-about.php" />
-        <option value="$PROJECT_DIR$/woocommerce-3columns-sidebar.php" />
-        <option value="$PROJECT_DIR$/woocommerce-4columns.php" />
         <option value="$PROJECT_DIR$/woocommerce-cart.php" />
         <option value="$PROJECT_DIR$/woocommerce-checkout.php" />
         <option value="$PROJECT_DIR$/woocommerce-compare.php" />
         <option value="$PROJECT_DIR$/woocommerce-list.php" />
         <option value="$PROJECT_DIR$/woocommerce-masonry.php" />
         <option value="$PROJECT_DIR$/woocommerce-myaccount.php" />
-        <option value="$PROJECT_DIR$/woocommerce-shop.php" />
         <option value="$PROJECT_DIR$/woocommerce-wishlist.php" />
         <option value="$PROJECT_DIR$/blog-fullwidth.php" />
         <option value="$PROJECT_DIR$/blog-grid-3columns.php" />
@@ -110,6 +146,10 @@
         <option value="$PROJECT_DIR$/assets/css/_mixin.scss" />
         <option value="$PROJECT_DIR$/woocommerce-3columns.php" />
         <option value="$PROJECT_DIR$/assets/css/style.scss" />
+        <option value="$PROJECT_DIR$/templates/product-tab1.php" />
+        <option value="$PROJECT_DIR$/woocommerce-shop.php" />
+        <option value="$PROJECT_DIR$/woocommerce-3columns-sidebar.php" />
+        <option value="$PROJECT_DIR$/woocommerce-4columns.php" />
       </list>
     </option>
   </component>
@@ -385,14 +425,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/css/plugins.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23890784">
-          <caret line="12" column="426" selection-start-line="12" selection-start-column="416" selection-end-line="12" selection-end-column="426" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/footers/footer2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.75438595">
@@ -485,20 +517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/woocommerce-3columns-sidebar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-29.375">
-          <caret line="559" column="39" selection-start-line="559" selection-start-column="39" selection-end-line="559" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/woocommerce-4columns.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-29.375">
-          <caret line="520" column="39" selection-start-line="520" selection-start-column="39" selection-end-line="520" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/woocommerce-cart.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-29.375">
@@ -538,13 +556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-29.375">
           <caret line="358" column="39" selection-start-line="358" selection-start-column="39" selection-end-line="358" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/woocommerce-shop.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-29.375">
-          <caret line="437" column="39" selection-start-line="437" selection-start-column="39" selection-end-line="437" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -705,16 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homepage3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37192982">
-          <caret line="125" column="22" selection-start-line="125" selection-start-column="22" selection-end-line="125" selection-end-column="22" />
-          <folding>
-            <element signature="e#25081#25115#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/woocommerce-product-detailed1.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36842105">
@@ -731,17 +732,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/woocommerce-3columns.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.625">
-          <caret line="140" column="0" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/_mixin.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.125">
+        <state vertical-scroll-proportion="0.7894737">
           <caret line="460" column="16" selection-start-line="460" selection-start-column="7" selection-end-line="460" selection-end-column="16" />
           <folding>
             <element signature="e#13381#13632#2" expanded="true" />
@@ -749,10 +742,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/homepage3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.5">
+          <caret line="314" column="4" selection-start-line="314" selection-start-column="4" selection-end-line="314" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67017543">
-          <caret line="5690" column="32" selection-start-line="5690" selection-start-column="32" selection-end-line="5690" selection-end-column="32" />
+        <state vertical-scroll-proportion="-7.5">
+          <caret line="5371" column="0" selection-start-line="5371" selection-start-column="0" selection-end-line="5371" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/woocommerce-3columns.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.625">
+          <caret line="33" column="53" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/product-tab1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.125">
+          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/woocommerce-shop.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.875">
+          <caret line="39" column="50" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/woocommerce-3columns-sidebar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.625">
+          <caret line="64" column="48" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
+          <folding>
+            <element signature="e#46156#46187#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/woocommerce-4columns.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54385966">
+          <caret line="31" column="66" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
           <folding />
         </state>
       </provider>

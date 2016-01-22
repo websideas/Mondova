@@ -62,7 +62,7 @@ include_once('templates/headers/header2.php');
                         </div>
 
                         <div class="row multi-columns-row">
-                            <div class="products">
+                            <div class="products products-effect-1">
                                 <div class="product col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <div class="product-content">
                                         <a href="woocommerce-product-detailed1.php" class="product-thumbnail">
