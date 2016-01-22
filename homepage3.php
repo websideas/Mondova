@@ -62,9 +62,7 @@ include_once('templates/headers/header1.php');
                     <h3 class="kt-heading-title"><span>Shop For Men</span></h3>
                 </div>
 
-                <!-- nav-pills, nav-tabs -->                                                            
-                <!-- Nav tabs -->
-                <ul class="nav nav-style3" role="tablist">
+                <ul class="nav nav-style3 text-center mar-bottom-60" role="tablist">
                     <li class="active"><a href="#denim-shirts" data-toggle="tab">Briefs</a></li>
                     <li><a href="#briefs" data-toggle="tab">Cardigans</a></li>
                     <li><a href="#cardigans" data-toggle="tab">Coats</a></li>
@@ -72,7 +70,6 @@ include_once('templates/headers/header1.php');
                     <li><a href="#dresses" data-toggle="tab">Dresses</a></li>
                 </ul>
 
-                <!-- Tab panes -->
                 <div class="tab-content">
                     <div class="tab-pane active" id="denim-shirts">
                         <?php include('templates/product-tab1.php'); ?>
@@ -130,7 +127,7 @@ include_once('templates/headers/header1.php');
 
                 <!-- nav-pills, nav-tabs -->                                                            
                 <!-- Nav tabs -->
-                <ul class="nav nav-style3" role="tablist">
+                <ul class="nav nav-style3 text-center mar-bottom-60" role="tablist">
                     <li class="active"><a href="#denim-shirts2" data-toggle="tab">Briefs</a></li>
                     <li><a href="#briefs2" data-toggle="tab">Cardigans</a></li>
                     <li><a href="#cardigans2" data-toggle="tab">Coats</a></li>
@@ -312,7 +309,7 @@ include_once('templates/headers/header1.php');
 
     </div><!-- #main -->
 
-    <img src="previews/03-homepage-V3.jpg" class="preview-image" style="top: -914px;display: none;max-width:none;" />
+    <img src="previews/03-homepage-V3.jpg" class="preview-image" style="top: -745px;display: none;" />
 <?php
 
 include_once('templates/footers/footer1.php');

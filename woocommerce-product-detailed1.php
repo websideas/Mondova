@@ -270,8 +270,7 @@ include_once('templates/headers/header1.php');
             <div class="container">
 
                 <div class="kt-heading-2 style1 mar-bottom-80">
-                    <h3 class="kt-heading-title"><span>our team</span></h3>
-                    <div class="divider"><div class="divider-inner"></div></div>
+                    <h3 class="kt-heading-title"><span>recently viewed</span></h3>
                 </div>
 
                 <div class="products products-effect-2">
