@@ -2713,6 +2713,7 @@ ul.style-list{
   text-align: center;
   overflow: hidden;
   margin-bottom: $shortcode;
+
   &-dark{
     &:after{
       content: '';
@@ -2734,6 +2735,7 @@ ul.style-list{
       }
     }
   }
+
 
   img{
     width: 100%;
@@ -5361,7 +5363,6 @@ ul.style-list{
       .star-rating{
         display: none;
       }
-
     }
 
     &-description{
@@ -5682,6 +5683,7 @@ ul.style-list{
         @include translate();
         @include opacity(0);
         display: block;
+        z-index: 2;
       }
       .title-link{
         color: $white;
@@ -5709,7 +5711,7 @@ ul.style-list{
 
       &-content{
         &:hover{
-          .product-content .star-rating,
+          .star-rating,
           .title-link,
           .product-over-tool,
           .product-thumbnail:before{

@@ -9,36 +9,36 @@ include_once('templates/slideshows/slideshow1.php');
 
 ?>
     <div id="main">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-4">
-                    <div class="banner banner-dark no-margin style2">
-                        <img src="assets/images/banner/8.jpg" alt="">
-                        <div class="banner-content">
-                            <h3 class="white">new COLLECTION</h3>
+        <div class="page-section no-padding-top pad-bottom-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="banner banner-dark no-margin style2">
+                            <img src="assets/images/banner/8.jpg" alt="">
+                            <div class="banner-content">
+                                <h3 class="white">new COLLECTION</h3>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="banner banner-dark no-margin style2">
-                        <img src="assets/images/banner/9.jpg" alt="">
-                        <div class="banner-content">
-                            <h3 class="white">new stock</h3>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="banner banner-dark no-margin style2">
+                            <img src="assets/images/banner/9.jpg" alt="">
+                            <div class="banner-content">
+                                <h3 class="white">new stock</h3>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="banner banner-dark no-margin style2">
-                        <img src="assets/images/banner/10.jpg" alt="">
-                        <div class="banner-content">
-                            <h3 class="white">new Models</h3>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="banner banner-dark no-margin style2">
+                            <img src="assets/images/banner/10.jpg" alt="">
+                            <div class="banner-content">
+                                <h3 class="white">new Models</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="page-section pad-bottom-55">
             <div class="container">
                 <div class="kt-heading-2 style1 mar-bottom-55">
@@ -58,7 +58,7 @@ include_once('templates/slideshows/slideshow1.php');
                 <!-- Tab panes -->
                 <div class="tab-content">
                     <div class="tab-pane active" id="denim-shirts">
-                        <?php include_once('templates/product-tab1.php'); ?>
+                        <?php include_once('templates/product-tab2.php'); ?>
                     </div>
                     <div class="tab-pane fade" id="briefs">
                         <p>Ut ornare porttitor varius. Nam dapibus venenatis ultrices. In nec lectus ac tellus laoreet suscipit. Morbi facilisis enim a mollis tincidunt. Praesent pretium sollicitudin lacus eget tincidunt. Integer elementum eros id feugiat faucibus. In aliquet magna vitae suscipit pretium. Pellentesque dignissim massa eu mollis ultricies. Pellentesque eu ornare tortor, nec sollicitudin nunc. Aenean nec feugiat quam, eu hendrerit erat. Nulla facilisi. </p>
@@ -129,7 +129,7 @@ include_once('templates/slideshows/slideshow1.php');
                                                     <a href="blog-singlepost-standard.php">Lorem ipsum dolor sit amet consectetuer</a>
                                                 </h4>
                                                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip </p>
-                                                <div><a href="#" class="btn btn-default">view all blog</a></div>
+                                                <div><a href="#" class="btn btn-default">Read more</a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -152,10 +152,10 @@ include_once('templates/slideshows/slideshow1.php');
                                                     <span class="post-date">20.11.2015</span>
                                                 </div>
                                                 <h4 class="blog-post-title">
-                                                    <a href="blog-singlepost-standard.php">Blog 1</a>
+                                                    <a href="blog-singlepost-standard.php">Consectetuer adipiscing elit</a>
                                                 </h4>
                                                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip </p>
-                                                <div><a href="#" class="btn btn-default">view all blog</a></div>
+                                                <div><a href="#" class="btn btn-default">Read more</a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -192,7 +192,7 @@ include_once('templates/slideshows/slideshow1.php');
 
     </div><!-- #main -->
 
-    <img src="previews/02-homepage-V2.jpg" class="preview-image" style="top: -2130px;display: none1;" />
+    <img src="previews/02-homepage-V2.jpg" class="preview-image" style="top: -2130px;display: none;" />
 <?php
 
 include_once('templates/footers/footer1.php');

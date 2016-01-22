@@ -302,7 +302,6 @@ include_once('templates/slideshows/slideshow1.php');
             <div class="row mar-bottom-100">
                 <div class="col-md-4">
                     <div class="bg-white box-shadow" style="padding: 40px 30px;">
-
                         <div class="widget widget_products_carousel no-margin">
                             <h3 class="widget-title">Top items</h3>
 
@@ -507,9 +506,6 @@ include_once('templates/slideshows/slideshow1.php');
                                             <div title="Rated 4.50 out of 5" class="star-rating"><span style="width:90%"><strong class="rating">4.50</strong> out of 5</span></div>
                                         </li>
                                     </ul>
-
-
-
                                 </div>
                             </div>
                         </div>

@@ -5656,7 +5656,8 @@ ul.style-list {
   -ms-opacity: 0;
   -o-opacity: 0;
   opacity: 0;
-  display: block; }
+  display: block;
+  z-index: 2; }
 .products.products-effect-3 .product .title-link {
   color: #FFFFFF;
   text-decoration: underline; }
@@ -5683,7 +5684,7 @@ ul.style-list {
       transform: scale(1.5); }
     .products.products-effect-3 .product .product-over-tool a + a {
       margin-left: 55px; }
-.products.products-effect-3 .product-content:hover .product-content .star-rating,
+.products.products-effect-3 .product-content:hover .star-rating,
 .products.products-effect-3 .product-content:hover .title-link,
 .products.products-effect-3 .product-content:hover .product-over-tool,
 .products.products-effect-3 .product-content:hover .product-thumbnail:before {
