@@ -100,6 +100,7 @@
     init_productcarouselwoo($("#sync1"), $("#sync2"));
     init_ecommerce();
     init_woo_quantily();
+    init_woocommerce_product_popup();
 
 
     $( 'body' )
@@ -556,7 +557,7 @@
             afterAction : syncPosition,
             autoHeight: true,
             responsiveRefreshRate : 200,
-            navigationText: ['<i class="arrow_left"></i>','<i class="arrow_right"></i>'],
+            navigationText: ['<i class="arrow_carrot-left"></i>','<i class="arrow_carrot-right"></i>'],
         });
 
         sync2.owlCarousel({
@@ -659,6 +660,17 @@
                 $(this).html( event.strftime(coming_html) );
             });
 
+        });
+    }
+
+
+    function init_woocommerce_product_popup(){
+        $('.single-product-main-images').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: {
+                enabled: true
+            },
         });
     }
 
