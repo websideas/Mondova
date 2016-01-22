@@ -1634,7 +1634,7 @@ select:not([multiple]) {
 
 #header {
   position: relative;
-  z-index: 100; }
+  z-index: 1001; }
   #header.header2 #nav #main-navigation {
     text-align: left; }
     #header.header2 #nav #main-navigation > li:first-child {

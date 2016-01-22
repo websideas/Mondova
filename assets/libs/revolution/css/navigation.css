@@ -2643,18 +2643,23 @@ opacity:1
 
 
 
-.tparrows.kitethemes{
+.rev_slider .tparrows.metis{
   width: 100px;
   height: 75px;
   background: none;
   line-height: 75px;
   color: #000000;
+  padding: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
 }
-.tparrows.kitethemes:after,
-.tparrows.kitethemes:before{
+.rev_slider .tparrows.metis:after,
+.rev_slider .tparrows.metis:before{
   background: #e6e6e7;
   top: 50%;
-  content: "";
+  content: ""!important;
   height: 2px;
   left: 0;
   position: absolute;
@@ -2664,24 +2669,24 @@ opacity:1
   -e-transform: rotate(45deg);
   width: 100px;
 }
-.tparrows.kitethemes:before{
+.rev_slider .tparrows.metis:before{
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -e-transform: rotate(-45deg);
 }
-.tp-rightarrow.kitethemes{
+.rev_slider .tp-rightarrow.metis{
   text-align: right;
 }
-.tp-leftarrow.kitethemes span,
-.tp-rightarrow.kitethemes span{
+.rev_slider .tp-leftarrow.metis span,
+.rev_slider .tp-rightarrow.metis span{
   font-size: 24px;
   line-height: 75px;
   color: #000000;
 }
-.tp-rightarrow.kitethemes span{
+.rev_slider .tp-rightarrow.metis span{
   float: left;
 }
-.tp-leftarrow.kitethemes span{
+.rev_slider .tp-leftarrow.metis span{
   float: right;
 }

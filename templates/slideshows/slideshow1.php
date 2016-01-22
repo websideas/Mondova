@@ -3,9 +3,9 @@
     <div id="rev_slider_6_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.1.5">
         <ul>    
             <!-- SLIDE  -->
-            <li data-index="rs-13" data-transition="fade" data-slotamount="default" data-hideafterloop="0"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="http://localhost/themethang/wp-content/uploads/2016/01/slide1-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+            <li data-index="rs-13" data-transition="fade" data-slotamount="default" data-hideafterloop="0"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="assets/images/slideshow/slide1-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                 <!-- MAIN IMAGE -->
-                <img src="http://localhost/themethang/wp-content/uploads/2016/01/slide1.jpg"  alt=""  width="1920" height="767" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                <img src="assets/images/slideshow/slide1.jpg"  alt=""  width="1920" height="767" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                 <!-- LAYERS -->
 
                 <!-- LAYER NR. 1 -->
@@ -24,7 +24,7 @@
 
                      data-end="8300" 
 
-                    style="z-index: 5;"><img src="http://localhost/themethang/wp-content/uploads/2016/01/slide1-thumb.png" alt="" width="657" height="805" data-ww="608px" data-hh="745px" data-no-retina> 
+                    style="z-index: 5;"><img src="assets/images/slideshow/slide1-thumb.png" alt="" width="657" height="805" data-ww="608px" data-hh="745px" data-no-retina> 
                 </div>
 
                 <!-- LAYER NR. 2 -->
@@ -112,9 +112,9 @@
                 </div>
             </li>
             <!-- SLIDE  -->
-            <li data-index="rs-14" data-transition="fade" data-slotamount="default" data-hideafterloop="0"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="http://localhost/themethang/wp-content/uploads/2016/01/slide2-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+            <li data-index="rs-14" data-transition="fade" data-slotamount="default" data-hideafterloop="0"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="assets/images/slideshow/slide2-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                 <!-- MAIN IMAGE -->
-                <img src="http://localhost/themethang/wp-content/uploads/2016/01/slide2.jpg"  alt=""  width="1920" height="767" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                <img src="assets/images/slideshow/slide2.jpg"  alt=""  width="1920" height="767" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                 <!-- LAYERS -->
 
                 <!-- LAYER NR. 1 -->
@@ -132,7 +132,7 @@
                     data-responsive_offset="on" 
 
                     
-                    style="z-index: 5;"><img src="http://localhost/themethang/wp-content/uploads/2016/01/slide2-number.png" alt="" width="246" height="259" data-ww="246px" data-hh="259px" data-no-retina> 
+                    style="z-index: 5;"><img src="assets/images/slideshow/slide2-number.png" alt="" width="246" height="259" data-ww="246px" data-hh="259px" data-no-retina> 
                 </div>
 
                 <!-- LAYER NR. 2 -->
@@ -216,9 +216,9 @@
                 </div>
             </li>
             <!-- SLIDE  -->
-            <li data-index="rs-15" data-transition="fade" data-slotamount="default" data-hideafterloop="0"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="http://localhost/themethang/wp-content/uploads/2016/01/slide3-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+            <li data-index="rs-15" data-transition="fade" data-slotamount="default" data-hideafterloop="0"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="assets/images/slideshow/slide3-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                 <!-- MAIN IMAGE -->
-                <img src="http://localhost/themethang/wp-content/uploads/2016/01/slide3.jpg"  alt=""  width="1920" height="767" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                <img src="assets/images/slideshow/slide3.jpg"  alt=""  width="1920" height="767" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                 <!-- LAYERS -->
 
                 <!-- LAYER NR. 1 -->
@@ -237,7 +237,7 @@
                     data-responsive_offset="on" 
 
                     
-                    style="z-index: 5;"><img src="http://localhost/themethang/wp-content/uploads/2016/01/slide3-best.png" alt="" width="679" height="79" data-ww="679px" data-hh="79px" data-no-retina> 
+                    style="z-index: 5;"><img src="assets/images/slideshow/slide3-best.png" alt="" width="679" height="79" data-ww="679px" data-hh="79px" data-no-retina> 
                 </div>
 
                 <!-- LAYER NR. 2 -->
@@ -304,7 +304,7 @@
 
                      data-end="8300" 
 
-                    style="z-index: 5;"><img src="http://localhost/themethang/wp-content/uploads/2016/01/slide5-people1.png" alt="" width="560" height="770" data-ww="560px" data-hh="770px" data-no-retina> 
+                    style="z-index: 5;"><img src="assets/images/slideshow/slide5-people1.png" alt="" width="560" height="770" data-ww="560px" data-hh="770px" data-no-retina> 
                 </div>
 
                 <!-- LAYER NR. 2 -->
@@ -323,7 +323,7 @@
 
                      data-end="8300" 
 
-                    style="z-index: 6;"><img src="http://localhost/themethang/wp-content/uploads/2016/01/slide5-people2.png" alt="" width="560" height="770" data-ww="560px" data-hh="770px" data-no-retina> 
+                    style="z-index: 6;"><img src="assets/images/slideshow/slide5-people2.png" alt="" width="560" height="770" data-ww="560px" data-hh="770px" data-no-retina> 
                 </div>
 
                 <!-- LAYER NR. 3 -->
@@ -342,7 +342,7 @@
 
                      data-end="8300" 
 
-                    style="z-index: 7;"><img src="http://localhost/themethang/wp-content/uploads/2016/01/slide5-and.png" alt="" width="100" height="100" data-ww="100px" data-hh="100px" data-no-retina> 
+                    style="z-index: 7;"><img src="assets/images/slideshow/slide5-and.png" alt="" width="100" height="100" data-ww="100px" data-hh="100px" data-no-retina> 
                 </div>
 
                 <!-- LAYER NR. 4 -->
@@ -452,7 +452,7 @@
 
                      data-end="8300" 
 
-                    style="z-index: 5;"><img src="http://localhost/themethang/wp-content/uploads/2016/01/slide6-people.png" alt="" width="675" height="770" data-ww="675px" data-hh="770px" data-no-retina> 
+                    style="z-index: 5;"><img src="assets/images/slideshow/slide6-people.png" alt="" width="675" height="770" data-ww="675px" data-hh="770px" data-no-retina> 
                 </div>
 
                 <!-- LAYER NR. 2 -->
@@ -513,7 +513,7 @@
 
                      data-end="8300" 
 
-                    style="z-index: 8;"><img src="http://localhost/themethang/wp-content/uploads/2016/01/slide6-mon.png" alt="" width="176" height="176" data-ww="176px" data-hh="176px" data-no-retina> 
+                    style="z-index: 8;"><img src="assets/images/slideshow/slide6-mon.png" alt="" width="176" height="176" data-ww="176px" data-hh="176px" data-no-retina> 
                 </div>
 
                 <!-- LAYER NR. 5 -->

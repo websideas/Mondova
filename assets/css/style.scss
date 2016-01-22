@@ -1447,7 +1447,7 @@ select:not([multiple]) {
 
 #header{
   position: relative;
-  z-index: 100;
+  z-index: 1001;
   &.header2{
     #nav{
       #main-navigation{

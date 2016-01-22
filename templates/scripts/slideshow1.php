@@ -26,10 +26,13 @@
                     }
                     ,
                     arrows: {
-                        style: "kitethemes",
+                        style: "metis",
                         enable:true,
-                        hide_onmobile:false,
-                        hide_onleave:false,
+                        hide_onmobile:true,
+                        hide_under:992,
+                        hide_onleave:true,
+                        hide_delay:200,
+                        hide_delay_mobile:1200,
                         tmp:'',
                         left: {
                             h_align:"left",
@@ -81,12 +84,11 @@
                 
                 if( kt_slide_next > slide_number ){ kt_slide_next = 1; }
                 if( kt_slide_prev < 1 ){ kt_slide_prev = slide_number; }
-                
+
             setTimeout(function(){
                 kt_button_next.html( '<span class="arrow_right"></span>'+kt_slide_next+ '/'+ slide_number  );
                 kt_button_prev.html( kt_slide_prev+ '/'+ slide_number+'<span class="arrow_left"></span>' );
             },300);
-            
         });
         
     }); /*ready*/
