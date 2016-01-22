@@ -102,6 +102,7 @@
             <li><a href="shortcode-messagebox.php">Message Box</a></li>
             <li><a href="shortcode-typography.php">Typography</a></li>
             <li><a href="shortcode-iconbox.php">Icon box</a></li>
+            <li><a href="shortcode-blog-carousel.php">Blog carousel</a></li>
         </ul>
     </li>
     <li>

@@ -16,24 +16,27 @@ include_once('templates/slideshows/slideshow1.php');
                         <div class="banner banner-dark no-margin style2">
                             <img src="assets/images/banner/8.jpg" alt="">
                             <div class="banner-content">
-                                <h3 class="white">new COLLECTION</h3>
+                                <h3>new COLLECTION</h3>
                             </div>
+                            <a href="#" class="banner-link"></a>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
                         <div class="banner banner-dark no-margin style2">
                             <img src="assets/images/banner/9.jpg" alt="">
                             <div class="banner-content">
-                                <h3 class="white">new stock</h3>
+                                <h3>new stock</h3>
                             </div>
+                            <a href="#" class="banner-link"></a>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4">
                         <div class="banner banner-dark no-margin style2">
                             <img src="assets/images/banner/10.jpg" alt="">
                             <div class="banner-content">
-                                <h3 class="white">new Models</h3>
+                                <h3>new Models</h3>
                             </div>
+                            <a href="#" class="banner-link"></a>
                         </div>
                     </div>
                 </div>
@@ -44,8 +47,6 @@ include_once('templates/slideshows/slideshow1.php');
                 <div class="kt-heading-2 style1 mar-bottom-55">
                     <h3 class="kt-heading-title"><span>best collection</span></h3>
                 </div>
-
-                <!-- nav-pills, nav-tabs -->                                                            
                 <!-- Nav tabs -->
                 <ul class="nav nav-style2 text-center mar-bottom-80" role="tablist">
                     <li><a href="#denim-shirts" data-toggle="tab">Briefs</a></li>
