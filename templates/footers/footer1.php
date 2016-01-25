@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="kt-icon-box style-2">
+                    <div class="kt-icon-box style2">
                         <div class="icon-box-icon">
                             <span class="fa fa-diamond"></span>
                         </div>
@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="kt-icon-box style-2">
+                    <div class="kt-icon-box style2">
                         <div class="icon-box-icon">
                             <span class="fa fa-truck"></span>
                         </div>
@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="kt-icon-box style-2">
+                    <div class="kt-icon-box style2">
                         <div class="icon-box-icon">
                             <span class="fa fa-cc-mastercard"></span>
                         </div>
@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="kt-icon-box style-2">
+                    <div class="kt-icon-box style2">
                         <div class="icon-box-icon">
                             <span class="fa fa-refresh"></span>
                         </div>

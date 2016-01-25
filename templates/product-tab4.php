@@ -155,7 +155,11 @@
 
         <div class="product col-lg-4 col-md-4 col-sm-6 col-xs-6">
             <div class="product-content">
-                <span class="posted_in"><a href="#">Dress</a> / <a href="#">T-Shirt</a></span>
+                <div class="star-rating" title="Rated 4 out of 5">
+                    <span style="width:80%"><span class="rating">4</span> out of 5</span>
+                </div>
+
+                <a class="title-link" href="woocommerce-product-detailed1.php">Spada Enforcer WP Glove</a>
                 <a href="woocommerce-product-detailed1.php" class="product-thumbnail">
                     <img src="assets/images/product/6.jpg" alt=""/>
                 </a>

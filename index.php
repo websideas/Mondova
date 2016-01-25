@@ -52,12 +52,12 @@ include_once('templates/slideshows/slideshow1.php');
                         <img src="assets/images/featured/7.jpg" alt="" />
                     </div>
                 </div>
-                <div class="kt-heading text-center style-2">
+                <div class="kt-heading text-center style2">
                     <div class="kt-heading-backend">women fashion</div>
                     <h3 class="kt-heading-title">w&nbsp;&nbsp;o<br />&nbsp;&nbsp;&nbsp;&nbsp;m&nbsp;&nbsp;e&nbsp;&nbsp;n</h3>
                 </div>
                 <div class="pad-60 bg-gray text-center pad-top-30">
-                    <h4 class="text-nomal" style="font-size:20px;">PETITE Tailored A-Line <br />Shorts</h4>
+                    <h4 class="text-nomal mar-topm-30" style="font-size:20px;">PETITE Tailored A-Line <br />Shorts</h4>
                     <div class="bg-white pad-35 box-shadow">
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed<br /> diam nonummy nibh euismod tincidunt ut laoreet dolore magna<br /> aliquam erat volutpat. </p>
                         <a href="#" class="btn btn-default">Shop Now</a>
@@ -65,12 +65,12 @@ include_once('templates/slideshows/slideshow1.php');
                 </div>
             </div>
             <div class="col-md-6 col-sm-6">
-                <div class="kt-heading text-center style-2">
+                <div class="kt-heading text-center style2">
                     <div class="kt-heading-backend">men fashion</div>
-                    <h3 class="kt-heading-title">m&nbsp;&nbsp;e<br />&nbsp;n&nbsp;&nbsp;'s</h3>
+                    <h3 class="kt-heading-title">m&nbsp;&nbsp;e<br />&nbsp;&nbsp;n&nbsp;'s&nbsp;&nbsp;</h3>
                 </div>
                 <div class="pad-60 bg-gray text-center pad-top-30 mar-bottom-65">
-                    <h4 class="text-nomal" style="font-size:20px;">SKINNY Shirt with Contrast Panel <br />in Long Sleeve</h4>
+                    <h4 class="text-nomal mar-topm-30" style="font-size:20px;">SKINNY Shirt with Contrast Panel <br />in Long Sleeve</h4>
                     <div class="bg-white pad-35 box-shadow">
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed<br /> diam nonummy nibh euismod tincidunt ut laoreet dolore<br /> magna aliquam erat volutpat. </p>
                         <a href="#" class="btn btn-default">Shop Now</a>
@@ -133,13 +133,6 @@ include_once('templates/slideshows/slideshow1.php');
     </div>
 
 
-
-
-
-
-
-
-
     <div class="page-section no-padding">
         <div class="row no-gutters">
             <div class="col-md-3">
@@ -194,10 +187,7 @@ include_once('templates/slideshows/slideshow1.php');
 
     <div class="page-section">
         <div class="container">
-
             <div class="row mar-bottom-20">
-
-
                 <div class="col-md-7">
                     <ul class="nav nav-border mar-top-35" role="tablist">
                         <li class="active"><a href="#blazers1" data-toggle="tab">Blazers</a></li>
@@ -206,10 +196,8 @@ include_once('templates/slideshows/slideshow1.php');
                         <li><a href="#hoodies1" data-toggle="tab">Hoodies</a></li>
                         <li><a href="#jackets1" data-toggle="tab">Jackets</a></li>
                         <li><a href="#jeans1" data-toggle="tab">Jeans</a></li>
-
                     </ul>
                 </div>
-
                 <div class="col-md-5">
                     <div class="kt-heading text-right">
                         <div class="kt-heading-backend">Women</div>
@@ -217,9 +205,7 @@ include_once('templates/slideshows/slideshow1.php');
                         <div class="kt-heading-subtitle">New Arrvial</div>
                     </div><!-- .kt-heading -->
                 </div>
-
             </div>
-
             <div class="tab-content">
                 <div class="tab-pane active" id="blazers1">
                     <?php include('templates/product-tab2.php'); ?>
@@ -240,9 +226,6 @@ include_once('templates/slideshows/slideshow1.php');
                     <?php include('templates/product-tab1.php'); ?>
                 </div>
             </div>
-
-
-
         </div>
     </div>
 
@@ -262,7 +245,7 @@ include_once('templates/slideshows/slideshow1.php');
                         <div class="owl-carousel-kt no-gutters no-margin">
                             <div class="owl-carousel kt-owl-carousel" id="testi-carousel-01" data-options='{"pagination": false, "navigation": true, "desktop": 1, "tablet" : 1, "mobile" : 1, "callback" : "kt_products_carousel"}'>
 
-                                <div class="testi-item">
+                                <div class="testi-item style1">
                                     <div class="testi-item-inner">
                                         <div class="testi-item-infos">
                                             <div class="testi-item-author">dan counsell</div>
@@ -271,7 +254,7 @@ include_once('templates/slideshows/slideshow1.php');
                                         <div class="testi-item-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam<br/>nonummy nibh euismod tincidunt ut laoreet dolore magna<br/>aliquam erat volutpat.</div>
                                     </div>
                                 </div>
-                                <div class="testi-item">
+                                <div class="testi-item style1">
                                     <div class="testi-item-inner">
                                         <div class="testi-item-infos">
                                             <div class="testi-item-author">CuongDV</div>
@@ -280,7 +263,7 @@ include_once('templates/slideshows/slideshow1.php');
                                         <div class="testi-item-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam<br/>nonummy nibh euismod tincidunt ut laoreet dolore magna<br/>aliquam erat volutpat.</div>
                                     </div>
                                 </div>
-                                <div class="testi-item">
+                                <div class="testi-item style1">
                                     <div class="testi-item-inner">
                                         <div class="testi-item-infos">
                                             <div class="testi-item-author">TienThang</div>
@@ -289,7 +272,7 @@ include_once('templates/slideshows/slideshow1.php');
                                         <div class="testi-item-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam<br/>nonummy nibh euismod tincidunt ut laoreet dolore magna<br/>aliquam erat volutpat.</div>
                                     </div>
                                 </div>
-                                <div class="testi-item">
+                                <div class="testi-item style1">
                                     <div class="testi-item-inner">
                                         <div class="testi-item-infos">
                                             <div class="testi-item-author">HongNguyen</div>

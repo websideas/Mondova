@@ -133,7 +133,6 @@ include_once('templates/headers/header1.php');
                                 <div class="products products-effect-3">
                                     <div class="product col-lg-12 col-md-4 col-sm-6 col-xs-6">
                                         <div class="product-content">
-                                            <span class="posted_in"><a href="#">Dress</a> / <a href="#">T-Shirt</a></span>
                                             <a href="woocommerce-product-detailed1.php" class="product-thumbnail">
                                                 <img src="assets/images/product/1.jpg" alt=""/>
                                             </a>

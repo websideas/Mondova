@@ -231,7 +231,7 @@
 
 
             objCarousel.imagesLoaded(function() {
-                console.log(options);
+                //console.log(options);
                 objCarousel.owlCarousel(options);
             });
         });

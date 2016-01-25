@@ -104,6 +104,8 @@
             <li><a href="shortcode-iconbox.php">Icon box</a></li>
             <li><a href="shortcode-blog-carousel.php">Blog carousel</a></li>
             <li><a href="shortcode-carousel.php">Carousel</a></li>
+            <li><a href="shortcode-image.php">Image</a></li>
+            <li><a href="shortcode-heading.php">Heading</a></li>
         </ul>
     </li>
     <li>

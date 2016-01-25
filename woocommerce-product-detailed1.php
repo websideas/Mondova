@@ -14,32 +14,27 @@ include_once('templates/headers/header1.php');
                             <div class="product-detail-thumbarea">
                                 <div class="single-product-main-images owl-carousel1" id="sync1">
                                     <div itemprop="image" class="woocommerce-main-image">
-                                        <img src="assets/images/product/1.jpg" class="img-responsive" alt="Product 1" title="Product 1" />
-                                        <a class="zoom" href="assets/images/product/1.jpg"><span class="arrow_expand"></span></a>
+                                        <img src="assets/images/product/details/1.jpg" class="img-responsive" alt="Product 1" title="Product 1" />
+                                        <a class="zoom" href="assets/images/product/details/1.jpg"><span class="arrow_expand"></span></a>
                                     </div>
                                     <div itemprop="image" class="woocommerce-main-image">
-                                        <img src="assets/images/product/2.jpg" class="img-responsive" alt="Product 2" title="Product 2" />
-                                        <a class="zoom" href="assets/images/product/2.jpg"><span class="arrow_expand"></span></a>
+                                        <img src="assets/images/product/details/2.jpg" class="img-responsive" alt="Product 2" title="Product 2" />
+                                        <a class="zoom" href="assets/images/product/details/2.jpg"><span class="arrow_expand"></span></a>
                                     </div>
                                     <div itemprop="image" class="woocommerce-main-image">
-                                        <img src="assets/images/product/3.jpg" class="img-responsive" alt="Product 3" title="Product 3" />
-                                        <a class="zoom" href="assets/images/product/3.jpg"><span class="arrow_expand"></span></a>
+                                        <img src="assets/images/product/details/3.jpg" class="img-responsive" alt="Product 3" title="Product 3" />
+                                        <a class="zoom" href="assets/images/product/details/3.jpg"><span class="arrow_expand"></span></a>
                                     </div>
                                     <div itemprop="image" class="woocommerce-main-image">
-                                        <img src="assets/images/product/4.jpg" class="img-responsive" alt="Product 4" title="Product 4" />
-                                        <a class="zoom" href="assets/images/product/4.jpg"><span class="arrow_expand"></span></a>
-                                    </div>
-                                    <div itemprop="image" class="woocommerce-main-image">
-                                        <img src="assets/images/product/5.jpg" class="img-responsive" alt="Product 5" title="Product 4" />
-                                        <a class="zoom" href="assets/images/product/5.jpg"><span class="arrow_expand"></span></a>
+                                        <img src="assets/images/product/details/4.jpg" class="img-responsive" alt="Product 4" title="Product 4" />
+                                        <a class="zoom" href="assets/images/product/details/4.jpg"><span class="arrow_expand"></span></a>
                                     </div>
                                 </div><!-- #sync1.single-product-main-images.owl-carousel -->
                                 <div class="single-product-main-thumbnails owl-carousel2" id="sync2" data-items="4">
-                                    <a href="assets/images/product/1.jpg" itemprop="image" class="woocommerce-main-image" title=""><img src="assets/images/product/1.jpg" class="img-responsive" alt="Product 1" title="Product 1" /></a>
-                                    <a href="assets/images/product/2.jpg" itemprop="image" class="woocommerce-main-image" title=""><img src="assets/images/product/2.jpg" class="img-responsive" alt="Product 2" title="Product 2" /></a>
-                                    <a href="assets/images/product/3.jpg" itemprop="image" class="woocommerce-main-image" title=""><img src="assets/images/product/3.jpg" class="img-responsive" alt="Product 3" title="Product 3" /></a>
-                                    <a href="assets/images/product/4.jpg" itemprop="image" class="woocommerce-main-image" title=""><img src="assets/images/product/4.jpg" class="img-responsive" alt="Product 4" title="Product 4" /></a>
-                                    <a href="assets/images/product/5.jpg" itemprop="image" class="woocommerce-main-image" title=""><img src="assets/images/product/5.jpg" class="img-responsive" alt="Product 5" title="Product 5" /></a>
+                                    <a href="assets/images/product/1.jpg" class="woocommerce-main-image" title=""><img src="assets/images/product/details/1.jpg" class="img-responsive" alt="Product 1" title="Product 1" /></a>
+                                    <a href="assets/images/product/2.jpg" class="woocommerce-main-image" title=""><img src="assets/images/product/details/2.jpg" class="img-responsive" alt="Product 2" title="Product 2" /></a>
+                                    <a href="assets/images/product/3.jpg" class="woocommerce-main-image" title=""><img src="assets/images/product/details/3.jpg" class="img-responsive" alt="Product 3" title="Product 3" /></a>
+                                    <a href="assets/images/product/4.jpg" class="woocommerce-main-image" title=""><img src="assets/images/product/details/4.jpg" class="img-responsive" alt="Product 4" title="Product 4" /></a>
                                 </div><!-- #sync2.single-product-main-thumbnails.owl-carousel -->
                             </div><!-- .product-detail-thumbarea -->
 
@@ -282,10 +277,10 @@ include_once('templates/headers/header1.php');
                     <h3 class="kt-heading-title"><span>recently viewed</span></h3>
                 </div>
 
-                <div class="products products-effect-2">
+                <div class="products products-effect-1">
 
                     <div class="owl-carousel-kt gutters">
-                        <div class="owl-carousel kt-owl-carousel" data-options='{"pagination": false, "navigation": true, "desktop": 4, "desktopsmall" : 3, "tablet" : 2, "mobile" : 1}'>
+                        <div class="owl-carousel kt-owl-carousel" data-options='{"pagination": false, "navigation": false, "desktop": 4, "desktopsmall" : 3, "tablet" : 2, "mobile" : 1}'>
                             <div class="product">
                                 <div class="product-content">
                                     <span class="posted_in"><a href="#">Dress</a> / <a href="#">T-Shirt</a></span>
@@ -480,7 +475,7 @@ include_once('templates/headers/header1.php');
         </div>
 
         <div class="page-section bg-gray">
-            <div class="container"><?php include_once('client-carousel.php'); ?></div>
+            <div class="container"><?php include_once('templates/client-carousel.php'); ?></div>
         </div>
     </div><!-- #main -->
 
