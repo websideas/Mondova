@@ -1,5 +1,5 @@
 <?php
-
+ 
 global $shadow;
 $shadow = ' ';
 
