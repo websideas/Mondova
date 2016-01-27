@@ -13,7 +13,6 @@ define( 'KT_THEME_DATA', KT_THEME_URL.'dummy-data/');
 define( 'KT_THEME_DATA_DIR', KT_THEME_DIR.'dummy-data/');
 
 define( 'KT_THEME_ASSETS', KT_THEME_URL . 'assets/');
-define( 'KT_THEME_FONTS', KT_THEME_ASSETS . 'fonts/');
 define( 'KT_THEME_LIBS', KT_THEME_ASSETS . 'libs/');
 define( 'KT_THEME_JS', KT_THEME_ASSETS . 'js/');
 define( 'KT_THEME_CSS', KT_THEME_ASSETS . 'css/');

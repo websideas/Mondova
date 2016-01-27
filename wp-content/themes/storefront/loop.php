@@ -8,7 +8,7 @@
  * @package storefront
  */
 
-do_action( 'storefront_loop_before' );
+do_action( 'kt_loop_before' );
 
 while ( have_posts() ) : the_post();
 

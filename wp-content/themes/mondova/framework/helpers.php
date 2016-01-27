@@ -39,6 +39,20 @@ if (!function_exists('kt_option')){
 }
 
 
+if (!function_exists('kt_sidebars')){
+    /**
+     * Get sidebars
+     *
+     * @return array
+     */
+    function kt_sidebars( ){
+        $sidebars = array();
+        foreach ( $GLOBALS['wp_registered_sidebars'] as $item ) {
+            $sidebars[$item['id']] = $item['name'];
+        }
+        return $sidebars;
+    }
+}
 
 
 if (!function_exists('kt_get_header')) {
@@ -72,8 +86,41 @@ if (!function_exists('kt_get_header_layout')) {
      *
      */
     function kt_get_header_layout(){
-        $layout = kt_option('header', 'layout1');
+        $layout = (isset($_REQUEST['header_layout'])) ?  isset($_REQUEST['header_layout']) : null;
+        if(!$layout){
+            $layout = kt_option('header', '1');
+        }
+
         return $layout;
     }
 }
 
+
+if (!function_exists('kt_get_logo')){
+    /**
+     * Get logo of current page
+     *
+     * @return string
+     *
+     */
+    function kt_get_logo(){
+        $logo = array('default' => '', 'retina' => '');
+        $logo_default = kt_option( 'logo' );
+        $logo_retina = kt_option( 'logo_retina' );
+
+        if(is_array($logo_default) && $logo_default['url'] != '' ){
+            $logo['default'] = $logo_default['url'];
+        }
+
+        if(is_array($logo_retina ) && $logo_retina['url'] != '' ){
+            $logo['retina'] = $logo_retina['url'];
+        }
+
+        if(!$logo['default']){
+            $logo['default'] = KT_THEME_IMG.'logo.png';
+            $logo['retina'] = KT_THEME_IMG.'logo-2x.png';
+        }
+
+        return $logo;
+    }
+}

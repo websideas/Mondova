@@ -106,6 +106,8 @@ function kt_add_scripts() {
     wp_enqueue_style( 'kt-wp-style', get_stylesheet_uri(), array('mediaelement', 'wp-mediaelement') );
     wp_enqueue_style( 'bootstrap', KT_THEME_LIBS . 'bootstrap/css/bootstrap.css', array());
     wp_enqueue_style( 'font-awesome', KT_THEME_LIBS . 'font-awesome/css/font-awesome.min.css', array());
+    wp_enqueue_style( 'elegant_font', KT_THEME_LIBS . 'elegant_font/style.css', array());
+
     wp_enqueue_style( 'kt-plugins', KT_THEME_CSS . 'plugins.css', array());
 
 	// Load our main stylesheet.
@@ -128,7 +130,64 @@ function kt_add_scripts() {
         'ajaxurl' => admin_url( 'admin-ajax.php' ),
         'security' => wp_create_nonce( 'ajax_frontend' ),
     ));
-    
+
+
+
+
 }
 add_action( 'wp_enqueue_scripts', 'kt_add_scripts' );
+
+
+
+if ( ! function_exists( 'kt_post_thumbnail_image' ) ) :
+    /**
+     * Display an optional post thumbnail.
+     *
+     * Wraps the post thumbnail in an anchor element on index views, or a div
+     * element when on single views.
+     *
+     */
+    function kt_post_thumbnail_image($size = 'post-thumbnail', $class_img = '', $link = true, $placeholder = true, $echo = true) {
+        if ( post_password_required() || is_attachment()) {
+            return;
+        }
+        $class = 'entry-thumbnail';
+        $attrs = '';
+        if( $link ){
+            $tag = 'a';
+            $attrs .= 'href="'.get_the_permalink().'"';
+        } else{
+            $tag = 'div';
+        }
+        if(!has_post_thumbnail() && $placeholder){
+            $class .= ' no-image';
+        }
+
+        if(!$echo){
+            ob_start();
+        }
+
+        if(has_post_thumbnail() || $placeholder){ ?>
+            <<?php echo $tag ?> <?php echo $attrs ?> class="<?php echo esc_attr($class); ?>">
+            <?php if(has_post_thumbnail()){ ?>
+                <?php the_post_thumbnail( $size, array( 'alt' => get_the_title(), 'class' => $class_img ) ); ?>
+            <?php }elseif($placeholder){ ?>
+                <?php
+                    $image = apply_filters( 'kt_placeholder', $size );
+                    printf(
+                        '<img src="%s" alt="%s" class="%s"/>',
+                        $image,
+                        esc_html__('No image', 'adroit'),
+                        $class_img.' no-image'
+                    )
+                ?>
+            <?php } ?>
+            </<?php echo $tag ?>><!-- .entry-thumb -->
+        <?php }
+
+        if(!$echo){
+            return ob_get_clean();
+        }
+    }
+endif;
 
