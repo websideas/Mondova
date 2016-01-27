@@ -12,7 +12,7 @@
 
     <li><a href="pages-about.php">About us</a></li>
     <li>
-        <a href="woocommerce-3columns-sidebar.php">Men</a>
+        <a href="woocommerce-3columns-sidebar.php">Men<span class="text-label text-new">New</span></a>
         <ul class="sub-menu-dropdown">
             <li><a href="#">Accessories</a></li>
             <li><a href="#">ASOS Basics</a></li>
@@ -38,7 +38,7 @@
 
     </li>
     <li class="kt-megamenu-item megamenu-width-100">
-        <a href="#">Women</a>
+        <a href="#">Women<span class="text-label text-hot">Hot</span></a>
 
 
         <div class="kt-megamenu-wrapper">
