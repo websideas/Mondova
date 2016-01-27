@@ -3,10 +3,8 @@
 // Exit if accessed directly
 if ( !defined('ABSPATH')) exit;
 
-// Script version, used to add version for scripts and styles
-define( 'KT_THEME_VER', '1.0' );
 
-define( 'KT_THEME_OPTIONS', 'adroit_option' );
+define( 'KT_THEME_OPTIONS', 'mondova_option' );
 
 define( 'KT_THEME_DIR', trailingslashit(get_template_directory()));
 define( 'KT_THEME_URL', trailingslashit(get_template_directory_uri()));
@@ -23,8 +21,3 @@ define( 'KT_THEME_IMG', KT_THEME_ASSETS . 'images/');
 
 //Include framework
 require KT_THEME_DIR .'framework/core.php';
-
-// Get All meta box for all post type.
-if ( class_exists( 'KT_Meta_Box' ) ) {
-	require THEME_KT_FW_DATA . 'data-metaboxes.php';
-}

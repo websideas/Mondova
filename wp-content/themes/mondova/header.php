@@ -10,8 +10,7 @@
 <html <?php language_attributes(); ?> class="no-js">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -24,14 +23,14 @@
 </head>
 <body <?php body_class( ); ?>>
     <?php
-    do_action( 'kt_body_top' );
-
-    $position = kt_get_header();
-    $header_layout = kt_get_header_layout();
+        $position = kt_get_header();
+        $header_layout = kt_get_header_layout();
     ?>
-    <?php get_template_part( 'templates/sidearea'); ?>
+    <?php
+    do_action( 'kt_body_top' ); ?>
+
     <div id="page_outter">
-        <div id="page">
+        <div id="page" class="hfeed site">
             <div id="wrapper-content" class="content-header-<?php echo esc_attr($header_layout); ?>">
                 <?php
 

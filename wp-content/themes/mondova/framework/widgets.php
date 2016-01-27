@@ -32,26 +32,6 @@ if ( function_exists('register_sidebar')) {
             'after_title' => '</h3>',
         ) );
 
-        register_sidebar( array(
-            'name' => esc_html__( 'Side Area', 'adroit'),
-            'id' => 'side-widget-area',
-            'description' => esc_html__( 'The side widget area', 'adroit'),
-            'before_widget' => '<div id="%1$s" class="widget-container %2$s"><div class="widget-inner">',
-            'after_widget' => '</div></div>',
-            'before_title' => '<h3 class="widget-title">',
-            'after_title' => '</h3>',
-        ) );
-
-        register_sidebar( array(
-            'name' => esc_html__( 'Promo Area', 'adroit'),
-            'id' => 'promo-area',
-            'description' => esc_html__( 'IMPORTANT: For best result select set number of widget to 3.', 'adroit'),
-            'before_widget' => '<div id="%1$s" class="widget-container %2$s"><div class="widget-inner">',
-            'after_widget' => '</div></div>',
-            'before_title' => '<h3 class="widget-title">',
-            'after_title' => '</h3>',
-        ) );
-
         $count = 5;
 
         for($i=1; $i<=$count;$i++){
@@ -66,15 +46,6 @@ if ( function_exists('register_sidebar')) {
             ) );
         }
 
-        register_sidebar(array(
-            'name' => esc_html__( 'Instagram Footer', 'adroit'),
-            'id' => 'instagram-footer',
-            'before_widget' => '<div id="%1$s" class="instagram-widget %2$s">',
-            'after_widget' => '</div>',
-            'before_title' => '<h4 class="instagram-title">',
-            'after_title' => '</h4>',
-            'description' => esc_html__('Use the Instagram widget here. IMPORTANT: For best result select "Small" under "Photo Size" and set number of photos to 6.', 'adroit'),
-        ));
 
         register_sidebar( array(
             'name' => esc_html__( 'Footer top', 'adroit'),
@@ -146,38 +117,6 @@ if ( function_exists('register_sidebar')) {
 
     add_action( 'widgets_init', 'kt_register_sidebars' );
 
-}
-
-/**
- * This code filters the categories widget to include the post count inside the link
- */
- 
-
-add_filter('wp_list_categories', 'kt_cat_count_span');
-function kt_cat_count_span($links) {
-
-    if (strpos($links, '</a>') !== false) {
-        $links = str_replace('</a> (', ' <span>(', $links);
-        $links = str_replace('</a> <', ' <', $links);
-        $links = str_replace(')', ')</span></a>', $links);
-        $links = str_replace('</a></span>', '</a>', $links);
-    }
-
-    
-    return $links;
-}
-
-/**
- * This code filters the Archive widget to include the post count inside the link
- */
-
-add_filter('get_archives_link', 'kt_archive_count_span');
-function kt_archive_count_span($links) {
-    if ( strpos($links, '</a>') !== false ) {
-        $links = str_replace('</a>&nbsp;(', ' <span>(', $links);
-        $links = str_replace(')', ')</span></a>', $links);
-    }
-    return $links;
 }
 
 /**
