@@ -77,7 +77,11 @@ $table_prefix  = 'mo_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
+
+define('AUTOSAVE_INTERVAL', 300 ); // seconds
+define('WP_POST_REVISIONS', false );
+
 
 /* That's all, stop editing! Happy blogging. */
 

@@ -1,0 +1,560 @@
+/*
+ * Title:   Responsive Style File
+ * Author:  http://themeforest.net/user/Kite-Themes
+ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[Table of contents]
+
+1. Retina logo
+2. Styles for devices(>=1490px)
+3. Styles for devices(>=1200px)
+4. Styles for devices(<=1199px)
+5. Styles for devices(>=992px and <= 1199px)
+6. Styles for devices(<=991px )
+7. Styles for devices(>=768px and <= 991px)
+8. Styles for devices(<=767px )
+9. Styles for devices(>=481px and <= 767px)
+10. Styles for devices(<=600 )
+11. Styles for devices(<=480px )
+12. Styles for devices(<=320px )
+*/
+
+
+
+
+@import 'mixin';
+@import 'variables';
+
+/* 1. Retina logo */
+@media only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 144dpi) {
+  .site-branding .site-logo.retina-logo-wrapper .retina-logo{ display: block; }
+  .site-branding .site-logo.retina-logo-wrapper .default-logo { display: none; }
+}
+
+/* 2. Styles for devices(>=1490) */
+@media (max-width: 1490px) {
+  #main-slideshow{
+    &.post-slider-big{
+      .slick-slide{
+        margin: 0;
+      }
+    }
+  }
+  .content-header-1{
+    .header-layout1{
+      .main-nav-socials{
+        margin-right: 15px;
+      }
+      #main-nav-tool{
+        position: static;
+      }
+      .site-branding{
+        position: static;
+      }
+    }
+  }
+}
+
+/* 3. Styles for devices(>=1200px) */
+@media (min-width: 1200px) {
+  .col-lg-clear{
+    clear: left;
+  }
+  .blog-posts-medium {
+    .no-sidebar &{
+      .post-item-thumb{
+        width: 58.3333%;
+      }
+      .post-item-info{
+        width: 41.6667%;
+      }
+    }
+  }
+  .main-sidebar{
+    .sidebar-left &{
+      padding-right: 40px;
+    }
+    .sidebar-right &{
+      padding-left: 40px;
+    }
+  }
+}
+
+
+
+
+/* 4. Styles for devices(<=1199px) */
+@media (max-width: 1199px) {
+  .header-container{
+    display: none;
+  }
+
+  #header-content-mobile{
+    display: block;
+  }
+
+  #header-content-mobile{
+    display: block;
+  }
+}
+
+/* 5. Styles for devices(>=992px and <= 1199px) */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .col-md-clear {
+    clear: left;
+  }
+}
+
+
+@media (max-width: 991px) {
+  #footer-bottom{
+    &.footer-bottom-2{
+      .widget_kt_socials{
+        text-align: center;
+      }
+    }
+  }
+  #footer-bottom.footer-bottom-2{
+    .widget_kt_socials{
+      margin-top: 0;
+    }
+  }
+  .blog-posts-slick{
+    .article-post{
+      h3{
+        font-size: 35px;
+        line-height: normal;
+      }
+    }
+    .slick-dots,
+    .article-post-content{
+      left: 30px;
+      right: 30px;
+      width: auto;
+      @include transform(translatex(0));
+    }
+    .article-post-content{
+      padding: 30px 30px 60px;
+    }
+    .slick-dots{
+      padding-left: 30px;
+    }
+  }
+  .row-eq-height{
+    display: block;
+  }
+  article.post-item-content.first-featured{
+    .entry-title{
+      padding-left: 15px;
+      padding-right: 15px;
+      a::before{
+        left: 0;
+      }
+    }
+  }
+  .no-sidebar{
+    .blog-posts-medium{
+      .entry-title{
+        padding-left: 15px;
+        padding-right: 15px;
+        a::before{
+          left: 0;
+        }
+      }
+    }
+  }
+  #main-slideshow.postslider-graybg{
+    padding: 30px 0;
+  }
+
+  .postslider-graybg,
+  .postslider-slider{
+    .blog-posts-slick{
+      .slick-arrow{
+        &.slick-next{
+          right: 0;
+        }
+        &.slick-prev{
+          left: 0;
+        }
+      }
+    }
+  }
+  .post-single.post-layout-6, 
+  .post-single.post-layout-6,
+  .post-single.post-layout-6{
+    .entry-header,
+    .entry-content,
+    .entry-footer{
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  .post-layout-6.post-single-addons{
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .promo-area{
+    .widget-container{
+      width: 100%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+
+  .no-sidebar{
+    .blog-posts-medium{
+      .entry-thumb{
+        margin-bottom: 30px;
+        display: block;
+      }
+      .entry-title{
+        padding: 0;
+        border: none;
+        margin-top: 0;
+        a:before{
+          border: none;
+        }
+      }
+    }
+  }
+  .blog-posts-medium{
+    article.post-item-content,
+    div.post-item-content{
+      &.post-item-featured{
+        &.format-gallery,
+        &.format-video,
+        &.format-standard,
+        &.format-audio{
+          .entry-title{
+            padding: 0;
+            margin-top: 0;
+            a:before{
+              border: none;
+            }
+          }
+          .post-item-thumb{
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+  .main-content{
+    &.col-md-12{
+      .post-layout-1{
+        > .entry-header,
+        > .entry-content,
+        > .entry-footer{
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+      .post-single-addons{
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+/* 6. Styles for devices(<=991px ) */
+@media (max-width: 991px) {
+
+}
+
+
+/* 7. Styles for devices(>=768px and <= 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-sm-clear {
+    clear: left;
+  }
+  #footer{
+    ul.kt_posts_widget{
+      li{
+        a.entry-thumb{
+          display: none;
+        }
+        .article-attr{
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
+/* 8. Styles for devices(<=767px ) */
+@media (max-width: 767px) {
+  .col-xs-clear {
+    clear: left;
+  }
+  #instagram-footer{
+    .null-instagram-feed{
+      .instagram-pics{
+        li{
+          width: 33.33%;
+        }
+      }
+    }
+  }
+  #main-slideshow{
+    .slick-arrow{
+      display: none!important;
+    }
+  }
+
+
+  .blog-posts-medium{
+    article.post-item-content{
+      .entry-title{
+        margin-top: 10px;
+      }
+    }
+  }
+  article.post-item-content.post-item-featured,
+  article.post-item-content.post-item-featured,
+  article.post-item-content.post-item-featured,
+  article.post-item-content.post-item-featured{
+    &.format-audio,
+    &.format-standard,
+    &.format-video,
+    &.format-gallery{
+      .entry-title{
+        padding: 25px 15px;
+        a:before{
+          left: 0;
+        }
+      }
+    }
+  }
+  .no-sidebar{
+    .blog-posts-medium{
+      .entry-title{
+        padding:25px 15px;
+      }
+    }
+  }
+  .blog-posts-list{
+    article.post-item-content:not(.post-item-featured){
+      h3.entry-title{
+        margin: -50px 10px 25px;
+        padding: 50px 20px 15px;
+      }
+    }
+  }
+  #commentform{
+    .comment_field-column{
+      width: 100%;
+    }
+  }
+
+  .gallery-images-grid{
+    .gallery-image-item{
+      width: 100%;
+      padding: 0;
+      margin-bottom: 30px;
+      &:first-child{
+        width: 100%;
+        padding-right: 0;
+        a{
+          left: 0;
+          right: 0;
+        }
+      }
+      a{
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+  .blog-posts-slick{
+    .slick-dots{
+      padding-left: 0;
+    }
+  }
+}
+/* 9. Styles for devices(>=481px and <= 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+
+
+}
+
+
+/* 10. Styles for devices(<=600 ) */
+@media (max-width: 600px) {
+  body.opened-nav-animate{
+    &.admin-bar{
+      #wpadminbar{
+        margin-top: -46px;
+      }
+    }
+  }
+  .blog-posts-slick{
+    .article-post{
+      h3{
+        font-size: 18px;
+        line-height: normal;
+        margin: 0;
+      }
+    }
+    .article-post-content{
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      border-width: 5px;
+    }
+  }
+  div.post-item-content,
+  article.post-item-content{
+    &.post-item-featured{
+      &.format-gallery{
+        .gallery-images{
+          .gallery-image-item{
+            padding: 0 5px;
+          }
+        }
+      }
+    }
+  }
+  .blog-posts-slick{
+    .article-post-content{
+      padding: 30px 30px 40px;
+      &:after{
+        width: 200px;
+      }
+    }
+    .slick-dots{
+      left: 40px;
+      bottom: 10px;
+    }
+  }
+}
+
+/* 11. Styles for devices(<=480px ) */
+@media (max-width: 480px) {
+  .post-item-meta{
+    padding-right: 15px;
+  }
+  .post-item-meta{
+    .post-item-metaright{
+      > span, > div{
+        margin-left: 15px;
+      }
+    }
+  }
+  #footer-bottom{
+    &.footer-bottom-2{
+      .widget_kt_socials{
+        .social-text{
+          ul{
+            li{
+              span{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  article.post-item-content.first-featured{
+    .entry-title{
+      padding:20px 15px;
+      font-size: 20px;
+    }
+  }
+  article.post-item-content{
+    .post-info-featured{
+      top: 10px;
+      right: 10px;
+      left: 10px;
+      border-width: 5px;
+      .post-info-featured-inner{
+        padding: 10px;
+        max-width: 100%;
+        .entry-title-featured{
+          font-size: 16px;
+          line-height: normal;
+        }
+      }
+    }
+  }
+  .author-info{
+    .author-avatar{
+      position: static;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .author-description{
+      padding-left: 0;
+      text-align: center;
+      min-height: auto;
+    }
+  }
+  #footer-bottom{
+    .social-text{
+      ul{
+        li{
+          a{
+            font-size: 14px;
+            span{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .blog-posts-list{
+    article.post-item-content:not(.post-item-featured){
+      .post-item-content{
+        margin: 0;
+      }
+    }
+  }
+  .post-item-content{
+    .post-item-meta{
+      .post-item-metaleft{
+        .posted-on,
+        > span::after{
+          display: none;
+        }
+      }
+    }
+  }
+  .widget_kt_post_tabs{
+    .kt-tabs-nav{
+      li{
+        display: inline-block;
+        min-width: 32%;
+        text-align: center;
+        a{
+          display: block;
+          span{
+            display: none;
+          }
+          i{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .comment-actions{
+    position: static;
+    margin-top: 20px;
+  }
+}
+
+/* 12. Styles for devices(<=320px ) */
+@media (max-width: 320px) {
+
+}
