@@ -13,9 +13,9 @@ if ( function_exists('register_sidebar')) {
     function kt_register_sidebars(){
 
         register_sidebar( array(
-            'name' => esc_html__( 'Primary Widget Area', 'adroit'),
+            'name' => esc_html__( 'Primary Widget Area', 'mondova'),
             'id' => 'primary-widget-area',
-            'description' => esc_html__( 'The primary widget area', 'adroit'),
+            'description' => esc_html__( 'The primary widget area', 'mondova'),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
             'after_widget' => '</section>',
             'before_title' => '<h3 class="widget-title">',
@@ -23,9 +23,9 @@ if ( function_exists('register_sidebar')) {
         ) );
 
         register_sidebar( array(
-            'name' => esc_html__( 'Blog Widget Area', 'adroit'),
+            'name' => esc_html__( 'Blog Widget Area', 'mondova'),
             'id' => 'blog-widget-area',
-            'description' => esc_html__( 'The blog widget area', 'adroit'),
+            'description' => esc_html__( 'The blog widget area', 'mondova'),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
             'after_widget' => '</section>',
             'before_title' => '<h3 class="widget-title">',
@@ -36,9 +36,9 @@ if ( function_exists('register_sidebar')) {
 
         for($i=1; $i<=$count;$i++){
             register_sidebar( array(
-                'name' => sprintf(esc_html__( 'Sidebar %s', 'adroit'), $i) ,
+                'name' => sprintf(esc_html__( 'Sidebar %s', 'mondova'), $i) ,
                 'id' => 'sidebar-column-'.$i,
-                'description' => sprintf(esc_html__( 'The sidebar column %s widget area', 'adroit'),$i),
+                'description' => sprintf(esc_html__( 'The sidebar column %s widget area', 'mondova'),$i),
                 'before_widget' => '<section class="widget %2$s">',
                 'after_widget' => '</section>',
                 'before_title' => '<h3 class="widget-title">',
@@ -48,9 +48,9 @@ if ( function_exists('register_sidebar')) {
 
 
         register_sidebar( array(
-            'name' => esc_html__( 'Footer top', 'adroit'),
+            'name' => esc_html__( 'Footer top', 'mondova'),
             'id' => 'footer-top',
-            'description' => esc_html__( 'The footer top widget area', 'adroit'),
+            'description' => esc_html__( 'The footer top widget area', 'mondova'),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
             'after_widget' => '</section>',
             'before_title' => '<h4 class="widget-title">',
@@ -62,9 +62,9 @@ if ( function_exists('register_sidebar')) {
 
         for($i=1; $i<=$count;$i++){
             register_sidebar( array(
-                'name' => sprintf(esc_html__( 'Footer column %s', 'adroit'), $i) ,
+                'name' => sprintf(esc_html__( 'Footer column %s', 'mondova'), $i) ,
                 'id' => 'footer-column-'.$i,
-                'description' => sprintf(esc_html__( 'The footer column %s widget area', 'adroit'),$i),
+                'description' => sprintf(esc_html__( 'The footer column %s widget area', 'mondova'),$i),
                 'before_widget' => '<section id="%1$s" class="widget %2$s">',
                 'after_widget' => '</section>',
                 'before_title' => '<h3 class="widget-title">',
@@ -73,9 +73,9 @@ if ( function_exists('register_sidebar')) {
         }
 
         register_sidebar( array(
-            'name' => esc_html__( 'Footer bottom column 1', 'adroit'),
+            'name' => esc_html__( 'Footer bottom column 1', 'mondova'),
             'id' => 'footer-bottom-1',
-            'description' => esc_html__( 'The footer bottom widget area', 'adroit'),
+            'description' => esc_html__( 'The footer bottom widget area', 'mondova'),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
             'after_widget' => '</section>',
             'before_title' => '<!--',
@@ -83,9 +83,9 @@ if ( function_exists('register_sidebar')) {
         ) );
 
         register_sidebar( array(
-            'name' => esc_html__( 'Footer bottom column 2', 'adroit'),
+            'name' => esc_html__( 'Footer bottom column 2', 'mondova'),
             'id' => 'footer-bottom-2',
-            'description' => esc_html__( 'The footer bottom widget area', 'adroit'),
+            'description' => esc_html__( 'The footer bottom widget area', 'mondova'),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
             'after_widget' => '</section>',
             'before_title' => '<!--',
@@ -157,26 +157,12 @@ function kt_archive_count_span($links) {
  *
  */
 
-/* Widgets list */
-/*
+// Widgets list
+
 $kt_widgets = array(
-	'kt_image.php',
-    'kt_facebook.php',
-    'kt_googleplus.php',
-    'kt_article.php',
-    'kt_article_carousel.php',
-    'kt_widget_tabs.php',
-    'kt_ads.php',
-    'kt_flickr.php',
-    'kt_popular.php',
-    'kt_aboutme.php',
-    'kt_socials.php',
-    'kt_contactinfo.php',
-    'kt_promo.php',
+    'kt_article.php'
 );
 
 foreach ( $kt_widgets as $widget ) {
 	require_once( KT_FW_WIDGETS . $widget );
-
 }
-*/

@@ -59,7 +59,11 @@ function kt_register_plugins() {
             'force_deactivation'    => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
             'external_url'      => '', // If set, overrides default API URL and points to an external URL
         ),
-
+        array(
+            'name' => 'WooCommerce - excelling eCommerce',
+            'slug' => 'woocommerce',
+            'required' => true,
+        ),
 
         array(
             'name' => 'Redux - Options framework',
@@ -77,18 +81,25 @@ function kt_register_plugins() {
             'required' => false,
         ),
         array(
-            'name' => 'WP Instagram Widget',
-            'slug' => 'wp-instagram-widget',
+            'name' => 'YITH WooCommerce Compare',
+            'slug' => 'yith-woocommerce-compare',
             'required' => false,
         ),
-
-
-        //Breadcrumb NavXT
+        array(
+            'name' => 'YITH WooCommerce Wishlist',
+            'slug' => 'yith-woocommerce-wishlist',
+            'required' => false,
+        ),
+        array(
+            'name' => 'WooCommerce Currency Switcher',
+            'slug' => 'woocommerce-currency-switcher',
+            'required' => false,
+        ),
 
     );
   
     // Change this to your theme text domain, used for internationalising strings
-    $theme_text_domain = 'adroit';
+    $theme_text_domain = 'mondova';
   
     /**
      * Array of configuration settings. Amend each line as needed.

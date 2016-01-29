@@ -50,6 +50,7 @@
 		<div class="col-full">
 
 		<?php
+
 		/**
 		 * @hooked woocommerce_breadcrumb - 10
 		 */

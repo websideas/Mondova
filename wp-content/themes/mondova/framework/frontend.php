@@ -5,6 +5,13 @@
 if ( !defined('ABSPATH')) exit;
 
 
+/*
+ * Set up the content width value based on the theme's design.
+ *
+ * @see kt_content_width() for template-specific adjustments.
+ */
+if ( ! isset( $content_width ) )
+	$content_width = 1140;
 
 
 add_action( 'after_setup_theme', 'kt_theme_setup' );
@@ -58,23 +65,14 @@ function kt_theme_setup() {
 	 * Enable support for Post Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-    
-    
+
     if (function_exists( 'add_image_size' ) ) {
-        add_image_size( 'kt_recent_posts', 570, 355, true);
-        add_image_size( 'kt_recent_posts_masonry', 570);
-        add_image_size( 'kt_first_featured', 670, 500, true);
-
+        add_image_size( 'kt_grid', 570, 650, true);
+        add_image_size( 'kt_masonry', 570);
+        add_image_size( 'kt_list', 700, 570, true);
+        add_image_size( 'kt_classic', 1140, 600, true );
+        add_image_size( 'kt_zigzag', 960, 600, true);
         add_image_size( 'kt_small', 170, 170, true );
-        add_image_size( 'kt_blog_post', 1140, 600, true );
-
-        add_image_size( 'kt_blog_post_sidebar', 1140 );
-        add_image_size( 'kt_blog_post_slider', 1460, 800, true );
-
-        add_image_size( 'kt_widget_article', 120, 75, true );
-        add_image_size( 'kt_widget_article_carousel', 335, 250, true );
-
-        add_image_size( 'kt_gallery_fullwidth', 5000, 730 );        
     }
     
     load_theme_textdomain( 'mondova', KT_THEME_DIR . '/languages' );
@@ -131,15 +129,69 @@ function kt_add_scripts() {
         'security' => wp_create_nonce( 'ajax_frontend' ),
     ));
 
-
-
-
 }
 add_action( 'wp_enqueue_scripts', 'kt_add_scripts' );
 
 
+/**
+ *
+ * Custom call back function for default post type
+ *
+ * @param $comment
+ * @param $args
+ * @param $depth
+ */
+function kt_comments($comment, $args, $depth) {
+    $GLOBALS['comment'] = $comment;
 
-if ( ! function_exists( 'kt_post_thumbnail_image' ) ) :
+	if ( 'pingback' == $comment->comment_type || 'trackback' == $comment->comment_type ) : ?>
+
+        <li id="comment-<?php comment_ID(); ?>" <?php comment_class( '' ); ?>>
+            <div class="comment-item">
+                <?php _e( 'Pingback:', '_tk' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', '_tk' ), '<span class="edit-link">', '</span>' ); ?>
+            </div>
+
+	<?php else : ?>
+
+        <li <?php comment_class('comment'); ?> id="li-comment-<?php comment_ID() ?>">
+            <div  id="comment-<?php comment_ID(); ?>" class="comment-item">
+
+                <div class="comment-avatar">
+                    <?php echo get_avatar($comment->comment_author_email, $size='100',$default='' ); ?>
+                </div>
+                <div class="comment-body">
+                    <div class="comment-meta">
+                        <h5 class="comment-author">
+                            <?php comment_author_link(); ?>
+                        </h5>
+                        <span class="comment-date">
+                            <?php printf( _x( '%s ago', '%s = human-readable time difference', 'adroit' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) ); ?>
+                        </span>
+                    </div>
+                    <div class="comment-entry">
+                        <?php comment_text() ?>
+                        <?php if ($comment->comment_approved == '0') : ?>
+                            <em><?php esc_html_e('Your comment is awaiting moderation.', 'adroit') ?></em>
+                        <?php endif; ?>
+                    </div>
+                    <div class="comment-actions">
+                        <?php edit_comment_link( '<span class="icon-pencil"></span> '.esc_html__('Edit', 'adroit'),'  ',' ') ?>
+                        <?php comment_reply_link( array_merge( $args,
+                            array('depth' => $depth,
+                                'max_depth' => $args['max_depth'],
+                                'reply_text' =>'<span class="icon-action-undo"></span> '.esc_html__('Reply','adroit')
+                            ))) ?>
+                    </div>
+                </div>
+            </div>
+        <?php
+    endif;
+}
+
+
+
+
+if ( ! function_exists( 'kt_post_thumbnail_image' ) ) {
     /**
      * Display an optional post thumbnail.
      *
@@ -148,7 +200,7 @@ if ( ! function_exists( 'kt_post_thumbnail_image' ) ) :
      *
      */
     function kt_post_thumbnail_image($size = 'post-thumbnail', $class_img = '', $link = true, $placeholder = true, $echo = true) {
-        if ( post_password_required() || is_attachment()) {
+        if ( is_attachment()) {
             return;
         }
         $class = 'entry-thumbnail';
@@ -177,7 +229,7 @@ if ( ! function_exists( 'kt_post_thumbnail_image' ) ) :
                     printf(
                         '<img src="%s" alt="%s" class="%s"/>',
                         $image,
-                        esc_html__('No image', 'adroit'),
+                        esc_html__('No image', 'mondova'),
                         $class_img.' no-image'
                     )
                 ?>
@@ -189,5 +241,356 @@ if ( ! function_exists( 'kt_post_thumbnail_image' ) ) :
             return ob_get_clean();
         }
     }
+}
+
+if ( ! function_exists( 'kt_posted_on' ) ) {
+	/**
+	 * Prints HTML with meta information for the current post-date/time and author.
+	 */
+	function kt_posted_on() {
+		$time_string = '<time class="entry-date published updated" datetime="%1$s" itemprop="datePublished">%2$s</time>';
+		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s" itemprop="datePublished">%4$s</time>';
+		}
+
+		$time_string = sprintf( $time_string,
+			esc_attr( get_the_date( 'c' ) ),
+			esc_html( get_the_date() ),
+			esc_attr( get_the_modified_date( 'c' ) ),
+			esc_html( get_the_modified_date() )
+		);
+
+		$posted_on = sprintf(
+			_x( 'Posted on %s', 'post date', 'mondova' ),
+			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		);
+
+		$byline = sprintf(
+			_x( 'by %s', 'post author', 'mondova' ),
+			'<span class="vcard author"><span class="fn" itemprop="author"><a class="url fn n" rel="author" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span></span>'
+		);
+
+		echo apply_filters( 'kt_single_post_posted_on_html', '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>', $posted_on, $byline );
+
+	}
+}
+
+
+
+
+
+if ( ! function_exists( 'kt_paging_nav' ) ) {
+    /**
+     * Display navigation to next/previous set of posts when applicable.
+     */
+    function kt_paging_nav( $type = 'normal' ) {
+
+        global $wp_query;
+
+        // Don't print empty markup if there's only one page.
+        if ( $wp_query->max_num_pages < 2 ) {
+            return;
+        }
+        if($type == 'none'){
+            return ;
+        }elseif($type == 'button'){ ?>
+            <nav class="navigation post-navigation clearfix">
+                <h1 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'mondova' ); ?></h1>
+                <div class="nav-links">
+                    <?php if ( get_next_posts_link() ) : ?>
+                        <div class="nav-previous"><?php next_posts_link( '<i class="fa fa-long-arrow-left"></i> '.esc_html__( 'Older posts', 'mondova' ) ); ?></div>
+                    <?php endif; ?>
+                    <?php if ( get_previous_posts_link() ) : ?>
+                        <div class="nav-next"><?php previous_posts_link( esc_html__( 'Newer posts', 'mondova' ).' <i class="fa fa-long-arrow-right"></i>' ); ?></div>
+                    <?php endif; ?>
+                </div><!-- .nav-links -->
+            </nav><!-- .navigation -->
+        <?php }else{
+            the_posts_pagination();
+        }
+    }
+}
+
+
+if ( ! function_exists( 'kt_entry_meta' ) ) {
+	/**
+	 * Display the post meta
+	 * @since 1.0.0
+	 */
+	function kt_entry_meta() {
+	    if ( 'post' == get_post_type() ) { ?>
+            <div class="entry-post-meta">
+			<?php
+			kt_post_meta_categories();
+			kt_post_meta_author();
+			?>
+            </div>
+        <?php
+        }
+	}
+}
+
+
+if ( ! function_exists( 'kt_post_meta' ) ) {
+	/**
+	 * Display the post meta
+	 * @since 1.0.0
+	 */
+	function kt_post_meta() {
+		?>
+		<div class="entry-meta">
+			<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
+
+			<?php
+			kt_post_meta_categories();
+			kt_post_meta_author();
+			kt_post_meta_date();
+			?>
+
+			<?php endif; // End if 'post' == get_post_type() ?>
+
+			<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
+				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'mondova' ), __( '1 Comment', 'mondova' ), __( '% Comments', 'mondova' ) ); ?></span>
+			<?php endif; ?>
+		</div>
+		<?php
+	}
+}
+
+
+if ( ! function_exists( 'kt_post_meta_categories' ) ) :
+    /**
+     * Prints HTML with meta information for categories.
+     *
+     */
+    function kt_post_meta_categories( $separator = ', ') {
+        $categories_list = get_the_category_list(  $separator );
+        if ( $categories_list ) {
+            printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span> %2$s</span>',
+                _x( 'Categories: ', 'Used before category names.', 'mondova' ),
+                $categories_list
+            );
+        }
+    }
 endif;
 
+
+if ( ! function_exists( 'kt_post_meta_tags' ) ) :
+    /**
+     * Prints HTML with meta information for tags.
+     *
+     */
+    function kt_post_meta_tags($separator = ', ', $before = '', $after = '') {
+        $tags_list = get_the_tag_list( '', $separator );
+        if ( $tags_list ) {
+            printf( '%2$s<span class="tags-links">%1$s</span>%3$s',
+                $tags_list,
+                $before,
+                $after
+            );
+        }
+    }
+endif;
+
+if ( ! function_exists( 'kt_post_meta_author' ) ) :
+    /**
+     * Prints HTML with meta information for author.
+     *
+     */
+    function kt_post_meta_author() {
+
+        printf( '<span class="author vcard"><span class="fn" itemprop="author">%4$s <span class="screen-reader-text">%1$s </span><a class="url fn n" rel="author" href="%2$s">%3$s</a></span></span>',
+            _x( 'Author', 'Used before post author name.', 'mondova' ),
+            esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+            get_the_author(),
+            esc_html__('By', 'mondova' )
+        );
+    }
+endif;
+
+
+
+if ( ! function_exists( 'kt_post_meta_date' ) ) {
+    /**
+     * Prints HTML with date information for current post.
+     *
+     */
+    function kt_post_meta_date() {
+
+        $time_string = '<time class="entry-date published updated" datetime="%1$s" itemprop="datePublished">%2$s</time>';
+		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s" itemprop="datePublished">%4$s</time>';
+		}
+
+		$time_string = sprintf( $time_string,
+			esc_attr( get_the_date( 'c' ) ),
+			esc_html( get_the_date() ),
+			esc_attr( get_the_modified_date( 'c' ) ),
+			esc_html( get_the_modified_date() )
+		);
+
+		printf(
+			'<span class="posted-on"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><span class="screen-reader-text">%1$s</span>%2$s</a></span>',
+			_x( 'Posted on %s', 'post date', 'mondova' ),
+			$time_string
+		);
+
+    }
+}
+
+
+
+if ( ! function_exists( 'kt_entry_date' ) ) {
+    /**
+     * Prints HTML with date information for current post.
+     *
+     */
+    function kt_entry_date() {
+
+        $time_string = '<time class="entry-date published updated" datetime="%1$s" itemprop="datePublished"><span class="post-date-number">%2$s</span><span class="post-date-text">%3$s</span></time>';
+		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+			$time_string = '<time class="entry-date published" datetime="%1$s"><span class="post-date-number">%2$s</span><span class="post-date-text">%3$s</span></time><time class="updated" datetime="%4$s" itemprop="datePublished"><span class="post-date-number">%5$s</span><span class="post-date-text">%6$s</span></time>';
+		}
+		$time_string = sprintf( $time_string,
+			esc_attr( get_the_date( 'c' ) ),
+			esc_html( get_the_date('j') ),
+			esc_html( get_the_date('F') ),
+			esc_attr( get_the_modified_date( 'c' ) ),
+			esc_html( get_the_modified_date('j') ),
+			esc_html( get_the_modified_date('F') )
+		);
+
+		printf(
+			'<span class="post-date">%s</span>',
+			$time_string
+		);
+
+    }
+}
+
+
+
+function kt_excerpt_length( ) {
+    return kt_option('archive_excerpt_length', 30);
+}
+add_filter( 'excerpt_length', 'kt_excerpt_length');
+
+
+
+if ( ! function_exists( 'kt_entry_excerpt' ) ) :
+	/**
+	 * Displays the optional excerpt.
+	 *
+	 * Wraps the excerpt in a div element.
+	 *
+	 * Create your own kt_entry_excerpt() function to override in a child theme.
+	 *
+	 *
+	 * @param string $class Optional. Class string of the div element. Defaults to 'entry-summary'.
+	 */
+	function kt_entry_excerpt( $class = 'entry-content' ) {
+		$class = esc_attr( $class );
+		 ?>
+			<div class="<?php echo esc_attr($class); ?>" itemprop="articleBody">
+				<?php the_excerpt(); ?>
+			</div><!-- .<?php echo esc_attr($class); ?> -->
+		<?php
+	}
+endif;
+
+
+
+/* ---------------------------------------------------------------------------
+ * Share Box [share_box]
+ * --------------------------------------------------------------------------- */
+if( ! function_exists( 'kt_share_box' ) ){
+    function kt_share_box($post_id = null, $style = "", $class = 'share-it'){
+        global $post;
+        if(!$post_id) $post_id = $post->ID;
+
+        $link = urlencode(get_permalink($post_id));
+        $title = urlencode(addslashes(get_the_title($post_id)));
+        $excerpt = urlencode(get_the_excerpt());
+        $image = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'full');
+
+        $html = '';
+        $share_arr = kt_option('social_share');
+
+
+        $social_share = ($share_arr) ? $share_arr : array('facebook' => '#', 'twitter' => '#', 'google_plus' => '#', 'pinterest' => '#', 'linkedin' => '#', 'tumblr' => '#', 'email' => '#') ;
+
+        if(count($social_share)){
+            foreach($social_share as $key => $val){
+                if($val){
+                    if($key == 'facebook'){
+                        // Facebook
+                        $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://www.facebook.com/sharer.php?s=100&amp;p[title]=' . $title . '&amp;p[url]=' . $link.'\', \'sharer\', \'toolbar=0,status=0,width=620,height=280\');popUp.focus();return false;">';
+                        $html .= '<i class="fa fa-facebook"></i><span>'.esc_html__('Share on Facebook', 'mondova').'</span>';
+                        $html .= '</a></li>';
+                    }elseif($key == 'twitter'){
+                        // Twitter
+                        $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://twitter.com/home?status=' . $link . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false;">';
+                        $html .= '<i class="fa fa-twitter"></i><span>'.esc_html__('Share on Twitter', 'mondova').'</span>';
+                        $html .= '</a></li>';
+                    }elseif($key == 'google_plus'){
+                        // Google plus
+                        $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'https://plus.google.com/share?url=' . $link . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
+                        $html .= '<i class="fa fa-google-plus"></i><span>'.esc_html__('Share on Google+', 'mondova').'</span>';
+                        $html .= "</a></li>";
+                    }elseif($key == 'pinterest'){
+                        // Pinterest
+                        $html .= '<li><a class="share_link" href="#" onclick="popUp=window.open(\'http://pinterest.com/pin/create/button/?url=' . $link . '&amp;description=' . $title . '&amp;media=' . urlencode($image[0]) . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
+                        $html .= '<i class="fa fa-pinterest"></i><span>'.esc_html__('Share on Pinterest', 'mondova').'</span>';
+                        $html .= "</a></li>";
+                    }elseif($key == 'linkedin'){
+                        // linkedin
+                        $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://linkedin.com/shareArticle?mini=true&amp;url=' . $link . '&amp;title=' . $title. '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
+                        $html .= '<i class="fa fa-linkedin"></i><span>'.esc_html__('Share on LinkedIn', 'mondova').'</span>';
+                        $html .= "</a></li>";
+                    }elseif($key == 'tumblr'){
+                        // Tumblr
+                        $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://www.tumblr.com/share/link?url=' . $link . '&amp;name=' . $title . '&amp;description=' . $excerpt . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
+                        $html .= '<i class="fa fa-tumblr"></i><span>'.esc_html__('Share on Tumblr', 'mondova').'</span>';
+                        $html .= "</a></li>";
+                    }elseif($key == 'email'){
+                        // Email
+                        $html .= '<li><a class="'.$style.'" href="mailto:?subject='.$title.'&amp;body='.$link.'">';
+                        $html .= '<i class="fa fa-envelope-o"></i><span>'.esc_html__('Share on Mail', 'mondova').'</span>';
+                        $html .= "</a></li>";
+                    }
+                }
+            }
+        }
+
+        if($html){
+            printf(
+                '<div class="%s"><ul class="%s">%s</ul></div>',
+                $class,
+                'social_icons',
+                $html
+            );
+        }
+    }
+}
+
+
+if ( ! function_exists( 'kt_post_nav' ) ) {
+	/**
+	 * Display navigation to next/previous post when applicable.
+	 */
+	function kt_post_nav() {
+        // Don't print empty markup if there's nowhere to navigate.
+        $previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+        $next     = get_adjacent_post( false, '', false );
+
+        if ( ! $next && ! $previous ) return;
+
+        echo '<div class="post-navigation-wrap"><div class="container">';
+		$args = array(
+			'next_text' => '<span class="meta-image"></span><span class="meta-nav">'.esc_html__('Previous Post', 'mondova').'</span><span class="meta-title">%title</span>',
+			'prev_text' => '<span class="meta-image"></span><span class="meta-nav">'.esc_html__('Next Post', 'mondova').'</span><span class="meta-title">%title</span>',
+        );
+		the_post_navigation( $args );
+        echo '</div></div>';
+	}
+}

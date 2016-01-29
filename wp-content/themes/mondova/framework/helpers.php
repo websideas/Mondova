@@ -8,6 +8,19 @@
 // Exit if accessed directly
 if ( !defined('ABSPATH')) exit;
 
+/**
+ * Function check if WC Plugin installed
+ */
+function kt_is_wc(){
+    return function_exists('is_woocommerce');
+}
+
+/**
+ *  @true  if WPML installed.
+ */
+function  kt_is_wpml(){
+    return class_exists('SitePress');
+}
 
 
 

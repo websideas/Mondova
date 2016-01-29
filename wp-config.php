@@ -81,6 +81,7 @@ define('WP_DEBUG', true);
 
 define('AUTOSAVE_INTERVAL', 300 ); // seconds
 define('WP_POST_REVISIONS', false );
+define('JETPACK_DEV_DEBUG', true);
 
 
 /* That's all, stop editing! Happy blogging. */
