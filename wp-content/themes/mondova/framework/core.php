@@ -209,6 +209,17 @@ if ( class_exists( 'Vc_Manager', false ) ) {
 
 }
 
+
+if(kt_is_wc()){
+    /**
+     * support for woocommerce helpers
+     *
+     */
+    require KT_FW_DIR . '/woocommerce.php';
+}
+
+
+
 /**
  * Include Widgets register and define all sidebars.
  *

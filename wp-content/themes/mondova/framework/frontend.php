@@ -133,6 +133,48 @@ function kt_add_scripts() {
 add_action( 'wp_enqueue_scripts', 'kt_add_scripts' );
 
 
+
+/**
+ * Control the number of  excerpt length
+ * @return string
+ *
+ *
+ */
+
+function kt_excerpt_length( ) {
+    if(is_search()){
+        $excerpt_length = kt_option('search_excerpt_length', 35);
+    }else{
+        $excerpt_length = kt_option('archive_excerpt_length', 40);
+    }
+    return $excerpt_length;
+}
+add_filter( 'excerpt_length', 'kt_excerpt_length');
+
+
+/**
+ *
+ *
+ * Control the number of posts per page
+ */
+function kt_posts_per_page( $query ) {
+    if ( $query->is_main_query() && !is_admin()) {
+
+        if(isset($_REQUEST['per_page'])){
+            $posts_per_page = $_REQUEST['per_page'];
+        }elseif(is_search()){
+            $posts_per_page = kt_option('search_posts_per_page', 9);
+        }elseif($query->is_archive() || is_home()){
+            $posts_per_page = kt_option('archive_posts_per_page', 14);
+        }
+
+        if(isset($posts_per_page)){
+            set_query_var('posts_per_page', $posts_per_page);
+        }
+    }
+}
+add_action( 'pre_get_posts', 'kt_posts_per_page' );
+
 /**
  *
  * Custom call back function for default post type
@@ -285,17 +327,20 @@ if ( ! function_exists( 'kt_paging_nav' ) ) {
      */
     function kt_paging_nav( $type = 'normal' ) {
 
+        if(is_array($type)){
+            $type = $type['pagination'];
+        }
+
         global $wp_query;
 
         // Don't print empty markup if there's only one page.
-        if ( $wp_query->max_num_pages < 2 ) {
+        if ( $wp_query->max_num_pages < 2 || $type == 'none') {
             return;
         }
-        if($type == 'none'){
-            return ;
-        }elseif($type == 'button'){ ?>
-            <nav class="navigation post-navigation clearfix">
-                <h1 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'mondova' ); ?></h1>
+
+        if($type == 'button'){ ?>
+            <nav class="navigation pagination-button">
+                <span class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'mondova' ); ?></span>
                 <div class="nav-links">
                     <?php if ( get_next_posts_link() ) : ?>
                         <div class="nav-previous"><?php next_posts_link( '<i class="fa fa-long-arrow-left"></i> '.esc_html__( 'Older posts', 'mondova' ) ); ?></div>
@@ -470,12 +515,6 @@ if ( ! function_exists( 'kt_entry_date' ) ) {
 
 
 
-function kt_excerpt_length( ) {
-    return kt_option('archive_excerpt_length', 30);
-}
-add_filter( 'excerpt_length', 'kt_excerpt_length');
-
-
 
 if ( ! function_exists( 'kt_entry_excerpt' ) ) :
 	/**
@@ -516,11 +555,8 @@ if( ! function_exists( 'kt_share_box' ) ){
         $html = '';
         $share_arr = kt_option('social_share');
 
-
-        $social_share = ($share_arr) ? $share_arr : array('facebook' => '#', 'twitter' => '#', 'google_plus' => '#', 'pinterest' => '#', 'linkedin' => '#', 'tumblr' => '#', 'email' => '#') ;
-
-        if(count($social_share)){
-            foreach($social_share as $key => $val){
+        if(count($share_arr)){
+            foreach($share_arr as $key => $val){
                 if($val){
                     if($key == 'facebook'){
                         // Facebook

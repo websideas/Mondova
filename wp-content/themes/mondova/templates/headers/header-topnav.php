@@ -1,21 +1,35 @@
 <ul class="top-navigation">
-    <li>
-        <a href="#"><i class="icon_lock_alt"></i>My Account</a>
-    </li>
-    <li class="language-switcher">
-        <a href="#"><i class="icon_ribbon_alt"></i>language</a>
-        <!--<ul class="list-lang">
-            <li><span class="current"><img alt="en" src="assets/images/lang/en.jpg"><span>English</span></span></li>
-            <li><a href="#" title="Russian"><img alt="ru" src="assets/images/lang/ru.jpg"><span>Russian</span></a></li>
-            <li><a href="#" title="Brazil"><img alt="bra" src="assets/images/lang/bra.jpg"><span>Brazil</span></a></li>
-            <li><a href="#" title="France"><img alt="fr" src="assets/images/lang/fr.jpg"><span>France</span></a></li>
-        </ul>-->
-    </li>
-    <li class="currency-switcher">
-        <a href="#"><i class="icon_currency"></i>Currency</a>
-        <ul>
-            <li><a href="#">USD</a></li>
-            <li><a href="#">EUR</a></li>
-        </ul>
-    </li>
+    <?php if ( kt_is_wc()){ ?>
+        <li><a href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>"><i class="icon_lock_alt"></i><?php esc_html_e('My Cart', 'wingman') ?></a></li>
+    <?php } ?>
+
+
+    <?php
+        kt_custom_wpml('<li class="language-switcher">', '</li>', esc_html__('Language', 'wingman'));
+    ?>
+
+    <?php if(class_exists('WOOCS') && kt_is_wc()){ ?>
+
+        <li class="currency-switcher">
+            <a href="#"><i class="icon_currency"></i><?php esc_html_e('Currency', 'wingman') ?></a>
+            <?php
+            global $WOOCS;
+            $currencies=$WOOCS->get_currencies();
+            echo '<ul>';
+            foreach($currencies as $key => $currency){
+                $selected = ($WOOCS->current_currency == $key) ? 'active' : '';
+                printf(
+                    '<li class="%s"><a href="#" data-currency="%s" title="%s"><span></span>%s</a>',
+                    $selected,
+                    esc_attr($currency['name']),
+                    esc_attr($currency['description']),
+                    $currency['name']
+                );
+            }
+            echo '</ul>';
+            ?>
+        </li>
+    <?php } ?>
+
+
 </ul>

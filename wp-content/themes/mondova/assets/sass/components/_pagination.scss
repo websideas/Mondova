@@ -67,3 +67,14 @@
     }
   }
 }
+
+.pagination-button{
+  @include clearfix();
+  .nav-previous{
+    float: left;
+  }
+  .nav-next{
+    float: right;
+  }
+
+}

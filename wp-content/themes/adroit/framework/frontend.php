@@ -397,7 +397,7 @@ if(!function_exists('kt_setting_script_footer')){
             echo sprintf('<script type="text/javascript">%s</script>', $advanced_js);
         }
     }
-    add_action('wp_footer', 'kt_setting_script_footer', 100);
+    add_action('wp_footer', 'kt_setlengting_script_footer', 100);
 }
 
 

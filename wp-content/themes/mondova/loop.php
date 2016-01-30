@@ -7,23 +7,26 @@
  *
  */
 
+
+$layout = kt_get_archive_layout();
+$article_columns = 12/$layout['columns'];
+$article_columns_tab = 12/$layout['columns_tab'];
+
+
+
+
 do_action( 'kt_loop_before' );
 
-$type = 'zigzag';
 
-$column = 3;
-$column_tab = 2;
 
-$article_column = 12/$column;
-$article_column_tab = 12/$column_tab;
 
-echo '<div class="blog-posts blog-posts-'.esc_attr($type).'">';
+echo '<div class="blog-posts blog-posts-'.esc_attr($layout['type']).'">';
 
-if($type == 'grid'|| $type == 'masonry'){
+if($layout['type'] == 'grid'|| $layout['type'] == 'masonry'){
     echo '<div class="row multi-columns-row">';
 }
-if($type == 'masonry') {
-    printf('<div class="blog-post-sizer col-lg-%1$s col-md-%1$s col-sm-%2$s"></div>', $article_column, $article_column_tab);
+if($layout['type'] == 'masonry') {
+    printf('<div class="blog-post-sizer col-lg-%1$s col-md-%1$s col-sm-%2$s"></div>', $article_columns, $article_columns_tab);
 }
 
 $i = 1;
@@ -37,26 +40,27 @@ while ( have_posts() ) : the_post();
 
     $format = get_post_format();
 
-    if($type == 'grid' || $type == 'masonry') {
-        printf('<div class="blog-post-wrap col-lg-%1$s col-md-%1$s col-sm-%2$s" >', $article_column, $article_column_tab);
+    if($layout['type'] == 'grid' || $layout['type'] == 'masonry') {
+        printf('<div class="blog-post-wrap col-lg-%1$s col-md-%1$s col-sm-%2$s" >', $article_columns_tab, $article_columns_tab);
     }
 
-
-    if($type == 'zigzag'){
+    if($layout['type'] == 'zigzag'){
         $format = ($i % 2 )? '' : 'even';
     }
-    get_template_part( 'templates/blog/'.$type.'/content', $format );
+    get_template_part( 'templates/blog/'.$layout['type'].'/content', $format );
 
-    if($type == 'grid' || $type == 'masonry') {
+    if($layout['type'] == 'grid' || $layout['type'] == 'masonry') {
         echo '</div>';
     }
     $i++;
 endwhile;
-if($type == 'grid' || $type == 'masonry') {
+if($layout['type'] == 'grid' || $layout['type'] == 'masonry') {
     echo "</div><!-- .row -->";
 }
 echo "</div><!-- .blog-posts -->";
 
-kt_paging_nav();
+/**
+ * @hooked kt_paging_nav
+ */
 
-do_action( 'kt_loop_after' );
+do_action( 'kt_loop_after',  $layout);

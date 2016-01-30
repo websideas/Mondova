@@ -545,16 +545,6 @@ div#post-body .rwmb-text{
 }
 
 
-.widget-content .chosen-container{
-    width: 100%!important;
-}
-.widget-content .chosen-container-multi .chosen-choices li.search-field input[type="text"]{
-    min-width: 130px;
-}
-
-.widget-content .chosen-container + .chosen-container{
-    display: none;
-}
 
 .rwmb-image_radio-wrapper .rwmb-input{
     margin-left: -10px;
@@ -578,4 +568,16 @@ div#post-body .rwmb-text{
 }
 .rwmb-image_radio-wrapper input:checked + img{
     border-color: #0073aa;
+}
+
+
+
+
+
+
+.widget-content .select2-container{
+    width: 100%!important;
+}
+.widget-content .select2-container + .select2-container{
+    display: none!important;
 }

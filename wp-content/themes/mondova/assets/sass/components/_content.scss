@@ -21,12 +21,16 @@
 
 }
 
+.sticky{
+
+}
 
 
 /* ==============================
    12. Blog posts
    ============================== */
 .blog-posts{
+  margin-bottom: $vspacing;
   .blog-post-sizer{
     min-height: 0;
   }

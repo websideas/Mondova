@@ -11,11 +11,7 @@
  *
  */
 
-
-$sidebar = array(
-    'sidebar' => '',
-    'sidebar_area' => 'primary-widget-area',
-);
+$sidebar = kt_get_archive_sidebar();
 
 $main_column = ($sidebar['sidebar']) ? '8' : '12';
 $sidebar_class = ($sidebar['sidebar']) ? 'sidebar-'.$sidebar['sidebar'] : 'no-sidebar';

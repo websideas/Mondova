@@ -19,7 +19,6 @@
       <script src="<?php echo KT_THEME_JS; ?>respond.min.js"></script>
     <![endif]-->
 
-
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 
 	<?php wp_head(); ?>
@@ -27,6 +26,7 @@
 <body <?php body_class( ); ?>>
     <?php
         $header_layout = kt_get_header_layout();
+        $header_position = kt_get_header_position();
     ?>
     <?php
     do_action( 'kt_body_top' ); ?>
@@ -35,10 +35,24 @@
         <div id="page" class="hfeed site">
             <div id="wrapper-content" class="content-header-<?php echo esc_attr($header_layout); ?>">
 
+                <?php
+                do_action( 'kt_before_header' ); ?>
+
                 <div class="header-container header-layout<?php echo esc_attr($header_layout); ?> <?php echo esc_attr(apply_filters('kt_header_class', '', $header_layout)); ?>">
+
+                    <?php
+                    if($header_position == 'below'){
+                        do_action( 'kt_slideshows_position' );
+                    } ?>
+
                     <header id="header" class="<?php echo apply_filters('theme_header_content_class', 'header-content', $header_layout) ?>">
                         <?php get_template_part( 'templates/headers/header', $header_layout); ?>
                     </header><!-- #header -->
+
+                    <?php
+                    if($header_position != 'below'){
+                        do_action( 'kt_slideshows_position' );
+                    } ?>
                 </div><!-- .header-container -->
 
                 <?php

@@ -15,7 +15,7 @@ if ( !defined('ABSPATH')) exit;
                 <?php get_template_part( 'templates/headers/header',  'branding'); ?>
             </div>
             <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12 header-right">
-                <?php //include_once('templates/shopping-cart.php'); ?>
+                <?php get_template_part( 'templates/headers/header',  'cart'); ?>
                 <?php get_search_form(); ?>
             </div>
         </div>

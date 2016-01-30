@@ -17,6 +17,28 @@ function kt_sanitize_boolean_callback( $input = '' ) {
 add_filter( 'kt_sanitize_boolean', 'kt_sanitize_boolean_callback', 15 );
 
 
+/**
+ * Add class to next button
+ *
+ * @param string $attr
+ * @return string
+ */
+function kt_next_posts_link_attributes( $attr = '' ) {
+    return "class='btn btn-default'";
+}
+add_filter( 'next_posts_link_attributes', 'kt_next_posts_link_attributes', 15 );
+
+
+/**
+ * Add class to prev button
+ *p
+ * @param string $attr
+ * @return string
+ */
+function kt_previous_posts_link_attributes( $attr = '' ) {
+    return "class='btn btn-default'";
+}
+add_filter( 'previous_posts_link_attributes', 'kt_previous_posts_link_attributes', 15 );
 
 
 if(!function_exists('kt_placeholder_callback')) {
@@ -69,28 +91,31 @@ function kt_password_form() {
 add_filter( 'the_password_form', 'kt_password_form' );
 
 
-/*
-add_filter('navigation_markup_template', 'kt_navigation_markup_template', 10, 2);
-function kt_navigation_markup_template($template, $class){
-    $disable_next = $disable_prev = '';
-    if ( !get_previous_posts_link() ) {
-        $disable_prev = '<span class="page-numbers prev disable">'._x( 'Previous', 'previous post','adroit' ).'</span>';
-    }
-    if ( !get_next_posts_link() ) {
-        $disable_next = '<span class="page-numbers next disable">'._x( 'Next', 'next post','adroit' ).'</span>';
+/**
+ * Extend the default WordPress body classes.
+ *
+ * @since 1.0
+ *
+ * @param array $classes A list of existing body class values.
+ * @return array The filtered body class list.
+ */
+function kt_body_classes( $classes ) {
+    global $post;
+
+    if ( is_multi_author() ) {
+        $classes[] = 'group-blog';
     }
 
-    $template = '
-	<nav class="navigation %1$s">
-		<h2 class="screen-reader-text">%2$s</h2>
-		<div class="nav-links">'.$disable_prev.'%3$s'.$disable_next.'</div>
-	</nav>';
-    return $template;
+    if( is_page() || is_singular('post')){
+        $classes[] = 'layout-'.kt_getlayout($post->ID);
+        $classes[] = rwmb_meta('_kt_extra_page_class');
+    }else{
+        $classes[] = 'layout-'.kt_option('layout', 'boxed');
+    }
+
+    return $classes;
 }
-*/
-
-
-
+add_filter( 'body_class', 'kt_body_classes' );
 
 
 
@@ -99,43 +124,69 @@ function kt_navigation_markup_template($template, $class){
  *
  * @since 1.0
  */
-add_action( 'kt_content_top', 'kt_page_header', 20 );
+
 function kt_page_header( ){
 
-    $title = kt_get_page_title();
-    $subtitle = kt_get_page_subtitle();
+    global $post;
+    $show_title = false;
 
-
-    //$subtitle = 'creative online fashion shop';
-
-
-    $title = '<h1 class="page-header-title">'.$title.'</h1>';
-    if($subtitle != ''){
-        $subtitle = '<div class="page-header-subtitle">'.$subtitle.'</div>';
-    }
-
-    $divider = '<div class="page-header-divider"><i class="icon_pens"></i></div>';
-
-
-    $style = 'standard';
-    //standard, fancy, fancy-tabbed
-
-    if($style == 'fancy-tabbed'){
-        $layout = '<div class="page-header %4$s"><div class="page-header-overlay"></div><div class="container">%3$s<div class="page-header-content"><div class="page-header-inner">%1$s %2$s</div></div></div></div>';
+    if ( is_front_page() && is_singular('page')){
+        $show_title = rwmb_meta('_kt_page_header', array(), get_option('page_on_front', true));
+        if( !$show_title ){
+            $show_title = kt_option('show_page_header', 1);
+        }
+    }elseif(is_archive()){
+        $show_title = kt_option('archive_page_header', 1);
+    }elseif(is_search()){
+        $show_title = kt_option('search_page_header', 1);
+    }elseif(is_404()){
+        $show_title = kt_option('notfound_page_header', 1);
     }else{
-        $layout = '<div class="page-header %4$s"><div class="page-header-overlay"></div><div class="container"><div class="page-header-content">%1$s %2$s %3$s</div></div></div>';
+        if(is_page()){
+            $post_id = $post->ID;
+            $show_title = rwmb_meta('_kt_page_header', array(), $post_id);
+            if( !$show_title ){
+                $show_title = kt_option('show_page_header', 1);
+            }
+        }else{
+            $show_title = kt_option('show_page_header', 1);
+        }
     }
 
-    printf(
-        $layout,
-        $title,
-        $subtitle,
-        $divider,
-        $style.'-heading'
-    );
+
+    $show_title = apply_filters( 'kt_show_title', $show_title );
+    if($show_title == 'on' || $show_title == 1){
+        $title = kt_get_page_title();
+        $subtitle = kt_get_page_subtitle();
+
+        $title = '<h1 class="page-header-title">'.$title.'</h1>';
+        if($subtitle != ''){
+            $subtitle = '<div class="page-header-subtitle">'.$subtitle.'</div>';
+        }
+
+        $divider = '<div class="page-header-divider"><i class="icon_pens"></i></div>';
+
+        $style = 'fancy-tabbed';
+        //standard, fancy-tabbed
+
+        if($style == 'fancy-tabbed'){
+            $layout = '<div class="page-header %4$s"><div class="page-header-overlay"></div><div class="container">%3$s<div class="page-header-content"><div class="page-header-inner">%1$s %2$s</div></div></div></div>';
+        }else{
+            $layout = '<div class="page-header %4$s"><div class="page-header-overlay"></div><div class="container"><div class="page-header-content">%1$s %2$s %3$s</div></div></div>';
+        }
+
+        printf(
+            $layout,
+            $title,
+            $subtitle,
+            $divider,
+            $style.'-heading'
+        );
+    }
+
 
 }
-
+add_action( 'kt_before_content', 'kt_page_header', 20 );
 
 /**
  * Get page title
@@ -218,4 +269,25 @@ function kt_get_page_subtitle(){
     }
 
     return apply_filters( 'kt_subtitle', $tagline );
+}
+
+
+
+add_action('kt_loop_after', 'kt_paging_nav');
+
+
+
+
+
+/**
+ * Add slideshow header
+ *
+ * @since 1.0
+ */
+add_action( 'kt_slideshows_position', 'kt_slideshows_position_callback' );
+function kt_slideshows_position_callback(){
+
+    if(is_page()){
+        kt_show_slideshow();
+    }
 }

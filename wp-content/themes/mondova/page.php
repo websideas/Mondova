@@ -9,10 +9,7 @@
  *
  */
 
-$sidebar = array(
-    'sidebar' => 'left',
-    'sidebar_area' => 'primary-widget-area',
-);
+$sidebar = kt_get_page_sidebar();
 
 $main_column = ($sidebar['sidebar']) ? '8' : '12';
 $sidebar_class = ($sidebar['sidebar']) ? 'sidebar-'.$sidebar['sidebar'] : 'no-sidebar';

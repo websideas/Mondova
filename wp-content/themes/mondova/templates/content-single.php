@@ -15,11 +15,11 @@
                         <?php
                         if( ! post_password_required( ) ):
                             wp_link_pages( array(
-                                'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'adroit' ) . '</span>',
+                                'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'mondova' ) . '</span>',
                                 'after'       => '</div>',
                                 'link_before' => '<span>',
                                 'link_after'  => '</span>',
-                                'pagelink'    => '<span class="screen-reader-text">' . esc_html__( 'Page', 'adroit' ) . ' </span>%',
+                                'pagelink'    => '<span class="screen-reader-text">' . esc_html__( 'Page', 'mondova' ) . ' </span>%',
                                 'separator'   => '<span class="screen-reader-text">, </span>',
                             ) );
                         endif;
@@ -32,7 +32,7 @@
                     <div class="content-single-left">
                         <h3 class="title">Lifestyle</h3>
                         <div class="category-desciption">
-                            <p>“ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero”</p>
+                            <p>" Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero"</p>
                         </div>
                     </div>
                     <div class="content-single-left">
