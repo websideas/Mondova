@@ -28,6 +28,7 @@
         left: 50%;
         display: block;
         @include transition();
+        @include opacity(0);
       }
 
       &:before{

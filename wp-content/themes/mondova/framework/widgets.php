@@ -23,6 +23,16 @@ if ( function_exists('register_sidebar')) {
         ) );
 
         register_sidebar( array(
+            'name' => esc_html__( 'Shop Widget Area', 'wingman'),
+            'id' => 'shop-widget-area',
+            'description' => esc_html__( 'The shop widget area', 'wingman'),
+            'before_widget' => '<div id="%1$s" class="widget clearfix %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>',
+        ) );
+
+        register_sidebar( array(
             'name' => esc_html__( 'Blog Widget Area', 'mondova'),
             'id' => 'blog-widget-area',
             'description' => esc_html__( 'The blog widget area', 'mondova'),

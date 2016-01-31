@@ -107,6 +107,7 @@ function kt_body_classes( $classes ) {
     }
 
     if( is_page() || is_singular('post')){
+
         $classes[] = 'layout-'.kt_getlayout($post->ID);
         $classes[] = rwmb_meta('_kt_extra_page_class');
     }else{

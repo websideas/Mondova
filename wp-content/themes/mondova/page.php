@@ -73,7 +73,5 @@ get_header(); ?>
 </div><!-- #primary -->
 
 
-<img src="previews/19-blog-single.jpg" class="preview-image" style="top: -1944px;display: none;" />
-
 <?php get_footer(); ?>
 

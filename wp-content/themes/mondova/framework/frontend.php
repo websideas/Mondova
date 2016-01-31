@@ -40,7 +40,6 @@ function kt_theme_setup() {
 		'caption',
 	) );
 
-
     /**
 	 * Enable support for Post Formats
 	 */
@@ -166,6 +165,12 @@ function kt_posts_per_page( $query ) {
             $posts_per_page = kt_option('search_posts_per_page', 9);
         }elseif($query->is_archive() || is_home()){
             $posts_per_page = kt_option('archive_posts_per_page', 14);
+        }
+
+        if(kt_is_wc()){
+            if(is_shop() || is_product_category() || is_product_tag()){
+                unset($posts_per_page);
+            }
         }
 
         if(isset($posts_per_page)){

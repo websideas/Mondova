@@ -1,15 +1,18 @@
 <ul class="top-navigation">
     <?php if ( kt_is_wc()){ ?>
-        <li><a href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>"><i class="icon_lock_alt"></i><?php esc_html_e('My Cart', 'wingman') ?></a></li>
+        <li>
+            <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">
+                <i class="icon_lock_alt"></i>
+                <?php esc_html_e('My Account', 'wingman'); ?>
+            </a>
+        </li>
     <?php } ?>
-
 
     <?php
         kt_custom_wpml('<li class="language-switcher">', '</li>', esc_html__('Language', 'wingman'));
     ?>
 
     <?php if(class_exists('WOOCS') && kt_is_wc()){ ?>
-
         <li class="currency-switcher">
             <a href="#"><i class="icon_currency"></i><?php esc_html_e('Currency', 'wingman') ?></a>
             <?php
@@ -30,6 +33,5 @@
             ?>
         </li>
     <?php } ?>
-
 
 </ul>

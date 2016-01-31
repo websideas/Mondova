@@ -21,41 +21,63 @@
     <favorites_list name="mondova" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="archive-product.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/woocommerce/templates/archive-product.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.5">
+              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="woocommerce.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/framework/woocommerce.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.375">
+              <caret line="437" column="33" selection-start-line="437" selection-start-column="33" selection-end-line="437" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content-product.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/woocommerce/content-product.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.877193">
+              <caret line="64" column="2" selection-start-line="64" selection-start-column="2" selection-end-line="64" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_woocommerce.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/components/_woocommerce.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.625">
+              <caret line="545" column="5" selection-start-line="545" selection-start-column="5" selection-end-line="545" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/components/_shortcodes.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/mondova/templates/author-bio.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/storefront/content-single.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/storefront/single.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/storefront/comments.php" />
-        <option value="$PROJECT_DIR$/wp-includes/comment-template.php" />
-        <option value="$PROJECT_DIR$/wp-config.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/components/_media.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/components/_menu.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/mondova/single.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/base/_base.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/mondova/comments.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/storefront/header.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/mondova/assets/css/style.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/backup.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/mondova/templates/content-single.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/components/_comments.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/components/_pageheader.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/layout/_layout.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/components/_pagination.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/mondova/templates/blog/list/content.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/mondova/templates/blog/grid/content.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/components/_forms.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/mondova/assets/js/plugins.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/mondova/assets/js/functions.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/mondova/templates/content-page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/mondova/templates/blog/classic/content.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/mondova/index.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/mondova/templates/blog/masonry/content.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/mondova/framework/frontend.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/mondova/templates/blog/zigzag/content.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/components/_content.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/mondova/templates/blog/zigzag/content-even.php" />
@@ -63,20 +85,39 @@
         <option value="$PROJECT_DIR$/wp-content/themes/mondova/framework/data/data-plugins.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/adroit/framework/admin.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/redux-framework/sample/sample-config.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/mondova/page.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/mondova/framework/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/mondova/framework/data/data-options.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/mondova/framework/admin.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/mondova/framework/widgets/kt_article.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/mondova/framework/assets/css/framework-core.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/mondova/framework/helpers.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/mondova/templates/headers/header-topnav.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/mondova/templates/headers/header-1.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/mondova/templates/headers/header-cart.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/mondova/framework/core.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/mondova/assets/css/woocommerce.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/mondova/framework/woocommerce.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/mondova/sidebar.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/page.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/framework/widgets.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/woocommerce/product-searchform.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/components/_widgets.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/components/_forms.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/woocommerce.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/assets/css/woocommerce.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/templates/headers/header-cart.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/woocommerce/cart/mini-cart.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/searchform.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/templates/headers/header-1.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/templates/headers/header-wishlist.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/framework/admin.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/templates/headers/header-topnav.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/components/_pagination.scss" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/woocommerce/templates/archive-product.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/woocommerce/loop/pagination.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/framework/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/framework/frontend.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/woocommerce/loop/orderby.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/woocommerce/loop/result-count.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/framework/woocommerce.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/woocommerce/loop/loop-end.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/woocommerce/loop/loop-start.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/components/_woocommerce.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/mondova/woocommerce/content-product.php" />
       </list>
     </option>
   </component>
@@ -190,11 +231,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twentyfifteen" />
+              <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -212,11 +249,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
+              <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mondova" />
+              <option name="myItemId" value="woocommerce" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -234,29 +271,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
+              <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mondova" />
+              <option name="myItemId" value="woocommerce" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mondova" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mondova" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HTML" />
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -270,33 +293,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HTML" />
+              <option name="myItemId" value="wp-content" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mondova" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mondova" />
+              <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HTML" />
+              <option name="myItemId" value="woocommerce" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="loop" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -323,11 +336,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/wp-content/themes/mondova/templates/footers" />
-      <recent name="$PROJECT_DIR$/wp-content/themes/mondova/templates/blog/zigzag" />
-      <recent name="$PROJECT_DIR$/wp-content/themes/mondova/templates" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/mondova/woocommerce" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/mondova/woocommerce/loop" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/mondova/woocommerce/cart" />
       <recent name="$PROJECT_DIR$/wp-content/themes/mondova" />
-      <recent name="$PROJECT_DIR$/wp-content/themes/mondova/assets/css/components" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/mondova/templates/footers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/wp-content/themes/mondova/assets/sass" />
@@ -379,26 +392,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1002" extended-state="7" />
+    <frame x="0" y="23" width="1920" height="1002" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23541667" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.50416666" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23541667" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.50416666" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="100" y="123" width="1720" height="802" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -420,269 +433,110 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/framework/frontend.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/storefront/js/checkout.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.375">
-          <caret line="73" column="34" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.85324234">
+          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/templates/blog/grid/content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14035088">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/templates/blog/zigzag/content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.875">
-          <caret line="3" column="48" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/templates/blog/zigzag/content-even.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49122807">
-          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/loop.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36842105">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/templates/footers/footer-widgets.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/storefront/js/checkout.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3508772">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/components/_widgets.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3508772">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../wingman/wp-content/themes/wingman/framework/data/data-plugins.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49122807">
-          <caret line="70" column="10" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/framework/data/data-plugins.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5964912">
-          <caret line="82" column="14" selection-start-line="82" selection-start-column="14" selection-end-line="82" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/framework/data/data-meta-box.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/redux-framework/sample/info-html.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/adroit/framework/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.307971">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/redux-framework/redux-framework.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="44" column="55" selection-start-line="44" selection-start-column="55" selection-end-line="44" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/redux-framework/.jshintrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/redux-framework/class.redux-plugin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.47368422">
-          <caret line="172" column="73" selection-start-line="172" selection-start-column="73" selection-end-line="172" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/redux-framework/sample/sample-config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/redux-framework/ReduxCore/inc/class.redux_api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.7368422">
-          <caret line="163" column="35" selection-start-line="163" selection-start-column="35" selection-end-line="163" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/single.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19298245">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/index.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/storefront/js/navigation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.875">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.75085324">
+          <caret line="44" column="28" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/adroit/framework/functions.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/storefront/js/skip-link-focus-fix.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17028986">
-          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="111" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.32423207">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/storefront/inc/woocommerce/css/deposits.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/js/select2/select2.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/woocommerce/assets/js/select2/select2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1453857336000" expanded="true" signature="-1:-1" placeholder="..." />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/adroit/framework/helpers.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/woocommerce.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44795322">
-          <caret line="336" column="26" selection-start-line="336" selection-start-column="26" selection-end-line="336" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.22807017">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/adroit/framework/data/data-options.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Core_d.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47251463">
-          <caret line="177" column="12" selection-start-line="177" selection-start-column="12" selection-end-line="203" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.34269005">
+          <caret line="297" column="9" selection-start-line="297" selection-start-column="9" selection-end-line="297" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/framework/functions.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/assets/css/woocommerce.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6608187">
-          <caret line="113" column="5" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
+        <state vertical-scroll-proportion="-3.125">
+          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-compare/init.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/storefront/inc/woocommerce/template-tags.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.442029">
-          <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/framework/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="19" column="76" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/framework/data/data-options.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.058824">
-          <caret line="274" column="26" selection-start-line="274" selection-start-column="26" selection-end-line="274" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/framework/widgets/kt_article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.625">
-          <caret line="148" column="39" selection-start-line="148" selection-start-column="39" selection-end-line="148" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/framework/assets/css/framework-core.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="9.260564">
-          <caret line="526" column="1" selection-start-line="526" selection-start-column="1" selection-end-line="526" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/woocommerce/includes/wc-cart-functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5368421">
-          <caret line="331" column="9" selection-start-line="331" selection-start-column="9" selection-end-line="331" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/woocommerce/includes/class-wc-cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5">
-          <caret line="676" column="28" selection-start-line="676" selection-start-column="28" selection-end-line="676" selection-end-column="28" />
+        <state vertical-scroll-proportion="-5.0">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="35" />
           <folding>
-            <marker date="1452591496000" expanded="true" signature="-1:-1" placeholder="SELECT SUM( ..." />
+            <element signature="e#6#110#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/templates/headers/header-topnav.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/storefront/inc/woocommerce/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.6470587">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="78" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/templates/headers/header-branding.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/framework/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61403507">
-          <caret line="435" column="42" selection-start-line="435" selection-start-column="42" selection-end-line="435" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/templates/headers/header-1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28070176">
-          <caret line="16" column="75" selection-start-line="16" selection-start-column="75" selection-end-line="16" selection-end-column="75" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -695,15 +549,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/templates/headers/header-cart.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/searchform.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03508772">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        <state vertical-scroll-proportion="-3.125">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/assets/js/woocommerce.js">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/framework/data/data-options.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.614035">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/templates/headers/header-cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5">
+          <caret line="4" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/templates/headers/header-1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31578946">
+          <caret line="18" column="79" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-wishlist/init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4350877">
+          <caret line="120" column="43" selection-start-line="120" selection-start-column="43" selection-end-line="120" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/templates/headers/header-wishlist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-wishlist/templates/add-to-wishlist-button.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -711,106 +605,278 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/backup.scss">
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-wishlist/templates/add-to-wishlist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1754386">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-wishlist/templates/wishlist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl-shortcode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="214" column="55" selection-start-line="214" selection-start-column="40" selection-end-line="214" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-wishlist/includes/class.yith-wcwl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="567" column="38" selection-start-line="567" selection-start-column="26" selection-end-line="567" selection-end-column="38" />
+          <folding>
+            <marker date="1454172255000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
+            <marker date="1454172255000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1454172255000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
+            <marker date="1454172255000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
+            <marker date="1454172255000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1454172255000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
+            <marker date="1454172255000" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..." />
+            <marker date="1454172255000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
+            <marker date="1454172255000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1454172255000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1454172255000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/woocommerce/cart/mini-cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7894737">
+          <caret line="61" column="60" selection-start-line="61" selection-start-column="60" selection-end-line="61" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/yith-woocommerce-wishlist/templates/wishlist-view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5017544">
+          <caret line="161" column="37" selection-start-line="161" selection-start-column="37" selection-end-line="161" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/framework/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2982456">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/woocommerce/includes/class-wc-cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35438597">
+          <caret line="949" column="50" selection-start-line="949" selection-start-column="50" selection-end-line="949" selection-end-column="50" />
+          <folding>
+            <marker date="1452591496000" expanded="true" signature="-1:-1" placeholder="SELECT SUM( ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/templates/headers/header-topnav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4385965">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/woocommerce/templates/global/wrapper-start.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50877196">
+          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/components/_pagination.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.25">
-          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HTML/assets/css/style.scss">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/components/_menu.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.529411">
-          <caret line="900" column="13" selection-start-line="900" selection-start-column="1" selection-end-line="900" selection-end-column="13" />
+        <state vertical-scroll-proportion="-27.5">
+          <caret line="156" column="8" selection-start-line="156" selection-start-column="8" selection-end-line="163" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/components/_other.scss">
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/woocommerce/templates/loop/pagination.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5263158">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+        <state vertical-scroll-proportion="-13.125">
+          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/components/_woocommerce.scss">
+    <entry file="file://$PROJECT_DIR$/wp-includes/general-template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.615942">
-          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+        <state vertical-scroll-proportion="-12.208333">
+          <caret line="2924" column="9" selection-start-line="2924" selection-start-column="9" selection-end-line="2924" selection-end-column="9" />
+          <folding>
+            <marker date="1451902768000" expanded="true" signature="-1:-1" placeholder="SELECT YEAR(..." />
+            <marker date="1451902768000" expanded="true" signature="-1:-1" placeholder="SELECT YEAR(..." />
+            <marker date="1451902768000" expanded="true" signature="-1:-1" placeholder="SELECT YEAR(..." />
+            <marker date="1451902768000" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..." />
+            <marker date="1451902768000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1451902768000" expanded="true" signature="-1:-1" placeholder="SELECT 1 as ..." />
+            <marker date="1451902768000" expanded="true" signature="-1:-1" placeholder="SELECT MONTH..." />
+            <marker date="1451902768000" expanded="true" signature="-1:-1" placeholder="SELECT MONTH..." />
+            <marker date="1451902768000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451902768000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451902768000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451902768000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451902768000" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/woocommerce/includes/wc-template-functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34269005">
+          <caret line="784" column="13" selection-start-line="784" selection-start-column="13" selection-end-line="784" selection-end-column="13" />
+          <folding>
+            <marker date="1453711024000" expanded="true" signature="-1:-1" placeholder="SELECT term_..." />
+            <marker date="1453711024000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/link-template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64912283">
+          <caret line="2497" column="26" selection-start-line="2497" selection-start-column="26" selection-end-line="2497" selection-end-column="26" />
+          <folding>
+            <marker date="1451157144000" expanded="true" signature="-1:-1" placeholder="SELECT p.ID ..." />
+            <marker date="1451157144000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/woocommerce/loop/pagination.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1754386">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/components/_content.scss">
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/woocommerce/templates/archive-product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.5">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/woocommerce/templates/loop/orderby.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0877193">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/storefront/inc/woocommerce/hooks.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.01754386">
-          <caret line="306" column="14" selection-start-line="306" selection-start-column="14" selection-end-line="306" selection-end-column="14" />
+          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+          <folding>
+            <element signature="e#6#71#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/framework/frontend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5122807">
+          <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/assets/css/style.scss">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/woocommerce/loop/orderby.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10526316">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="9" selection-end-column="30" />
+        <state vertical-scroll-proportion="-6.875">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/assets/css/woocommerce.scss">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/woocommerce/loop/result-count.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10526316">
-          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        <state vertical-scroll-proportion="-14.375">
+          <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/framework/core.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/woocommerce/templates/loop/loop-start.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-31.25">
-          <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.07017544">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/woocommerce/loop/loop-end.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05263158">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/framework/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.01754386">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/framework/woocommerce.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.25">
-          <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
+        <state vertical-scroll-proportion="-9.375">
+          <caret line="437" column="33" selection-start-line="437" selection-start-column="33" selection-end-line="437" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/twentyfifteen/sidebar.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/woocommerce/loop/loop-start.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.0">
-          <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="42" selection-end-column="23" />
+        <state vertical-scroll-proportion="-3.125">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/framework/widgets.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/assets/sass/components/_woocommerce.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="16" column="40" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="40" />
+        <state vertical-scroll-proportion="-15.625">
+          <caret line="545" column="5" selection-start-line="545" selection-start-column="5" selection-end-line="545" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/sidebar.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/woocommerce/content-product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="60" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/mondova/page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57894737">
-          <caret line="61" column="33" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.877193">
+          <caret line="64" column="2" selection-start-line="64" selection-start-column="2" selection-end-line="64" selection-end-column="2" />
           <folding />
         </state>
       </provider>

@@ -16,6 +16,7 @@ if ( !defined('ABSPATH')) exit;
             </div>
             <div class="col-lg-5 col-md-4 col-sm-4 col-xs-12 header-right">
                 <?php get_template_part( 'templates/headers/header',  'cart'); ?>
+                <?php get_template_part( 'templates/headers/header',  'wishlist'); ?>
                 <?php get_search_form(); ?>
             </div>
         </div>

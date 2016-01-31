@@ -17,13 +17,6 @@ if ( ! function_exists( 'kt_woocommerce_theme_setup' ) ):
     }
 endif;
 
-/*
-function kt_disable_woocommerce_enable_setup_wizard(){
-    return false;
-}
-add_filter('woocommerce_enable_setup_wizard', 'kt_disable_woocommerce_enable_setup_wizard');
-*/
-
 /**
  * Add custom style to woocommerce
  *
@@ -64,110 +57,417 @@ function kt_woocommerce_set_option() {
 add_action( 'after_switch_theme', 'kt_woocommerce_set_option', 1 );
 
 
-
-
-
 /**
- * Woocommerce cart in header
+ * Woocommerce wishlist in header
  *
  * @since 1.0
  */
-function kt_woocommerce_get_cart( $wrapper = true ){
-    $output = '';
-    if ( kt_is_wc() ) {
-        $cart_total = WC()->cart->get_cart_total();
-        $cart_count = WC()->cart->cart_contents_count;
-        if( $wrapper == true ){
-            $output .= '<div class="shopping-bag shopping-bag-cart">';
-        }
+function kt_woocommerce_get_wishlist( ){
+    if ( kt_is_wc() && defined( 'YITH_WOOCOMPARE' ) ) {
+        kt_cart_wishlist();
+    }
+}
 
-        $output .= sprintf(
-            '<a href="%s" class="%s">%s <span class="mini-cart-total">%s</span></a>',
-            esc_url(WC()->cart->get_cart_url()),
-            'header-cart',
-            '<i class="icon_bag_alt"></i>',
-            $cart_count
+
+/**
+ * WishList Link
+ * Displayed a link to the cart including the number of items present and the cart total
+ * @param  array $settings Settings
+ * @return array           Settings
+ * @since  1.0.0
+ */
+if ( ! function_exists( 'kt_cart_wishlist' ) ) {
+    function kt_cart_wishlist() {
+        global $yith_wcwl;
+        printf(
+            '<a href="%s" class="%s" title="%s">%s<span class="amount">%s</span></a>',
+            esc_url( $yith_wcwl->get_wishlist_url() ),
+            'wishlist-contents',
+            __( 'View your wishlist', 'storefront' ),
+            '<i class="icon_heart_alt"></i>',
+            sprintf('%02s', $yith_wcwl->count_products())
         );
+        ?>
+        <div class="shopping-bag-content woocommerce widget_shopping_cart">
+            <ul class="cart_list product_list_widget ">
+            <?php
+                $args = array( 'is_default' => 1 );
+                $wishlist_items = $yith_wcwl->get_products($args);
+                if( count( $wishlist_items ) > 0 ) {
+                    foreach( $wishlist_items as $item ) {
+                        global $product;
+                        if( function_exists( 'wc_get_product' ) ) {
+                            $product = wc_get_product( $item['prod_id'] );
+                        }
+                        else{
+                            $product = get_product( $item['prod_id'] );
+                        }
 
-        $output .= '<div class="shopping-bag-content woocommerce">';
-        if ( sizeof(WC()->cart->cart_contents)>0 ) {
+                        if( $product !== false && $product->exists() ){
+                            ?>
+                            <li class="mini_cart_item">
+                                <a class="minicart_product" href="<?php echo esc_url( get_permalink( apply_filters( 'woocommerce_in_cart_product', $item['prod_id'] ) ) ) ?>">
+                                    <?php echo $product->get_image() ?>
+                                    <?php echo apply_filters( 'woocommerce_in_cartproduct_obj_title', $product->get_title(), $product ) ?>
+                                </a>
+                                <div class="minicart_product_infos">
+                                    <?php
+                                    if( is_a( $product, 'WC_Product_Bundle' ) ){
+                                        if( $product->min_price != $product->max_price ){
+                                            echo sprintf( '%s - %s', wc_price( $product->min_price ), wc_price( $product->max_price ) );
+                                        }
+                                        else{
+                                            echo wc_price( $product->min_price );
+                                        }
+                                    }
+                                    elseif( $product->price != '0' ) {
+                                        echo $product->get_price_html();
+                                    }
+                                    else {
+                                        echo apply_filters( 'yith_free_text', __( 'Free!', 'yith-woocommerce-wishlist' ) );
+                                    }
+                                    ?>
+                                </div>
+                            </li>
+                            <?php
+                        }
+                    }
 
-            $output .= '<div class="cart_block_desc">'.esc_html__( 'Recently added item(s)','wingman' ).'</div>';
-            $output .= '<div class="bag-products mCustomScrollbar">';
-            $output .= '<div class="bag-products-content">';
-            foreach (WC()->cart->cart_contents as $cart_item_key => $cart_item) {
-                $bag_product = $cart_item['data'];
-
-                if ($bag_product->exists() && $cart_item['quantity']>0) {
-                    $output .= '<div class="bag-product clearfix">';
-                    $output .= '<figure><a class="bag-product-img" href="'.get_permalink($cart_item['product_id']).'">'.$bag_product->get_image().'</a></figure>';
-                    $output .= '<div class="bag-product-details">';
-                    $output .= '<h3 class="bag-product-title"><a href="'.get_permalink($cart_item['product_id']).'">' . apply_filters('woocommerce_cart_widget_product_title', $bag_product->get_title(), $bag_product) . '</a></h3>';
-
-                    $output .= WC()->cart->get_item_data( $cart_item );
-
-                    $output .= '<div class="bag-product-price">'.$cart_item['quantity'].'x'.wc_price($bag_product->get_price()).'</div>';
-
-                    $output .= '</div>';
-                    $output .= apply_filters( 'woocommerce_cart_item_remove_link', sprintf('<a href="#" data-itemkey="'.$cart_item_key.'" data-id="'.$cart_item['product_id'].'" class="remove" title="%s"></a>', esc_html__('Remove this item', 'woocommerce') ), $cart_item_key );
-
-                    $output .= '</div>';
+                }else{
+                    printf('<li class="cart-desc empty">%s</li>', esc_html__('Your wishlist is empty.', 'mondova') );
                 }
-            }
-            $output .= '</div>';
-            $output .= '</div>';
-
-        }else{
-            $output .=  "<p class='cart_block_desc no_products'>".esc_html__('Your cart is currently empty.', 'wingman')."</p>";
-        }
-
-        if ( sizeof(WC()->cart->cart_contents)>0 ) {
-            $output .= '<div class="bag-total"><strong>'.esc_html__('Subtotal: ', 'wingman').'</strong>'.$cart_total.'</div><!-- .bag-total -->';
-            $output .= '<div class="bag-buttons">';
-            $output .= '<span><a href="'.esc_url( WC()->cart->get_cart_url() ).'" class="btn btn-default btn-block">'.esc_html__('View cart', 'wingman').'</a></span>';
-            $output .= '<span><a href="'.esc_url( WC()->cart->get_checkout_url() ).'" class="btn btn-dark btn-block">'.esc_html__('Checkout', 'wingman').'</a></span>';
-            $output .= '</div><!-- .bag-buttons -->';
-        }
-
-        $output .= '</div><!-- .shopping-bag-content -->';
-        if( $wrapper == true ){
-            $output .= '</div>';
-        }
+            ?>
+            </ul>
+            <?php if( count( $wishlist_items ) > 0 ) { ?>
+                <p class="buttons-wishlish">
+                    <?php
+                        printf(
+                            '<span><a class="btn btn-default btn-block wc-forward" href="%s">%s</a></span>',
+                            esc_url( $yith_wcwl->get_wishlist_url() ),
+                            esc_html__('View Wishlist', 'mondova')
+                        )
+                    ?>
+                </p>
+            <?php } ?>
+        </div>
+        <?php
     }
-    return $output;
 }
-
 
 /**
  * Woocommerce cart in header
  *
  * @since 1.0
  */
-function kt_woocommerce_get_cart_mobile( $wrapper = true ){
-    $output = '';
+function kt_woocommerce_get_cart( ){
     if ( kt_is_wc() ) {
-        $cart_count = WC()->cart->cart_contents_count;
-        if( $wrapper == true ){
-            $output .= '<a href="'.WC()->cart->get_cart_url().'" class="mobile-cart">';
-        }
-        $output .= '<i class="fa fa-shopping-cart"></i>';
-        $output .= '<span class="mobile-cart-total">'.$cart_count.'</span>';
-
-        if( $wrapper == true ){
-            $output .= '</a>';
+        kt_cart_link();
+        if ( !is_cart() ) {
+            ?>
+            <div class="shopping-bag-content woocommerce widget_shopping_cart">
+                <?php the_widget('WC_Widget_Cart', 'title='); ?>
+            </div><!-- .shopping-bag-content -->
+            <?php
         }
     }
-    return $output;
 }
 
 
 /**
- * Woocommerce replate cart in header
+ * Cart Link
+ * Displayed a link to the cart including the number of items present and the cart total
+ * @param  array $settings Settings
+ * @return array           Settings
+ * @since  1.0.0
+ */
+if ( ! function_exists( 'kt_cart_link' ) ) {
+    function kt_cart_link() {
+        printf(
+            '<a href="%s" class="%s" title="%s">%s<span class="amount">%s</span></a>',
+            esc_url( WC()->cart->get_cart_url() ),
+            'cart-contents',
+            __( 'View your shopping cart', 'storefront' ),
+            '<i class="icon_bag_alt"></i>',
+            sprintf('%02s', WC()->cart->get_cart_contents_count())
+        );
+    }
+}
+
+
+/**
+ * Cart Fragments
+ * Ensure cart contents update when products are added to the cart via AJAX
+ * @param  array $fragments Fragments to refresh via AJAX
+ * @return array            Fragments to refresh via AJAX
+ */
+if ( ! function_exists( 'kt_cart_link_fragment' ) ) {
+    function kt_cart_link_fragment( $fragments ) {
+        ob_start();
+        kt_cart_link();
+        $fragments['a.cart-contents'] = ob_get_clean();
+        return $fragments;
+    }
+}
+
+
+
+
+
+if (!function_exists('kt_get_woo_sidebar')) {
+    /**
+     * Get woo sidebar
+     *
+     * @param null $post_id
+     * @return array
+     */
+    function kt_get_woo_sidebar( $post_id = null )
+    {
+
+
+        $sidebar = array('sidebar_area' => '');
+        $requestCustom = false;
+
+        if(isset($_REQUEST['sidebar'])){
+            $sidebar['sidebar'] = $_REQUEST['sidebar'];
+            $requestCustom = true;
+        }
+
+        if(is_product() || $post_id || is_shop()){
+            if(is_shop() && !$post_id){
+                $post_id = get_option( 'woocommerce_shop_page_id' );
+            }
+            global $post;
+            if(!$post_id) $post_id = $post->ID;
+
+
+            if(!isset($sidebar['sidebar'])){
+                $sidebar['sidebar'] = rwmb_meta('_kt_sidebar', array(), $post_id);
+            }
+            if($sidebar['sidebar'] == '' || $sidebar['sidebar'] == 'default' || $requestCustom){
+
+                if(!$requestCustom){
+                    if(is_shop()) {
+                        $sidebar['sidebar'] = kt_option('shop_sidebar', 'left');
+                    }else{
+                        $sidebar['sidebar'] = kt_option('product_sidebar', 'full');
+                    }
+                }
+                if($sidebar['sidebar'] == 'left' ){
+                    if(is_shop()){
+                        $sidebar['sidebar_area'] = kt_option('shop_sidebar_left', 'primary-widget-area');
+                    }else{
+                        $sidebar['sidebar_area'] = kt_option('product_sidebar_left', 'primary-widget-area');
+                    }
+                }elseif($sidebar['sidebar'] == 'right'){
+                    if(is_shop()){
+                        $sidebar['sidebar_area'] = kt_option('shop_sidebar_right', 'primary-widget-area');
+                    }else{
+                        $sidebar['sidebar_area'] = kt_option('product_sidebar_right', 'primary-widget-area');
+                    }
+                }
+            }elseif($sidebar['sidebar'] == 'left'){
+                $sidebar['sidebar_area'] = rwmb_meta('_kt_left_sidebar', array(), $post_id);
+            }elseif($sidebar['sidebar'] == 'right'){
+                $sidebar['sidebar_area'] = rwmb_meta('_kt_right_sidebar', array(), $post_id);
+            }
+
+
+
+        }elseif( is_product_taxonomy() || is_product_tag()){
+            if(!isset($sidebar['sidebar'])) {
+                $sidebar['sidebar'] = kt_option('shop_sidebar', 'left');
+            }
+
+            if($sidebar['sidebar'] == 'left' ){
+                $sidebar['sidebar_area'] = kt_option('shop_sidebar_left', 'primary-widget-area');
+            }elseif($sidebar['sidebar'] == 'right'){
+                $sidebar['sidebar_area'] = kt_option('shop_sidebar_right', 'primary-widget-area');
+            }
+        }elseif(is_cart()){
+            $sidebar['sidebar'] = 'full';
+        }elseif(is_page()){
+            global $post;
+            if(!$post_id) $post_id = $post->ID;
+
+            if(!isset($sidebar['sidebar'])){
+                $sidebar['sidebar'] = rwmb_meta('_kt_sidebar', array(), $post_id);
+            }
+
+            if($sidebar['sidebar'] == '' || $sidebar['sidebar'] == 'default' || $requestCustom){
+                if(!$requestCustom){
+                    $sidebar['sidebar'] = kt_option('sidebar', 'full');
+                }
+                if($sidebar['sidebar'] == 'left' ){
+                    $sidebar['sidebar_area'] = kt_option('shop_sidebar_left', 'primary-widget-area');
+                }elseif($sidebar['sidebar'] == 'right'){
+                    $sidebar['sidebar_area'] = kt_option('shop_sidebar_right', 'primary-widget-area');
+                }
+            }elseif($sidebar['sidebar'] == 'left'){
+                $sidebar['sidebar_area'] = rwmb_meta('_kt_left_sidebar', array(), $post_id);
+            }elseif($sidebar['sidebar'] == 'right'){
+                $sidebar['sidebar_area'] = rwmb_meta('_kt_right_sidebar', array(), $post_id);
+            }
+        }
+        return apply_filters('kt_wc_sidebar', $sidebar);
+    }
+}
+
+
+
+
+
+
+/**
+ * Display Gird List toogle
+ *
  *
  */
-function kt_woocommerce_header_add_to_cart_fragment( $fragments ) {
-    $fragments['.mini-cart'] = kt_woocommerce_get_cart();
-    $fragments['.mobile-cart'] = kt_woocommerce_get_cart_mobile();
-    return $fragments;
+
+function kt_woocommerce_gridlist_toggle(){ ?>
+    <?php $gridlist = apply_filters('woocommerce_gridlist_toggle', kt_get_gridlist_toggle()) ?>
+    <ul class="gridlist-toggle">
+        <li>
+            <a class="list<?php if($gridlist == 'list'){ ?> active<?php } ?>" data-placement="top" data-toggle="tooltip" href="#" title="<?php _e('List view', 'wingman') ?>" data-layout="list" data-remove="grid">
+                <i class="icon_grid-2x2"></i>
+            </a>
+        </li>
+        <li>
+            <a class="grid<?php if($gridlist == 'grid'){ ?> active<?php } ?>" data-placement="top" data-toggle="tooltip" href="#" title="<?php _e('Grid view', 'wingman') ?>" data-layout="grid" data-remove="list">
+                <i class="icon_menu"></i>
+            </a>
+        </li>
+    </ul>
+<?php }
+
+
+/**
+ *
+ * Ajax Update posts layout
+ *
+ *
+ */
+function kt_frontend_update_posts_layout(){
+    WC()->session->set( 'products_layout', $_REQUEST['layout']);
 }
-add_filter('add_to_cart_fragments', 'kt_woocommerce_header_add_to_cart_fragment');
+
+add_action( 'wp_ajax_frontend_update_posts_layout', 'kt_frontend_update_posts_layout' );
+add_action( 'wp_ajax_nopriv_frontend_update_posts_layout', 'kt_frontend_update_posts_layout' );
+
+/**
+ * Get Grid or List layout.
+ *
+ * Return the layout of products
+ *
+ * @return string layout of products.
+ *
+ *
+ */
+function kt_get_gridlist_toggle( $layout = 'grid' ){
+    if(isset($_REQUEST['view'])){
+        return $_REQUEST['view'];
+    }elseif ( WC()->session->__isset( 'products_layout' ) ) {
+        return WC()->session->__get( 'products_layout' );
+    }else{
+        return kt_option('shop_products_layout', $layout);
+    }
+}
+
+
+
+function kt_woocommerce_product_loop_start_callback($classes){
+    if(is_product_category() || is_shop() || is_product_tag()){
+        $products_layout = kt_get_gridlist_toggle();
+        $classes .= ' '.$products_layout;
+    }
+    return $classes;
+}
+
+
+
+
+
+
+
+
+if ( !function_exists('kt_product_shop_count') ) {
+    function kt_product_shop_count() {
+        $default_count = $products_per_page = kt_option('products_per_page', 12);
+        $count = isset($_GET['per_page']) ? $_GET['per_page'] : $default_count;
+        if ( $count === 'all' ) {
+            $count = -1;
+        } else if ( !is_numeric($count) ) {
+            $count = $default_count;
+        }
+        return $count;
+    }
+}
+
+
+function kt_woocommerce_catalog_orderby( ){
+    return array(
+        'menu_order' => __( 'Default sorting', 'mondova' ),
+        'popularity' => __( 'Popularity', 'mondova' ),
+        'rating'     => __( 'Average rating', 'mondova' ),
+        'date'       => __( 'Newness', 'mondova' ),
+        'price'      => __( 'Price: low to high', 'mondova' ),
+        'price-desc' => __( 'Price: high to low', 'mondova' )
+    );
+}
+
+function kt_woocommerce_shop_loop(){
+    ?>
+    <div class="products-tools">
+        <?php
+        kt_woocommerce_gridlist_toggle();
+        woocommerce_catalog_ordering();
+        woocommerce_result_count();
+        ?>
+    </div>
+    <?php
+}
+
+
+/**
+ * Change columns of shop
+ *
+ */
+
+add_filter( 'loop_shop_columns', 'kt_woo_shop_columns' );
+function kt_woo_shop_columns( $columns ) {
+    $cols =  kt_option('shop_gird_cols', 3);
+    if(isset($_REQUEST['cols'])){
+        $cols = $_REQUEST['cols'];
+    }
+
+
+    return $cols ;
+}
+
+
+/**
+ * KT WooCommerce hooks
+ *
+ * @package mondova
+ */
+
+
+if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
+    add_filter( 'woocommerce_add_to_cart_fragments', 'kt_cart_link_fragment' );
+} else {
+    add_filter( 'add_to_cart_fragments', 'kt_cart_link_fragment' );
+}
+
+add_filter( 'loop_shop_columns', 'kt_woo_shop_columns' );
+add_filter( 'loop_shop_per_page', 'kt_product_shop_count');
+add_filter('woocommerce_catalog_orderby', 'kt_woocommerce_catalog_orderby');
+add_filter('woocommerce_show_page_title', '__return_false');
+add_filter( 'woocommerce_product_loop_start', 'kt_woocommerce_product_loop_start_callback' );
+
+remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
+remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
+
+
+add_action( 'woocommerce_before_shop_loop', 'kt_woocommerce_shop_loop');
+
+
+
