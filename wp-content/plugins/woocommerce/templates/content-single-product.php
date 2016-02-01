@@ -50,6 +50,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="summary entry-summary">
 
 		<?php
+
+        woocommerce_template_single_meta();
+
 			/**
 			 * woocommerce_single_product_summary hook.
 			 *

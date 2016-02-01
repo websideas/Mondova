@@ -267,7 +267,7 @@
  */
 ul.style-list{
   padding: 0;
-  margin: 0 0 $shortcode;
+  margin: 0 0 $vspacing;
   list-style: none;
   li{
     padding-left: 52px;
@@ -328,7 +328,7 @@ ul.style-list{
   border-radius: 0;
   position: relative;
   line-height: 24px;
-  margin-bottom: $shortcode;
+  margin-bottom: $vspacing;
   .alert_title{
     font-size: 18px;
     letter-spacing: 0.05em;
@@ -441,7 +441,7 @@ ul.style-list{
 
 
 .nav-border {
-  margin-bottom: $shortcode;
+  margin-bottom: $vspacing;
   > li {
     display: inline-block;
     > a {
@@ -515,7 +515,7 @@ ul.style-list{
 }
 
 .nav-style2{
-  margin-bottom: $shortcode;
+  margin-bottom: $vspacing;
   li{
     a{
       padding-bottom: 6px;
@@ -540,7 +540,7 @@ ul.style-list{
 }
 
 .nav-style3{
-  margin-bottom: $shortcode;
+  margin-bottom: $vspacing;
   li{
     display: inline-block;
     + li{
@@ -564,7 +564,7 @@ ul.style-list{
 }
 
 .nav-style4{
-  margin-bottom: $shortcode;
+  margin-bottom: $vspacing;
   position: relative;
   li{
     + li{
@@ -575,7 +575,7 @@ ul.style-list{
 
 
 .nav-woocommerce{
-  margin-bottom: $shortcode;
+  margin-bottom: $vspacing;
   border-bottom: 2px solid $text;
   li{
     display: inline-block;
@@ -636,7 +636,7 @@ ul.style-list{
 
 
 .kt-tab-container{
-  margin-bottom: $shortcode;
+  margin-bottom: $vspacing;
   .tabs{
     padding: 0;
     list-style: none;
@@ -679,7 +679,7 @@ ul.style-list{
  * 10.7 Accordion
  */
 .kt-accordion{
-  margin: 0 0 $shortcode;
+  margin: 0 0 $vspacing;
   .kt-accortion-title{
     padding: 20px 30px;
     font-size: 14px;
@@ -794,7 +794,7 @@ ul.style-list{
  */
 
 .social-nav{
-  margin: 0 0 $shortcode;
+  margin: 0 0 $vspacing;
   padding: 0;
   list-style: none;
 
@@ -982,7 +982,7 @@ ul.style-list{
   position: relative;
   text-align: center;
   overflow: hidden;
-  margin-bottom: $shortcode;
+  margin-bottom: $vspacing;
   img{
     width: 100%;
   }
@@ -1148,7 +1148,7 @@ ul.style-list{
  */
 .category-banner{
   position: relative;
-  margin-bottom: $shortcode;
+  margin-bottom: $vspacing;
   &-button{
     position: absolute;
     left: 30px;
@@ -1233,7 +1233,7 @@ ul.style-list{
  * 10.15 Single Image
  */
 .single-image{
-  margin-bottom: $shortcode;
+  margin-bottom: $vspacing;
   overflow: hidden;
   position: relative;
   img{
@@ -1502,7 +1502,7 @@ ul.style-list{
 
 
 .testi-navigation{
-  margin: 0 0 $shortcode;
+  margin: 0 0 $vspacing;
   padding: 0;
   list-style: none;
   @include clearfix();
@@ -1530,7 +1530,7 @@ ul.style-list{
   background: #fff;
   padding: 30px;
   box-shadow:0 0 6px 0 rgba($black,0.05);
-  margin-bottom: $shortcode;
+  margin-bottom: $vspacing;
 
   .countdown-wrap{
     width:60px;
@@ -1563,7 +1563,7 @@ ul.style-list{
  */
 
 .team{
-  margin-bottom: $shortcode;
+  margin-bottom: $vspacing;
   text-align: center;
   .avatar{
     border: 15px solid $white;
@@ -1642,7 +1642,7 @@ ul.style-list{
 
 
 .contact-info{
-  margin-bottom: $shortcode;
+  margin-bottom: $vspacing;
   ul{
     margin: 0;
     padding: 0;
@@ -1686,7 +1686,7 @@ ul.style-list{
 
 .kt-icon-box{
   position: relative;
-  margin-bottom: $shortcode;
+  margin-bottom: $vspacing;
   &:not([class*=" style-"]){
     border: 1px solid $gray-bg2;
     margin-bottom: 30px;
@@ -1815,7 +1815,7 @@ ul.style-list{
  */
 
 .blog-carousel{
-  margin-bottom: $shortcode;
+  margin-bottom: $vspacing;
   .blog-carousel-title{
     font-size: 36px;
     font-weight: 700;

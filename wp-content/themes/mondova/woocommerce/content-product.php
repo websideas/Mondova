@@ -65,52 +65,69 @@ $classes[] = sprintf('col-lg-%1$s col-md-%1$s col-sm-%2$s', $bootstrapColumn, 6)
 ?>
 <li <?php post_class( $classes ); ?>>
 
+
     <div class="product-content">
+
+
+
+        <?php
+
+        if($woocommerce_loop['type'] == 'standard'){
+            $cat_count = sizeof( get_the_terms( $product->ID, 'product_cat' ) );
+            echo $product->get_categories( ' / ', '<span class="posted_in">', '</span>' );
+        }
+
+        if($woocommerce_loop['effect'] == 3){
+             ?>
+            <div title="Rated 4 out of 5" class="star-rating">
+                <span style="width:80%"><span class="rating">4</span> out of 5</span>
+            </div>
+            <a href="woocommerce-product-detailed1.php" class="title-link">Spada Enforcer WP Glove</a>
+        <?php
+        }
+
+        /**
+         * woocommerce_before_shop_loop_item hook.
+         *
+         * @hooked woocommerce_template_loop_product_link_open - 10
+         */
+        do_action( 'woocommerce_before_shop_loop_item' );
+
+        /**
+         * woocommerce_before_shop_loop_item_title hook.
+         *
+         * @hooked woocommerce_show_product_loop_sale_flash - 10
+         * @hooked woocommerce_template_loop_product_thumbnail - 10
+         */
+        do_action( 'woocommerce_before_shop_loop_item_title' );
+
+        /**
+         * woocommerce_after_shop_loop_item hook.
+         *
+         * @hooked woocommerce_template_loop_product_link_close - 5
+         * @hooked woocommerce_template_loop_add_to_cart - 10
+         */
+        do_action( 'woocommerce_after_shop_loop_item' );
+        ?>
 
     </div>
     <div class="product-details">
+        <?php
+        /**
+         * woocommerce_shop_loop_item_title hook.
+         *
+         * @hooked woocommerce_template_loop_product_title - 10
+         */
+        do_action( 'woocommerce_shop_loop_item_title' );
 
+        /**
+         * woocommerce_after_shop_loop_item_title hook.
+         *
+         * @hooked woocommerce_template_loop_rating - 5
+         * @hooked woocommerce_template_loop_price - 10
+         */
+        do_action( 'woocommerce_after_shop_loop_item_title' );
+        ?>
     </div>
-
-
-	<?php
-	/**
-	 * woocommerce_before_shop_loop_item hook.
-	 *
-	 * @hooked woocommerce_template_loop_product_link_open - 10
-	 */
-	do_action( 'woocommerce_before_shop_loop_item' );
-
-	/**
-	 * woocommerce_before_shop_loop_item_title hook.
-	 *
-	 * @hooked woocommerce_show_product_loop_sale_flash - 10
-	 * @hooked woocommerce_template_loop_product_thumbnail - 10
-	 */
-	do_action( 'woocommerce_before_shop_loop_item_title' );
-
-	/**
-	 * woocommerce_shop_loop_item_title hook.
-	 *
-	 * @hooked woocommerce_template_loop_product_title - 10
-	 */
-	do_action( 'woocommerce_shop_loop_item_title' );
-
-	/**
-	 * woocommerce_after_shop_loop_item_title hook.
-	 *
-	 * @hooked woocommerce_template_loop_rating - 5
-	 * @hooked woocommerce_template_loop_price - 10
-	 */
-	do_action( 'woocommerce_after_shop_loop_item_title' );
-
-	/**
-	 * woocommerce_after_shop_loop_item hook.
-	 *
-	 * @hooked woocommerce_template_loop_product_link_close - 5
-	 * @hooked woocommerce_template_loop_add_to_cart - 10
-	 */
-	do_action( 'woocommerce_after_shop_loop_item' );
-	?>
 
 </li>

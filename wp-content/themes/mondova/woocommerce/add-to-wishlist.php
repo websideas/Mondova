@@ -24,7 +24,7 @@ global $product;
 $title = ( $exists && ! $available_multi_wishlist ) ? apply_filters( 'yith-wcwl-browse-wishlist-label', $browse_wishlist_text ) : $label;
 
 ?>
-<div class="yith-wcwl-add-to-wishlist add-to-wishlist-<?php echo $product_id ?>" data-toggle="tooltip" data-original-title="<?php echo esc_attr($title) ?>">
+<div class="yith-wcwl-add-to-wishlist add-to-wishlist-<?php echo $product_id ?>" data-toggle="tooltip" title="<?php echo esc_attr($title) ?>" data-added="<?php echo esc_attr(apply_filters( 'yith-wcwl-browse-wishlist-label', $browse_wishlist_text )); ?>">
     <?php if( ! ( $disable_wishlist && ! is_user_logged_in() ) ): ?>
         <div class="yith-wcwl-add-button <?php echo ( $exists && ! $available_multi_wishlist ) ? 'hide': 'show' ?>" style="display:<?php echo ( $exists && ! $available_multi_wishlist ) ? 'none': 'block' ?>">
             <?php yith_wcwl_get_template( 'add-to-wishlist-' . $template_part . '.php', $atts ); ?>

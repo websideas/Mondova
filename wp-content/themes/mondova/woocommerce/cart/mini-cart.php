@@ -24,13 +24,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <?php do_action( 'woocommerce_before_mini_cart' ); ?>
+<?php if ( ! WC()->cart->is_empty() ) { ?>
+    <p class="cart-desc">
+        <?php echo sprintf( _n( 'You have <span>%d item</span> in your shopping bag', 'You have <span>%d item(s)</span> in your shopping bag', WC()->cart->get_cart_contents_count(), 'storefront' ), WC()->cart->get_cart_contents_count() );?>
+    </p>
+<?php }else{ ?>
+    <p class="cart-desc empty"><?php _e( 'No products in the cart.', 'woocommerce' ); ?></p>
+<?php }; ?>
 
 <ul class="cart_list product_list_widget <?php echo $args['list_class']; ?>">
-
 	<?php if ( ! WC()->cart->is_empty() ) : ?>
-        <li class="cart-desc">
-            <?php echo sprintf( _n( 'You have <span>%d item</span> in your shopping bag', 'You have <span>%d item(s)</span> in your shopping bag', WC()->cart->get_cart_contents_count(), 'storefront' ), WC()->cart->get_cart_contents_count() );?>
-        </li>
 		<?php
 			foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
 				$_product     = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
@@ -45,10 +48,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<li class="<?php echo esc_attr( apply_filters( 'woocommerce_mini_cart_item_class', 'mini_cart_item', $cart_item, $cart_item_key ) ); ?>">
 						<?php
 						echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
-							'<a href="%s" class="remove" title="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
+							'<a href="%s" class="remove" title="%s" data-product_id="%s" data-itemkey="%s" data-product_sku="%s">&times;</a>',
 							esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
 							__( 'Remove this item', 'woocommerce' ),
 							esc_attr( $product_id ),
+                            $cart_item_key,
 							esc_attr( $_product->get_sku() )
 						), $cart_item_key );
 						?>
@@ -68,13 +72,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				}
 			}
 		?>
-
-	<?php else : ?>
-
-		<li class="cart-desc empty"><?php _e( 'No products in the cart.', 'woocommerce' ); ?></li>
-
 	<?php endif; ?>
-
 </ul><!-- end product list -->
 
 <?php if ( ! WC()->cart->is_empty() ) : ?>

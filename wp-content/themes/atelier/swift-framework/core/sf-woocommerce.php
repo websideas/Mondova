@@ -235,6 +235,9 @@
 		    <div class="badge-wrap">
 			    <?php
 
+
+
+
 			    	if (sf_is_out_of_stock()) {
 
 			    		echo '<span class="out-of-stock-badge">' . __( 'Sold out', 'swiftframework' ) . '</span>';

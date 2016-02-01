@@ -21,11 +21,6 @@
 
     $(window).load(function(){
 
-        // Page loader
-        $("body").imagesLoaded(function(){
-            init_wow();
-        });
-
         $(window).trigger("scroll");
         $(window).trigger("resize");
 
@@ -80,8 +75,6 @@
     /* ---------------------------------------------
      Scripts ready
      --------------------------------------------- */
-    init_SearchFull();
-    init_SearchFull();
     //init_MainMenu();
     init_MobileMenu();
     init_rating();
@@ -90,17 +83,11 @@
     init_shortcodes();
     init_VCGoogleMap();
     init_popup();
-    init_quickview();
     init_backtotop();
-    init_matchHeight();
     init_productsMasonry();
     init_backtotop();
     init_VCComingSoon();
 
-    init_productcarouselwoo($("#sync1"), $("#sync2"));
-    init_ecommerce();
-    init_woo_quantily();
-    init_woocommerce_product_popup();
 
 
     $( 'body' )
@@ -268,52 +255,19 @@
      --------------------------------------------- */
     function init_shortcodes() {
         // Tooltips (bootstrap plugin activated)
-        $('[data-toggle="tooltip"]').tooltip({container:"body", delay: { "show": 100, "hide": 50 }});
+        $('[data-toggle="tooltip"]').each(function(){
+            var $this = $(this);
+            if($this.closest('.product-effect-3').length){
+                $this.tooltip({container:"body", delay: { "show": 100, "hide": 50 }, placement: "bottom"});
+            }else{
+                $this.tooltip({container:"body", delay: { "show": 100, "hide": 50 }});
+            }
+
+        });
         //$('.kt-tab-container').tabs();
         //$('.kt-accordion').accordion({ 'heightStyle': 'content' });
         $(".entry-content").fitVids();
 
-    }
-
-    /* ---------------------------------------------
-     WOW animations
-     --------------------------------------------- */
-    function init_wow(){
-        var wow = new WOW({
-            mobile: false
-        });
-        if ($("body").hasClass("appear-animate")){
-            wow.init();
-        }
-    }
-
-
-    /* ---------------------------------------------
-     Search
-     --------------------------------------------- */
-    function init_SearchFull(){
-        $('.search-action a').magnificPopup({
-            type: 'inline',
-            mainClass : 'mfp-zoom-in',
-            items: { src: '#search-fullwidth' },
-            focus : 'input[name=s]',
-            removalDelay: 200
-        });
-    }
-
-    /* ---------------------------------------------
-     Match Height
-     --------------------------------------------- */
-    function init_matchHeight(){
-        $('.equal_height').each(function(){
-            var equal_height_element;
-            if($(this).hasClass('equal_height_element')){
-                equal_height_element = $(this).children('.kt_column').children('*');
-            }else{
-                equal_height_element = $(this).children();
-            }
-            equal_height_element.matchHeight({ byRow: true });
-        });
     }
 
 
@@ -427,229 +381,6 @@
         }
     }
 
-
-    /* ---------------------------------------------
-     All function for ecommerce
-     --------------------------------------------- */
-
-    function init_ecommerce(){
-
-        var current_min_price = 0,
-            current_max_price = 750;
-
-        $( '.price_slider' ).slider({
-            range: true,
-            min: 0,
-            max: 1000,
-            values: [ current_min_price, current_max_price ],
-            create: function() {
-                $( '.price_label span.from' ).html( '$' + current_min_price );
-                $( '.price_label span.to' ).html( '$' + current_max_price );
-            },
-            slide: function( event, ui ) {
-                $( '.price_label span.from' ).html( '$' + ui.values[ 0 ] );
-                $( '.price_label span.to' ).html( '$' + ui.values[ 1 ] );
-            }
-        });
-
-
-        $('#payment ul.payment_methods li:first').addClass('active');
-        $('.input-radio', '#payment').on('change', function(){
-            var val = $('.input-radio:checked', '#payment').val();
-            $('.payment_box', '#payment').hide().closest('li').removeClass('active');
-            $('.payment_method_'+val, '#payment ').show().closest('li').addClass('active');
-        });
-
-        if (typeof $.fn.easyZoom !== "undefined") {
-            $('.easyzoom').easyZoom();
-        }
-
-        var $tools = $('ul.grid-list');
-        if($tools.length){
-            $('a', $tools).on('click', function(e){
-                e.preventDefault();
-                var $this = $(this),
-                    $gridlist = $this.closest('.grid-list'),
-                    $products = $this.closest('#main').find('.products');
-
-                $gridlist.find('a').removeClass('active');
-                $this.addClass('active');
-                $products
-                    .removeClass($this.data('remove'))
-                    .addClass($this.data('layout'));
-
-            });
-        }
-
-        $('body').on('click','.woocommerce .showlogin',function(e){
-            e.preventDefault();
-            $(this).parent().next('.login').slideToggle();
-        });
-
-    }
-
-    /* ---------------------------------------------
-     QickView
-     --------------------------------------------- */
-    function init_quickview(){
-        $('body').on('click', '.quickview', function(e){
-            e.preventDefault();
-            var objProduct = $(this);
-            objProduct.addClass('loading');
-
-            var data = {},
-                ajaxurl  = 'ajax/woocommerce-product-quickview.php';
-
-            $.post(ajaxurl, data, function(response) {
-                objProduct.removeClass('loading');
-                $.magnificPopup.open({
-                    mainClass : 'mfp-zoom-in',
-                    showCloseBtn: false,
-                    removalDelay: 200,
-                    items: {
-                        src: '<div class="themedev-product-popup mfp-with-anim">' + response + '</div>',
-                        type: 'inline'
-                    },
-                    callbacks: {
-                        open: function() {
-                            var $popup = $('.themedev-product-popup');
-                            $popup.imagesLoaded(function(){
-                                var images = $("#quickview-images"),
-                                    thumbnails = $("#quickview-thumbnails");
-
-                                init_productcarouselwoo(images, thumbnails);
-                                setTimeout(function(){
-                                    $popup.addClass('animate-width');
-                                }, 500);
-                                setTimeout(function(){
-                                    $popup.addClass('add-content');
-                                }, 1000);
-
-                            });
-
-                            init_shortcodes();
-                        }
-                    }
-                });
-            });
-            return false;
-        });
-
-        $(document).on('click', '.close-quickview', function (e) {
-            e.preventDefault();
-            $.magnificPopup.close();
-        });
-
-    }
-
-
-    /* ---------------------------------------------
-     Single Product
-     --------------------------------------------- */
-
-    function init_productcarouselwoo(sync1, sync2){
-
-        sync1.owlCarousel({
-            singleItem : true,
-            slideSpeed : 1000,
-            items : 1,
-            navigation: true,
-            pagination: false,
-            afterAction : syncPosition,
-            autoHeight: true,
-            responsiveRefreshRate : 200,
-            navigationText: ['<i class="arrow_carrot-left"></i>','<i class="arrow_carrot-right"></i>'],
-        });
-
-        sync2.owlCarousel({
-            theme : 'woocommerce-thumbnails',
-            items : sync2.data('items'),
-            itemsCustom : [[991,sync2.data('items')], [768, sync2.data('items')], [480, sync2.data('items')]],
-            navigation: true,
-            navigationText: false,
-            pagination:false,
-            responsiveRefreshRate : 100,
-            afterInit : function(el){
-                el.find(".owl-item").eq(0).addClass("synced");
-            }
-        });
-
-        sync2.on("click", ".owl-item", function(e){
-            e.preventDefault();
-            var number = $(this).data("owlItem");
-            sync1.trigger("owl.goTo", number);
-        });
-
-        function syncPosition(el){
-            var current = this.currentItem;
-
-            sync2
-                .find(".owl-item")
-                .removeClass("synced")
-                .eq(current)
-                .addClass("synced");
-            if(sync2.data("owlCarousel") !== undefined){
-                center(current)
-            }
-        }
-        function center(number){
-            var sync2visible = sync2.data("owlCarousel").owl.visibleItems;
-
-            var num = number;
-            var found = false;
-
-            for(var i in sync2visible){
-                if(num === sync2visible[i]){
-                    var found = true;
-                }
-            }
-
-            if(found===false){
-                if(num>sync2visible[sync2visible.length-1]){
-                    sync2.trigger("owl.goTo", num - sync2visible.length+2)
-                }else{
-                    if(num - 1 === -1){
-                        num = 0;
-                    }
-                    sync2.trigger("owl.goTo", num);
-                }
-            } else if(num === sync2visible[sync2visible.length-1]){
-                sync2.trigger("owl.goTo", sync2visible[1])
-            } else if(num === sync2visible[0]){
-                sync2.trigger("owl.goTo", num-1)
-            }
-        }
-
-
-    }
-
-    /* ---------------------------------------------
-     Woocommercer Quantily
-     --------------------------------------------- */
-    function init_woo_quantily(){
-        $('body').on('click','.quantity-group .quantity-plus',function(){
-            var obj_qty = $(this).closest('.quantity-group').find('input.qty'),
-                val_qty = parseInt(obj_qty.val()),
-                min_qty = parseInt(obj_qty.attr('min')),
-                max_qty = parseInt(obj_qty.attr('max')),
-                step_qty = parseInt(obj_qty.attr('step'));
-            val_qty = val_qty + step_qty;
-            if(max_qty && val_qty > max_qty){ val_qty = max_qty; }
-            obj_qty.val(val_qty);
-        });
-        $('body').on('click','.quantity-group .quantity-minus',function(){
-            var obj_qty = $(this).closest('.quantity-group').find('input.qty'),
-                val_qty = parseInt(obj_qty.val()),
-                min_qty = parseInt(obj_qty.attr('min')),
-                max_qty = parseInt(obj_qty.attr('max')),
-                step_qty = parseInt(obj_qty.attr('step'));
-            val_qty = val_qty - step_qty;
-            if(min_qty && val_qty < min_qty){ val_qty = min_qty; }
-            if(!min_qty && val_qty < 0){ val_qty = 0; }
-            obj_qty.val(val_qty);
-        });
-    }
-
     /* ---------------------------------------------
      VC Coming Soon
      --------------------------------------------- */
@@ -665,26 +396,5 @@
     }
 
 
-    function init_woocommerce_product_popup(){
-        $('.single-product-main-images').magnificPopup({
-            delegate: 'a',
-            type: 'image',
-            gallery: {
-                enabled: true
-            },
-        });
-    }
-
 })(jQuery); // End of use strict
 
-
-
-function kt_products_carousel( _type, elem ){
-    "use strict"; // Start of use strict
-    if( _type == 'afterMove'){
-        var $data = elem.data('owlCarousel'),
-            $navigation = $('ul[data-sync='+elem.attr('id')+']');
-        $('li', $navigation).removeClass('active');
-        $('li:eq('+$data.currentItem+')', $navigation).addClass('active');
-    }
-}
