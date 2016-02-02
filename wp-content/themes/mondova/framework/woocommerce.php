@@ -211,8 +211,6 @@ if ( ! function_exists( 'kt_cart_link_fragment' ) ) {
 
 
 
-
-
 if (!function_exists('kt_get_woo_sidebar')) {
     /**
      * Get woo sidebar
@@ -223,84 +221,32 @@ if (!function_exists('kt_get_woo_sidebar')) {
     function kt_get_woo_sidebar( $post_id = null )
     {
 
+        $sidebar = array('sidebar' => '', 'sidebar_area' => '');
 
-        $sidebar = array('sidebar_area' => '');
-        $requestCustom = false;
-
-        if(isset($_REQUEST['sidebar'])){
+        if(is_cart() || is_checkout() || is_account_page()){
+            $sidebar['sidebar'] = '';
+        }elseif(isset($_REQUEST['sidebar'])){
             $sidebar['sidebar'] = $_REQUEST['sidebar'];
-            $requestCustom = true;
-        }
-
-        if(is_product() || $post_id || is_shop()){
-            if(is_shop() && !$post_id){
-                $post_id = get_option( 'woocommerce_shop_page_id' );
-            }
-            global $post;
-            if(!$post_id) $post_id = $post->ID;
-
-
-            if(!isset($sidebar['sidebar'])){
-                $sidebar['sidebar'] = rwmb_meta('_kt_sidebar', array(), $post_id);
-            }
-            if($sidebar['sidebar'] == '' || $sidebar['sidebar'] == 'default' || $requestCustom){
-
-                if(!$requestCustom){
-                    if(is_shop()) {
-                        $sidebar['sidebar'] = kt_option('shop_sidebar', 'left');
-                    }else{
-                        $sidebar['sidebar'] = kt_option('product_sidebar', 'full');
-                    }
-                }
-                if($sidebar['sidebar'] == 'left' ){
-                    if(is_shop()){
-                        $sidebar['sidebar_area'] = kt_option('shop_sidebar_left', 'primary-widget-area');
-                    }else{
-                        $sidebar['sidebar_area'] = kt_option('product_sidebar_left', 'primary-widget-area');
-                    }
-                }elseif($sidebar['sidebar'] == 'right'){
-                    if(is_shop()){
-                        $sidebar['sidebar_area'] = kt_option('shop_sidebar_right', 'primary-widget-area');
-                    }else{
-                        $sidebar['sidebar_area'] = kt_option('product_sidebar_right', 'primary-widget-area');
-                    }
-                }
-            }elseif($sidebar['sidebar'] == 'left'){
-                $sidebar['sidebar_area'] = rwmb_meta('_kt_left_sidebar', array(), $post_id);
-            }elseif($sidebar['sidebar'] == 'right'){
-                $sidebar['sidebar_area'] = rwmb_meta('_kt_right_sidebar', array(), $post_id);
-            }
-
-
-
-        }elseif( is_product_taxonomy() || is_product_tag()){
-            if(!isset($sidebar['sidebar'])) {
-                $sidebar['sidebar'] = kt_option('shop_sidebar', 'left');
-            }
-
+            $sidebar['sidebar_area'] = 'shop-widget-area';
+        }elseif(is_shop() || is_product_taxonomy() || is_product_tag()){
+            $sidebar['sidebar'] = kt_option('shop_sidebar', 'left');
             if($sidebar['sidebar'] == 'left' ){
                 $sidebar['sidebar_area'] = kt_option('shop_sidebar_left', 'primary-widget-area');
             }elseif($sidebar['sidebar'] == 'right'){
                 $sidebar['sidebar_area'] = kt_option('shop_sidebar_right', 'primary-widget-area');
             }
-        }elseif(is_cart()){
-            $sidebar['sidebar'] = 'full';
-        }elseif(is_page()){
+        }elseif(is_product() || $post_id){
+
             global $post;
             if(!$post_id) $post_id = $post->ID;
+            $sidebar['sidebar'] = rwmb_meta('_kt_sidebar', array(), $post_id);
 
-            if(!isset($sidebar['sidebar'])){
-                $sidebar['sidebar'] = rwmb_meta('_kt_sidebar', array(), $post_id);
-            }
-
-            if($sidebar['sidebar'] == '' || $sidebar['sidebar'] == 'default' || $requestCustom){
-                if(!$requestCustom){
-                    $sidebar['sidebar'] = kt_option('sidebar', 'full');
-                }
+            if($sidebar['sidebar'] == '' || $sidebar['sidebar'] == 'default'){
+                $sidebar['sidebar'] = kt_option('product_sidebar', 'full');
                 if($sidebar['sidebar'] == 'left' ){
-                    $sidebar['sidebar_area'] = kt_option('shop_sidebar_left', 'primary-widget-area');
+                    $sidebar['sidebar_area'] = kt_option('product_sidebar_left', 'primary-widget-area');
                 }elseif($sidebar['sidebar'] == 'right'){
-                    $sidebar['sidebar_area'] = kt_option('shop_sidebar_right', 'primary-widget-area');
+                    $sidebar['sidebar_area'] = kt_option('product_sidebar_right', 'primary-widget-area');
                 }
             }elseif($sidebar['sidebar'] == 'left'){
                 $sidebar['sidebar_area'] = rwmb_meta('_kt_left_sidebar', array(), $post_id);
@@ -308,10 +254,14 @@ if (!function_exists('kt_get_woo_sidebar')) {
                 $sidebar['sidebar_area'] = rwmb_meta('_kt_right_sidebar', array(), $post_id);
             }
         }
+
+        if($sidebar['sidebar'] == 'full'){
+            $sidebar['sidebar'] = '';
+        }
+
         return apply_filters('kt_wc_sidebar', $sidebar);
     }
 }
-
 
 /**
  * Display Gird List toogle
@@ -541,19 +491,113 @@ function kt_fronted_fronted_get_wishlist() {
 }
 
 
-function kt_fronted_remove_product(){
-    $data = array();
+function woocommerce_upsell_related_carousel(){
+    global $product;
 
-    if ( ! empty( $_GET['remove_item'] )){
-        $cart_item_key = sanitize_text_field( $_GET['remove_item'] );
 
-        if ( $cart_item = WC()->cart->get_cart_item( $cart_item_key ) ) {
-            WC()->cart->remove_cart_item( $cart_item_key );
-        }
+    $upsells = $product->get_upsells();
+    $related = $product->get_related();
+
+    if ( sizeof( $upsells ) === 0 && sizeof( $related ) === 0) return;
+
+    $tabs = array();
+
+    if ( sizeof( $upsells ) !== 0){
+        $tabs['upsells'] = esc_html__( 'You may also like', 'mondova' );
     }
 
-    wp_send_json( $data );
+    if ( sizeof( $related ) !== 0){
+        $tabs['related'] = esc_html__( 'Related Products', 'woocommerce' );;
+    }
 
+    if(count($tabs)){
+        echo '<div class="container">';
+        echo '<ul class="tabs related-upsells-tabs">';
+        foreach($tabs as $key=>$tab){ ?>
+            <li class="<?php echo esc_attr( $key ); ?>_tab">
+                <a href="#tab-<?php echo esc_attr( $key ); ?>"><?php echo esc_html($tab); ?></a>
+            </li>
+        <?php }
+        echo '</ul>';
+
+        foreach($tabs as $key=>$tab){
+            if($key == 'upsells'){
+                woocommerce_upsell_display();
+            }elseif($key == 'related'){
+                woocommerce_output_related_products();
+            }
+        }
+
+
+        echo '</div>';
+    }
+
+}
+function kt_woocommerce_recently_viewed(){
+    $viewed_products = ! empty( $_COOKIE['woocommerce_recently_viewed'] ) ? (array) explode( '|', $_COOKIE['woocommerce_recently_viewed'] ) : array();
+    $viewed_products = array_filter( array_map( 'absint', $viewed_products ) );
+
+    if ( empty( $viewed_products ) ) {
+        return;
+    }
+
+    ob_start();
+
+
+    $query_args = array( 'posts_per_page' => 10, 'no_found_rows' => 1, 'post_status' => 'publish', 'post_type' => 'product', 'post__in' => $viewed_products, 'orderby' => 'rand' );
+
+    $query_args['meta_query']   = array();
+    $query_args['meta_query'][] = WC()->query->stock_status_meta_query();
+    $query_args['meta_query']   = array_filter( $query_args['meta_query'] );
+
+    $r = new WP_Query( $query_args );
+
+    if ( $r->have_posts() ) {
+
+
+        echo '<ul class="product_list_widget">';
+
+        while ( $r->have_posts() ) {
+            $r->the_post();
+            wc_get_template( 'content-widget-product.php' );
+        }
+
+        echo '</ul>';
+
+    }
+
+    wp_reset_postdata();
+
+    $content = ob_get_clean();
+
+    echo $content;
+}
+
+
+
+
+function kt_template_product_actions(){
+
+    echo "<div class='product-actions'>";
+
+    if(class_exists('YITH_WCWL_UI')){
+        echo do_shortcode('[yith_wcwl_add_to_wishlist]');
+    }
+
+    if(defined( 'YITH_WOOCOMPARE' )){
+        printf(
+            '<div data-toggle="tooltip" data-placement="top" title="%s">%s</div>',
+            esc_html__('Compare','wingman'),
+            do_shortcode('[yith_compare_button container="no" type="link"]')
+        );
+    }
+
+    echo "</div>";
+}
+
+function kt_remove_yith_wcwl_positions($positions){
+    $positions['add-to-cart']['hook'] = '';
+    return $positions;
 }
 
 
@@ -565,8 +609,6 @@ function kt_fronted_remove_product(){
 
 add_action( 'wp_ajax_fronted_get_wishlist', 'kt_fronted_fronted_get_wishlist' );
 add_action( 'wp_ajax_nopriv_fronted_get_wishlist', 'kt_fronted_fronted_get_wishlist' );
-add_action( 'wp_ajax_fronted_remove_product', 'kt_fronted_remove_product' );
-add_action( 'wp_ajax_nopriv_fronted_remove_product', 'kt_fronted_remove_product' );
 
 
 if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
@@ -617,3 +659,38 @@ add_action('woocommerce_after_shop_loop_item_title', 'kt_template_loop_product_a
 
 
 add_filter('woocommerce_loop_add_to_cart_args', 'kt_loop_add_to_cart_args', 10, 2);
+
+
+
+
+/**
+ * KT WooCommerce Product detail
+ *
+ * @package mondova
+ */
+
+add_filter('woocommerce_product_description_heading', '__return_false');
+add_filter('woocommerce_product_additional_information_heading', '__return_false');
+
+add_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_related_carousel' );
+add_action( 'woocommerce_after_single_product_summary', 'kt_woocommerce_recently_viewed' );
+
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10);
+add_action('woocommerce_single_product_summary', 'woocommerce_template_single_rating', 15);
+
+add_action('woocommerce_after_add_to_cart_button', 'kt_template_product_actions');
+
+
+
+
+// Remove compare product
+if(defined( 'YITH_WOOCOMPARE' )){
+    global $yith_woocompare;
+    remove_action( 'woocommerce_single_product_summary', array( $yith_woocompare->obj, 'add_compare_link' ), 35 );
+}
+
+// Remove wishlist product
+add_filter('yith_wcwl_positions', 'kt_remove_yith_wcwl_positions');

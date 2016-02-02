@@ -110,7 +110,7 @@ function kt_add_scripts() {
 	// Load our main stylesheet.
     wp_enqueue_style( 'kt-main', KT_THEME_CSS . 'style.css');
     wp_enqueue_style( 'kt-queries', KT_THEME_CSS . 'queries.css');
-    
+
 	// Load the Internet Explorer specific stylesheet.
 	wp_enqueue_style( 'kt-ie', KT_THEME_CSS . 'ie.css');
 	wp_style_add_data( 'kt-ie', 'conditional', 'lt IE 9' );
@@ -159,26 +159,22 @@ add_filter( 'excerpt_length', 'kt_excerpt_length');
 function kt_posts_per_page( $query ) {
     if ( $query->is_main_query() && !is_admin()) {
 
+
         if(isset($_REQUEST['per_page'])){
             $posts_per_page = $_REQUEST['per_page'];
         }elseif(is_search()){
             $posts_per_page = kt_option('search_posts_per_page', 9);
-        }elseif($query->is_archive() || is_home()){
+        }elseif($query->is_category() || $query->is_home() || $query->is_tag()){
             $posts_per_page = kt_option('archive_posts_per_page', 14);
         }
 
-        if(kt_is_wc()){
-            if(is_shop() || is_product_category() || is_product_tag()){
-                unset($posts_per_page);
-            }
-        }
 
         if(isset($posts_per_page)){
             set_query_var('posts_per_page', $posts_per_page);
         }
     }
 }
-add_action( 'pre_get_posts', 'kt_posts_per_page' );
+//add_action( 'pre_get_posts', 'kt_posts_per_page' );
 
 /**
  *

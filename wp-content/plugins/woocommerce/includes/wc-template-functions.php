@@ -343,7 +343,6 @@ if ( ! function_exists( 'woocommerce_content' ) ) {
 		if ( is_singular( 'product' ) ) {
 
 			while ( have_posts() ) : the_post();
-
 				wc_get_template_part( 'content', 'single-product' );
 
 			endwhile;
@@ -1761,7 +1760,7 @@ if ( ! function_exists( 'woocommerce_form_field' ) ) {
 							. '<option value="">'.__( 'Select a country&hellip;', 'woocommerce' ) .'</option>';
 
 					foreach ( $countries as $ckey => $cvalue ) {
-						$field .= '<option value="' . esc_attr( $ckey ) . '" '. selected( $value, $ckey, false ) . '>'.__( $cvalue, 'woocommerce' ) .'</option>';
+						$field .= '<option value="' . esc_attr( $ckey ) . '" '. selected( $value, $ckey, false ) . '>'. __( $cvalue, 'woocommerce' ) .'</option>';
 					}
 
 					$field .= '</select>';

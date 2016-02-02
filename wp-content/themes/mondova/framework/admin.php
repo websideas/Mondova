@@ -15,7 +15,7 @@ if ( !function_exists( 'kt_admin_enqueue_scripts' ) ) {
         wp_enqueue_style( 'select2', KT_FW_LIBS.'select2/css/select2.min.css');
 
         wp_enqueue_script( 'kt_image', KT_FW_JS.'kt_image.js', array('jquery'), KT_FW_VER, true);
-        wp_enqueue_script( 'select2', KT_FW_LIBS.'select2/js/select2.min.js', array('jquery'), KT_FW_VER, true);
+        //wp_enqueue_script( 'select2', KT_FW_LIBS.'select2/js/select2.min.js', array('jquery'), KT_FW_VER, true);
         wp_enqueue_script( 'cookie', KT_FW_JS.'jquery.cookie.js', array('jquery'), KT_FW_VER, true);
         wp_enqueue_script( 'showhide_metabox', KT_FW_JS.'kt_showhide_metabox.js', array('jquery'), KT_FW_VER, true);
         wp_enqueue_script( 'kt_icons', KT_FW_JS.'kt_icons.js', array('jquery'), KT_FW_VER, true);

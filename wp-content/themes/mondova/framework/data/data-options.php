@@ -219,6 +219,184 @@ if ( ! class_exists( 'KT_config' ) ) {
             );
 
             /**
+             *	Woocommerce
+             **/
+            $this->sections[] = array(
+                'id'			=> 'woocommerce',
+                'title'			=> esc_html__( 'Woocommerce', 'wingman' ),
+                'desc'			=> '',
+                'icon'	=> 'icon-Full-Cart',
+                'fields'		=> array(
+                    array(
+                        'id'       => 'shop_products_heading',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Shop Products settings', 'wingman' ).'</div>',
+                        'full_width' => true
+                    ),
+
+                    array(
+                        'id' => 'shop_page_header',
+                        'type' => 'switch',
+                        'title' => esc_html__('Show Page header', 'wingman'),
+                        'desc' => esc_html__('Show page header or?.', 'wingman'),
+                        "default" => 1,
+                        'on' => esc_html__('Enabled', 'wingman'),
+                        'off' =>esc_html__('Disabled', 'wingman')
+                    ),
+                    array(
+                        'id'       => 'shop_sidebar',
+                        'type'     => 'select',
+                        'title'    => esc_html__( 'Shop: Sidebar configuration', 'wingman' ),
+                        'subtitle'     => esc_html__( "Please choose sidebar for shop post", 'wingman' ),
+                        'options'  => array(
+                            'full' => esc_html__('No sidebars', 'wingman'),
+                            'left' => esc_html__('Left Sidebar', 'wingman'),
+                            'right' => esc_html__('Right Layout', 'wingman')
+                        ),
+                        'default'  => 'left',
+                        'clear' => false
+                    ),
+                    array(
+                        'id'       => 'shop_sidebar_left',
+                        'type' => 'select',
+                        'title'    => esc_html__( 'Shop: Sidebar left area', 'wingman' ),
+                        'subtitle'     => esc_html__( "Please choose left sidebar ", 'wingman' ),
+                        'data'     => 'sidebars',
+                        'default'  => 'primary-widget-area',
+                        'required' => array('shop_sidebar','equals','left'),
+                        'clear' => false
+                    ),
+                    array(
+                        'id'       => 'shop_sidebar_right',
+                        'type'     => 'select',
+                        'title'    => esc_html__( 'Shop: Sidebar right area', 'wingman' ),
+                        'subtitle'     => esc_html__( "Please choose left sidebar ", 'wingman' ),
+                        'data'     => 'sidebars',
+                        'default'  => 'primary-widget-area',
+                        'required' => array('shop_sidebar','equals','right'),
+                        'clear' => false
+                    ),
+
+                    array(
+                        'id'       => 'shop_products_layout',
+                        'type'     => 'select',
+                        'title'    => esc_html__( 'Shop: Products default Layout', 'wingman' ),
+                        'options'  => array(
+                            'grid' => esc_html__('Grid', 'wingman' ),
+                            'lists' => esc_html__('Lists', 'wingman' )
+                        ),
+                        'default'  => 'grid'
+                    ),
+                    array(
+                        'id'       => 'shop_gird_cols',
+                        'type'     => 'select',
+                        'title'    => esc_html__( 'Number column to display width gird mod', 'wingman' ),
+                        'options'  => array(
+                            '2' => 2,
+                            '3' => 3,
+                            '4' => 4,
+                        ),
+                        'default'  => 3,
+                    ),
+                    array(
+                        'id'       => 'shop_products_effect',
+                        'type'     => 'select',
+                        'title'    => esc_html__( 'Shop product effect', 'wingman' ),
+                        'options'  => array(
+                            '1' => esc_html__('Effect 1', 'wingman' ),
+                            '2' => esc_html__('Effect 2', 'wingman' ),
+                            '3' => esc_html__('Effect 3', 'wingman' )
+                        ),
+                        'default'  => '1'
+                    ),
+                    array(
+                        'id'       => 'loop_shop_per_page',
+                        'type'     => 'text',
+                        'title'    => esc_html__( 'Number of products displayed per page', 'wingman' ),
+                        'default'  => '12'
+                    ),
+
+                    // For Single Products
+                    array(
+                        'id'   => 'divide_id',
+                        'type' => 'divide'
+                    ),
+                    array(
+                        'id'       => 'shop_single_product',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Single Product settings', 'wingman' ).'</div>',
+                        'full_width' => true
+                    ),
+                    array(
+                        'id' => 'product_page_header',
+                        'type' => 'switch',
+                        'title' => esc_html__('Show Page header', 'wingman'),
+                        'desc' => esc_html__('Show page header or?.', 'wingman'),
+                        "default" => 1,
+                        'on' => esc_html__('Enabled', 'wingman'),
+                        'off' =>esc_html__('Disabled', 'wingman')
+                    ),
+                    array(
+                        'id'       => 'product_sidebar',
+                        'type'     => 'select',
+                        'title'    => esc_html__( 'Product: Sidebar configuration', 'wingman' ),
+                        'subtitle'     => esc_html__( "Please choose single product page ", 'wingman' ),
+                        'options'  => array(
+                            'full' => esc_html__('No sidebars', 'wingman'),
+                            'left' => esc_html__('Left Sidebar', 'wingman'),
+                            'right' => esc_html__('Right Layout', 'wingman')
+                        ),
+                        'default'  => 'full',
+                        'clear' => false
+                    ),
+                    array(
+                        'id'       => 'product_sidebar_left',
+                        'type' => 'select',
+                        'title'    => esc_html__( 'Product: Sidebar left area', 'wingman' ),
+                        'subtitle'     => esc_html__( "Please choose left sidebar ", 'wingman' ),
+                        'data'     => 'sidebars',
+                        'default'  => 'primary-widget-area',
+                        'required' => array('product_sidebar','equals','left'),
+                        'clear' => false
+                    ),
+                    array(
+                        'id'       => 'product_sidebar_right',
+                        'type'     => 'select',
+                        'title'    => esc_html__( 'Product: Sidebar right area', 'wingman' ),
+                        'subtitle'     => esc_html__( "Please choose left sidebar ", 'wingman' ),
+                        'data'     => 'sidebars',
+                        'default'  => 'primary-widget-area',
+                        'required' => array('product_sidebar','equals','right'),
+                        'clear' => false
+                    ),
+
+                    //Slider effect: Lightbox - Zoom
+                    //Product description position - Tab, Below
+                    //Product reviews position - Tab,Below
+                    //Social Media Sharing Buttons
+                    //Single Product Gallery Type
+
+                    array(
+                        'id'   => 'divide_id',
+                        'type' => 'divide'
+                    ),
+                    array(
+                        'id'       => 'shop_single_product',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Shop Product settings', 'wingman' ).'</div>',
+                        'full_width' => true
+                    ),
+                    array(
+                        'id'       => 'time_product_new',
+                        'type'     => 'text',
+                        'title'    => esc_html__( 'Time Product New', 'wingman' ),
+                        'default'  => '30',
+                        'desc' => esc_html__('Time Product New ( unit: days ).', 'wingman'),
+                    ),
+                )
+            );
+
+            /**
              *	Page header
              **/
             $this->sections[] = array(

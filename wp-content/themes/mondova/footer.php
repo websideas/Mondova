@@ -21,7 +21,7 @@
                 }
 
                 if(kt_option('footer_bottom', true)){
-                    get_template_part( 'templates/footers/footer', 'bottom');
+                    //get_template_part( 'templates/footers/footer', 'bottom');
                 }
 
                 ?>
