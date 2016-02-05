@@ -207,6 +207,7 @@ if ( class_exists( 'Vc_Manager', false ) ) {
     add_action( 'init', 'kt_js_composer_bridge', 20 );
 
 
+
 }
 
 /**

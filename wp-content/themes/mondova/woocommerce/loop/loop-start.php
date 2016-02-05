@@ -15,5 +15,5 @@
  * @version     2.0.0
  */
 ?>
-<div class="row multi-columns-row woocommerce-row">
+<div class="row woocommerce-row">
     <ul class="<?php echo apply_filters('kt_product_loop_start', 'shop-products' ); ?>">

@@ -76,11 +76,15 @@
     //init_MainMenu();
     init_carousel();
     init_shortcodes();
-    init_popup();
-    init_backtotop();
     init_backtotop();
 
 
+    $('.social_icons').on('hover', 'li', function(){
+        var $this= $(this);
+
+        $this.siblings().removeClass('active');
+        $this.addClass('active');
+    });
 
 
     /* ---------------------------------------------

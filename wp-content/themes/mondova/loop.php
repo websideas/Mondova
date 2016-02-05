@@ -9,21 +9,16 @@
 
 
 $layout = kt_get_archive_layout();
-$article_columns = 12/$layout['columns'];
-$article_columns_tab = 12/$layout['columns_tab'];
-
-
-
 
 do_action( 'kt_loop_before' );
-
-
 
 
 echo '<div class="blog-posts blog-posts-'.esc_attr($layout['type']).'">';
 
 if($layout['type'] == 'grid'|| $layout['type'] == 'masonry'){
     echo '<div class="row multi-columns-row">';
+    $article_columns = 12/$layout['columns'];
+    $article_columns_tab = 12/$layout['columns_tab'];
 }
 if($layout['type'] == 'masonry') {
     printf('<div class="blog-post-sizer col-lg-%1$s col-md-%1$s col-sm-%2$s"></div>', $article_columns, $article_columns_tab);
@@ -41,7 +36,7 @@ while ( have_posts() ) : the_post();
     $format = get_post_format();
 
     if($layout['type'] == 'grid' || $layout['type'] == 'masonry') {
-        printf('<div class="blog-post-wrap col-lg-%1$s col-md-%1$s col-sm-%2$s" >', $article_columns_tab, $article_columns_tab);
+        printf('<div class="blog-post-wrap col-lg-%1$s col-md-%1$s col-sm-%2$s" >', $article_columns, $article_columns_tab);
     }
 
     if($layout['type'] == 'zigzag'){

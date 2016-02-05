@@ -42,7 +42,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 					setup_postdata( $post );
 					?>
 					<tr>
-						<td>
+						<td class="grouped-quantity">
 							<?php if ( $product->is_sold_individually() || ! $product->is_purchasable() ) : ?>
 								<?php woocommerce_template_loop_add_to_cart(); ?>
 							<?php else : ?>
@@ -58,7 +58,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 							<?php endif; ?>
 						</td>
 
-						<td class="label">
+						<td class="grouped-label">
 							<label for="product-<?php echo $product_id; ?>">
 								<?php echo $product->is_visible() ? '<a href="' . esc_url( apply_filters( 'woocommerce_grouped_product_list_link', get_permalink(), $product_id ) ) . '">' . esc_html( get_the_title() ) . '</a>' : esc_html( get_the_title() ); ?>
 							</label>
@@ -87,18 +87,19 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 			?>
 		</tbody>
 	</table>
+    <div class="cart-inner">
+        <input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id ); ?>" />
 
-	<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id ); ?>" />
+        <?php if ( $quantites_required ) : ?>
 
-	<?php if ( $quantites_required ) : ?>
+            <?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
-		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+            <button type="submit" class="single_add_to_cart_button btn btn-addtocart"><i class="icon_bag_alt"></i><?php echo $product->single_add_to_cart_text(); ?></button>
 
-		<button type="submit" class="single_add_to_cart_button btn btn-addtocart"><i class="icon_bag_alt"></i><?php echo $product->single_add_to_cart_text(); ?></button>
+            <?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 
-		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
-
-	<?php endif; ?>
+        <?php endif; ?>
+    </div>
 </form>
 
 <?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>

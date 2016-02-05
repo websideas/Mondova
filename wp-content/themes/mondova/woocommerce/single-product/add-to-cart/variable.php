@@ -34,7 +34,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 			<tbody>
 				<?php foreach ( $attributes as $attribute_name => $options ) : ?>
 					<tr>
-						<td class="label"><label for="<?php echo sanitize_title( $attribute_name ); ?>"><?php echo wc_attribute_label( $attribute_name ); ?></label></td>
+						<td class="variable-label"><label for="<?php echo sanitize_title( $attribute_name ); ?>"><?php echo wc_attribute_label( $attribute_name ); ?></label></td>
 						<td class="value">
 							<?php
 								$selected = isset( $_REQUEST[ 'attribute_' . sanitize_title( $attribute_name ) ] ) ? wc_clean( $_REQUEST[ 'attribute_' . sanitize_title( $attribute_name ) ] ) : $product->get_variation_default_attribute( $attribute_name );
@@ -48,30 +48,31 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 		</table>
 
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+        <div class="cart-inner">
+            <div class="single_variation_wrap">
+                <?php
+                    /**
+                     * woocommerce_before_single_variation Hook.
+                     */
+                    do_action( 'woocommerce_before_single_variation' );
 
-		<div class="single_variation_wrap">
-			<?php
-				/**
-				 * woocommerce_before_single_variation Hook.
-				 */
-				do_action( 'woocommerce_before_single_variation' );
+                    /**
+                     * woocommerce_single_variation hook. Used to output the cart button and placeholder for variation data.
+                     * @since 2.4.0
+                     * @hooked woocommerce_single_variation - 10 Empty div for variation data.
+                     * @hooked woocommerce_single_variation_add_to_cart_button - 20 Qty and cart button.
+                     */
+                    do_action( 'woocommerce_single_variation' );
 
-				/**
-				 * woocommerce_single_variation hook. Used to output the cart button and placeholder for variation data.
-				 * @since 2.4.0
-				 * @hooked woocommerce_single_variation - 10 Empty div for variation data.
-				 * @hooked woocommerce_single_variation_add_to_cart_button - 20 Qty and cart button.
-				 */
-				do_action( 'woocommerce_single_variation' );
+                    /**
+                     * woocommerce_after_single_variation Hook.
+                     */
+                    do_action( 'woocommerce_after_single_variation' );
 
-				/**
-				 * woocommerce_after_single_variation Hook.
-				 */
-				do_action( 'woocommerce_after_single_variation' );
-
-                do_action( 'woocommerce_after_add_to_cart_button' );
-			?>
-		</div>
+                    do_action( 'woocommerce_after_add_to_cart_button' );
+                ?>
+            </div>
+        </div>
 
 	<?php endif; ?>
 

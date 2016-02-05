@@ -235,7 +235,7 @@ if (!function_exists('kt_get_woo_sidebar')) {
             }elseif($sidebar['sidebar'] == 'right'){
                 $sidebar['sidebar_area'] = kt_option('shop_sidebar_right', 'primary-widget-area');
             }
-        }elseif(is_product() || $post_id){
+        }/*elseif(is_product() || $post_id){
 
             global $post;
             if(!$post_id) $post_id = $post->ID;
@@ -253,7 +253,8 @@ if (!function_exists('kt_get_woo_sidebar')) {
             }elseif($sidebar['sidebar'] == 'right'){
                 $sidebar['sidebar_area'] = rwmb_meta('_kt_right_sidebar', array(), $post_id);
             }
-        }
+
+        }*/
 
         if($sidebar['sidebar'] == 'full'){
             $sidebar['sidebar'] = '';
@@ -433,7 +434,7 @@ function kt_woocommerce_show_product_badge(){
 
     echo '<div class="product-badge">';
     if ( ! $product->is_in_stock() ) {
-        printf('<span class="wc-out-of-stock">%s</span>', esc_html__( 'Sold out', 'mondova' ));
+        printf('<span class="wc-out-of-stock">%s</span>', esc_html__( 'Out of stock', 'mondova' ));
     }elseif ( $product->is_on_sale() ){
 	    echo apply_filters( 'woocommerce_sale_flash', '<span class="wc-onsale-badge">' . __( 'Sale!', 'mondova' ) . '</span>', $post, $product );
     }elseif( $num_day < $time_new ) {
@@ -506,13 +507,15 @@ function woocommerce_upsell_related_carousel(){
         $tabs['upsells'] = esc_html__( 'You may also like', 'mondova' );
     }
 
-    if ( sizeof( $related ) !== 0){
+    /*if ( sizeof( $related ) !== 0){
         $tabs['related'] = esc_html__( 'Related Products', 'woocommerce' );;
     }
+    */
 
     if(count($tabs)){
+        echo '<div class="related-upsells-tabs">';
         echo '<div class="container">';
-        echo '<ul class="tabs related-upsells-tabs">';
+        echo '<ul class="nav">';
         foreach($tabs as $key=>$tab){ ?>
             <li class="<?php echo esc_attr( $key ); ?>_tab">
                 <a href="#tab-<?php echo esc_attr( $key ); ?>"><?php echo esc_html($tab); ?></a>
@@ -529,6 +532,7 @@ function woocommerce_upsell_related_carousel(){
         }
 
 
+        echo '</div>';
         echo '</div>';
     }
 
@@ -673,18 +677,26 @@ add_filter('woocommerce_product_description_heading', '__return_false');
 add_filter('woocommerce_product_additional_information_heading', '__return_false');
 
 add_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_related_carousel' );
-add_action( 'woocommerce_after_single_product_summary', 'kt_woocommerce_recently_viewed' );
+//add_action( 'woocommerce_after_single_product_summary', 'kt_woocommerce_recently_viewed' );
 
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10);
+remove_action('woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10);
+
+add_action('woocommerce_product_images', 'kt_woocommerce_show_product_badge', 10);
+
 add_action('woocommerce_single_product_summary', 'woocommerce_template_single_rating', 15);
 
 add_action('woocommerce_after_add_to_cart_button', 'kt_template_product_actions');
 
+add_action('woocommerce_share', 'kt_share_box');
 
 
+
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
+add_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 60);
 
 // Remove compare product
 if(defined( 'YITH_WOOCOMPARE' )){

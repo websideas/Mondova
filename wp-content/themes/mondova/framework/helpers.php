@@ -269,15 +269,14 @@ if (!function_exists('kt_get_archive_sidebar')) {
     function kt_get_archive_sidebar()
     {
         if( isset($_REQUEST['sidebar'] )){
-            $sidebar = array(
-                'sidebar' => $_REQUEST['sidebar'],
-                'sidebar_area' => $_REQUEST['area']
-            );
+            $sidebar = array('sidebar' => $_REQUEST['sidebar'], 'sidebar_area' => '');
             if($sidebar['sidebar'] == 'full'){
                 $sidebar['sidebar'] = '';
             }
-            if(!$sidebar['area']){
-                $sidebar['sidebar'] = 'primary-widget-area';
+            if(isset( $_REQUEST['area'])){
+                $sidebar['sidebar_area'] = $_REQUEST['area'];
+            }elseif(!$sidebar['sidebar_area']){
+                $sidebar['sidebar_area'] = 'blog-widget-area';
             }
         }elseif(is_search()){
             $sidebar = array(
@@ -346,6 +345,11 @@ if (!function_exists('kt_get_archive_layout')) {
         if (isset($_REQUEST['type'])) {
             $layout['type'] = $_REQUEST['type'];
             $layout['pagination'] = 'normal';
+            if(isset($_REQUEST['columns'])){
+                $layout['columns'] = $_REQUEST['columns'];
+            }else{
+                $layout['columns'] = kt_option('archive_columns', 2);
+            }
         } elseif (is_search()) {
             $layout['type'] = kt_option('search_loop_style', 'grid');
             $layout['columns'] = kt_option('search_columns', 3);
@@ -355,6 +359,7 @@ if (!function_exists('kt_get_archive_layout')) {
             $layout['columns'] = kt_option('archive_columns', 2);
             $layout['pagination'] = kt_option('archive_pagination', 'normal');
         }
+
         return apply_filters('kt_archive_layout', $layout);
     }
 }
@@ -451,3 +456,5 @@ if (!function_exists('kt_custom_wpml')){
 
     }
 }
+
+

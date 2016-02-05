@@ -149,7 +149,7 @@ class Widget_KT_Posts extends WP_Widget {
         <script type="text/javascript">
             (function($){
                 $('document').ready(function() {
-                    $('.categories-chosen').select2();
+                    $('.categories-chosen').chosen();
                 });
             })(jQuery);
         </script>

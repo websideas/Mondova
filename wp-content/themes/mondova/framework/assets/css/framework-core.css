@@ -575,9 +575,13 @@ div#post-body .rwmb-text{
 
 
 
-.widget-content .select2-container{
+.widget-content .chosen-container{
     width: 100%!important;
 }
-.widget-content .select2-container + .select2-container{
+.widget-content .chosen-container + .chosen-container{
     display: none!important;
+}
+.widget-content .chosen-container-multi .chosen-choices li.search-field input[type="text"]{
+    height: 30px;
+    min-width: 150px;
 }

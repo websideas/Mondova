@@ -53,7 +53,12 @@ $classes = array(
     'product-effect-'.$woocommerce_loop['effect'],
     'product-type-'.$woocommerce_loop['type']
 );
-
+if ( 0 === ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1 === $woocommerce_loop['columns'] ) {
+    $classes[] = 'first';
+}
+if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
+    $classes[] = 'last';
+}
 
 $bootstrapColumn = round( 12 / $woocommerce_loop['columns'] );
 

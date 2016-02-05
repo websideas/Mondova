@@ -171,6 +171,9 @@ p {
   pointer-events: none;
   z-index: 999; }
 
+.text-normal {
+  text-transform: none; }
+
 .letter-spacing {
   letter-spacing: 0.3em; }
 

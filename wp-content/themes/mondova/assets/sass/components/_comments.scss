@@ -76,7 +76,6 @@
       }
     }
 
-
     .comment-respond{
       background: none;
       padding: 0 150px 0 0;
@@ -197,14 +196,17 @@
       }
     }
 
+    .star-rating,
+    .comment-actions{
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
 
     .comment-actions {
       font-size: 12px;
       font-weight: normal;
       line-height: 15px;
-      position: absolute;
-      right: 0;
-      top: 0;
       text-transform: uppercase;
       a{
         color: $text;

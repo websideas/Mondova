@@ -16,8 +16,8 @@
 8. Styles for devices(<=480px )
 */
 
-@import 'mixin';
-@import 'variables';
+@import '../sass/utils/mixin';
+@import '../sass/utils/variables';
 
 /* 1. Styles for devices(>1300px) */
 @media (min-width: 1400px) {
@@ -36,6 +36,14 @@
       }
     }
   }
+
+  .woocommerce{
+    div.images{
+      margin-right: 30px;
+    }
+  }
+
+
 }
 
 /* 1. Styles for devices(>1300px) */

@@ -5,95 +5,6 @@
    ============================== */
 
 
-/*
- * 16.1 Rev slider
- */
-.rev_slider{
-  .product-attr{
-    text-align: center;
-    h4{
-      font-size:16px;
-      text-transform: none;
-      margin: 0 0 10px;
-    }
-  }
-
-  .tp-loader.spinner0{
-    background-color: #FFFFFF;
-  }
-
-  .metis{
-    width: 50px;
-    height: 50px;
-    @include box-shadow(0,2px, 6px, rgba(#000, 0.05));
-    &.tparrows{
-      &:before{
-        font-size: 15px;
-        line-height: 34px;
-        color: $gray-text;
-      }
-      &.tp-leftarrow{
-        &:before{
-          @include FontIcon('\f104');
-        }
-      }
-      &.tp-rightarrow{
-        &:before{
-          @include FontIcon('\f105');
-        }
-      }
-
-    }
-  }
-
-  .ares{
-    .tp-bullet{
-      width: 7px;
-      height: 7px;
-      background: #d7d7d7;
-
-      &:hover,
-      &.selected{
-        background: #000000;
-      }
-    }
-  }
-
-  .site-nav{
-    width: 46px;
-    background: none;
-    border:2px solid #fff;
-    &:hover:before{
-      @include transform(scale(1.2));
-    }
-    &:before{
-      font-family: "icomoon";
-      font-size: 18px;
-      line-height: 36px;
-      @include transition(all 0.4s ease);
-    }
-    &.tp-rightarrow:before{
-      content: "\ebf9";
-    }
-    &.tp-leftarrow:before{
-      content: "\ea26";
-    }
-  }
-
-  .site-pagination{
-    .tp-bullet{
-      width: 7px;
-      height: 7px;
-      background: #999999;
-      @include border-radius(50%);
-      &:hover,
-      &.selected{
-        background: #ffffff;
-      }
-    }
-  }
-}
-
 
 /*
  * 16.2 Owl Carousel
@@ -131,7 +42,7 @@
   }
 
   .owl-controls{
-    /*margin: 80px 0 0;*/
+    margin: 85px 0 0;
   }
 
 
@@ -250,7 +161,101 @@
 
 }
 
+.nav-style-1{
 
+}
+
+
+/*
+ * 16.1 Rev slider
+ */
+
+/*
+.rev_slider{
+  .product-attr{
+    text-align: center;
+    h4{
+      font-size:16px;
+      text-transform: none;
+      margin: 0 0 10px;
+    }
+  }
+
+  .tp-loader.spinner0{
+    background-color: #FFFFFF;
+  }
+
+  .metis{
+    width: 50px;
+    height: 50px;
+    @include box-shadow(0,2px, 6px, rgba(#000, 0.05));
+    &.tparrows{
+      &:before{
+        font-size: 15px;
+        line-height: 34px;
+        color: $gray-text;
+      }
+      &.tp-leftarrow{
+        &:before{
+          @include FontIcon('\f104');
+        }
+      }
+      &.tp-rightarrow{
+        &:before{
+          @include FontIcon('\f105');
+        }
+      }
+
+    }
+  }
+
+  .ares{
+    .tp-bullet{
+      width: 7px;
+      height: 7px;
+      background: #d7d7d7;
+
+      &:hover,
+      &.selected{
+        background: #000000;
+      }
+    }
+  }
+
+  .site-nav{
+    width: 46px;
+    background: none;
+    border:2px solid #fff;
+    &:hover:before{
+      @include transform(scale(1.2));
+    }
+    &:before{
+      font-family: "icomoon";
+      font-size: 18px;
+      line-height: 36px;
+      @include transition(all 0.4s ease);
+    }
+    &.tp-rightarrow:before{
+      content: "\ebf9";
+    }
+    &.tp-leftarrow:before{
+      content: "\ea26";
+    }
+  }
+
+  .site-pagination{
+    .tp-bullet{
+      width: 7px;
+      height: 7px;
+      background: #999999;
+      @include border-radius(50%);
+      &:hover,
+      &.selected{
+        background: #ffffff;
+      }
+    }
+  }
+}
 .rev_slider{
   .tparrows{
     &.hades{
@@ -370,3 +375,4 @@
     }
   }
 }
+*/

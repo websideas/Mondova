@@ -18,7 +18,8 @@
             <?php
             global $WOOCS;
             $currencies=$WOOCS->get_currencies();
-            echo '<ul>';
+            //print_r($currencies);
+            echo '<ul class="currency-switcher-content">';
             foreach($currencies as $key => $currency){
                 $selected = ($WOOCS->current_currency == $key) ? 'active' : '';
                 printf(

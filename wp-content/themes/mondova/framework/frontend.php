@@ -132,6 +132,38 @@ function kt_add_scripts() {
 add_action( 'wp_enqueue_scripts', 'kt_add_scripts' );
 
 
+/**
+ * Theme Custom CSS
+ *
+ * @since       1.0
+ * @return      void
+ * @access      public
+ */
+function kt_setting_script() {
+
+    $css = '';
+
+    if(is_page() || is_singular()){
+
+        global $post;
+        $post_id = $post->ID;
+
+        $pageh_spacing = rwmb_meta('_kt_page_top_spacing', array(), $post_id);
+        if($pageh_spacing != ''){
+            $css .= '.content-area-inner{padding-top: '.$pageh_spacing.';}';
+        }
+        $pageh_spacing = rwmb_meta('_kt_page_bottom_spacing', array(), $post_id);
+        if($pageh_spacing != ''){
+            $css .= '.content-area-inner{padding-bottom:'.$pageh_spacing.';}';
+        }
+
+
+    }
+
+    wp_add_inline_style( 'kt-main', $css );
+}
+add_action('wp_enqueue_scripts', 'kt_setting_script');
+
 
 /**
  * Control the number of  excerpt length
@@ -196,7 +228,7 @@ function kt_comments($comment, $args, $depth) {
 
 	<?php else : ?>
 
-        <li <?php comment_class('comment'); ?> id="li-comment-<?php comment_ID() ?>">
+        <li <?php comment_class('comment'); ?> id="li-comment-<?php comment_ID() ?>" itemprop="review" itemscope itemtype="http://schema.org/Review">
             <div  id="comment-<?php comment_ID(); ?>" class="comment-item">
 
                 <div class="comment-avatar">
@@ -207,11 +239,11 @@ function kt_comments($comment, $args, $depth) {
                         <h5 class="comment-author">
                             <?php comment_author_link(); ?>
                         </h5>
-                        <span class="comment-date">
-                            <?php printf( _x( '%s ago', '%s = human-readable time difference', 'adroit' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) ); ?>
-                        </span>
+                        <time class="comment-date" itemprop="datePublished" datetime="<?php echo get_comment_date( 'c' ); ?>">
+                        <?php printf( _x( '%s ago', '%s = human-readable time difference', 'adroit' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) ); ?>
+                    </time>
                     </div>
-                    <div class="comment-entry">
+                    <div class="comment-entry" itemprop="description">
                         <?php comment_text() ?>
                         <?php if ($comment->comment_approved == '0') : ?>
                             <em><?php esc_html_e('Your comment is awaiting moderation.', 'adroit') ?></em>
@@ -557,44 +589,47 @@ if( ! function_exists( 'kt_share_box' ) ){
         $share_arr = kt_option('social_share');
 
         if(count($share_arr)){
+            $i =0;
             foreach($share_arr as $key => $val){
                 if($val){
+                    $active = ($i == 0) ? 'active' : '';
                     if($key == 'facebook'){
                         // Facebook
-                        $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://www.facebook.com/sharer.php?s=100&amp;p[title]=' . $title . '&amp;p[url]=' . $link.'\', \'sharer\', \'toolbar=0,status=0,width=620,height=280\');popUp.focus();return false;">';
+                        $html .= '<li class="'.$active.'"><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://www.facebook.com/sharer.php?s=100&amp;p[title]=' . $title . '&amp;p[url]=' . $link.'\', \'sharer\', \'toolbar=0,status=0,width=620,height=280\');popUp.focus();return false;">';
                         $html .= '<i class="fa fa-facebook"></i><span>'.esc_html__('Share on Facebook', 'mondova').'</span>';
                         $html .= '</a></li>';
                     }elseif($key == 'twitter'){
                         // Twitter
-                        $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://twitter.com/home?status=' . $link . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false;">';
+                        $html .= '<li class="'.$active.'"><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://twitter.com/home?status=' . $link . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false;">';
                         $html .= '<i class="fa fa-twitter"></i><span>'.esc_html__('Share on Twitter', 'mondova').'</span>';
                         $html .= '</a></li>';
                     }elseif($key == 'google_plus'){
                         // Google plus
-                        $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'https://plus.google.com/share?url=' . $link . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
+                        $html .= '<li class="'.$active.'"><a class="'.$style.'" href="#" onclick="popUp=window.open(\'https://plus.google.com/share?url=' . $link . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
                         $html .= '<i class="fa fa-google-plus"></i><span>'.esc_html__('Share on Google+', 'mondova').'</span>';
                         $html .= "</a></li>";
                     }elseif($key == 'pinterest'){
                         // Pinterest
-                        $html .= '<li><a class="share_link" href="#" onclick="popUp=window.open(\'http://pinterest.com/pin/create/button/?url=' . $link . '&amp;description=' . $title . '&amp;media=' . urlencode($image[0]) . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
+                        $html .= '<li class="'.$active.'"><a class="share_link" href="#" onclick="popUp=window.open(\'http://pinterest.com/pin/create/button/?url=' . $link . '&amp;description=' . $title . '&amp;media=' . urlencode($image[0]) . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
                         $html .= '<i class="fa fa-pinterest"></i><span>'.esc_html__('Share on Pinterest', 'mondova').'</span>';
                         $html .= "</a></li>";
                     }elseif($key == 'linkedin'){
                         // linkedin
-                        $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://linkedin.com/shareArticle?mini=true&amp;url=' . $link . '&amp;title=' . $title. '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
+                        $html .= '<li class="'.$active.'"><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://linkedin.com/shareArticle?mini=true&amp;url=' . $link . '&amp;title=' . $title. '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
                         $html .= '<i class="fa fa-linkedin"></i><span>'.esc_html__('Share on LinkedIn', 'mondova').'</span>';
                         $html .= "</a></li>";
                     }elseif($key == 'tumblr'){
                         // Tumblr
-                        $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://www.tumblr.com/share/link?url=' . $link . '&amp;name=' . $title . '&amp;description=' . $excerpt . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
+                        $html .= '<li class="'.$active.'"><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://www.tumblr.com/share/link?url=' . $link . '&amp;name=' . $title . '&amp;description=' . $excerpt . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
                         $html .= '<i class="fa fa-tumblr"></i><span>'.esc_html__('Share on Tumblr', 'mondova').'</span>';
                         $html .= "</a></li>";
                     }elseif($key == 'email'){
                         // Email
-                        $html .= '<li><a class="'.$style.'" href="mailto:?subject='.$title.'&amp;body='.$link.'">';
+                        $html .= '<li class="'.$active.'"><a class="'.$style.'" href="mailto:?subject='.$title.'&amp;body='.$link.'">';
                         $html .= '<i class="fa fa-envelope-o"></i><span>'.esc_html__('Share on Mail', 'mondova').'</span>';
                         $html .= "</a></li>";
                     }
+                    $i++;
                 }
             }
         }

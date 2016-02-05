@@ -206,6 +206,11 @@ if ( class_exists( 'Vc_Manager', false ) ) {
 	}
     add_action( 'init', 'kt_js_composer_bridge', 20 );
 
+    /**
+     * Include js_composer update param
+     *
+     */
+    require KT_FW_DIR . 'js_composer/js_composer_update.php';
 
 }
 

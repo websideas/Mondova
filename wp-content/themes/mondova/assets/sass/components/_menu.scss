@@ -177,8 +177,9 @@
         padding: 40px 30px 30px;
         @include opacity(0);
         @include transform(translate(0, 40px));
-        @include transition('opacity 0.5s ease-in-out, transform 0.5s ease-in-out');
+        @include transition('opacity 0.2s ease-in-out, transform 0.3s ease-in-out');
         @include box-shadow(0, 2px, 3px, rgba(0, 0, 0, 0.05));
+
 
       }
 
