@@ -43,10 +43,15 @@
                         <h3 class="title"><?php esc_html_e('Author', 'mondova') ?></h3>
                         <?php get_template_part( 'templates/author-bio' ); ?>
                     </div>
+                    <?php
+                    $tags_list = get_the_tag_list( );
+                    if ( $tags_list ) {
+                    ?>
                     <div class="content-single-left">
                         <h3 class="title"><?php esc_html_e('Tag', 'mondova') ?></h3>
                         <?php kt_post_meta_tags(''); ?>
                     </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
