@@ -1,5 +1,94 @@
 # Redux Framework Changelog
 
+## 3.6.2
+* WP.org release and cleanup
+
+## 3.6.1.3
+* Fixed:   #3105 - link_color output failing due to PHP error.
+
+## 3.6.1.2
+* Fixed:   #3103 - WP 4.6 forces new default date format, breaking date validation.
+
+## 3.6.1.1
+* Fixed:   Typography subsets error due to typo.
+
+## 3.6.1 - WP.org release
+
+## 3.6.0.11
+* Removed:  Empty PHP file from editor field.
+* Modified: Replaced class primary function name in browser.php to __construct for PHP7 compatibility.
+
+## 3.6.0.10
+* Fixed:    #3051 - Color_RBGA field RGBA value outputting zeros when color is left blank.
+
+## 3.6.0.9
+* Fixed:    #3048 - Subsection tabs not including specified section class name.
+
+## 3.6.0.8
+* Fixed:    Incorrect string comparison result in admin link check.  Thanks @ksere.
+* Fixed:    Check value exists before validating when used with Metabox extension.  Thanks @Enchiridion
+
+
+## 3.6.0.7
+* Fixed:    Empty values not passing to validation_callback.
+
+
+## 3.6.0.6
+* Fixed:    Javascript error in customizer javascript, preventing save of changed options.
+* Fixed:    #3019 - Section descriptions incorrect when opt_name contains digits.
+
+## 3.6.0.5
+* Reverted: Changes to typography.  The on input variable solution was not working.
+* Fixed:    Support URL has generator was failing with an error.
+
+## 3.6.0.4
+* Changed:  Typography field is now only ONE input variable. Should reduce our 
+            max_input_vars errors dramatically.
+
+## 3.6.0.3
+* Fixed:    Some XSS vulnerabilities only available in the backend when authenticated as a user.
+
+## 3.6.0.2
+* Fixed:    Customizer.min.js compression issue. Deploy.
+
+## 3.6.0.1
+* Fixed     Outdated redux.min.js on wp.org causing option panel failure.
+* Fixed:    #2936 - Border field outputting px with blank value.
+* Fixed:    Resolved Theme-Check php shortcode false notice.
+* Modified: No more major redirect for the Redux page, only on first install with the plugin.
+* Fixed:    IE11 bug in the customizer. Thanks @anikitas!
+
+## 3.6.0    
+* Fixed:     Fixed Customizer path issues
+* Added:     Added new default arguments filter by opt_name and type.  :)
+* Notice:    WP.org release
+
+## 3.5.9.8  
+* Fixed:    #2903 - False positive flag in border field JS.  Avast doesn't like empty document ready statements.
+
+## 3.5.9.7  
+* Fixed:    #2880 - More issues with the extensions_url routine.
+
+## 3.5.9.6  
+* Fixed:    #2876 - Fixing more unvetted user contributions.
+
+## 3.5.9.5
+* Modified: #2855 - Extensions now have a helper class to help composer-based installs. Thanks @2ndkauboy!
+
+## 3.5.9.4
+* Fixed:    #2857 - Required 'contains' not properly evaluating with checkboxes.
+
+## 3.5.9.3
+* Fixed:    #2831 - Localization was complete broken.
+* Fixed:    #2832 - CSS conflicts with Rev Slider (Hey, Rev Slider guys, you don't have to load your CSS on every admin page.  Really?)
+
+## 3.5.9.2
+* Fixed:    Leftover debug echo line in basic customizer extension.
+
+## 3.5.9.1
+* Added:    EXPERIMENTAL:  New parsing code in an effort to break the 1000 max_input_var issue that crops up from time to time. Thanks, @harunbasic
+* Added:    EXPERIMENTAL:  "Bugfix" for extension_url in an effort to make it correct.  Thanks, @ottok
+
 ## 3.5.9
 * Notice:   New wp.org release
 
@@ -46,7 +135,7 @@
 * Fixed:    #2677 - tinymce javascript errors when wp editor is disabled.
 
 ## 3.5.8.3
-* Modified: While in dev_mode, noticies will appear if Redux sample data in share_icons and admin_bar_links arguments is not changed.
+* Modified: While in dev_mode, notices will appear if Redux sample data in share_icons and admin_bar_links arguments is not changed.
             This became necessary because devs are not changing this data and theme ends users are coming to us for theme support.
 * Modified: Redux links to be // instead of http:// or https:// to ensure portability for secure sites.
 

@@ -32,6 +32,8 @@ class WOOCS_STORAGE
 
     public function set_val($key, $value)
     {
+        $value=sanitize_text_field(esc_html($value));
+        //***
         switch ($this->type)
         {
             case 'session':
@@ -88,7 +90,7 @@ class WOOCS_STORAGE
                 break;
         }
 
-        return $value;
+        return sanitize_text_field(esc_html($value));
     }
 
     public function is_isset($key)

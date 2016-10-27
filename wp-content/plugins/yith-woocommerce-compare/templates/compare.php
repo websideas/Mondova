@@ -19,8 +19,8 @@ $widths = array();
 foreach( $products as $product ) $widths[] = '{ "sWidth": "205px", resizeable:true }';
 
 $table_text = get_option( 'yith_woocompare_table_text' );
-yit_wpml_register_string( 'Plugins', 'plugin_yit_compare_table_text', $table_text );
-$localized_table_text = yit_wpml_string_translate( 'Plugins', 'plugin_yit_compare_table_text', $table_text );
+do_action ( 'wpml_register_single_string', 'Plugins', 'plugin_yit_compare_table_text', $table_text );
+$localized_table_text = apply_filters ( 'wpml_translate_single_string', $table_text, 'Plugins', 'plugin_yit_compare_table_text' );
 
 ?><!DOCTYPE html>
 <!--[if IE 6]>
@@ -174,7 +174,7 @@ $localized_table_text = yit_wpml_string_translate( 'Plugins', 'plugin_yit_compar
 <?php do_action( 'yith_woocompare_after_main_table' ); ?>
 
 <?php if( wp_script_is( 'responsive-theme', 'enqueued' ) ) wp_dequeue_script( 'responsive-theme' ) ?><?php if( wp_script_is( 'responsive-theme', 'enqueued' ) ) wp_dequeue_script( 'responsive-theme' ) ?>
-<?php do_action('wp_print_footer_scripts'); ?>
+<?php print_footer_scripts(); ?>
 
 <script type="text/javascript">
 
@@ -202,14 +202,32 @@ $localized_table_text = yit_wpml_string_translate( 'Plugins', 'plugin_yit_compar
         }).trigger('yith_woocompare_render_table');
 
         // add to cart
-        var button_clicked;
+        var button_clicked,
+            redirect_to_cart = false;
+
         $(document).on('click', 'a.add_to_cart_button', function(){
             button_clicked = $(this);
             button_clicked.block({message: null, overlayCSS: {background: '#fff url(' + woocommerce_params.ajax_loader_url + ') no-repeat center', backgroundSize: '16px 16px', opacity: 0.6}});
         });
 
+        // close colorbox if redirect to cart is active after add to cart
+        $('body').on( 'adding_to_cart', function ( $thisbutton, data ) {
+            if( wc_add_to_cart_params.cart_redirect_after_add == 'yes' ) {
+                wc_add_to_cart_params.cart_redirect_after_add = 'no';
+                redirect_to_cart = true;
+            }
+        });
+
         // remove add to cart button after added
         $('body').on('added_to_cart', function( ev, fragments, cart_hash, button ){
+
+
+            if( redirect_to_cart == true ) {
+                // redirect
+                parent.window.location = wc_add_to_cart_params.cart_url;
+                return;
+            }
+
             button_clicked.hide();
 
             <?php if ( $is_iframe ) : ?>

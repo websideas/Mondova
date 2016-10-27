@@ -40,15 +40,26 @@ if( !class_exists( 'YITH_Woocompare' ) ) {
          * @since 1.0.0
          */
         public function __construct() {
+
+            // init widget
             add_action( 'widgets_init', array( $this, 'registerWidgets' ) );
 
-	        // Load Plugin Framework
-	        add_action( 'plugins_loaded', array( $this, 'plugin_fw_loader' ), 15 );
-
             if( $this->is_frontend() ) {
+
+                // require frontend class
+                require_once('class.yith-woocompare-frontend.php');
+
                 $this->obj = new YITH_Woocompare_Frontend();
-            } elseif( $this->is_admin() ) {
-                $this->obj = new YITH_Woocompare_Admin();
+            }
+            elseif( $this->is_admin() ) {
+
+                // Load Plugin Framework
+                add_action( 'after_setup_theme', array( $this, 'plugin_fw_loader' ), 1 );
+
+                // require admin class
+                require_once('class.yith-woocompare-admin.php');
+
+	            $this->obj = new YITH_Woocompare_Admin();
             }
 
             return $this->obj;
@@ -60,7 +71,11 @@ if( !class_exists( 'YITH_Woocompare' ) ) {
          */
         public function is_frontend() {
             $is_ajax = ( defined( 'DOING_AJAX' ) && DOING_AJAX );
-            return (bool) ( ! is_admin() || $is_ajax && isset( $_REQUEST['context'] ) && $_REQUEST['context'] == 'frontend' );
+	        $context_check = isset( $_REQUEST['context'] ) && $_REQUEST['context'] == 'frontend';
+	        $actions_to_check = array( 'woof_draw_products' );
+	        $action_check = isset( $_REQUEST['action'] ) && in_array( $_REQUEST['action'], $actions_to_check );
+
+            return (bool) ( ! is_admin() || ( $is_ajax && ( $context_check || $action_check ) ) );
         }
 
         /**
@@ -81,9 +96,10 @@ if( !class_exists( 'YITH_Woocompare' ) ) {
 	     * @author Andrea Grillo <andrea.grillo@yithemes.com>
 	     */
 	    public function plugin_fw_loader() {
+
             if ( ! defined( 'YIT_CORE_PLUGIN' ) ) {
                 global $plugin_fw_data;
-                if ( ! empty( $plugin_fw_data ) ) {
+                if( ! empty( $plugin_fw_data ) ){
                     $plugin_fw_file = array_shift( $plugin_fw_data );
                     require_once( $plugin_fw_file );
                 }

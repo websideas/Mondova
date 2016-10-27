@@ -22,8 +22,6 @@ $num_members_products_activate  = $this->get_number_of_membership_products();
 <div class="yit-container product-licence-activation">
     <h2><?php _e( 'Yithemes License Activation', 'yith-plugin-fw' ) ?></h2>
 
-    <?php $this instanceof YIT_Theme_Licence && $this->show_old_licence_message() && $this->get_old_licence_message(); ?>
-
     <div class="licence-check-section">
         <form method="post" id="licence-check-update" action="<?php echo admin_url( 'admin-ajax.php' ) ?>">
             <span class="licence-label" style="display: block;"><?php _e( 'Have you updated your licenses? Have you asked for an extension? Update information concerning your products.', 'yith-plugin-fw' ); ?></span>
@@ -96,7 +94,7 @@ $num_members_products_activate  = $this->get_number_of_membership_products();
                     <?php if( $this->show_extra_info ) : ?>
                         <th><?php _e( 'Remaining', 'yith-plugin-fw' ) ?></th>
                         <?php if( $num_members_products_activate ) : ?>
-                            <th><?php _e( 'Membership', 'yith-plugin-fw' ) ?></th>
+                            <th><?php _e( 'Club Subscription', 'yith-plugin-fw' ) ?></th>
                         <?php endif; ?>
                     <?php endif; ?>
 
@@ -145,7 +143,7 @@ $num_members_products_activate  = $this->get_number_of_membership_products();
                             </a>
 
                             <?php if( ! $info['licence']['is_membership'] && $this->show_renew_button ) : ?>
-                                <a class="button-licence licence-renew" href="<?php echo $this->get_renewing_uri( $info['licence']['licence_key'] ) ?>" target="_blank">
+                                <a class="button-licence licence-renew" href="<?php echo esc_url( $this->get_renewing_uri( $info['licence']['licence_key'] ) ) ?>" target="_blank">
                                     <?php _e( 'Renew', 'yith-plugin-fw' ) ?>
                                 </a>
                             <?php endif; ?>

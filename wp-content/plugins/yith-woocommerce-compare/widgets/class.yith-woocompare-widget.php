@@ -20,11 +20,11 @@ if( !class_exists( 'YITH_WOOCOMPARE' ) ) {
         function __construct() {
             $widget_ops = array (
 	            'classname' => 'yith-woocompare-widget',
-	            'description' => __( 'The widget show the list of products added in the compare table.', 'yith-woocommerce-compare'
+	            'description' => __( 'The widget shows the list of products added in the comparison table.', 'yith-woocommerce-compare'
 	            )
             );
 
-	        parent::__construct( 'yith-woocompare-widget', __( 'YITH Woocommerce Compare Widget', 'yith-woocommerce-compare' ), $widget_ops );
+	        parent::__construct( 'yith-woocompare-widget', __( 'YITH WooCommerce Compare Widget', 'yith-woocommerce-compare' ), $widget_ops );
         }
 
 
@@ -38,8 +38,8 @@ if( !class_exists( 'YITH_WOOCOMPARE' ) ) {
 
             extract( $args );
 
-            yit_wpml_register_string( 'Widget', 'widget_yit_compare_title_text', $instance['title'] );
-            $localized_widget_title = yit_wpml_string_translate( 'Widget', 'widget_yit_compare_title_text', $instance['title'] );
+            do_action ( 'wpml_register_single_string', 'Widget', 'widget_yit_compare_title_text', $instance['title'] );
+            $localized_widget_title = apply_filters ( 'wpml_translate_single_string', $instance['title'], 'Widget', 'widget_yit_compare_title_text' );
 
             echo $before_widget . $before_title . $localized_widget_title . $after_title; ?>
 
@@ -65,7 +65,7 @@ if( !class_exists( 'YITH_WOOCOMPARE' ) ) {
 
             <p>
                 <label>
-                    <strong><?php _e( 'Title', 'yit' ) ?>:</strong><br />
+                    <?php _e( 'Title', 'yith-woocommerce-compare' ) ?>:<br />
                     <input class="widefat" type="text" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" />
                 </label>
             </p>

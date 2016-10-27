@@ -111,6 +111,9 @@ div.woocs_price_info ul{
     border-radius: 6px;
     padding: 7px !important;
 }
+
+
+
 div:hover.woocs_price_info ul{
     visibility: visible;
     opacity: 0.85;
@@ -123,6 +126,7 @@ div:hover.woocs_price_info ul{
 div.woocs_price_info ul li{
     padding-bottom: 4px;
     white-space: nowrap;
+    margin: 0 !important;
 }
 
 /***************** price info styles end ****************************/
@@ -131,3 +135,18 @@ div.woocs_price_info ul li{
     display: none;
 }
 
+ul.woocs_price_info_list li span{
+    font-weight: bold;
+}
+
+.woocs_cart_item_price{
+    font-size: 11px;
+    font-style: italic;
+}
+
+#shipping_method .woocs_cart_item_price{
+    display: inline-block;
+    clear: both;
+    text-indent: 0;
+    margin-left: 5px;
+}

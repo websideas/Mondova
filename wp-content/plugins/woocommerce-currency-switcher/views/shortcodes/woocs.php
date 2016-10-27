@@ -100,7 +100,7 @@ if ($drop_down_view == 'flags')
                 <option <?php if ($show_flags) : ?>style="background: url('<?php echo(!empty($currency['flag']) ? $currency['flag'] : $empty_flag); ?>') no-repeat 99% 0; background-size: 30px 20px;"<?php endif; ?> value="<?php echo $key ?>" <?php selected($this->current_currency, $key) ?> data-imagesrc="<?php if ($show_flags) echo(!empty($currency['flag']) ? $currency['flag'] : $empty_flag); ?>" data-icon="<?php if ($show_flags) echo(!empty($currency['flag']) ? $currency['flag'] : $empty_flag); ?>" data-description="<?php echo $currency['description'] ?>"><?php echo $option_txt ?></option>
             <?php endforeach; ?>
         </select>
-        <div style="display: none;">WOOCS <?php echo $this->the_plugin_version ?></div>
+        <div style="display: none;">WOOCS <?php echo WOOCS_VERSION ?></div>
     </form>
     <?php
 }

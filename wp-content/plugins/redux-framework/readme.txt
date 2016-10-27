@@ -3,8 +3,8 @@ Contributors: dovyp, kprovance
 Donate link: http://ideas.reduxframework.com
 Tags: admin, admin interface, options, theme options, plugin options, options framework, settings, web fonts, google fonts
 Requires at least: 3.5.1
-Tested up to: 4.5
-Stable tag: 3.5.9
+Tested up to: 4.8
+Stable tag: 3.6.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -124,6 +124,52 @@ That's because the real FAQ section is on our site! Please visit [http://docs.re
 1. This is the demo mode of Redux Framework. Activate it and you will find a fully-functional admin panel that you can play with. On the Plugins page, beneath the description and an activated Redux Framework, you will find a Demo Mode link. Click that link to activate or deactivate the sample-config file Redux ships with.  Don't take our word for it, check out our online demo and try Redux without installing a thing! [**http://demo.reduxframework.com/wp-admin/**](http://demo.reduxframework.com/wp-admin/)
 
 == Changelog ==
+
+## 3.6.2
+* Fixed:   #3105 - link_color output failing due to PHP error.
+* Fixed:   #3103 - WP 4.6 forces new default date format, breaking date validation.
+* Fixed:   Typography subsets error due to typo.
+* Fixed:   Extra dead files on WP.org repo. Bah SVN.
+
+## 3.6.1
+* Removed   Empty PHP file from editor field.
+* Modified: Replaced class primary function name in browser.php to __construct for PHP7 compatibility.
+* Fixed:    #3051 - Color_RBGA field RGBA value outputting zeros when color is left blank.
+* Fixed:    #3048 - Subsection tabs not including specified section class name.
+* Fixed:    Incorrect string comparison result in admin link check.  Thanks @ksere.
+* Fixed:    Check value exists before validating when used with Metabox extension.  Thanks @Enchiridion
+* Fixed:    Empty values not passing to validation_callback.
+* Fixed:    Javascript error in customizer javascript, preventing save of changed options.
+* Fixed:    #3019 - Section descriptions incorrect when opt_name contains digits.
+* Reverted: Changes to typography.  The on input variable solution was not working.
+* Fixed:    Support URL has generator was failing with an error.
+* Changed:  Typography field is now only ONE input variable. Should reduce our
+            max_input_vars errors dramatically.
+* Fixed:    Some XSS vulnerabilities only available in the backend when authenticated as a user.
+* Fixed:    Deleted old deleted files stuck in our WP.org SVN repo.
+
+
+## 3.6.0.2
+* Fixed     Outdated customizer.min.js on wp.org causing customizer failure.
+
+## 3.6.0.1
+* Fixed     Outdated redux.min.js on wp.org causing option panel failure.
+* Fixed:    #2936 - Border field outputting px with blank value.
+* Fixed:    Resolved Theme-Check php shortcode false notice.
+* Modified: No more major redirect for the Redux page, only on first install with the plugin.
+* Fixed:    IE11 bug in the customizer. Thanks @anikitas!
+* Fixed:    Customizer path issues
+* Added:    New default arguments filter by opt_name and type.  :)
+* Fixed:    #2903 - False positive flag in border field JS.  Avast doesn't like empty document ready statements.
+* Fixed:    #2880 - More issues with the extensions_url routine.
+* Fixed:    #2876 - Fixing more unvetted user contributions.
+* Modified: #2855 - Extensions now have a helper class to help composer-based installs. Thanks @2ndkauboy!
+* Fixed:    #2857 - Required 'contains' not properly evaluating with checkboxes.
+* Fixed:    #2831 - Localization was complete broken.
+* Fixed:    #2832 - CSS conflicts with Rev Slider (Hey, Rev Slider guys, you don't have to load your CSS on every admin page.  Really?)
+* Fixed:    Leftover debug echo line in basic customizer extension.
+* Added:    EXPERIMENTAL:  New parsing code in an effort to break the 1000 max_input_var issue that crops up from time to time. Thanks, @harunbasic
+* Added:    EXPERIMENTAL:  "Bugfix" for extension_url in an effort to make it correct.  Thanks, @ottok
 
 ## 3.5.9
 * Fixed:    Wordpress 4.4.1 related issues.
